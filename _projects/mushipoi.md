@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mushi Poi
-#permalink: /projects/mushipoi
+#permalink: /projects/mushipoi/
 ---
 
 # **Mushi Poi: A Development Story**
