@@ -21,12 +21,13 @@
             <img src="{{ site.logo | relative_url }}" alt="Logo" />
           </a>
         {% endif %}
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
 
         <div>
         {% include sidebar-custom.html %}
         </div>
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        
 
       </header>
       <section>
