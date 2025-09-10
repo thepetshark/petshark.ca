@@ -4,3 +4,40 @@
 <p>
   <a href="{{ "/projects/mushipoi/" | relative_url }}">Mushi Poi</a>
 </p>
+<div>
+
+{%- comment -%}
+Groups projects by year (from `date`), newest → oldest.
+Within each year, projects are sorted newest → oldest.
+Skips items without a `date`. Add an "Undated" section if you want (shown below, commented).
+{%- endcomment -%}
+
+{%- assign dated = site.projects | where_exp: "p", "p.date" -%}
+{%- assign dated = dated | sort: "date" | reverse -%}
+{%- assign groups = dated | group_by_exp: "p", "p.date | date: '%Y'" -%}
+{%- assign groups = groups | sort: "name" | reverse -%}
+
+{%- for g in groups -%}
+  <h3>{{ g.name }}</h3>
+  {%- assign year_items = g.items | sort: "date" | reverse -%}
+  <ul>
+    {%- for p in year_items -%}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+{%- endfor -%}
+
+{%- comment -%}
+Optional: show undated items
+{%- assign undated = site.projects | where_exp: "p", "p.date == nil" -%}
+{%- if undated.size > 0 -%}
+  <h3>Undated</h3>
+  <ul>
+    {%- for p in undated -%}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+{%- endcomment -%}
+
+</div>

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Mushi Poi
+date: 2015-10-01
+description: A fun puzzle game with adorable creatures.
 #permalink: /projects/mushipoi/
 ---
 
