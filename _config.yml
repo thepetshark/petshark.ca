@@ -13,17 +13,28 @@ remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-email-protect
-  - jekyll-imagemagick
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-tabs
   - jekyll-terser
+#  - jekyll-imagemagick
 
 # -----------------------------------------------------------------------------
 # Jekyll Site Structure
 # -----------------------------------------------------------------------------
 include:
-  - _projects
+  - _pages
+#  - _projects  #  now a collection. do not add to include
+
+# -----------------------------------------------------------------------------
+# Jekyll Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
@@ -57,22 +68,22 @@ external_links:
 
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
-imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
-  widths:
-    - 480
-    - 800
-    - 1400
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".jpg"
-    - ".jpeg"
-    - ".png"
-    - ".tiff"
-    - ".gif"
-  output_formats:
-    webp: "-quality 85"
+# imagemagick:
+#   enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+#   widths:
+#     - 480
+#     - 800
+#     - 1400
+#   input_directories:
+#     - assets/img/
+#   input_formats:
+#     - ".jpg"
+#     - ".jpeg"
+#     - ".png"
+#     - ".tiff"
+#     - ".gif"
+#   output_formats:
+#     webp: "-quality 85"
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.
