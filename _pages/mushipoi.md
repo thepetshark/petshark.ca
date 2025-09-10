@@ -1,3 +1,9 @@
+---
+layout: default
+title: Mushi Poi
+permalink /projects/mushipoi
+---
+
 # **Mushi Poi: A Development Story**
 
 ## **Project Overview**
