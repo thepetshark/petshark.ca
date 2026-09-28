@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%- comment -%}
+  A page on its own: no logo link, no side menu, no portfolio, no links to the rest of the site.
+  For game privacy policies and support pages. Use it with `layout: standalone` in a page's front matter.
+  It loads no site stylesheet or script, so nothing site-wide can add the menu back.
+  Optional front matter: `noindex: true` asks search engines not to list the page.
+{%- endcomment -%}
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+{%- if page.description %}
+    <meta name="description" content="{{ page.description | escape }}">
+{%- endif %}
+{%- if page.noindex %}
+    <meta name="robots" content="noindex">
+{%- endif %}
+    <style>
+      body {
+        margin: 0;
+        padding: 40px 20px 48px;
+        background: #fff;
+        color: #555;
+        font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      main, footer { max-width: 40em; margin: 0 auto; }
+      h1, h2, h3 { color: #222; line-height: 1.25; }
+      h1 { font-size: 1.75em; margin: 0 0 0.4em; }
+      h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; }
+      a { color: #267cb9; }
+      footer { margin-top: 3em; font-size: 0.85em; color: #888; }
+    </style>
+  </head>
+  <body>
+    <main>
+{{ content }}
+    </main>
+    <footer>
+      <p>Copyright Pet Shark Productions Inc. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

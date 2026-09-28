@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: standalone
 title: IdLings — Privacy Policy
 description: The privacy policy of IdLings, a game by Pet Shark Productions Inc.
 permalink: /idlings/privacy/

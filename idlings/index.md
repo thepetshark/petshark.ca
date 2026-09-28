@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: standalone
 title: IdLings — Support
 description: Support for IdLings, a narrative idle game for iPhone by Pet Shark Productions Inc.
 permalink: /idlings/
