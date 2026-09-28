@@ -12,6 +12,12 @@ permalink: /idlings/
 Mr Moody turned thirteen fairies to stone. Tap them free, let them gather Dust, and beat his clock before it runs
 out, round after round.
 
+## Contact
+
+For help, bug reports or questions, email
+[support@petsharkproductions.com](mailto:support@petsharkproductions.com). Please include your device model and iOS
+version.
+
 ## Restoring purchases
 
 On a new device, or after reinstalling, open the Shop or Settings in the game and tap **Restore purchases**, signed in

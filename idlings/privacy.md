@@ -45,4 +45,4 @@ If this policy changes, the new version will be posted at this address with a ne
 
 ## Contact
 
-Questions about this policy: see [IdLings support]({{ "/idlings/" | relative_url }}).
+Questions about this policy: [support@petsharkproductions.com](mailto:support@petsharkproductions.com).
