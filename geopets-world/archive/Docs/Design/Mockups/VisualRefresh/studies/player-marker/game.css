@@ -1,0 +1,40 @@
+/* "Chosen for the game": the Settings screen's Map tab, drawn in the game's own theme (UITheme.cs, read 2026-09-22:
+   Ink #24483B, Muted #58695B, Paper #FAF4E5, Cream #F1EAD8, Green #366950, Line #D5DDC9) and the layout of the
+   existing Settings screen (Docs/Validation/DeveloperSettings179/). Flat: no shadow, bevel or gloss anywhere. */
+
+.gm-settings { background: #FAF4E5; color: #24483B; font-family: "Nunito", system-ui, sans-serif; padding: 40px 24px 0; display: flex; flex-direction: column; }
+.gm-settings h2 { margin: 0 0 18px; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; color: #24483B; }
+
+.gm-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 18px; }
+.gm-tabs span { display: flex; align-items: center; justify-content: center; height: 44px; border-radius: 12px; background: #F1EAD8; color: #24483B; font-size: 15px; font-weight: 700; }
+.gm-tabs span.on { background: #366950; color: #FAF4E5; }
+.gm-tabs span.dev { color: #58695B; }
+
+.gm-section { margin: 4px 0 8px; font-size: 13.5px; font-weight: 800; letter-spacing: 0.04em; color: #24483B; }
+.gm-options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+
+/* one option: an icon, a name, one line saying what it is; the chosen one is filled green */
+.gm-opt { position: relative; display: block; cursor: pointer; }
+.gm-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.gm-opt .body { display: grid; grid-template-columns: 48px 1fr 22px; align-items: center; gap: 12px; min-height: 64px; padding: 8px 12px 8px 8px; border-radius: 14px; background: #F1EAD8; }
+.gm-opt img { width: 48px; height: 48px; display: block; border-radius: 10px; }
+.gm-opt b { display: block; font-size: 15.5px; font-weight: 800; line-height: 1.2; color: #24483B; }
+.gm-opt small { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.3; color: #58695B; }
+.gm-opt .tick { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #D5DDC9; background: #FAF4E5; box-sizing: border-box; }
+.gm-opt input:checked + .body { background: #366950; }
+.gm-opt input:checked + .body b { color: #FAF4E5; }
+.gm-opt input:checked + .body small { color: #D5DDC9; }
+.gm-opt input:checked + .body .tick { border: 6px solid #FAF4E5; background: #366950; }
+.gm-opt input:focus-visible + .body { outline: 2px solid #9ec5ff; outline-offset: 2px; }
+.gm-opt .note { display: none; margin-top: 4px; font-size: 11.5px; font-weight: 700; color: #9D713F; }
+body.no-compass .gm-opt .note { display: block; }
+.gm-opt input:checked + .body .note { color: #F1EAD8; }
+
+.gm-back { margin-top: auto; margin-bottom: 40px; text-align: center; font-size: 15px; font-weight: 800; letter-spacing: 0.04em; color: #366950; }
+
+/* the handoff sheet below the phones */
+.gm-assets { display: flex; flex-wrap: wrap; gap: 14px; max-width: 1180px; }
+.gm-assets figure { margin: 0; width: 132px; font-size: 12px; color: #aab2c2; }
+.gm-assets img { display: block; width: 128px; height: 128px; object-fit: contain; border-radius: 8px; background: #569433; border: 1px solid #3b4355; margin-bottom: 6px; }
+.gm-assets figure.paper img { background: #FAF4E5; }
+.gm-assets code { color: #d6dbe6; font-size: 11px; word-break: break-all; }

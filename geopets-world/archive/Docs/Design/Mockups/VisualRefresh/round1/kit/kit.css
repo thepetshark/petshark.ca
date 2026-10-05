@@ -1,0 +1,234 @@
+/* Direction: Explorer's kit. Built from the objects of an expedition: canvas,
+   stitching, woven labels, enamel pins, brass, label-maker tape. Flat and
+   graphic, in the manner of a national-park poster, not leathery or grungy.
+   Rarity is the metal a pin is mounted in: bronze, silver, gold. Biome is the
+   felt behind it. Trail-marker orange is the one colour that means "go". */
+
+@font-face { font-family: "Alfa Slab One"; src: url("../shared/fonts/alfa-slab-one/AlfaSlabOne-Regular.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Barlow"; src: url("../shared/fonts/barlow/Barlow-Medium.ttf") format("truetype"); font-weight: 500; font-display: block; }
+@font-face { font-family: "Barlow"; src: url("../shared/fonts/barlow/Barlow-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: block; }
+@font-face { font-family: "Barlow"; src: url("../shared/fonts/barlow/Barlow-ExtraBold.ttf") format("truetype"); font-weight: 800; font-display: block; }
+
+.kit {
+  --canvas: #CBBE97; --canvas-edge: #8E8157; --canvas-deep: #B4A67C;
+  --pack: #2F4A3A; --pack-deep: #1F3328;
+  --orange: #F26A2E; --orange-deep: #BF4A17;
+  --enamel: #FBFAF4; --thread: #F3EAC9;
+  --brass: #C9A24B; --brass-hi: #F0DA98; --brass-lo: #8A6A24;
+  --stamp: #B5382F; --sky: #3E8FC4;
+  --bronze: #B67C4B; --bronze-hi: #E3B48A; --bronze-lo: #774C2A;
+  --silver: #BFC6CF; --silver-hi: #F4F6F9; --silver-lo: #858E99;
+  --gold: #E4B43C; --gold-hi: #FCE89A; --gold-lo: #A27713;
+  --b-meadow: #7FA65A; --b-grove: #3F7A55; --b-marsh: #3D9A98;
+  --b-stonefield: #C2A57A; --b-snow: #B5DAF0; --b-town: #EE9F50;
+  --weave: repeating-linear-gradient(0deg, rgba(31,51,40,.07) 0 1px, transparent 1px 3px),
+           repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 1px, transparent 1px 3px);
+
+  font-family: "Barlow", sans-serif; font-weight: 600; color: var(--pack);
+  -webkit-font-smoothing: antialiased;
+}
+
+.kit .slab-type { font-family: "Alfa Slab One", serif; font-weight: 400; letter-spacing: .01em; }
+.kit img.pin { display: block; filter: drop-shadow(0 3px 0 rgba(31, 51, 40, .38)); }
+
+/* A canvas flap: woven cloth, a bound edge, a line of stitching just inside. */
+.kit .flap {
+  position: relative; background-color: var(--canvas); background-image: var(--weave);
+  border: 2.5px solid var(--canvas-edge); border-radius: 20px;
+  box-shadow: 0 5px 0 rgba(31, 51, 40, .42);
+}
+.kit .flap::before { content: ""; position: absolute; inset: 6px; border-radius: 13px; border: 2px dashed var(--thread); pointer-events: none; opacity: .95; }
+
+/* A woven label sewn onto the flap. */
+.kit .label {
+  position: relative; display: inline-block; padding: 8px 22px 9px; border-radius: 7px;
+  background-color: var(--pack); background-image: var(--weave); color: var(--enamel);
+  font-family: "Alfa Slab One", serif; font-weight: 400; font-size: 24px; line-height: 1; letter-spacing: .015em;
+  box-shadow: 0 3px 0 var(--pack-deep);
+}
+.kit .label::before { content: ""; position: absolute; inset: 3px; border-radius: 4px; border: 1.5px dashed rgba(243, 234, 201, .75); }
+
+/* Buttons are stitched patches. */
+.kit .btn {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap;
+  height: 58px; padding: 0 22px; border-radius: 15px;
+  background-color: var(--orange); background-image: var(--weave); color: var(--enamel);
+  font-weight: 800; font-size: 22px; letter-spacing: .01em;
+  box-shadow: 0 5px 0 var(--orange-deep);
+}
+.kit .btn::before { content: ""; position: absolute; inset: 4px; border-radius: 11px; border: 2px dashed rgba(251, 250, 244, .8); pointer-events: none; }
+.kit .btn > * { position: relative; }
+.kit .btn.green { background-color: var(--pack); box-shadow: 0 5px 0 var(--pack-deep); }
+.kit .btn.plain { background-color: var(--enamel); color: var(--pack); box-shadow: 0 5px 0 #BDB596; }
+.kit .btn.plain::before { border-color: rgba(47, 74, 58, .45); }
+.kit .btn.small { height: 46px; font-size: 16.5px; padding: 0 8px; border-radius: 13px; }
+
+/* Polished metal: one gradient, three alloys. */
+.kit .metal { --m: var(--brass); --m-hi: var(--brass-hi); --m-lo: var(--brass-lo);
+  background: linear-gradient(145deg, var(--m-hi) 0%, var(--m) 42%, var(--m-lo) 78%, var(--m) 100%); }
+.kit .common .metal, .kit .metal.bronze { --m: var(--bronze); --m-hi: var(--bronze-hi); --m-lo: var(--bronze-lo); }
+.kit .uncommon .metal, .kit .metal.silver { --m: var(--silver); --m-hi: var(--silver-hi); --m-lo: var(--silver-lo); }
+.kit .rare .metal, .kit .metal.gold { --m: var(--gold); --m-hi: var(--gold-hi); --m-lo: var(--gold-lo); }
+
+/* ---- screen furniture ------------------------------------------------- */
+
+.kit .bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.kit .bg.splash { background-color: #9CC3D8; background-image: url("assets/splash.jpg"); }
+.kit .bg.map { background-color: #7FA65A; background-image: url("assets/map.jpg"); }
+.kit .dim { position: absolute; inset: 0; background: rgba(31, 51, 40, .6); }
+
+/* Wallet: enamel capsules in a brass rim. */
+.kit .hud-top { position: absolute; top: 16px; right: 14px; display: flex; gap: 12px; }
+.kit .capsule { height: 38px; padding: 3px; border-radius: 999px; box-shadow: 0 3px 0 rgba(31, 51, 40, .45); }
+.kit .capsule > div { height: 100%; min-width: 82px; padding: 0 13px 0 4px; display: flex; align-items: center; gap: 5px; border-radius: 999px; background: var(--enamel); font-weight: 800; font-size: 18px; }
+.kit .capsule img { width: 28px; height: 28px; filter: none; }
+.kit .capsule span { margin-left: auto; }
+
+.kit .hud-left { position: absolute; top: 96px; left: 12px; display: grid; gap: 14px; }
+.kit .hud-right { position: absolute; top: 96px; right: 12px; display: grid; gap: 8px; padding: 6px; border-radius: 999px; background-color: var(--pack); background-image: var(--weave); box-shadow: 0 3px 0 var(--pack-deep); }
+.kit .shortcut { position: relative; width: 52px; height: 52px; padding: 3px; border-radius: 50%; box-shadow: 0 4px 0 rgba(31, 51, 40, .45); }
+.kit .shortcut > div { width: 100%; height: 100%; border-radius: 50%; background: var(--enamel); display: grid; place-items: center; }
+.kit .shortcut img { width: 36px; height: 36px; filter: none; }
+.kit .mini { width: 34px; height: 34px; }
+.kit .mini.off { opacity: .45; filter: grayscale(1); }
+
+/* A stamped counter: a red rubber-stamp roundel. */
+.kit .count-stamp {
+  position: absolute; right: -8px; top: -9px; min-width: 25px; height: 25px; padding: 0 6px; display: grid; place-items: center;
+  border-radius: 999px; background: var(--enamel); color: var(--stamp); border: 2.5px solid var(--stamp);
+  font-weight: 800; font-size: 14px; line-height: 1; transform: rotate(-8deg);
+}
+.kit .count-stamp.go { color: var(--pack); border-color: var(--pack); }
+
+.kit .nav { position: absolute; left: 0; right: 0; bottom: 36px; padding: 0 16px; display: flex; align-items: flex-end; justify-content: space-between; }
+.kit .nav .big { width: 70px; height: 70px; }
+.kit .nav .mid { width: 52px; height: 52px; }
+.kit .attribution { position: absolute; left: 0; right: 0; bottom: 124px; text-align: center; font-size: 10px; font-weight: 600; color: var(--pack-deep); opacity: .75; }
+
+/* ---- splash ----------------------------------------------------------- */
+
+.kit .logo { position: absolute; left: 50%; top: 262px; width: 252px; transform: translateX(-50%); filter: drop-shadow(0 6px 0 rgba(31, 51, 40, .4)); }
+.kit .account { position: absolute; left: 18px; right: 18px; bottom: 54px; padding: 26px 22px 28px; text-align: center; }
+.kit .account h2 { margin: 0; font-size: 25px; line-height: 1.12; }
+.kit .account p { margin: 7px 0 16px; font-size: 15px; font-weight: 500; }
+.kit .account .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+
+/* ---- map furniture ---------------------------------------------------- */
+
+.kit .bezel { position: absolute; left: 50%; top: 50%; width: 312px; height: 200px; transform: translate(-50%, -46%); overflow: visible; }
+.kit .player { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -78%); display: grid; justify-items: center; }
+.kit .player .heading { width: 0; height: 0; margin-bottom: 2px; border: 8px solid transparent; border-bottom: 12px solid var(--orange); filter: drop-shadow(0 1px 0 var(--pack-deep)); }
+.kit .player img { width: 62px; height: 62px; }
+.kit .needle { width: 3px; height: 12px; background: linear-gradient(90deg, var(--silver-hi), var(--silver-lo)); border-radius: 0 0 2px 2px; }
+.kit .ground { width: 22px; height: 7px; margin-top: -2px; border-radius: 50%; background: rgba(31, 51, 40, .35); }
+
+.kit .marker { position: absolute; display: grid; justify-items: center; }
+.kit .mount { position: relative; width: 60px; height: 60px; padding: 4px; border-radius: 50%; box-shadow: 0 4px 0 rgba(31, 51, 40, .45); }
+.kit .mount > div { width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; background-color: var(--felt, var(--enamel)); background-image: var(--weave); box-shadow: inset 0 2px 0 rgba(31, 51, 40, .22); }
+.kit .mount img { width: 44px; height: 44px; filter: drop-shadow(0 2px 0 rgba(31, 51, 40, .35)); }
+
+/* ---- pin board and gear tray ------------------------------------------ */
+
+.kit .board { position: absolute; left: 12px; right: 12px; top: 64px; bottom: 132px; padding: 0 14px 12px; display: flex; flex-direction: column; overflow: hidden; }
+.kit .board > * { flex-shrink: 0; }
+.kit .board .label { align-self: flex-start; margin: 16px 0 0 4px; }
+.kit .close { position: absolute; right: 14px; top: 14px; width: 40px; height: 40px; padding: 3px; border-radius: 50%; z-index: 3; box-shadow: 0 3px 0 rgba(31, 51, 40, .45); }
+.kit .close > div { width: 100%; height: 100%; border-radius: 50%; background: var(--enamel); display: grid; place-items: center; font-weight: 800; font-size: 17px; line-height: 1; color: var(--stamp); }
+
+.kit .progress { margin: 14px 4px 0; display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.kit .progress b { font-weight: 800; font-size: 16px; }
+.kit .progress .strap { position: relative; flex: 1; height: 14px; border-radius: 4px; background: var(--canvas-deep); box-shadow: inset 0 2px 0 rgba(31, 51, 40, .25); overflow: hidden; }
+.kit .progress .fill { position: absolute; inset: 0 auto 0 0; background-color: var(--orange); background-image: var(--weave); }
+
+.kit .chips { display: flex; gap: 7px; margin: 12px -14px 0; padding: 0 18px 8px; overflow: hidden; }
+.kit .chip { flex: 0 0 auto; height: 30px; padding: 0 12px 0 9px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+  border-radius: 6px; background-color: var(--enamel); box-shadow: 0 2px 0 #BDB596; }
+.kit .chip i { width: 13px; height: 13px; border-radius: 50%; background: var(--dot, var(--enamel)); box-shadow: inset 0 0 0 1.5px var(--pack); }
+.kit .chip.on { background-color: var(--pack); background-image: var(--weave); color: var(--enamel); box-shadow: 0 2px 0 var(--pack-deep); }
+.kit .chip.on i { box-shadow: inset 0 0 0 1.5px var(--enamel); }
+
+.kit .grid { display: grid; margin-top: 8px; padding: 2px 2px 8px; }
+.kit .grid.three { grid-template-columns: repeat(3, 1fr); gap: 14px 6px; }
+.kit .grid.four { grid-template-columns: repeat(4, 1fr); gap: 10px 8px; }
+
+.kit .slot { display: grid; justify-items: center; text-align: center; }
+.kit .slot .mount { width: 88px; height: 88px; padding: 5px; }
+.kit .slot .mount img { width: 68px; height: 68px; }
+.kit .slot .sparkle { position: absolute; right: -2px; top: -4px; font-size: 18px; line-height: 1; color: var(--gold-hi); text-shadow: 0 1px 0 var(--gold-lo), 0 0 0 var(--gold-lo); }
+/* Names are punched on label-maker tape. */
+.kit .name { margin-top: 7px; max-width: 100%; padding: 3px 7px 3px; border-radius: 2px; background: var(--pack); color: var(--enamel);
+  font-weight: 800; font-size: 10.5px; line-height: 1.15; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 1.5px 0 var(--pack-deep); }
+.kit .slot .lvl { margin-top: 4px; font-size: 11.5px; font-weight: 600; opacity: .8; }
+.kit .slot.missing .mount { background: none; box-shadow: none; border: 2.5px dashed var(--canvas-edge); padding: 2px; }
+.kit .slot.missing .mount > div { background: rgba(31, 51, 40, .08); box-shadow: none; font-family: "Alfa Slab One", serif; font-size: 30px; color: rgba(31, 51, 40, .3); }
+.kit .slot.missing .name { background: var(--canvas-deep); color: rgba(31, 51, 40, .7); box-shadow: none; }
+.kit .slot .pips { position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%); display: flex; gap: 3px; padding: 2px 4px; border-radius: 999px; background: var(--enamel); box-shadow: 0 1px 0 rgba(31, 51, 40, .35); }
+.kit .slot .pips i { width: 7px; height: 7px; border-radius: 50%; background: #D8D2B8; }
+.kit .slot .pips i.on { background: var(--orange); }
+
+.kit .tabs { display: flex; gap: 6px; margin: 14px 2px 4px; }
+.kit .tab { flex: 1; height: 34px; display: grid; place-items: center; font-size: 13px; font-weight: 600; border-radius: 6px; background: var(--enamel); box-shadow: 0 2px 0 #BDB596; }
+.kit .tab.on { background-color: var(--pack); background-image: var(--weave); color: var(--enamel); box-shadow: 0 2px 0 var(--pack-deep); }
+
+/* A compartment in a gear tray: recessed, not raised. */
+.kit .tile { position: relative; padding: 7px 2px 6px; border-radius: 11px; text-align: center; background-color: var(--canvas-deep); background-image: var(--weave); box-shadow: inset 0 3px 0 rgba(31, 51, 40, .24), inset 0 0 0 1.5px rgba(31, 51, 40, .18); }
+.kit .tile img { width: 54px; height: 54px; margin: 0 auto; }
+.kit .tile .count { position: absolute; right: -3px; top: 38px; min-width: 25px; height: 21px; padding: 2px; border-radius: 5px; box-shadow: 0 2px 0 rgba(31, 51, 40, .4); }
+.kit .tile .count b { display: grid; place-items: center; height: 100%; padding: 0 4px; border-radius: 3px; background: var(--enamel); font-weight: 800; font-size: 13px; line-height: 1; }
+.kit .tile .title { margin-top: 3px; font-size: 11px; font-weight: 600; line-height: 1.1; white-space: nowrap; }
+
+/* ---- confirm flap ----------------------------------------------------- */
+
+.kit .permit { position: absolute; left: 22px; right: 22px; top: 232px; padding: 0 18px 28px; text-align: center; }
+.kit .permit .label { margin-top: 18px; font-size: 21px; }
+.kit .permit .close { right: -10px; top: -12px; }
+.kit .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.kit .fact { padding: 10px 6px 9px; border-radius: 10px; background: var(--enamel); font-size: 13px; font-weight: 500; line-height: 1.2; box-shadow: 0 2px 0 #BDB596; }
+.kit .fact img { width: 46px; height: 46px; margin: 0 auto 3px; }
+.kit .fact b { display: block; font-weight: 800; font-size: 19px; }
+.kit .watch { position: relative; width: 42px; height: 42px; margin: 3px auto 5px; padding: 3px; border-radius: 50%; }
+.kit .watch > div { position: relative; width: 100%; height: 100%; border-radius: 50%; background: var(--enamel); }
+.kit .watch > div::before, .kit .watch > div::after { content: ""; position: absolute; left: 50%; bottom: 50%; width: 3px; margin-left: -1.5px; border-radius: 3px; background: var(--pack); transform-origin: 50% 100%; }
+.kit .watch > div::before { height: 12px; }
+.kit .watch > div::after { height: 9px; transform: rotate(115deg); background: var(--orange); }
+.kit .permit .prompt { margin: 16px 0 12px; font-size: 15px; font-weight: 500; }
+.kit .price { display: inline-flex; align-items: center; gap: 2px; height: 32px; padding: 0 9px 0 3px; margin-left: 2px; border-radius: 999px; background: var(--enamel); color: var(--pack); font-size: 18px; }
+.kit .price img { width: 26px; height: 26px; filter: none; }
+
+/* ---- Hometown ---------------------------------------------------------- */
+
+.kit .bg.home { background-color: #6FA8D6; background-image: url("assets/home.jpg"); }
+.kit .hb { position: absolute; transform: translate(-50%, -100%); display: grid; justify-items: center; }
+.kit .hb .body { position: relative; display: flex; align-items: center; gap: 5px; height: 38px; padding: 0 12px 0 4px; border-radius: 999px; white-space: nowrap;
+  background: var(--enamel); box-shadow: 0 0 0 3px var(--brass), 0 0 0 4px var(--brass-lo), 0 6px 0 rgba(31, 51, 40, .45); font-weight: 800; font-size: 16px; }
+.kit .hb .body img { width: 30px; height: 30px; }
+.kit .hb .stem { width: 3px; height: 13px; margin-top: 4px; background: linear-gradient(90deg, var(--silver-hi), var(--silver-lo)); }
+.kit .hb.ready .body { background-color: var(--orange); background-image: var(--weave); color: var(--enamel); }
+.kit .hb.locked .body { padding-left: 10px; }
+.kit .hb .door { width: 14px; height: 20px; border-radius: 7px 7px 2px 2px; background: #9A6B3C; box-shadow: inset 0 0 0 2px var(--pack); }
+.kit .hb .meter { position: absolute; left: 12px; right: 12px; bottom: -11px; height: 6px; border-radius: 3px; background: var(--canvas-deep); box-shadow: 0 0 0 1.5px var(--pack); overflow: hidden; }
+.kit .hb .meter i { display: block; width: 58%; height: 100%; background: var(--orange); }
+.kit .hb.working .stem { margin-top: 13px; }
+
+/* ---- second pass: real scenes, auto-delivery, storage ------------------ */
+.kit .arc { position: absolute; inset: 0; width: 390px; height: 844px; }
+.kit .hb.locked .body { padding: 0 11px; height: 34px; }
+.kit .lock { position: relative; display: block; width: 14px; height: 11px; margin-top: 8px; border-radius: 3px; background: var(--pack); }
+.kit .lock::before { content: ""; position: absolute; left: 2px; top: -8px; width: 6px; height: 8px; border: 2.5px solid var(--pack); border-bottom: 0; border-radius: 6px 6px 0 0; }
+.kit .toast { position: absolute; right: 14px; top: 66px; display: flex; align-items: center; gap: 5px; height: 38px; padding: 0 13px 0 4px; border-radius: 999px; white-space: nowrap;
+  background: var(--enamel); box-shadow: 0 0 0 3px var(--brass), 0 0 0 4px var(--brass-lo), 0 6px 0 rgba(31, 51, 40, .45); font-size: 13px; font-weight: 500; }
+.kit .toast img { width: 30px; height: 30px; }
+.kit .toast b { font-weight: 800; font-size: 16px; }
+.kit .progress.storage { margin-top: 14px; }
+.kit .progress .up { flex: none; height: 26px; padding: 0 10px; display: grid; place-items: center; border-radius: 6px; background-color: var(--orange); background-image: var(--weave); color: var(--enamel);
+  box-shadow: 0 2px 0 var(--orange-deep); font-weight: 800; font-size: 12.5px; }
+
+/* ---- brand strip ------------------------------------------------------ */
+
+.kit-brand .logo-tile { width: 360px; height: 250px; display: grid; place-items: center; background: #9CC3D8 url("assets/splash.jpg") center 40% / cover; }
+.kit-brand .logo-tile img { max-width: 300px; max-height: 214px; filter: drop-shadow(0 5px 0 rgba(31, 51, 40, .4)); }
+.kit-brand .icon-tile { padding: 22px 24px 8px; display: flex; gap: 18px; align-items: flex-end; background: #F2ECDC; }
+.kit-brand .icon-tile.dark { background: #20252F; }
+.kit-brand .icon-tile img { display: block; border-radius: 22.5%; }
+.kit-brand .icon-tile img.circle { border-radius: 50%; }

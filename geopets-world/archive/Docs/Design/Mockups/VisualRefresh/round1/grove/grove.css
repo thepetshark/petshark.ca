@@ -1,0 +1,223 @@
+/* Direction: the current look, pushed. The comparison baseline.
+   Everything here is the identity the game already uses -- its theme colours
+   from UITheme.cs, Nunito, Fraunces, the approved outlined symbols, the
+   selected app image -- with four things added: depth in three steps, colour
+   that carries meaning (biome tint, rarity ring, state), a title where WORLD
+   has weight, and a night mode. No generated art. */
+
+@font-face { font-family: "Nunito"; src: url("../shared/fonts/nunito/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; font-display: block; }
+@font-face { font-family: "Fraunces"; src: url("../shared/fonts/fraunces/Fraunces-Variable.ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+
+.gv {
+  /* The native theme, unchanged (Assets/_GeoPets/Runtime/UI/UITheme.cs). */
+  --ink: #24483B; --muted: #58695B; --paper: #FAF4E5; --cream: #F1EAD8; --green: #366950; --line: #D5DDC9; --gold: #9D713F;
+  /* Added. */
+  --green-deep: #25503B; --leaf: #5FA777; --water: #4F8FB3; --honey: #D9A441; --berry: #B5485D;
+  --b-meadow: #DDE8B9; --b-grove: #BFDCC4; --b-marsh: #BDE0DA; --b-stonefield: #E5D9C3; --b-snow: #DCEAF2; --b-town: #F3D9B5;
+  --shade: 36, 72, 59;  /* shadows are tinted with the ink, never grey */
+  --lift-1: 0 1px 0 #fff inset, 0 1px 0 var(--line), 0 3px 8px rgba(var(--shade), .14);
+  --lift-2: 0 1px 0 #fff inset, 0 2px 0 var(--line), 0 8px 18px rgba(var(--shade), .16);
+  --lift-3: 0 1px 0 #fff inset, 0 3px 0 #C6D0B8, 0 18px 40px rgba(var(--shade), .30);
+
+  font-family: "Nunito", sans-serif; font-weight: 700; color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+.gv .serif { font-family: "Fraunces", serif; font-weight: 700; font-variation-settings: "SOFT" 60, "WONK" 1; letter-spacing: -.01em; }
+
+/* ---- night mode: the same components on dark surfaces ------------------ */
+.gv.night { --paper: #21362E; --cream: #2B4339; --line: #3C574B; --ink: #EAF1E4; --muted: #A9BCAE; --lift-1: 0 1px 0 rgba(255,255,255,.08) inset, 0 3px 8px rgba(0,0,0,.35); --lift-2: 0 1px 0 rgba(255,255,255,.08) inset, 0 8px 18px rgba(0,0,0,.4); }
+.gv.night .icon { filter: drop-shadow(0 0 0 transparent); }
+.gv.night .chipbox, .gv.night .disc, .gv.night .marker .face.sq { background: #F1EAD8; }  /* dark-green symbols keep their cream backing on dark terrain */
+
+/* ---- primitives -------------------------------------------------------- */
+
+.gv .btn {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap;
+  height: 56px; padding: 0 22px; border-radius: 18px; color: #fff; font-weight: 800; font-size: 19px; letter-spacing: .01em;
+  background: linear-gradient(#3F7A5C, var(--green)); box-shadow: 0 1px 0 rgba(255,255,255,.28) inset, 0 3px 0 var(--green-deep), 0 8px 16px rgba(var(--shade), .22);
+}
+.gv .btn.ghost { background: var(--paper); color: var(--green); box-shadow: 0 1px 0 #fff inset, 0 0 0 1.5px var(--line), 0 3px 0 var(--line); }
+.gv .btn.small { height: 46px; font-size: 16px; padding: 0 8px; border-radius: 15px; }
+
+.gv .bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.gv .bg.splash { background-color: #8FC4E8; background-image: linear-gradient(rgba(20,48,38,.10), rgba(20,48,38,0) 40%), url("assets/splash.jpg"); }
+.gv .bg.map { background-color: #4E8F3C; background-image: url("assets/map-day.jpg"); }
+.gv.night .bg.map { background-color: #16241F; background-image: url("assets/map-night.jpg"); }
+.gv .dim { position: absolute; inset: 0; background: rgba(22, 44, 36, .5); }
+
+/* Wallet chips: step one of the depth scale. */
+.gv .hud-top { position: absolute; top: 16px; right: 14px; display: flex; gap: 10px; }
+.gv .wallet { height: 36px; min-width: 84px; padding: 0 13px 0 5px; display: flex; align-items: center; gap: 5px; border-radius: 999px; background: var(--paper); box-shadow: var(--lift-1); font-weight: 800; font-size: 17px; }
+.gv .wallet img { width: 28px; height: 28px; }
+.gv .wallet span { margin-left: auto; }
+
+.gv .hud-left { position: absolute; top: 96px; left: 12px; display: grid; gap: 12px; }
+.gv .hud-right { position: absolute; top: 96px; right: 12px; display: grid; gap: 8px; }
+.gv .chipbox { position: relative; width: 50px; height: 50px; border-radius: 16px; display: grid; place-items: center; background: var(--paper); box-shadow: var(--lift-1); }
+.gv .chipbox img { width: 34px; height: 34px; }
+.gv .chipbox.mini { width: 36px; height: 36px; border-radius: 12px; }
+.gv .chipbox.mini img { width: 24px; height: 24px; }
+.gv .chipbox.mini.off { opacity: .5; }
+.gv .pill { position: absolute; right: -7px; top: -7px; min-width: 22px; height: 22px; padding: 0 6px; display: grid; place-items: center; border-radius: 999px; background: var(--berry); color: #fff; font-weight: 800; font-size: 12.5px; line-height: 1; box-shadow: 0 0 0 2px var(--paper); }
+.gv .pill.go { background: var(--leaf); }
+
+.gv .nav { position: absolute; left: 0; right: 0; bottom: 36px; padding: 0 16px; display: flex; align-items: flex-end; justify-content: space-between; }
+.gv .disc { display: grid; place-items: center; border-radius: 50%; background: var(--paper); box-shadow: 0 0 0 3px var(--ink), var(--lift-2); }
+.gv .disc.big { width: 68px; height: 68px; }
+.gv .disc.mid { width: 48px; height: 48px; }
+.gv .disc.big img { width: 44px; height: 44px; }
+.gv .disc.mid img { width: 30px; height: 30px; }
+.gv .attribution { position: absolute; left: 0; right: 0; bottom: 120px; text-align: center; font-size: 10px; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); }
+
+/* ---- title: WORLD given weight, three code-native treatments ----------- */
+
+.gv .title { color: #FFF8E6; text-align: center; text-shadow: 0 2px 0 rgba(20,48,38,.55), 0 6px 18px rgba(20,48,38,.45); line-height: .92; }
+.gv .title .name { display: block; font-family: "Nunito", sans-serif; font-weight: 900; font-size: 44px; letter-spacing: -.01em; }
+.gv .title .world { display: block; margin-top: 4px; font-family: "Fraunces", serif; font-weight: 900; font-variation-settings: "SOFT" 100, "WONK" 1; font-size: 62px; letter-spacing: .02em; color: #FFE7A8; }
+.gv .title .world img { width: .8em; height: .8em; margin: 0 .02em -.1em; vertical-align: baseline; filter: drop-shadow(0 2px 0 rgba(20,48,38,.55)); }
+.gv .title.banner .world { margin-top: 10px; padding: 4px 18px 8px; border-radius: 16px; font-size: 50px; color: #FFF8E6; background: linear-gradient(#3F7A5C, var(--green)); box-shadow: 0 1px 0 rgba(255,255,255,.3) inset, 0 4px 0 var(--green-deep), 0 10px 22px rgba(20,48,38,.4); display: inline-block; text-shadow: 0 2px 0 rgba(20,48,38,.5); }
+.gv .title.stacked .name { font-size: 30px; letter-spacing: .02em; }
+.gv .title.stacked .world { font-size: 74px; margin-top: 0; }
+.gv .splash-title { position: absolute; left: 0; right: 0; top: 96px; }
+
+.gv .account { position: absolute; left: 18px; right: 18px; bottom: 54px; padding: 24px 20px 22px; border-radius: 26px; background: var(--paper); box-shadow: var(--lift-3); text-align: center; }
+.gv .account h2 { margin: 0; font-size: 27px; line-height: 1.1; }
+.gv .account p { margin: 6px 0 16px; font-size: 15px; font-weight: 600; color: var(--muted); }
+.gv .account .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+
+/* ---- map furniture ---------------------------------------------------- */
+
+.gv .range { position: absolute; left: 50%; top: 50%; width: 300px; height: 190px; transform: translate(-50%, -46%); border-radius: 50%;
+  border: 2.5px solid rgba(255, 248, 230, .95); box-shadow: 0 0 0 1.5px rgba(36, 72, 59, .55), inset 0 0 0 1.5px rgba(36, 72, 59, .25); background: radial-gradient(ellipse at center, rgba(255,248,230,0) 58%, rgba(255,248,230,.22) 100%); }
+.gv .player { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -86%); display: grid; justify-items: center; }
+.gv .player .disc { width: 56px; height: 56px; box-shadow: 0 0 0 3px var(--green), 0 0 0 6px rgba(255,248,230,.9), var(--lift-2); }
+.gv .player .disc img { width: 38px; height: 38px; }
+.gv .stem { width: 0; height: 0; margin-top: 5px; border: 7px solid transparent; border-top: 10px solid var(--paper); filter: drop-shadow(0 2px 1px rgba(var(--shade), .4)); }
+
+.gv .marker { position: absolute; display: grid; justify-items: center; }
+.gv .marker .face { position: relative; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--stage, var(--paper)); box-shadow: 0 0 0 3px var(--ring, var(--paper)), var(--lift-2); }
+.gv .marker .face img { width: 42px; height: 42px; }
+.gv .marker .face.sq { border-radius: 17px; }
+.gv .uncommon { --ring: var(--water); }
+.gv .rare { --ring: var(--honey); }
+
+/* ---- sheets ------------------------------------------------------------ */
+
+.gv .sheet { position: absolute; left: 12px; right: 12px; top: 64px; bottom: 132px; padding: 18px 14px 12px; border-radius: 28px; background: var(--paper); box-shadow: var(--lift-3); display: flex; flex-direction: column; overflow: hidden; }
+.gv .sheet > * { flex-shrink: 0; }
+.gv .sheet h2 { margin: 0 0 0 4px; font-size: 30px; line-height: 1; }
+.gv .close { position: absolute; right: 14px; top: 14px; width: 38px; height: 38px; border-radius: 13px; display: grid; place-items: center; background: var(--cream); box-shadow: var(--lift-1); }
+.gv .close img { width: 22px; height: 22px; }
+
+.gv .progress { margin: 14px 4px 0; display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+.gv .progress b { font-weight: 800; font-size: 15px; color: var(--ink); }
+.gv .progress .bar { position: relative; flex: 1; height: 10px; border-radius: 999px; background: var(--cream); box-shadow: inset 0 1px 2px rgba(var(--shade), .2); overflow: hidden; }
+.gv .progress .fill { position: absolute; inset: 0 auto 0 0; border-radius: 999px; background: linear-gradient(90deg, var(--leaf), var(--green)); }
+
+.gv .chips { display: flex; gap: 7px; margin: 12px -14px 0; padding: 0 18px 10px; overflow: hidden; }
+.gv .chip { flex: 0 0 auto; height: 30px; padding: 0 12px 0 9px; display: flex; align-items: center; gap: 6px; font-size: 13px; border-radius: 999px; background: var(--cream); }
+.gv .chip i { width: 12px; height: 12px; border-radius: 50%; background: var(--dot, var(--paper)); box-shadow: inset 0 0 0 1.5px rgba(var(--shade), .45); }
+.gv .chip.on { background: var(--green); color: #fff; }
+.gv .chip.on i { box-shadow: inset 0 0 0 1.5px #fff; }
+
+.gv .grid { display: grid; margin-top: 4px; padding: 2px 2px 10px; }
+.gv .grid.three { grid-template-columns: repeat(3, 1fr); gap: 10px 8px; }
+.gv .grid.four { grid-template-columns: repeat(4, 1fr); gap: 10px 8px; }
+
+/* A Wildling card: step two of the depth scale. Tint = biome, ring = rarity. */
+.gv .card { position: relative; padding: 8px 6px 9px; border-radius: 20px; background: #FFFBF0; box-shadow: var(--lift-2); text-align: center; }
+.gv .card .stage { position: relative; width: 82px; height: 82px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, rgba(255,255,255,.75), rgba(255,255,255,0) 62%), var(--stage); box-shadow: 0 0 0 3px var(--ring, var(--line)); }
+.gv .card .stage img { width: 74px; height: 74px; margin-top: 6px; filter: drop-shadow(0 3px 2px rgba(var(--shade), .28)); }
+.gv .card .name { margin-top: 12px; font-weight: 800; font-size: 13px; line-height: 1.1; white-space: nowrap; }
+.gv .card .meta { margin-top: 3px; font-size: 11px; font-weight: 700; color: var(--muted); }
+.gv .card .tier { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); z-index: 2; box-shadow: 0 0 0 2px #FFFBF0; padding: 1px 8px 2px; border-radius: 999px; font-size: 9.5px; font-weight: 800; letter-spacing: .02em; color: #fff; background: var(--ring); }
+.gv .card.missing { background: var(--cream); box-shadow: inset 0 0 0 1.5px var(--line); }
+.gv .card.missing .stage { background: #E6DEC9; box-shadow: 0 0 0 3px #DCD3BC; }
+.gv .card.missing .stage img { filter: brightness(0) opacity(.22); }
+.gv .card.missing .name { color: var(--muted); font-weight: 700; }
+.gv .card .pips { position: absolute; right: 8px; top: 9px; display: flex; gap: 3px; }
+.gv .card .pips i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+.gv .card .pips i.on { background: var(--green); }
+
+.gv .tabs { display: flex; gap: 4px; margin: 14px 2px 8px; padding: 4px; border-radius: 16px; background: var(--cream); }
+.gv .tab { flex: 1; height: 32px; display: grid; place-items: center; font-size: 13px; border-radius: 12px; color: var(--muted); }
+.gv .tab.on { background: var(--paper); color: var(--ink); box-shadow: var(--lift-1); }
+
+.gv .tile { position: relative; padding: 8px 2px 8px; border-radius: 18px; background: #FFFBF0; box-shadow: var(--lift-1); text-align: center; }
+.gv .tile .well { width: 56px; height: 56px; margin: 0 auto; border-radius: 16px; display: grid; place-items: center; background: var(--well, var(--cream)); }
+.gv .tile .well img { width: 44px; height: 44px; }
+.gv .tile.material { --well: #E4EEDC; } .gv .tile.product { --well: #F6E6C6; } .gv .tile.tool { --well: #DDE7EE; }
+.gv .tile .count { position: absolute; right: 5px; top: 5px; min-width: 24px; height: 21px; padding: 0 6px; display: grid; place-items: center; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 800; font-size: 12.5px; line-height: 1; }
+.gv .tile .title { margin-top: 6px; font-size: 11px; line-height: 1.1; white-space: nowrap; color: var(--muted); }
+
+/* ---- Hometown bubbles -------------------------------------------------- */
+
+.gv .hb { position: absolute; transform: translate(-50%, -100%); display: grid; justify-items: center; }
+.gv .hb .body { position: relative; display: flex; align-items: center; gap: 6px; height: 38px; padding: 0 13px 0 6px; border-radius: 999px; white-space: nowrap; background: var(--paper); box-shadow: var(--lift-2); font-weight: 800; font-size: 15px; }
+.gv .hb .body img { width: 28px; height: 28px; }
+.gv .hb.ready .body { background: linear-gradient(#6FB887, var(--leaf)); color: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.3) inset, 0 3px 0 #3F8458, 0 8px 16px rgba(var(--shade), .25); }
+.gv .hb.ready .body img { padding: 2px; border-radius: 50%; background: var(--paper); }
+.gv .hb.locked .body { background: rgba(250, 244, 229, .92); color: var(--muted); }
+.gv .hb .meter { position: absolute; left: 12px; right: 12px; bottom: -9px; height: 6px; border-radius: 999px; background: var(--cream); box-shadow: 0 0 0 1.5px var(--paper); overflow: hidden; }
+.gv .hb .meter i { display: block; width: 58%; height: 100%; background: var(--honey); }
+.gv .hb.working .stem { margin-top: 12px; }
+
+/* ---- confirm ----------------------------------------------------------- */
+
+.gv .modal { position: absolute; left: 22px; right: 22px; top: 238px; padding: 24px 18px 20px; border-radius: 28px; background: var(--paper); box-shadow: var(--lift-3); text-align: center; }
+.gv .modal h2 { margin: 0; font-size: 25px; line-height: 1.1; }
+.gv .modal .close { right: -8px; top: -10px; border-radius: 50%; background: var(--paper); box-shadow: var(--lift-2); }
+.gv .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.gv .fact { padding: 12px 6px 10px; border-radius: 18px; background: var(--well, var(--cream)); font-size: 13px; font-weight: 600; line-height: 1.2; color: var(--muted); }
+.gv .fact img { width: 42px; height: 42px; display: block; margin: 0 auto 4px; }
+.gv .fact b { display: block; font-weight: 800; font-size: 18px; color: var(--ink); }
+.gv .modal .prompt { margin: 16px 0 12px; font-size: 15px; font-weight: 600; color: var(--muted); }
+.gv .price { display: inline-flex; align-items: center; gap: 3px; height: 30px; padding: 0 9px 0 3px; margin-left: 2px; border-radius: 999px; background: rgba(255, 248, 230, .96); color: var(--ink); font-size: 16px; }
+.gv .price img { width: 24px; height: 24px; }
+
+/* ---- screens drawn over today's real screenshots -------------------------
+   The pushed interface sits at exactly today's measured positions, so nothing
+   of the old interface shows through. */
+.gv .bg.map-today { background-image: url("assets/today-map.png"); background-size: 390px 844px; }
+.gv .bg.home-today { background-image: url("assets/today-home.png"); background-size: 390px 844px; }
+.gv.real .nav { bottom: 44px; }
+.gv.real .hud-top { top: 10px; right: 10px; gap: 2px; }
+.gv.real .wallet { width: 96px; min-width: 96px; }
+.gv.real .hud-left { top: 125px; left: 7px; }
+.gv.real .hud-right { top: 138px; right: 9px; min-height: 96px; align-content: space-evenly; justify-items: center; gap: 0; padding: 0 3px; border-radius: 999px; background: var(--paper); box-shadow: var(--lift-1); }
+.gv.real .hud-right .chipbox.mini { width: 32px; height: 32px; box-shadow: none; background: var(--cream); }
+.gv .arc { position: absolute; inset: 0; width: 390px; height: 844px; }
+.gv .marker .face img.portrait { width: 46px; height: 46px; border-radius: 50%; }
+/* Today's count badge sits at the lower right of each portrait; the pushed pill goes exactly over it. */
+.gv.real .marker .pill { top: auto; bottom: -3px; right: -5px; min-width: 26px; height: 26px; font-size: 14px; }
+.gv .puck { position: absolute; left: 195px; top: 423px; transform: translate(-50%, -50%); }
+.gv .puck .disc { width: 46px; height: 46px; box-shadow: 0 0 0 3px var(--green), 0 0 0 6px rgba(255, 248, 230, .92), 0 6px 12px rgba(var(--shade), .4); }
+.gv .puck .disc img { width: 30px; height: 30px; }
+
+.gv .state { position: absolute; display: flex; align-items: center; gap: 6px; padding: 0 10px 0 7px; border-radius: 18px; background: var(--paper); box-shadow: var(--lift-2); white-space: nowrap; }
+.gv .state img { width: 30px; height: 30px; flex: none; }
+.gv .state b { display: block; font-weight: 800; font-size: 15px; line-height: 1.1; }
+.gv .state.idle b { font-size: 12.5px; white-space: normal; color: var(--muted); }
+.gv .state.locked { height: 34px; padding: 0 12px 0 6px; border-radius: 999px; background: rgba(250, 244, 229, .94); }
+.gv .state.locked img { width: 22px; height: 22px; } .gv .state.locked b { font-size: 13px; color: var(--muted); }
+.gv .slots { display: flex; gap: 3px; margin-top: 4px; }
+.gv .slots i { width: 14px; height: 5px; border-radius: 3px; background: var(--line); }
+.gv .slots i.on { background: var(--honey); }
+.gv .toast { position: absolute; right: 12px; top: 14px; height: 38px; padding: 0 14px 0 6px; display: flex; align-items: center; gap: 6px; border-radius: 999px; background: var(--paper); box-shadow: var(--lift-2); font-size: 14px; }
+.gv .toast img { width: 28px; height: 28px; } .gv .toast b { font-weight: 800; } .gv .toast span { color: var(--muted); font-weight: 600; }
+
+/* ---- second pass: storage -------------------------------------------- */
+.gv .progress.storage { margin-top: 12px; }
+.gv .progress .up { flex: none; height: 26px; padding: 0 11px; display: grid; place-items: center; border-radius: 999px; background: var(--green); color: #fff; font-weight: 800; font-size: 12.5px; box-shadow: 0 2px 0 var(--green-deep); }
+.gv .progress.storage + .tabs { margin-top: 12px; }
+
+/* ---- brand strip ------------------------------------------------------- */
+
+.gv-brand .logo-tile { width: 360px; height: 250px; display: grid; place-items: center; background: #8FC4E8 url("assets/splash.jpg") center 22% / cover; }
+.gv-brand .logo-tile .title .name { font-size: 34px; } .gv-brand .logo-tile .title .world { font-size: 48px; }
+.gv-brand .logo-tile .title.banner .world { font-size: 40px; } .gv-brand .logo-tile .title.stacked .name { font-size: 24px; } .gv-brand .logo-tile .title.stacked .world { font-size: 58px; }
+.gv-brand .icon-tile { padding: 22px 24px 8px; display: flex; gap: 18px; align-items: flex-end; background: #F2ECDC; }
+.gv-brand .icon-tile.dark { background: #20252F; }
+.gv-brand .icon-tile img { display: block; border-radius: 22.5%; }
+.gv-brand .icon-tile img.circle { border-radius: 50%; }

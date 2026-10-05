@@ -1,0 +1,86 @@
+/* Playset. The world is the smooth toy diorama of the Toybox map the owner liked, now with relief and
+   moving light. The interface is organic and SOLID: soft blob shapes in flat colour, never a shadow, a bevel
+   or a gloss. Depth is colour on colour. One decoration only: a small leaf pattern on sheet headers. */
+
+@font-face { font-family: "Baloo 2"; src: url("../shared/fonts/baloo2/Baloo2-Variable.ttf") format("truetype"); font-weight: 400 800; font-display: block; }
+@font-face { font-family: "Nunito"; src: url("../../round1/shared/fonts/nunito/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; font-display: block; }
+
+.ps { --butter: #FFE9A8; --butter-soft: #FFF4D2; --leaf: #3FA65A; --leaf-soft: #D9F2C4; --sky: #5CC1F0; --sky-soft: #D6F0FC; --coral: #FF7A59; --coral-soft: #FFE0D6; --ink: #2B3A55; --cloud: #FFFDF5;
+  --blob: 46% 54% 50% 50% / 52% 48% 52% 48%; --blob-b: 54% 46% 48% 52% / 48% 54% 46% 52%;
+  font-family: "Nunito", sans-serif; font-weight: 700; color: var(--ink); }
+.ps .sym svg g { stroke: var(--ink); stroke-width: 3.4; }
+.ps h2, .ps h3, .ps b, .ps .btn, .ps .tab, .ps .lead { font-family: "Baloo 2", sans-serif; }
+
+/* map */
+.ps .range-under { stroke: rgba(43, 58, 85, .38); stroke-width: 6; stroke-linecap: round; }
+.ps .range-line { stroke: var(--cloud); stroke-width: 3.5; stroke-linecap: round; stroke-dasharray: 1 9; }
+.ps .player .sym { left: -21px; top: -21px; width: 42px; height: 42px; padding: 5px; border-radius: var(--blob); background: var(--leaf); border: 4px solid var(--cloud); }
+.ps .player .sym svg g { stroke: var(--cloud); } .ps .player .sym svg [fill]:not([fill="none"]) { fill: var(--leaf); }
+.ps .mk .face { left: -24px; top: -24px; width: 48px; height: 48px; border-radius: var(--blob); background: var(--leaf-soft); border: 4px solid var(--cloud); }
+.ps .mk.uncommon .face { background: var(--sky-soft); border-color: var(--sky); } .ps .mk.rare .face { background: var(--coral-soft); border-color: var(--coral); }
+.ps .mk .face .creature { width: 40px; height: 40px; margin-top: 4px; }
+.ps .mk .stem { left: -7px; top: 22px; border: 7px solid transparent; border-top: 10px solid var(--cloud); border-bottom: 0; }
+.ps .mk.uncommon .stem { border-top-color: var(--sky); } .ps .mk.rare .stem { border-top-color: var(--coral); }
+.ps .mk .count { left: 10px; top: 4px; min-width: 23px; height: 23px; padding: 0 5px; border-radius: 12px; background: var(--coral); color: var(--cloud); font-size: 15px; font-weight: 800; line-height: 1; }
+.ps .pickup .sym { padding: 3px; border-radius: var(--blob); background: var(--cloud); }
+
+.ps .purse { height: 36px; padding: 0 13px 0 6px; border-radius: 18px 15px 18px 16px; background: var(--cloud); }
+.ps .purse b { font-size: 19px; font-weight: 700; line-height: 1; padding-top: 2px; }
+.ps .short { width: 52px; height: 52px; border-radius: var(--blob); background: var(--cloud); } .ps .short .sym { width: 34px; height: 34px; }
+.ps .short .badge { right: -5px; top: -5px; min-width: 22px; height: 22px; border-radius: 11px; background: var(--coral); color: var(--cloud); font-size: 14px; font-weight: 800; }
+.ps .toggle { width: 40px; height: 40px; border-radius: var(--blob-b); background: var(--cloud); } .ps .toggle.on { background: var(--leaf-soft); } .ps .toggle .sym { width: 26px; height: 26px; }
+.ps .attribution { color: var(--cloud); }
+.ps .nav { padding: 0 14px; height: 66px; }
+.ps .nav::before { content: ""; position: absolute; left: 46px; right: 46px; top: 9px; bottom: 9px; border-radius: 26px 22px 24px 28px; background: var(--butter); }
+.ps .dest { position: relative; width: 50px; height: 50px; border-radius: var(--blob-b); background: var(--cloud); } .ps .dest .sym { width: 31px; height: 31px; }
+.ps .dest.big { width: 66px; height: 66px; border-radius: var(--blob); border: 5px solid var(--butter); } .ps .dest.big .sym { width: 40px; height: 40px; }
+
+/* sheets */
+.ps .scrim { background: rgba(43, 58, 85, .55); }
+.ps .sheet { left: 10px; right: 10px; border-radius: 36px 30px 34px 28px; background: var(--cloud); }
+.ps .sheet-head { height: 74px; padding: 0 16px 0 22px; background: var(--butter) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='30'%3E%3Cpath d='M5 15c4-8 12-8 16 0-4 8-12 8-16 0z' fill='%23F9DB86'/%3E%3C/svg%3E"); }
+.ps .sheet h2 { font-size: 33px; font-weight: 800; line-height: 1; padding-top: 4px; }
+.ps .close { width: 42px; height: 42px; border-radius: var(--blob); background: var(--cloud); } .ps .close .sym { width: 22px; height: 22px; }
+.ps .progress { margin: 14px 18px 0; font-size: 14px; } .ps .lead { font-size: 17px; font-weight: 700; }
+.ps .meter { height: 12px; border-radius: 8px; background: var(--leaf-soft); } .ps .meter u { border-radius: 8px; background: var(--leaf); }
+.ps .chips { gap: 7px; margin: 12px 0 0; padding: 0 18px; }
+.ps .chip { height: 30px; gap: 6px; padding: 0 12px 0 9px; border-radius: 15px; background: var(--butter-soft); font-size: 13px; }
+.ps .chip i { width: 11px; height: 11px; border-radius: 50%; background: var(--dot, var(--ink)); } .ps .chip.on { background: var(--ink); color: var(--cloud); } .ps .chip.on i { background: var(--cloud); }
+.ps .biome-meadow { --dot: #6CC04A; --tint: #E2F4C8; } .ps .biome-grove { --dot: #2F8F5B; --tint: #CDEBD6; } .ps .biome-marsh { --dot: #3BB6B0; --tint: #CFEFEA; }
+.ps .biome-stonefield { --dot: #9AA0A6; --tint: #E7E6DF; } .ps .biome-snow { --dot: #8FC9EE; --tint: #DFF1FB; } .ps .biome-town { --dot: #F2A24B; --tint: #FCE6C6; }
+.ps .grid.wild { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; padding: 0 14px 14px; }
+.ps .card { padding: 8px 6px 10px; text-align: center; border-radius: 24px 20px 26px 22px; background: var(--tint); }
+.ps .card:nth-child(even) { border-radius: 20px 26px 22px 24px; }
+.ps .card .stage { height: 80px; } .ps .card .creature { width: 78px; height: 78px; }
+.ps .card .name { font-size: 15.5px; font-weight: 700; line-height: 1.1; margin-top: 2px; }
+.ps .card .meta { display: flex; flex-direction: column; align-items: center; gap: 3px; margin-top: 4px; font-size: 11.5px; line-height: 1.2; white-space: nowrap; }
+.ps .card .where { display: none; } .ps .card .tier { padding: 1px 8px; border-radius: 8px; background: var(--leaf); color: var(--cloud); text-transform: capitalize; }
+.ps .card.uncommon .tier { background: var(--sky); color: var(--ink); } .ps .card.rare .tier { background: var(--coral); }
+.ps .card.missing { background: var(--butter-soft); } .ps .card.missing .name { font-family: "Nunito", sans-serif; font-size: 12.5px; opacity: .7; } .ps .card.missing .tier { opacity: .55; }
+.ps .progress.storage { margin-top: 16px; }
+.ps .btn { height: 54px; gap: 6px; padding: 0 22px; border-radius: 27px 24px 27px 25px; background: var(--leaf); color: var(--cloud); font-size: 20px; font-weight: 700; }
+.ps .btn b { font-weight: 800; } .ps .btn .sym { padding: 1px; border-radius: 50%; background: var(--cloud); }
+.ps .btn.quiet { background: var(--butter-soft); color: var(--ink); } .ps .btn.small { height: 30px; padding: 2px 14px 0; font-size: 15px; border-radius: 15px; }
+.ps .tabs { gap: 4px; margin: 14px 16px 0; padding: 4px; border-radius: 22px; background: var(--butter-soft); }
+.ps .tab { flex: 1; height: 34px; justify-content: center; border-radius: 17px; font-size: 15px; font-weight: 600; } .ps .tab.on { background: var(--leaf); color: var(--cloud); }
+.ps .grid.items { grid-template-columns: repeat(4, 1fr); gap: 12px 8px; margin-top: 16px; padding: 0 14px; }
+.ps .tile { text-align: center; } .ps .tile .well { height: 80px; border-radius: var(--blob); background: var(--butter-soft); } .ps .tile:nth-child(odd) .well { border-radius: var(--blob-b); }
+.ps .tile.kind-product .well { background: var(--coral-soft); } .ps .tile.kind-tool .well { background: var(--sky-soft); }
+.ps .tile .item-img { width: 62px; height: 62px; } .ps .tile .sym { width: 50px; height: 50px; }
+.ps .tile .name { margin-top: 5px; font-family: "Nunito", sans-serif; font-size: 12.5px; font-weight: 700; } .ps .tile .kind { display: none; }
+.ps .tile .count { position: absolute; right: 0; top: -4px; min-width: 27px; height: 25px; padding: 2px 6px 0; display: grid; place-items: center; border-radius: 13px; background: var(--ink); color: var(--cloud); font-size: 15px; font-weight: 700; line-height: 1; }
+
+/* confirmation */
+.ps .modal { left: 22px; right: 22px; top: 232px; padding: 26px 18px 20px; text-align: center; border-radius: 40px 32px 38px 30px; background: var(--cloud); }
+.ps .modal h2 { font-size: 27px; font-weight: 800; line-height: 1.05; padding: 0 36px; }
+.ps .modal .close { right: 12px; top: 12px; background: var(--butter-soft); }
+.ps .facts { gap: 10px; margin-top: 16px; } .ps .fact { gap: 2px; padding: 12px 8px; border-radius: 24px 20px 26px 22px; background: var(--leaf-soft); } .ps .fact + .fact { background: var(--sky-soft); border-radius: 20px 26px 22px 24px; }
+.ps .fact .item-img, .ps .fact .sym { width: 46px; height: 46px; } .ps .fact b { font-size: 17px; font-weight: 700; line-height: 1.15; }
+.ps .prompt { margin: 16px 0 12px; font-size: 15px; font-weight: 600; } .ps .actions { gap: 8px; }
+
+/* Hometown */
+.ps .bubble { gap: 7px; height: 42px; padding: 0 14px 0 7px; border-radius: 21px 18px 21px 19px; background: var(--cloud); }
+.ps .bubble::after { content: ""; position: absolute; left: 50%; bottom: -8px; margin-left: -7px; border: 7px solid transparent; border-top: 9px solid var(--cloud); border-bottom: 0; }
+.ps .bubble .item-img, .ps .bubble .sym { width: 30px; height: 30px; } .ps .bubble b { font-size: 16px; font-weight: 700; line-height: 1; }
+.ps .bubble .meter { width: 58px; height: 6px; margin-top: 3px; } .ps .bubble.locked { background: var(--ink); color: var(--cloud); } .ps .bubble.locked::after { border-top-color: var(--ink); }
+.ps .bubble.locked .sym svg g { stroke: var(--cloud); } .ps .bubble.locked .sym svg [fill]:not([fill="none"]) { fill: var(--ink); }

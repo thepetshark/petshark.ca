@@ -1,0 +1,74 @@
+/* Round two, shared structure. Everything here is position and size; colour, shape and type belong to each
+   direction's own stylesheet. House rule for the whole round, from the owner's review of round one:
+   NO shadow, bevel, gloss or raised edge on any button, icon or window. There is not one box-shadow,
+   drop-shadow or gradient-as-gloss in this round. Separation comes from colour, outline, spacing and overlap.
+
+   Canvas: a modern tall phone, 412 x 884 (about the owner's test phone), not the game's 390 x 844 reference.
+   The punch-hole camera and the gesture bar are drawn, and no control sits in the top 40 px or the bottom 24 px. */
+
+.phone.p2 { width: 412px; height: 884px; --safe-top: 40px; --safe-bottom: 24px; font-synthesis: none; -webkit-font-smoothing: antialiased; }
+.p2 * { box-sizing: border-box; }
+.p2 .plate { position: absolute; inset: 0; width: 412px; height: 884px; object-fit: cover; }
+.p2 .cutout { position: absolute; left: 50%; top: 13px; width: 13px; height: 13px; margin-left: -6.5px; border-radius: 50%; background: #05070b; z-index: 40; }
+.p2 .gesture { position: absolute; left: 50%; bottom: 8px; width: 112px; height: 4px; margin-left: -56px; border-radius: 4px; background: rgba(255, 255, 255, .86); outline: 1px solid rgba(0, 0, 0, .28); z-index: 40; }
+.p2 .scrim { position: absolute; inset: 0; }
+.p2 .sym { display: inline-block; flex: none; line-height: 0; }
+.p2 .sym svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+/* map furniture */
+.p2 svg.range { position: absolute; inset: 0; width: 412px; height: 884px; overflow: visible; pointer-events: none; }
+.p2 svg.range path { fill: none; }
+.p2 .player, .p2 .mk, .p2 .pickup { position: absolute; width: 0; height: 0; }
+.p2 .player .sym { position: absolute; }
+.p2 .mk .face { position: absolute; display: grid; place-items: center; overflow: hidden; }
+.p2 .mk .stem, .p2 .mk .count { position: absolute; }
+.p2 .mk .count { display: grid; place-items: center; font-style: normal; }
+.p2 .pickup .sym { position: absolute; left: -13px; top: -13px; width: 26px; height: 26px; }
+
+/* interface, clear of the device bands */
+.p2 .wallet { position: absolute; top: calc(var(--safe-top) + 6px); right: 12px; display: flex; gap: 6px; z-index: 5; }
+.p2 .purse { display: flex; align-items: center; gap: 5px; }
+.p2 .purse .sym { width: 24px; height: 24px; }
+.p2 .side { position: absolute; top: 150px; display: grid; gap: 8px; z-index: 5; }
+.p2 .side.left { left: 12px; } .p2 .side.right { right: 12px; }
+.p2 .short, .p2 .toggle { position: relative; display: grid; place-items: center; }
+.p2 .short .badge { position: absolute; display: grid; place-items: center; font-style: normal; }
+.p2 .attribution { position: absolute; left: 0; right: 0; bottom: calc(var(--safe-bottom) + 86px); text-align: center; font: 700 10px/1 system-ui, sans-serif; color: #fff; opacity: .9; }
+.p2 .nav { position: absolute; left: 0; right: 0; bottom: calc(var(--safe-bottom) + 10px); display: flex; align-items: center; justify-content: space-between; z-index: 6; }
+.p2 .dest { display: grid; place-items: center; flex: none; }
+
+/* sheets and the confirmation */
+.p2 .sheet { position: absolute; left: 0; right: 0; top: calc(var(--safe-top) + 12px); bottom: calc(var(--safe-bottom) + 92px); display: flex; flex-direction: column; overflow: hidden; z-index: 4; }
+.p2 .sheet > * { flex: none; }
+.p2 .sheet-head { display: flex; align-items: center; justify-content: space-between; }
+.p2 .sheet h2, .p2 .modal h2, .p2 .card h3, .p2 .tile h3 { margin: 0; }
+.p2 .close { display: grid; place-items: center; flex: none; }
+.p2 .progress { display: flex; align-items: center; gap: 10px; }
+.p2 .meter { position: relative; display: block; flex: 1; overflow: hidden; }
+.p2 .meter u { position: absolute; left: 0; top: 0; bottom: 0; display: block; text-decoration: none; }
+.p2 .chips, .p2 .tabs { display: flex; overflow: hidden; }
+.p2 .chip, .p2 .tab { flex: none; display: flex; align-items: center; white-space: nowrap; }
+.p2 .grid { display: grid; min-height: 0; }
+.p2 .card, .p2 .tile { position: relative; min-width: 0; }
+.p2 .card .stage { display: grid; place-items: center; overflow: hidden; }
+.p2 .card.missing .creature { filter: brightness(0); opacity: .16; }
+.p2 .card .name, .p2 .tile .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p2 .card .meta { margin: 0; }
+.p2 .tile .well { display: grid; place-items: center; }
+.p2 .item-img { mix-blend-mode: multiply; object-fit: contain; }
+.p2 .modal { position: absolute; z-index: 7; }
+.p2 .modal .close { position: absolute; }
+.p2 .facts { display: grid; grid-template-columns: 1fr 1fr; }
+.p2 .fact { display: grid; justify-items: center; text-align: center; }
+.p2 .actions { display: grid; }
+.p2 .btn { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+.p2 .btn .sym { width: 22px; height: 22px; }
+.p2 .bubble { position: absolute; transform: translate(-50%, -100%); display: flex; align-items: center; white-space: nowrap; z-index: 3; }
+.p2 .bubble .lines { display: grid; }
+
+/* board chrome */
+.r2-spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; max-width: 1180px; }
+.r2-hours { display: flex; gap: 36px; overflow-x: auto; padding: 6px 4px 22px; align-items: flex-start; }
+body.capture .r2-hours { flex-wrap: wrap; overflow: visible; }
+.r2-type { background: #2a303c; border: 1px solid #3b4355; border-radius: 12px; padding: 16px 18px; color: #fff; }
+.r2-type small { display: block; margin-top: 8px; font: 13px/1.4 system-ui, sans-serif; color: #aab2c2; }

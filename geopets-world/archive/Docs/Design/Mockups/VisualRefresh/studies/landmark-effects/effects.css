@@ -1,0 +1,7 @@
+/* The landmark effects study. The 3D canvas sits between the plate (the 2D canvas under it) and today's interface. */
+.lx-gl { pointer-events: none; }
+.lx-closeups { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.lx-closeups figure { margin: 0; width: 360px; }
+.lx-close canvas { display: block; width: 360px; height: 360px; border-radius: 14px; border: 1px solid #3b4355; }
+.lx-closeups figcaption { margin-top: 8px; font-size: 13.5px; color: #aab2c2; }
+.lx-closeups figcaption > b { color: #fff; font-size: 15px; }

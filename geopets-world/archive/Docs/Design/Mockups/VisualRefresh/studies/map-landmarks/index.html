@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>The market, Energy and Water on the map</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+<link rel="stylesheet" href="landmarks.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>The market, Energy and Water on the map</h1>
+  <p>This study explores visuals for the three places a player goes to on the map. Energy and Water get a small, distinct 3D object, because the pin that appears when collection is ready is what players look for. The market gets a smaller object that belongs in the world, and a pin of its own, larger than the others, so it reads as a landmark. Use the switches: every combination shows on today's map, close and from high up, beside the game as it is now.</p>
+  <p class="rv-note">The 3D objects were generated in the style of the map's own props, cut out, and set onto captures of the game from 22 September, with the pins and the stall painted out. They are sized in map units against today's stall, which is 17 units. The pins are drawn in the approved identity. The market pin is new: the market has none today.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Energy</legend><span class="nm-seg">
+    <label><input type="radio" name="energy" value="today">Today</label>
+    <label><input type="radio" name="energy" value="a">Rune stone</label>
+    <label><input type="radio" name="energy" value="b">Crystals</label>
+    <label><input type="radio" name="energy" value="c">Pinwheel</label>
+    <label><input type="radio" name="energy" value="d">Orb post</label></span></fieldset>
+  <fieldset><legend>Water</legend><span class="nm-seg">
+    <label><input type="radio" name="water" value="today">Today</label>
+    <label><input type="radio" name="water" value="a">Spring</label>
+    <label><input type="radio" name="water" value="b">Hand pump</label>
+    <label><input type="radio" name="water" value="c">Well</label>
+    <label><input type="radio" name="water" value="d">Rain barrel</label></span></fieldset>
+  <fieldset><legend>Market</legend><span class="nm-seg">
+    <label><input type="radio" name="market" value="a">Stall</label>
+    <label><input type="radio" name="market" value="b">Tiny square</label>
+    <label><input type="radio" name="market" value="c">Cart</label>
+    <label><input type="radio" name="market" value="d">Pavilion</label>
+    <label><input type="radio" name="market" value="e">Kiosk</label></span></fieldset>
+</div>
+<div class="nm-bar" role="group" aria-label="Pin controls">
+  <fieldset><legend>Market pin</legend><span class="nm-seg">
+    <label><input type="radio" name="marker" value="none">None (today)</label>
+    <label><input type="radio" name="marker" value="awning">Awning crest</label>
+    <label><input type="radio" name="marker" value="pennant">Pennant</label>
+    <label><input type="radio" name="marker" value="emblem">Emblem</label>
+    <label><input type="radio" name="marker" value="sign">Shop sign</label></span></fieldset>
+  <fieldset><legend>Its size</legend><span class="nm-seg">
+    <label><input type="radio" name="msize" value="1.25">1.25 ×</label>
+    <label><input type="radio" name="msize" value="1.5">1.5 ×</label>
+    <label><input type="radio" name="msize" value="2">2 ×</label></span></fieldset>
+  <fieldset><legend>Pins float</legend><span class="nm-seg">
+    <label><input type="radio" name="lift" value="close">Close</label>
+    <label><input type="radio" name="lift" value="float">Well above</label>
+    <label><input type="radio" name="lift" value="high">High</label></span></fieldset>
+  <fieldset><legend>Energy and Water</legend><span class="nm-seg">
+    <label><input type="radio" name="pins" value="on">Ready to collect</label>
+    <label><input type="radio" name="pins" value="off">Cooling down</label></span></fieldset>
+</div>
+
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone lm-phone"><img class="lm-today" src="assets/today-near.png" alt="Today, close"></div></div><p class="rv-cap"><b>Today, close</b>A capture of 22 September: an Energy pin in front of a Water pin, both 64 points here. The striped stall on the rock is the market; it is 17 map units, the size of a pin at this zoom.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone lm-phone" data-plate="near"></div></div><p class="rv-cap"><b>Concept, close</b>The same view with the chosen objects and pins. The market stands where today's stall stood; Energy and Water on the rock in front.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone lm-phone"><img class="lm-today" src="assets/today-far.png" alt="Today, from high up"></div></div><p class="rv-cap"><b>Today, from high up</b>The Water and Energy pins stacked on the rock in the middle; their disks are hidden under them.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone lm-phone" data-plate="far"></div></div><p class="rv-cap"><b>Concept, from high up</b>From here a small object is a few pixels; the pin does the work, and the market's larger pin still reads as the landmark.</p></div>
+</div>
+
+<h2 class="rv-section">Energy: small, and yellow at a glance</h2>
+<p class="rv-note">Each about half the stall's height. Energy is the map's yellow, so each keeps a yellow part that still reads when the object is ten pixels tall.</p>
+<div class="lm-cards">
+  <figure class="lm-card"><div class="swatch"><img src="assets/energy-a.png" alt=""></div><b>A · Rune stone</b>A short standing stone with a yellow bolt carved into it, on a patch of grass. The calmest; the bolt is the Energy symbol itself.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/energy-b.png" alt=""></div><b>B · Crystals</b>Three amber crystals in a ring of pebbles, glowing at the tips. The most "collectable"; at night it could glow on its own.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/energy-c.png" alt=""></div><b>C · Pinwheel</b>A garden pinwheel with yellow sails on a post. It could turn slowly, the only one that moves.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/energy-d.png" alt=""></div><b>D · Orb post</b>A copper rod on a stone plinth with a glowing yellow orb. The tallest silhouette; reads from far away.</figure>
+</div>
+
+<h2 class="rv-section">Water: small, and blue at a glance</h2>
+<p class="rv-note">The same size as Energy. Blue water shows in each, so a Water place never reads as Energy.</p>
+<div class="lm-cards">
+  <figure class="lm-card"><div class="swatch grass"><img src="assets/water-a.png" alt=""></div><b>A · Spring basin</b>A round stone basin with a small bubbling jet. The lowest and quietest.</figure>
+  <figure class="lm-card"><div class="swatch grass"><img src="assets/water-b.png" alt=""></div><b>B · Hand pump</b>An iron pump over a wooden trough. A strong, unmistakable silhouette.</figure>
+  <figure class="lm-card"><div class="swatch grass"><img src="assets/water-c.png" alt=""></div><b>C · Little well</b>A stone well with a small roof and a bucket. The most storybook; the roof competes a little with the market's awnings.</figure>
+  <figure class="lm-card"><div class="swatch grass"><img src="assets/water-d.png" alt=""></div><b>D · Rain barrel</b>A barrel dripping into a basin. Homely; the tallest of the four.</figure>
+</div>
+
+<h2 class="rv-section">The market: smaller, and part of the world</h2>
+<p class="rv-note">Every roof keeps today's orange-and-cream stripe, so any of them reads as a market. None is taller than today's stall; the square and the pavilion are a little wider.</p>
+<div class="lm-cards">
+  <figure class="lm-card"><div class="swatch"><img src="assets/market-a.png" alt=""></div><b>A · Stall, refined</b>Today's stall with crates of produce and bunting: the least change.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/market-b.png" alt=""></div><b>B · Tiny square</b>Two stalls facing each other round a flagpole: a small place rather than a single shop.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/market-c.png" alt=""></div><b>C · Trader's cart</b>A handcart with a striped canopy: the smallest footprint, and it looks as if it travels.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/market-d.png" alt=""></div><b>D · Pavilion</b>A round striped tent with a pennant: the most landmark-like, the same from every side, so the camera's turning never shows its back.</figure>
+  <figure class="lm-card"><div class="swatch"><img src="assets/market-e.png" alt=""></div><b>E · Kiosk</b>A wooden hut with an awning and hanging baskets: sturdy, the most "building".</figure>
+</div>
+
+<h2 class="rv-section">The chosen models, first pass</h2>
+<p class="rv-note">The five chosen props, modelled in Blender from these concepts by scripts, and shown here at the game's default camera tilt at one scale. Each sheet below puts the concept beside renders at the three tilts.</p>
+<img src="models/renders/overview-40.jpg" alt="The five models side by side" style="max-width:100%;border-radius:12px;display:block;margin-bottom:14px">
+<div class="lm-sheets">
+  <img src="models/renders/orb_post-sheet.jpg" alt="Orb post: concept and renders">
+  <img src="models/renders/spring-sheet.jpg" alt="Spring: concept and renders">
+  <img src="models/renders/pavilion-sheet.jpg" alt="Pavilion: concept and renders">
+  <img src="models/renders/kiosk-sheet.jpg" alt="Kiosk: concept and renders">
+  <img src="models/renders/rune_stone-sheet.jpg" alt="Rune stone: concept and renders">
+</div>
+
+<h2 class="rv-section">The market pin: larger than the others</h2>
+<p class="rv-note">Today's pins at their size, 36 points, beside the four market pins at 1.5 ×. Each is the market's orange with the approved market symbol. The Emblem, chosen at 1.25 ×, has no number badge; the Shop sign carries the place's name, from the map data the market already uses.</p>
+<div class="lm-board" id="lm-board"></div>
+<p class="rv-note" style="margin-top:18px">The size is a choice: the Pennant at three sizes, beside an Energy pin.</p>
+<div class="lm-board lm-sizes" id="lm-sizes"></div>
+
+<script src="pins.js"></script>
+<script src="assets/sizes.js"></script>
+<script src="landmarks.js"></script>
+</body>
+</html>

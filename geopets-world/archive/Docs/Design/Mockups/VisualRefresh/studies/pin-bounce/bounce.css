@@ -1,0 +1,41 @@
+/* The pin bounce study. Phones are today's plate plus today's flat interface (../shared/study.css), with a
+   drawn pin layer between the two: plain DOM and CSS transforms, not a canvas, because every pin here is exactly what
+   the game draws (WorldPortraitMarker's SVG shapes via ../map-landmarks/pins.js) and a transform is enough to hop and
+   squash it. No box-shadow, text-shadow or drop-shadow appears inside a phone; a ring and a strip's playhead are a
+   plain border and a plain line. */
+
+.bp-row { margin: 0 0 8px; }
+.bp-row h2 { margin: 30px 0 2px; font-size: 18px; font-weight: 650; color: #fff; }
+.bp-row .bp-nums { margin: 0 0 4px; font-size: 14px; color: #c3cad8; }
+.bp-row .bp-nums b { color: #fff; font-weight: 700; }
+.bp-row .bp-summary { margin: 0 0 4px; max-width: 78ch; font-size: 13.5px; color: #98a1b3; }
+
+.bp-layer { position: absolute; inset: 0; }
+.bp-pin { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+.bp-lift { position: absolute; left: 0; top: 0; }
+.bp-squash { width: 100%; height: 100%; }
+.bp-pin svg { display: block; overflow: visible; }
+
+/* the tap indicator: a plain ring, no blur, no glow, that expands and fades where the finger landed */
+.bp-ring { position: absolute; left: 0; top: 0; width: 1px; height: 1px; margin: -0.5px 0 0 -0.5px;
+  border: 2px solid var(--ink); border-radius: 50%; opacity: 0; pointer-events: none; }
+
+/* ---- the close-up: the same water pin, magnified, so the squash shows even in a still -------------------------- */
+.bp-close { display: flex; align-items: center; gap: 14px; margin: 4px 4px 14px; }
+.bp-close-card { position: relative; width: 168px; height: 300px; border-radius: 14px; background: #6DA84A; overflow: hidden; flex: 0 0 auto; }
+.bp-close-stage { position: absolute; left: 50%; bottom: 22px; width: 0; height: 0; }
+.bp-close-note { font-size: 13px; color: #98a1b3; max-width: 46ch; }
+.bp-close-note b { color: #fff; font-weight: 600; }
+
+/* ---- the timing strip: the pin's own offset over one tap, plotted, under each row of phones -------------------- */
+.bp-strip { margin: 8px 4px 4px; max-width: 1220px; }
+.bp-strip svg { display: block; width: 100%; height: auto; }
+.bp-strip .bp-axis { stroke: #3b4355; stroke-width: 1; }
+.bp-strip .bp-rest { stroke: #56617a; stroke-width: 1; stroke-dasharray: 3 3; }
+.bp-strip .bp-curve { fill: none; stroke: #9ec5ff; stroke-width: 2; }
+.bp-strip .bp-peak { stroke: #56617a; stroke-width: 1; stroke-dasharray: 2 3; }
+.bp-strip .bp-playhead { stroke: #e9edf5; stroke-width: 1.5; }
+.bp-strip text { fill: #98a1b3; font: 11.5px ui-monospace, Consolas, monospace; }
+.bp-strip text.bp-label { fill: #e3e7ef; font: 600 11.5px system-ui, "Segoe UI", sans-serif; }
+
+/* body.capture .nm-bar { display: none; } already covers the page controls (../night-map/night.css) */

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playset — Geo Pets World visual refresh, round two</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../r2.css">
+<link rel="stylesheet" href="playset.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Playset</h1>
+  <p>The world is the smooth toy diorama of the Toybox map from round one, now with rolling ground, a bouldery Stonefield and a sun and a moon that move. The interface is organic and solid: soft blob shapes in flat colour, a friendly rounded face, and not one shadow.</p>
+  <p class="rv-note">Concept only. The map is the game's real map, redrawn; Wildling names, rarities, biomes, item titles and the confirmation's copy are the game's own; levels, counts, timers and the Hometown level are illustrative. The phone is a modern tall one (412 by 884) with its camera cut-out and gesture bar drawn, and no control sits under either.</p>
+</header>
+
+
+
+<h2 class="rv-section">What this direction is made of</h2>
+<div class="rv-principles">
+  <div><b>Colour on colour</b>Depth comes from one flat colour sitting on another. A sheet is cloud white on a dimmed map; a card is its biome's tint on the sheet; a count is coral on anything.</div>
+  <div><b>No two blobs alike</b>Panels, cards and buttons have slightly uneven corners, so the interface feels hand-cut and soft without imitating any material.</div>
+  <div><b>Things from the world</b>Item icons are small matte models that could be picked up off the map. They have form, but no gloss, no plate and no cast shadow.</div>
+  <div><b>One decoration</b>A small leaf pattern on sheet headers. Nothing else is decorated.</div>
+</div>
+<div class="rv-swatches" style="margin-top:18px">
+  <span><i style="background:#FFFDF5"></i>Cloud #FFFDF5<br>every surface</span>
+  <span><i style="background:#FFE9A8"></i>Butter #FFE9A8<br>headers, the navigation shelf</span>
+  <span><i style="background:#3FA65A"></i>Leaf #3FA65A<br>go: buttons, progress, common</span>
+  <span><i style="background:#5CC1F0"></i>Sky #5CC1F0<br>uncommon, water, information</span>
+  <span><i style="background:#FF7A59"></i>Coral #FF7A59<br>counts, rare</span>
+  <span><i style="background:#2B3A55"></i>Ink #2B3A55<br>text and line, a navy, never black</span>
+</div>
+<div class="r2-spec" style="margin-top:18px">
+  <div class="r2-type"><div style="font-family:'Baloo 2';font-weight:800;font-size:34px;line-height:1">Wildlings 15 of 18</div><small>Baloo 2, 600 to 800: titles, numbers and buttons. Chunky and soft without a gloss to lean on.</small></div>
+  <div class="r2-type"><div style="font-family:'Nunito';font-weight:700;font-size:16px">Riverside woodland, 5 wood per worker</div><small>Nunito, 600 to 800: labels and running text. The identity's own face, kept.</small></div>
+</div>
+
+<h2 class="rv-section">One view, four hours</h2>
+<p class="rv-note">The same place at the default zoom. Midday is a screenshot of the game, redrawn; the other three are edits of that one image in which only the light changes, so you can watch the sun and the moon move.</p>
+<div class="r2-hours">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-dawn" data-screen="map" data-plate="assets/default-dawn.jpg" data-hour="dawn" data-zoom="default"></div></div><p class="rv-cap" style="max-width:412px"><b>Dawn</b>The sun is low on the right, so every tree, boulder and rise throws a long shadow to the left. Mist in the hollows.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-midday" data-screen="map" data-plate="assets/default-midday.jpg" data-hour="midday" data-zoom="default"></div></div><p class="rv-cap" style="max-width:412px"><b>Midday</b>The master image: the game's real map redrawn in this look. Short shadows, the clearest read of roads and biomes.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-golden" data-screen="map" data-plate="assets/default-golden.jpg" data-hour="golden" data-zoom="default"></div></div><p class="rv-cap" style="max-width:412px"><b>Golden hour</b>The sun has crossed to the left and the shadows now run to the right. This is the hour the other zooms are shown at.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-night" data-screen="map" data-plate="assets/default-night.jpg" data-hour="night" data-zoom="default"></div></div><p class="rv-cap" style="max-width:412px"><b>Night</b>The moon is up. Following the night study, the ground keeps its colour, the distance sinks into haze, and markers are drawn exactly as by day.</p></div>
+</div>
+
+<h2 class="rv-section">The other two zooms, at golden hour</h2>
+<p class="rv-note">Zooming changes the camera angle, so the light has to work from near the ground and from straight above.</p>
+<div class="r2-hours">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-zoom-in" data-screen="map" data-plate="assets/zoom-in-golden.jpg" data-hour="golden" data-zoom="zoom-in"></div></div><p class="rv-cap" style="max-width:412px"><b>Fully zoomed in</b>The low camera puts the horizon and the sky in the picture, which is where a low sun does the most.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-zoom-out" data-screen="map" data-plate="assets/zoom-out-golden.jpg" data-hour="golden" data-zoom="zoom-out"></div></div><p class="rv-cap" style="max-width:412px"><b>Fully zoomed out</b>Looking straight down there is no sky: the hour is told by the long shadows and by the lit and shaded sides of the ground.</p></div>
+</div>
+
+<h2 class="rv-section">Hometown, the collection, the inventory and a confirmation</h2>
+<p class="rv-note">Hometown follows the game's own framing: a close isometric view whose lawn fills the frame, the locked land under cloud that lies on the island, the padlocked portal standing in that cloud. It is always daylight. Finished crafting is delivered automatically, so working buildings show only a timer.</p>
+<div class="r2-hours">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-home" data-screen="home" data-plate="assets/home-day.jpg" data-hour="midday"></div></div><p class="rv-cap" style="max-width:412px"><b>Hometown</b>Two buildings at work, the request board, and the portal to the next area, which opens when your level allows.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-collection" data-screen="collection" data-plate="assets/default-midday.jpg" data-hour="golden"></div></div><p class="rv-cap" style="max-width:412px"><b>Wildlings</b>The game's creature meshes, unchanged. What marks a rarity and a biome belongs to this direction.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-inventory" data-screen="inventory" data-plate="assets/default-midday.jpg" data-hour="midday"></div></div><p class="rv-cap" style="max-width:412px"><b>Inventory</b>One storage meter with an upgrade, as the capacity decision asks; whether materials and goods get separate limits is still open.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-confirm" data-screen="confirm" data-plate="assets/default-night.jpg" data-hour="night" data-zoom="default"></div></div><p class="rv-cap" style="max-width:412px"><b>A confirmation, at night</b>Tapping outside dismisses it. Shown over the night map to check the interface against the darkest plate.</p></div>
+</div>
+
+<script>window.R2_CONFIG = {"key": "playset", "cls": "ps", "items": "sheet", "wildCount": 12, "home": [{"state": "working", "item": "flour", "title": "Flour", "time": "4:12", "progress": 58, "x": 62, "y": 158}, {"state": "working", "item": "biscuit", "title": "Biscuit", "time": "1:05", "progress": 82, "x": 300, "y": 148}, {"state": "note", "symbol": "collection", "title": "Requests", "label": "2 requests", "x": 345, "y": 246}, {"state": "locked", "label": "Level 6", "x": 140, "y": 112}]};</script>
+<script src="../../round1/shared/content.js"></script>
+<script src="../../studies/night-map/geometry.js"></script>
+<script src="../shared/symbols.js"></script>
+<script src="../screens.js"></script>
+</body>
+</html>

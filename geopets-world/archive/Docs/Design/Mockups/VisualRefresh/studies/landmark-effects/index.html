@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>The landmark effects: Orb post, Spring and Pavilion</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+<link rel="stylesheet" href="effects.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>The landmark effects: Orb post, Spring and Pavilion</h1>
+  <p>The first effects for these landmarks. The effects tell the state: the orb glows when Energy is ready and dims while it cools down; the Spring runs while Water is ready and goes dry while it cools down; at night the orb lights itself, the Spring's water keeps a faint glow, and the Pavilion has a warm lantern. Here they play on the map at the three zooms, by day and at night, with two or three options each.</p>
+  <p class="rv-note"><b>Chosen on 22 September:</b> the Orb post's A, with C's ring pulsing out when it is ready and when Energy is collected; the Spring's A; the Pavilion's A. The page opens on that choice; the other options stay for comparison.</p>
+  <p class="rv-note">These are the real models, drawn in 3D in the browser through the game's own camera numbers, over map plates of 20 September with today's interface on top. Every effect uses what Unity would use: an emissive material, a water shader, a scrolling band, a vertex wave, a few sprites and particles, and at night a light added to the ground in its own colours. It is still a browser, not Unity. The cooldown here lasts 6 seconds so that you can see both states; in the game it is 100.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Time</legend><span class="nm-seg">
+    <label><input type="radio" name="time" value="day">Day</label>
+    <label><input type="radio" name="time" value="night">Night</label></span></fieldset>
+  <fieldset><legend>Energy and Water</legend><span class="nm-seg">
+    <label><input type="radio" name="state" value="ready">Ready</label>
+    <label><input type="radio" name="state" value="cooling">Cooling down</label>
+    <label><input type="radio" name="state" value="cycle">Both, in turn</label></span></fieldset>
+  <button class="st-btn" id="st-pause" type="button" aria-pressed="false">Pause</button>
+</div>
+<div class="nm-bar" role="group" aria-label="Effect options">
+  <fieldset><legend>Orb post</legend><span class="nm-seg">
+    <label><input type="radio" name="orb" value="a">A · Steady glow, chosen</label>
+    <label><input type="radio" name="orb" value="b">B · Glow and sparks</label>
+    <label><input type="radio" name="orb" value="c">C · Charging</label></span></fieldset>
+  <fieldset><legend>Glow on the ground at night</legend><span class="nm-seg">
+    <label><input type="radio" name="glow" value="disc">Unlit discs</label>
+    <label><input type="radio" name="glow" value="none">None</label></span></fieldset>
+  <fieldset><legend>Spring</legend><span class="nm-seg">
+    <label><input type="radio" name="spring" value="a">A · Ripples, chosen</label>
+    <label><input type="radio" name="spring" value="b">B · Ripples and droplets</label></span></fieldset>
+  <fieldset><legend>Pavilion at night</legend><span class="nm-seg">
+    <label><input type="radio" name="lantern" value="a">A · Lantern glow, chosen</label>
+    <label><input type="radio" name="lantern" value="b">B · Glow and light on the ground</label></span></fieldset>
+</div>
+
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-zoom-fixed="zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The Orb post on the left, the Spring on the right, the Pavilion further off.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-zoom-fixed="default"></div></div><p class="rv-cap"><b>Default</b>Where a player spends most of the time: the effects have to read at this size.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-zoom-fixed="zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>A few pixels each; the pins do the work here, and the effects should stay quiet.</p></div>
+</div>
+
+<h2 class="rv-section">Close up</h2>
+<div class="lx-closeups">
+  <figure><div class="lx-close" data-model="orb_post"></div><figcaption><b>Orb post</b>
+    <ul class="st-build">
+      <li><b>A · Steady glow, chosen.</b> Ready: the orb glows and breathes, with a soft halo. Cooling down: it dims to a dull amber. A ring pulses out the moment it is ready again and the moment Energy is collected (the ring comes from C).</li>
+      <li><b>B · Glow and sparks.</b> A, and eight sparks climbing round the orb while Energy is ready.</li>
+      <li><b>C · Charging.</b> While it cools down the glow slowly fills again, so you can see how long is left; a ring pulses out the moment it is ready.</li>
+      <li><b>At night</b>, in every option, a pale unlit gradient disc lies on the ground round the orb (the terrain itself is not lit, for now). The switch above turns the discs off to compare.</li>
+    </ul></figcaption></figure>
+  <figure><div class="lx-close" data-model="spring"></div><figcaption><b>Spring</b>
+    <ul class="st-build">
+      <li><b>A · Ripples.</b> Ready: rings move out across the water, a glint slides over it, and the jet flows up. Cooling down: the water drains in about a second, the jet sinks, and the basin stands dry; it fills again when Water is ready.</li>
+      <li><b>B · Ripples and droplets.</b> A, and ten droplets arcing from the jet into the basin, each leaving a small ring where it lands.</li>
+      <li><b>At night</b> the water glows a faint blue of its own, enough to find the Spring by, and a pale blue unlit disc lies on the ground round it while it holds water.</li>
+    </ul></figcaption></figure>
+  <figure><div class="lx-close" data-model="pavilion"></div><figcaption><b>Pavilion</b>
+    <ul class="st-build">
+      <li><b>The pennant</b> flaps in every option.</li>
+      <li><b>A · Lantern glow, chosen.</b> At night the lantern under the roof lights up with a warm halo, and a warm unlit disc lies on the ground under the Pavilion.</li>
+      <li><b>B · Glow and light on the ground.</b> A, and the lantern lights the deck and the ground round it, so the market reads as a lit place at night.</li>
+    </ul></figcaption></figure>
+</div>
+
+<h2 class="rv-section">What each costs on the phone</h2>
+<table class="st-table">
+  <tr><th>effect</th><th>built as</th><th>phone cost</th></tr>
+  <tr><td>The orb's glow and dimming</td><td>An emissive value on the orb's own material, set from the state</td><td><span class="st-cost low">Almost nothing</span></td></tr>
+  <tr><td>The orb's halo</td><td>One additive sprite</td><td><span class="st-cost low">Low: one small transparent quad</span></td></tr>
+  <tr><td>Sparks (orb B)</td><td>A particle system of eight, only while ready</td><td><span class="st-cost low">Low; one draw call per orb near the camera</span></td></tr>
+  <tr><td>Charging (orb C), and the ring pulse (orb A and C)</td><td>The same emissive value driven by the cooldown's progress; one ring sprite for a second</td><td><span class="st-cost low">Almost nothing</span></td></tr>
+  <tr><td>Ripples and glint</td><td>The water surface's shader, from its position and time</td><td><span class="st-cost low">Almost nothing: opaque, no extra geometry</span></td></tr>
+  <tr><td>Draining and filling</td><td>The water part moves down into the basin; the jet part scales to its base</td><td><span class="st-cost low">Almost nothing</span></td></tr>
+  <tr><td>The jet's flow</td><td>A band scrolling up the jet in its shader</td><td><span class="st-cost low">Almost nothing</span></td></tr>
+  <tr><td>Droplets and splash rings (Spring B)</td><td>A particle system of ten, and ten ring decals on the water, only while ready</td><td><span class="st-cost mid">Low to medium: transparent, one or two draw calls per Spring; keep to Springs near the camera</span></td></tr>
+  <tr><td>The pennant</td><td>A vertex wave in its shader, stronger toward its tip</td><td><span class="st-cost low">Almost nothing</span></td></tr>
+  <tr><td>The lantern and its halo</td><td>Emission on the lantern, one additive sprite, at night only</td><td><span class="st-cost low">Low</span></td></tr>
+  <tr><td>The discs on the ground at night (all three)</td><td>A small unlit mesh lying on the ground, draped to the terrain's height where it is placed, with a soft radial-gradient texture, blended additively; shown only at night</td><td><span class="st-cost low">Low: one draw call and a few dozen triangles per landmark, and a transparent circle 32 to 40 units across; no change to the terrain shader or the renderer</span></td></tr>
+  <tr><td>Light on the ground at night (Pavilion B, not chosen)</td><td>A term in the terrain shader that adds light in the ground's own colours round a point, as for the player's gem</td><td><span class="st-cost mid">Low per light, but it touches the terrain shader; a handful of lights at most</span></td></tr>
+</table>
+
+<script src="vendor/three-r159.min.js"></script>
+<script src="../shared/scene.js"></script>
+<script src="../night-map/geometry.js"></script>
+<script src="../night-map/night.js"></script>
+<script src="../shared/mapfx.js"></script>
+<script src="../map-landmarks/models/web/orb_post.js"></script>
+<script src="../map-landmarks/models/web/spring.js"></script>
+<script src="../map-landmarks/models/web/pavilion.js"></script>
+<script src="effects.js"></script>
+</body>
+</html>

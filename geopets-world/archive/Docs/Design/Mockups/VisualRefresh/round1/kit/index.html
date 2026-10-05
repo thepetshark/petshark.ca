@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explorer's kit — Geo Pets World visual refresh, round one</title>
+<link rel="stylesheet" href="../shared/frame.css">
+<link rel="stylesheet" href="kit.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Explorer's kit</h1>
+  <p>Built from the things you would take on the walk: a canvas bag, enamel pins, brass, woven labels and label-maker tape, drawn flat like a national-park poster. The game is about going outside to collect; here the collection is a board of pins.</p>
+  <p class="rv-note">Concept only. Wildling names, rarities, biomes and item titles are real; levels, counts and prices are illustrative. All art on this board was generated for the study. The creature pins are the game's real models translated into pin form: same animals, same shapes.</p>
+</header>
+
+
+
+<h2 class="rv-section">What makes it this direction</h2>
+<div class="rv-principles">
+  <div><b>Made of gear, not of panels</b>Surfaces are canvas flaps with a line of stitching, headers are woven labels, buttons are sewn patches. Flat and graphic, never leathery or grungy.</div>
+  <div><b>The collection is a pin board</b>Every Wildling is an enamel pin. You do not fill in a list, you fill a board, and an empty mount is a pin you have not earned yet.</div>
+  <div><b>Rarity is metal, biome is felt</b>A pin is mounted in bronze, silver or gold, like a medal. The felt behind it is the colour of the biome it lives in.</div>
+  <div><b>Trail-marker orange means go</b>One loud colour, borrowed from waymarks, for the thing to press and for progress. Pack green carries everything else.</div>
+</div>
+
+<h2 class="rv-section">Title logo and app icon</h2>
+<p class="rv-note">Three badges. Geo Pets is the name and WORLD is at least as prominent, in different lettering: an embroidered patch with a stitched globe for the O, an enamel pin, and a routed trail sign. Two app icons keep the selected leaf-eared companion: one as a pin, one as a poster.</p>
+<div class="rv-brand kit-brand">
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-a.png" alt="Geo Pets World logo, embroidered patch"></div><figcaption><b>A — embroidered patch</b>The O in WORLD is a stitched globe with a paw-print landmass.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-b.png" alt="Geo Pets World logo, enamel pin"></div><figcaption><b>B — enamel pin</b>The title as the first pin in the collection.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-c.png" alt="Geo Pets World logo, trail sign"></div><figcaption><b>C — trail sign</b>A routed park-entrance board, WORLD in waymark orange.</figcaption></figure>
+</div>
+<div class="rv-brand kit-brand" style="margin-top:22px">
+  <figure class="rv-tile"><div class="icon-tile">
+    <img src="assets/appicon-a.png" width="128" height="128" alt="">
+    <img src="assets/appicon-a.png" width="64" height="64" alt=""><img src="assets/appicon-a.png" width="48" height="48" alt=""><img src="assets/appicon-a.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-a.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon A — enamel pin</b>128, 64, 48 and 32 px, then a circular crop.</figcaption></figure>
+  <figure class="rv-tile"><div class="icon-tile dark">
+    <img src="assets/appicon-b.png" width="128" height="128" alt="">
+    <img src="assets/appicon-b.png" width="64" height="64" alt=""><img src="assets/appicon-b.png" width="48" height="48" alt=""><img src="assets/appicon-b.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-b.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon B — poster</b>The same sizes on a dark home screen.</figcaption></figure>
+</div>
+
+<h2 class="rv-section">The same six screens</h2>
+<p class="rv-note">Each phone is exactly 390×844. Scroll sideways.</p>
+
+<div class="rv-row">
+
+  <!-- 1. Splash -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-splash">
+    <div class="bg splash"></div>
+    <img class="logo" src="assets/logo-a.png" alt="Geo Pets World">
+    <section class="account flap">
+      <h2 class="slab-type" id="splash-heading"></h2>
+      <p id="splash-status"></p>
+      <div class="btn" id="splash-primary"></div>
+      <div class="row">
+        <div class="btn green small" id="splash-create"></div>
+        <div class="btn plain small" id="splash-signin"></div>
+      </div>
+    </section>
+  </div></div><p class="rv-cap"><b>Splash</b>A badge over a poster valley, and the account panel as the flap of a field bag.</p></div>
+
+  <!-- 2. World map -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-map">
+    <div class="bg map"></div>
+    <svg class="arc" viewBox="0 0 390 844" aria-hidden="true"><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#2F4A3A" stroke-width="8" stroke-linecap="round"/><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#FBFAF4" stroke-width="4" stroke-linecap="round"/><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#F26A2E" stroke-width="4" stroke-dasharray="3 17"/></svg>
+    <div class="marker" style="left:172px; top:590px"><div class="mount metal"><div><img class="pin" src="assets/items/softwood.png" alt="Wood ready"></div><span class="count-stamp go">✓</span></div><div class="needle"></div></div>
+    <div class="marker common" style="left:110px; top:180px"><div class="mount metal"><div style="--felt:var(--b-grove)"><img class="pin" src="assets/pins/mossbrush.png" alt="Mossbrush"></div></div><div class="needle"></div></div>
+    <div class="marker rare" style="left:36px; top:320px"><div class="mount metal"><div style="--felt:var(--b-marsh)"><img class="pin" src="assets/pins/reedshield.png" alt="Reedshield"></div></div><div class="needle"></div></div>
+    <div class="marker" style="left:292px; top:530px"><div class="mount metal"><div><img class="pin" src="assets/items/wooden-trap.png" alt="Traps"></div><span class="count-stamp">4</span></div><div class="needle"></div></div>
+
+    <div class="player"><div class="heading"></div><img class="pin" src="assets/ui/profile.png" alt="You"><div class="needle"></div><div class="ground"></div></div>
+
+    <div class="hud-top">
+      <div class="capsule metal"><div><img src="assets/items/coin.png" alt="Coins"><span id="hud-coins"></span></div></div>
+      <div class="capsule metal"><div><img src="assets/items/water.png" alt="Water"><span id="hud-water"></span></div></div>
+    </div>
+    <div class="hud-left">
+      <div class="shortcut metal"><div><img src="assets/items/wooden-trap.png" alt="Traps"></div><span class="count-stamp">3</span></div>
+      <div class="shortcut metal"><div><img src="assets/ui/worker.png" alt="Workers"></div><span class="count-stamp go">20</span></div>
+    </div>
+    <div class="hud-right">
+      <img class="pin mini" src="assets/ui/worker.png" alt="Show workers">
+      <img class="pin mini off" src="assets/items/wooden-trap.png" alt="Show traps">
+    </div>
+
+    <div class="attribution">© Mapbox © OpenStreetMap</div>
+    <div class="nav">
+      <img class="pin big" src="assets/ui/profile.png" alt="Profile">
+      <img class="pin mid" src="assets/ui/collection.png" alt="Collection">
+      <img class="pin mid" src="assets/ui/inventory.png" alt="Inventory">
+      <img class="pin mid" src="assets/ui/my-sales.png" alt="My Sales">
+      <img class="pin big" src="assets/ui/home.png" alt="Home">
+    </div>
+  </div></div><p class="rv-cap"><b>World map and HUD</b>The game's real map, printed as a trail map. The roads, the rocky biome, the sea, the tree patch and the market stalls are where they are in today's game. Wildlings are pins mounted in the metal of their rarity; counts are rubber stamps.</p></div>
+
+  <!-- Hometown -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-home">
+    <div class="bg home"></div>
+    <div class="hb working" style="left:66px; top:318px"><div class="body"><img src="assets/items/flour.png" alt=""><b>0:42</b><span class="meter"><i></i></span></div><div class="stem"></div></div>
+    <div class="hb working" style="left:226px; top:290px"><div class="body"><img src="assets/items/biscuit.png" alt=""><b>1:10</b><span class="meter"><i style="width:28%"></i></span></div><div class="stem"></div></div>
+    <div class="hb locked" style="left:130px; top:306px"><div class="body"><span class="lock"></span></div></div>
+    <div class="toast"><img src="assets/items/biscuit.png" alt=""><b>+3 Biscuit</b><span>in your bag</span></div>
+    <div class="hud-top">
+      <div class="capsule metal"><div><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div></div>
+      <div class="capsule metal"><div><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div></div>
+    </div>
+    <div class="hud-left"><div class="shortcut metal"><div><img src="assets/ui/worker.png" alt="Workers"></div><span class="count-stamp go">2</span></div></div>
+    <div class="nav">
+      <img class="pin big" src="assets/ui/profile.png" alt="Profile">
+      <img class="pin mid" src="assets/ui/collection.png" alt="Collection">
+      <img class="pin mid" src="assets/ui/inventory.png" alt="Inventory">
+      <img class="pin mid" src="assets/ui/my-sales.png" alt="My Sales">
+      <img class="pin big" src="assets/ui/world.png" alt="World">
+    </div>
+  </div></div><p class="rv-cap"><b>Hometown</b>The game's Hometown as a poster scene, with every building it has today. Working buildings carry an enamel capsule with their timer; idle ones stay quiet; the padlocked archway gets a small lock; finished goods arrive with a notice, as decided today.</p></div>
+
+  <!-- 3. Collection -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-collection">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="capsule metal"><div><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div></div>
+      <div class="capsule metal"><div><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div></div>
+    </div>
+    <section class="board flap">
+      <div class="close metal"><div>✕</div></div>
+      <div class="label">Wildlings</div>
+      <div class="progress"><b id="found-count"></b><div class="strap"><div class="fill" id="found-fill"></div></div></div>
+      <div class="chips" id="biome-chips"></div>
+      <div class="grid three" id="collection-grid"></div>
+    </section>
+    <div class="nav">
+      <img class="pin big" src="assets/ui/profile.png" alt="Profile">
+      <img class="pin mid" src="assets/ui/collection.png" alt="Collection">
+      <img class="pin mid" src="assets/ui/inventory.png" alt="Inventory">
+      <img class="pin mid" src="assets/ui/my-sales.png" alt="My Sales">
+      <img class="pin big" src="assets/ui/home.png" alt="Home">
+    </div>
+  </div></div><p class="rv-cap"><b>Wildling collection</b>A pin board. Bronze, silver and gold mounts are common, uncommon and rare; the felt is the biome. Names are punched on label-maker tape. An empty stitched mount is a pin still to earn.</p></div>
+
+  <!-- 4. Inventory -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-inventory">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="capsule metal"><div><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div></div>
+      <div class="capsule metal"><div><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div></div>
+    </div>
+    <section class="board flap">
+      <div class="close metal"><div>✕</div></div>
+      <div class="label">Inventory</div>
+      <div class="progress storage"><b>Storage 105 / 150</b><div class="strap"><div class="fill" style="width:70%"></div></div><span class="up">Upgrade</span></div>
+      <div class="tabs"><div class="tab on">All</div><div class="tab">Materials</div><div class="tab">Products</div><div class="tab">Tools</div></div>
+      <div class="grid four" id="item-grid"></div>
+    </section>
+    <div class="nav">
+      <img class="pin big" src="assets/ui/profile.png" alt="Profile">
+      <img class="pin mid" src="assets/ui/collection.png" alt="Collection">
+      <img class="pin mid" src="assets/ui/inventory.png" alt="Inventory">
+      <img class="pin mid" src="assets/ui/my-sales.png" alt="My Sales">
+      <img class="pin big" src="assets/ui/home.png" alt="Home">
+    </div>
+  </div></div><p class="rv-cap"><b>Inventory</b>A gear tray with recessed compartments, each count on a small brass tag. The storage meter follows today's decision that the inventory has a capacity you can upgrade; whether materials and goods get separate limits is still open, so one is shown.</p></div>
+
+  <!-- 5. Confirm -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone kit" id="screen-confirm">
+    <div class="bg map"></div><div class="dim"></div>
+    <section class="permit flap">
+      <div class="close metal"><div>✕</div></div>
+      <div class="label" id="hire-place"></div>
+      <div class="facts">
+        <div class="fact"><img class="pin" src="assets/items/softwood.png" alt=""><b id="hire-yield-n"></b><span id="hire-yield"></span></div>
+        <div class="fact"><div class="watch metal"><div></div></div><b id="hire-time-n"></b><span id="hire-time"></span></div>
+      </div>
+      <p class="prompt" id="hire-prompt"></p>
+      <div class="btn">Hire
+        <span class="price"><img src="assets/items/coin.png" alt="coins"><span id="hire-coins"></span></span>
+        <span class="price"><img src="assets/items/water.png" alt="water"><span id="hire-water"></span></span>
+      </div>
+    </section>
+  </div></div><p class="rv-cap"><b>Confirmation popup</b>A flap with a woven label: what you get, how long it takes, and the price on the patch you press. Tapping outside still dismisses it.</p></div>
+
+</div>
+
+<script src="../shared/content.js"></script>
+<script>
+(function () {
+  var G = window.GPW, $ = function (id) { return document.getElementById(id); };
+  if (location.hash === "#capture") document.body.classList.add("capture");
+
+  $("splash-heading").textContent = G.copy.splash.heading;
+  $("splash-status").textContent = G.copy.splash.status;
+  $("splash-primary").textContent = G.copy.splash.primary;
+  $("splash-create").textContent = G.copy.splash.secondary[0];
+  $("splash-signin").textContent = G.copy.splash.secondary[1];
+  $("hud-coins").textContent = G.wallet.coins;
+  $("hud-water").textContent = G.wallet.water;
+  document.querySelectorAll(".w-coins").forEach(function (e) { e.textContent = G.wallet.coins; });
+  document.querySelectorAll(".w-water").forEach(function (e) { e.textContent = G.wallet.water; });
+
+  var found = G.wildlings.filter(function (w) { return w.found; }).length;
+  $("found-count").textContent = found + " of " + G.wildlings.length + " found";
+  $("found-fill").style.width = Math.round(found / G.wildlings.length * 100) + "%";
+
+  var chips = [["All", "var(--enamel)"]].concat(Object.keys(G.biomes).map(function (b) { return [G.biomes[b], "var(--b-" + b + ")"]; }));
+  $("biome-chips").innerHTML = chips.map(function (c, i) {
+    return '<div class="chip' + (i === 0 ? " on" : "") + '" style="--dot:' + c[1] + '"><i></i>' + c[0] + "</div>";
+  }).join("");
+
+  $("collection-grid").innerHTML = G.wildlings.map(function (w) {
+    var pips = w.family ? '<span class="pips">' + [1, 2, 3].map(function (n) { return '<i class="' + (n <= w.family ? "on" : "") + '"></i>'; }).join("") + "</span>" : "";
+    var sparkle = w.found && w.rarity === "rare" ? '<span class="sparkle">✦</span>' : "";
+    var inner = w.found
+      ? '<div style="--felt:var(--b-' + w.biome + ')"><img class="pin" src="assets/pins/' + w.slug + '.png" alt=""></div>'
+      : "<div>?</div>";
+    return '<article class="slot ' + w.rarity + (w.found ? "" : " missing") + '"><div class="mount metal">' + inner + sparkle + pips + "</div>" +
+      '<div class="name">' + (w.found ? w.name : "Not found yet") + "</div>" +
+      '<span class="lvl">' + (w.found ? "Level " + w.level : G.biomes[w.biome]) + "</span></article>";
+  }).join("");
+
+  $("item-grid").innerHTML = G.items.map(function (it) {
+    return '<div class="tile"><img class="pin" src="assets/items/' + it.slug + '.png" alt=""><span class="count metal"><b>' + it.count + "</b></span>" +
+      '<div class="title">' + it.title + "</div></div>";
+  }).join("");
+
+  var h = G.copy.hire;
+  $("hire-place").textContent = h.place;
+  $("hire-yield-n").textContent = "5 wood"; $("hire-yield").textContent = "per worker";
+  $("hire-time-n").textContent = "60 sec"; $("hire-time").textContent = "of work";
+  $("hire-prompt").textContent = h.prompt;
+  $("hire-coins").textContent = h.coins; $("hire-water").textContent = h.water;
+})();
+</script>
+<!-- real-scenes pass applied -->
+</body>
+</html>

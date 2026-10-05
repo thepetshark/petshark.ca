@@ -1,0 +1,149 @@
+/* Night-map study. The page frame is round one's neutral review frame
+   (../../round1/shared/frame.css). Inside each phone, the interface is TODAY'S
+   interface at today's measured positions, in the approved identity (cream and
+   green, Nunito, the approved symbols): the study changes the night, not the
+   interface. Everything that belongs to the night fades with --t (0 = day,
+   1 = night), which the slider at the top of the page drives. */
+
+@font-face { font-family: "Nunito"; src: url("../../round1/shared/fonts/nunito/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; font-display: block; }
+
+:root { --t: 1; }
+
+/* ---- page controls ------------------------------------------------------ */
+
+.nm-bar { position: sticky; top: 0; z-index: 20; margin: 0 -40px 8px; padding: 12px 40px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center;
+  background: rgba(35, 40, 51, .94); border-bottom: 1px solid #3b4355; backdrop-filter: blur(8px); }
+.nm-bar fieldset { margin: 0; padding: 0; border: 0; display: flex; align-items: center; gap: 8px; }
+.nm-bar legend { float: left; padding: 0; margin-right: 4px; color: #98a1b3; font-size: 13.5px; }
+.nm-time { display: flex; align-items: center; gap: 10px; color: #98a1b3; font-size: 13.5px; }
+.nm-time input { width: 220px; accent-color: #e9edf5; }
+.nm-seg { display: inline-flex; border: 1px solid #3b4355; border-radius: 8px; overflow: hidden; }
+.nm-seg label { position: relative; padding: 5px 12px; font-size: 13.5px; color: #d6dbe6; background: #2f3644; cursor: pointer; }
+.nm-seg label + label { border-left: 1px solid #3b4355; }
+.nm-seg input { position: absolute; opacity: 0; pointer-events: none; }
+.nm-seg label:has(input:checked) { background: #e9edf5; color: #1b202a; }
+.nm-seg label:has(input:focus-visible) { outline: 2px solid #9ec5ff; outline-offset: -2px; }
+body.capture .nm-bar { display: none; }
+
+.nm-row { display: flex; gap: 36px; align-items: flex-start; padding: 6px 4px 22px; overflow-x: auto; }
+.nm-text { flex: 0 0 330px; max-width: 330px; font-size: 14px; color: #c3cad8; }
+.nm-text h3 { margin: 0 0 6px; font-size: 21px; font-weight: 650; color: #fff; letter-spacing: -0.01em; }
+.nm-text p { margin: 0 0 10px; }
+.nm-text dl { margin: 12px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; font-size: 13.5px; }
+.nm-text dt { color: #98a1b3; } .nm-text dd { margin: 0; color: #e3e7ef; }
+.nm-facts { border-collapse: collapse; font-size: 13.5px; margin-top: 4px; }
+.nm-facts th, .nm-facts td { padding: 6px 12px 6px 0; text-align: right; border-bottom: 1px solid #3b4355; font-variant-numeric: tabular-nums; }
+.nm-facts th:first-child, .nm-facts td:first-child { text-align: left; }
+.nm-facts th { color: #98a1b3; font-weight: 500; } .nm-facts td { color: #e3e7ef; }
+.nm-facts tr.bad td { color: #ffb4a8; } .nm-facts tr.ref td { color: #a9e6c0; }
+.nm-ref { display: flex; gap: 14px; align-items: flex-start; }
+.nm-ref figure { margin: 0; } .nm-ref img { display: block; height: 320px; width: auto; border-radius: 12px; }
+.nm-ref figcaption { margin-top: 8px; max-width: 200px; font-size: 13px; color: #aab2c2; }
+body.capture .nm-row { flex-wrap: wrap; overflow: visible; }
+
+/* ---- the phone ---------------------------------------------------------- */
+
+.nm { font-family: "Nunito", sans-serif; font-weight: 700; color: #24483B; -webkit-font-smoothing: antialiased;
+  --ink: #24483B; --paper: #FAF4E5; --cream: #F1EAD8; --line: #D5DDC9; --green: #366950; --berry: #B5485D; --leaf: #5FA777; --water: #4F8FB3; --honey: #D9A441;
+  --glass: rgba(14, 22, 48, .80); --glass-line: rgba(255, 255, 255, .16); }
+.nm .plate { position: absolute; inset: 0; width: 390px; height: 844px; object-fit: cover; }
+.nm .plate.night { opacity: var(--t); }
+.nm svg.world { position: absolute; inset: 0; width: 390px; height: 844px; overflow: visible; pointer-events: none; }
+.nm .static { position: absolute; inset: 0; }
+
+/* the range line: today's one-pixel blue by day; a lit line at night */
+.nm .range-day { fill: none; stroke: #3FA0F5; stroke-width: 1.2; opacity: calc(1 - var(--t)); }
+.nm .range-glow { fill: none; stroke: #6FE3F5; stroke-width: 7; opacity: calc(.34 * var(--t)); filter: blur(3px); }
+.nm .range-night { fill: none; stroke: #9CF0FA; stroke-width: 1.8; opacity: calc(.95 * var(--t)); }
+.nm.t-reach .range-glow { stroke-width: 12; opacity: calc(.55 * var(--t)); }
+.nm.t-reach .range-night { stroke-width: 2.4; stroke: #C9F8FF; }
+.nm.t-bluehour .range-glow { stroke: #FFE9C9; opacity: calc(.22 * var(--t)); } .nm.t-bluehour .range-night { stroke: #FFF3DD; stroke-width: 1.5; opacity: calc(.85 * var(--t)); }
+.nm.painted-range svg.world .range-glow, .nm.painted-range svg.world .range-night { opacity: 0; }   /* the painting carries its own boundary */
+
+/* the player: today's capsule stays in the plate; at night a beacon finds it */
+.nm .beacon { position: absolute; transform: translate(-50%, -50%); border-radius: 50%; opacity: var(--t); border: 2px solid rgba(255, 248, 230, .95);
+  box-shadow: 0 0 0 1.5px rgba(10, 18, 44, .55), 0 0 14px 3px rgba(255, 244, 214, .55), inset 0 0 10px rgba(255, 244, 214, .35); }
+.nm.t-lanterns .beacon { border-color: #FFE2A6; box-shadow: 0 0 0 1.5px rgba(40, 22, 4, .5), 0 0 18px 5px rgba(255, 197, 110, .7), inset 0 0 12px rgba(255, 197, 110, .45); }
+.nm.t-reach .beacon { border-color: #C9F8FF; box-shadow: 0 0 0 1.5px rgba(10, 18, 44, .55), 0 0 14px 3px rgba(111, 227, 245, .6), inset 0 0 10px rgba(111, 227, 245, .35); }
+@media (prefers-reduced-motion: no-preference) {
+  body:not(.capture) .nm .beacon::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid rgba(255, 248, 230, .8); animation: nm-ping 2.8s ease-out infinite; }
+}
+@keyframes nm-ping { 0% { transform: scale(1); opacity: .8; } 70%, 100% { transform: scale(2.3); opacity: 0; } }
+
+/* animal-group marker: today's marker, crisp. Centre of the disc sits on (x, y). */
+.nm .mk { position: absolute; width: 0; height: 0; }
+.nm .mk .face { position: absolute; left: -20px; top: -20px; width: 40px; height: 40px; border-radius: 50%; background: #3F6F62; box-shadow: 0 0 0 3px var(--paper), 0 3px 6px rgba(20, 40, 32, .35); overflow: hidden; display: grid; place-items: center; }
+.nm .mk .face img { width: 38px; height: 38px; margin-top: 3px; }
+.nm .mk .stem { position: absolute; left: -7px; top: 20px; width: 0; height: 0; border: 7px solid transparent; border-top: 11px solid var(--paper); }
+.nm .mk .count { position: absolute; left: 6px; top: -1px; min-width: 21px; height: 21px; padding: 0 5px; display: grid; place-items: center; border-radius: 999px; background: var(--paper); color: var(--ink); font-weight: 900; font-size: 13.5px; line-height: 1; box-shadow: 0 0 0 1.5px rgba(36, 72, 59, .35); }
+.nm .mk.uncommon .face { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--water), 0 3px 6px rgba(20, 40, 32, .35); }
+.nm .mk.rare .face { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--honey), 0 3px 6px rgba(20, 40, 32, .35); }
+/* night-only layers of a marker */
+.nm .mk .rim, .nm .mk .halo, .nm .mk .pool { position: absolute; border-radius: 50%; opacity: 0; pointer-events: none; }
+.nm .mk .rim { left: -25px; top: -25px; width: 50px; height: 50px; border: 2px solid rgba(214, 234, 255, .9); box-shadow: 0 0 10px 2px rgba(150, 190, 255, .45); }
+.nm .mk .halo { left: -62px; top: -62px; width: 124px; height: 124px; background: radial-gradient(circle, rgba(255, 221, 150, .62) 0, rgba(255, 205, 120, .28) 38%, rgba(255, 197, 110, 0) 70%); mix-blend-mode: screen; }
+.nm .mk .pool { left: -42px; top: 22px; width: 84px; height: 30px; background: radial-gradient(ellipse, rgba(255, 214, 140, .60) 0, rgba(255, 197, 110, 0) 70%); mix-blend-mode: screen; }
+.nm.t-moonlit .mk .rim, .nm.t-reach .mk .rim { opacity: var(--t); }
+.nm.t-lanterns .mk .halo, .nm.t-lanterns .mk .pool { opacity: var(--t); }
+.nm.t-lanterns .mk.uncommon .halo { background: radial-gradient(circle, rgba(150, 214, 255, .62) 0, rgba(110, 190, 255, .26) 38%, rgba(110, 190, 255, 0) 70%); }
+.nm.t-lanterns .mk.rare .halo { background: radial-gradient(circle, rgba(255, 214, 96, .72) 0, rgba(255, 190, 60, .30) 38%, rgba(255, 190, 60, 0) 70%); }
+.nm.t-bluehour .mk .rim { opacity: calc(.7 * var(--t)); border-color: rgba(255, 236, 205, .9); box-shadow: 0 0 10px 2px rgba(255, 190, 150, .4); }
+/* beyond reach (Light is reach): an ember. Still findable, clearly not yet in play. */
+.nm.t-reach .mk.far { transform: scale(calc(1 - .30 * var(--t))); filter: saturate(calc(1 - .55 * var(--t))) brightness(calc(1 - .34 * var(--t))); }
+.nm.t-reach .mk.far .rim { opacity: 0; }
+.nm.t-reach .mk.far .count { opacity: calc(1 - var(--t)); }
+.nm .mk.night-only { opacity: var(--t); }
+
+/* object affordances at night: a halo for things that glow, and optional icon chips */
+.nm .glow { position: absolute; transform: translate(-50%, -50%); border-radius: 50%; mix-blend-mode: screen; opacity: 0; pointer-events: none; }
+.nm.t-moonlit .glow.pickup, .nm.t-reach .glow.pickup, .nm.t-bluehour .glow.pickup { opacity: calc(.9 * var(--t)); }
+body[data-layer="painted"] .nm.t-lanterns .glow.pickup { opacity: var(--t); }   /* the regraded Lanterns plate already has these glows; the painting has no pickups */
+.nm .glow.energy { background: radial-gradient(circle, rgba(255, 232, 130, .85) 0, rgba(255, 226, 122, .30) 40%, rgba(255, 226, 122, 0) 70%); }
+.nm .glow.water { background: radial-gradient(circle, rgba(150, 222, 255, .85) 0, rgba(127, 214, 255, .30) 40%, rgba(127, 214, 255, 0) 70%); }
+.nm .chip { position: absolute; width: 30px; height: 30px; margin: -30px 0 0 -15px; border-radius: 10px; display: none; place-items: center; background: var(--paper); box-shadow: 0 0 0 1.5px rgba(36, 72, 59, .45), 0 3px 7px rgba(8, 14, 36, .45); }
+.nm .chip img { width: 22px; height: 22px; }
+.nm .chip::after { content: ""; position: absolute; left: 50%; bottom: -7px; margin-left: -5px; border: 5px solid transparent; border-top: 7px solid var(--paper); border-bottom: 0; }
+body.chips .nm .chip { display: grid; opacity: var(--t); }
+body.chips .nm.t-reach .chip.far { filter: saturate(.45) brightness(.66); transform: scale(.82); }
+
+/* ---- today's interface, at today's positions ---------------------------- */
+
+.nm .hud-top { position: absolute; top: 10px; right: 10px; display: flex; gap: 2px; }
+.nm .wallet { width: 96px; height: 36px; padding: 0 13px 0 5px; display: flex; align-items: center; gap: 5px; border-radius: 999px; background: var(--paper); box-shadow: 0 1px 0 #fff inset, 0 1px 0 var(--line), 0 3px 8px rgba(36, 72, 59, .14); font-weight: 800; font-size: 17px; }
+.nm .wallet img { width: 28px; height: 28px; } .nm .wallet span { margin-left: auto; }
+.nm .hud-left { position: absolute; top: 125px; left: 7px; }
+.nm .chipbox { width: 50px; height: 50px; border-radius: 16px; display: grid; place-items: center; background: var(--paper); box-shadow: 0 1px 0 #fff inset, 0 1px 0 var(--line), 0 3px 8px rgba(36, 72, 59, .14); }
+.nm .chipbox img { width: 34px; height: 34px; }
+.nm .hud-right { position: absolute; top: 138px; right: 9px; min-height: 96px; display: grid; align-content: space-evenly; justify-items: center; padding: 0 3px; border-radius: 999px; background: var(--paper); box-shadow: 0 1px 0 #fff inset, 0 1px 0 var(--line), 0 3px 8px rgba(36, 72, 59, .14); }
+.nm .hud-right .mini { width: 32px; height: 32px; border-radius: 12px; display: grid; place-items: center; background: var(--cream); }
+.nm .hud-right .mini img { width: 24px; height: 24px; }
+.nm .nav { position: absolute; left: 0; right: 0; bottom: 44px; padding: 0 16px; display: flex; align-items: flex-end; justify-content: space-between; }
+.nm .disc { display: grid; place-items: center; border-radius: 50%; background: var(--paper); box-shadow: 0 0 0 3px var(--ink), 0 1px 0 #fff inset, 0 8px 18px rgba(36, 72, 59, .16); }
+.nm .disc.big { width: 68px; height: 68px; } .nm .disc.mid { width: 48px; height: 48px; }
+.nm .disc.big img { width: 44px; height: 44px; } .nm .disc.mid img { width: 30px; height: 30px; }
+.nm .attribution { position: absolute; left: 0; right: 0; top: 713px; text-align: center; font-size: 10px; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .7); }
+
+/* optional night interface: dark glass, symbols keep their cream backing (#60) */
+body.glass .nm .wallet, body.glass .nm .chipbox, body.glass .nm .hud-right { background: var(--glass); color: #F3EFE2; box-shadow: 0 0 0 1px var(--glass-line), 0 4px 12px rgba(0, 0, 0, .35); backdrop-filter: blur(6px); }
+body.glass .nm .wallet img, body.glass .nm .chipbox img { border-radius: 50%; background: var(--paper); }
+body.glass .nm .chipbox img { border-radius: 11px; padding: 2px; }
+body.glass .nm .hud-right .mini { background: var(--paper); }
+body.glass .nm .disc { background: var(--glass); box-shadow: 0 0 0 2px rgba(255, 248, 230, .55), 0 6px 16px rgba(0, 0, 0, .4); backdrop-filter: blur(6px); }
+body.glass .nm .disc img { border-radius: 50%; background: var(--paper); padding: 4px; }
+body.glass .nm .disc.big img { width: 52px; height: 52px; } body.glass .nm .disc.mid img { width: 36px; height: 36px; }
+
+/* ---- second round (twilight.html): a grid of small live phones to choose from ---- */
+
+.tw-grid { display: grid; grid-template-columns: 124px repeat(5, 176px); gap: 14px 16px; align-items: center; justify-items: center; width: max-content; margin: 8px 0 30px; }
+.tw-head, .tw-side { font-size: 13px; line-height: 1.3; color: #aab2c2; }
+.tw-head { grid-row: 1; text-align: center; max-width: 150px; } .tw-side { grid-column: 1; text-align: right; justify-self: end; }
+.tw-mini { position: relative; width: 176px; height: 380px; border-radius: 14px; overflow: hidden; background: #000; }
+.tw-mini .phone { transform: scale(.45); transform-origin: 0 0; border-radius: 0; }
+.tw-left { grid-column: 2; grid-row: 2 / span 3; } .tw-right { grid-column: 6; grid-row: 2 / span 3; }
+.tw-end { position: absolute; left: 0; right: 0; bottom: 0; padding: 5px 0 6px; text-align: center; font: 600 12.5px system-ui, "Segoe UI", sans-serif; color: #fff; background: rgba(14, 17, 22, .74); }
+.tw-cell { display: block; padding: 0; border: 0; background: none; border-radius: 17px; cursor: pointer; outline: 3px solid transparent; outline-offset: 3px; }
+.tw-cell:hover { outline-color: #566076; }
+.tw-cell[aria-pressed="true"] { outline-color: #e9edf5; }
+.tw-cell:focus-visible { outline-color: #9ec5ff; }
+.tw-swatches span { width: 98px; } .tw-swatches code { display: block; font: 12px ui-monospace, Consolas, monospace; color: #e3e7ef; }
+body.capture .tw-grid { margin-bottom: 40px; }

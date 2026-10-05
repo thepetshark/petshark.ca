@@ -1,0 +1,56 @@
+/* Review-page chrome shared by every direction. Deliberately plain: a neutral
+   slate page and a system font, so the frame never competes with, or borrows
+   from, the direction being shown. Phones are exact 390x844 rectangles so an
+   element screenshot at device-pixel-ratio 1 is the capture. */
+
+* { box-sizing: border-box; }
+html { background: #232833; }
+body {
+  margin: 0;
+  padding: 32px 40px 80px;
+  color: #d6dbe6;
+  font: 15px/1.5 system-ui, "Segoe UI", sans-serif;
+}
+
+.rv-head { max-width: 920px; margin-bottom: 28px; }
+.rv-head h1 { margin: 0 0 6px; font-size: 26px; font-weight: 650; color: #fff; letter-spacing: -0.01em; }
+.rv-head p { margin: 0 0 8px; max-width: 72ch; }
+.rv-note { color: #98a1b3; font-size: 13.5px; }
+.rv-nav { display: flex; gap: 8px; margin: 0 0 26px; flex-wrap: wrap; }
+.rv-nav a {
+  color: #d6dbe6; text-decoration: none; padding: 7px 14px; border-radius: 8px;
+  background: #2f3644; border: 1px solid #3b4355;
+}
+.rv-nav a[aria-current="page"] { background: #e9edf5; color: #1b202a; border-color: #e9edf5; }
+.rv-nav a.pending { opacity: .45; pointer-events: none; }
+
+.rv-section { margin: 34px 0 14px; font-size: 17px; font-weight: 650; color: #fff; }
+.rv-section + .rv-note { margin: -8px 0 16px; max-width: 80ch; }
+
+.rv-row { display: flex; gap: 36px; overflow-x: auto; padding: 6px 4px 22px; align-items: flex-start; }
+.rv-item { flex: 0 0 auto; }
+.rv-cap { margin-top: 12px; max-width: 390px; font-size: 13.5px; color: #aab2c2; }
+.rv-cap b { color: #fff; font-weight: 600; display: block; margin-bottom: 2px; font-size: 14.5px; }
+
+/* The bezel is page decoration; the capture target is the .phone inside it. */
+.rv-bezel { padding: 10px; border-radius: 34px; background: #0e1116; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+.phone { width: 390px; height: 844px; position: relative; overflow: hidden; border-radius: 26px; background: #000; isolation: isolate; }
+body.capture .phone { border-radius: 0; }
+
+.rv-brand { display: flex; gap: 22px; flex-wrap: wrap; align-items: stretch; }
+.rv-tile { border-radius: 16px; overflow: hidden; background: #2f3644; border: 1px solid #3b4355; }
+.rv-tile figcaption { padding: 10px 14px 12px; font-size: 13.5px; color: #aab2c2; max-width: 340px; }
+.rv-tile figcaption b { color: #fff; font-weight: 600; display: block; }
+
+.rv-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 1100px; }
+.rv-principles div { background: #2a303c; border: 1px solid #3b4355; border-radius: 12px; padding: 14px 16px; font-size: 14px; }
+.rv-principles b { color: #fff; display: block; margin-bottom: 4px; font-weight: 600; }
+
+.rv-swatches { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.rv-swatches span { width: 92px; font-size: 12px; color: #aab2c2; }
+.rv-swatches i { display: block; height: 46px; border-radius: 10px; margin-bottom: 5px; border: 1px solid rgba(255,255,255,.12); }
+
+/* Capture mode (open the page with #capture): no bezels, no sideways scroll,
+   so every phone is a plain 390x844 rectangle laid out on the page. */
+body.capture .rv-row { flex-wrap: wrap; overflow: visible; }
+body.capture .rv-bezel { padding: 0; border-radius: 0; background: none; box-shadow: none; }

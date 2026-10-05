@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The map at night — Geo Pets World visual refresh</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="night.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>The map at night</h1>
+  <p>Four ways the world map could read as night while everything you can tap stays easy to find. Each one is shown on the game's real map at its three zoom levels, because zooming changes the camera angle and the night has to work at all of them.</p>
+  <p class="rv-note">Concepts only. The map keeps today's look so that the only thing changing is the night. The interface is today's, at today's positions. Hometown is not covered: it is daylight-only by an earlier decision.</p>
+  <p class="rv-note">The reaction on 20 September: Moonlit was fine, but something between Moonlit and Blue hour, where the map keeps more of its colour, would be better. Markers are world-space canvases, which lighting does not touch, so they stay bright on their own. <a href="twilight.html" style="color:#9ec5ff">The second round</a> follows that.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Study controls">
+  <label class="nm-time">Day <input id="nm-time" type="range" min="0" max="100" value="100" aria-label="Time of day, from day to night"> Night</label>
+  <fieldset><legend>Night plate</legend><span class="nm-seg">
+    <label><input type="radio" name="layer" value="painted" checked>Painted concept</label>
+    <label><input type="radio" name="layer" value="graded">Screenshot, regraded</label></span></fieldset>
+  <fieldset><legend>Interface</legend><span class="nm-seg">
+    <label><input type="radio" name="hud" value="cream" checked>Today's cream</label>
+    <label><input type="radio" name="hud" value="glass">Night glass</label></span></fieldset>
+  <fieldset><legend>Icon chips on patches and stalls</legend><span class="nm-seg">
+    <label><input type="radio" name="chips" value="off" checked>Off</label>
+    <label><input type="radio" name="chips" value="on">On</label></span></fieldset>
+</div>
+
+<h2 class="rv-section">Where night stands today</h2>
+<p class="rv-note">The game already has a night, built for the lighting prototype. It dims the light, so the ground drops to near-black and takes the trees, rocks and roads with it. The reference night, a screenshot from an earlier game that is not shown here, does the opposite: it changes the colours and leaves the light in.</p>
+<div class="nm-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-tonight"><img src="../../reference/tonight-central-park.png" alt="The game's present night" width="390" height="844" style="display:block"></div></div>
+    <p class="rv-cap"><b>The game tonight</b>A real capture from today (Central Park test location). Only the water and the cream interface read. The interface stays at full brightness, so the eye adapts to it and the map looks darker still.</p></div>
+  <div class="nm-text" style="flex-basis:520px; max-width:520px">
+    <h3>What the numbers say</h3>
+    <p>Lightness of the ground around the player, on a scale where 0 is black and 100 is white. The gap between roads and land is what lets you tell a road from a field at a glance.</p>
+    <table class="nm-facts" id="facts-today">
+      <thead><tr><th></th><th>roads</th><th>land</th><th>gap</th><th>far away</th></tr></thead>
+      <tbody>
+        <tr class="ref"><td>The reference, night</td><td>16</td><td>36, up to 60</td><td>20 to 45</td><td>20</td></tr>
+        <tr class="bad"><td>Geo Pets World tonight</td><td>12</td><td>12</td><td>0</td><td>19</td></tr>
+        <tr><td>Geo Pets World by day</td><td>44</td><td>55</td><td>11</td><td>57</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px">Two things follow. The reference reads as night because the <em>distance</em> is dim, not because the player's surroundings are. And even by day this map separates roads from land by hue more than by lightness, so simply dimming it cannot work: a night palette has to create the contrast. All four treatments below do.</p>
+    
+  </div>
+</div>
+
+<h2 class="rv-section">Four treatments</h2>
+<p class="rv-note">Each uses a different mechanism to keep tappable things visible, so they can be mixed. Drag the slider at the top to watch day turn into night. One Wildling group beyond the range line is illustrative; everything else is where it is in the game's screenshots.</p>
+
+<div class="nm-row" id="row-moonlit">
+  <div class="nm-text">
+    <h3>Moonlit</h3>
+    <p>Night is a colour, not a loss of light. The ground keeps its brightness range and turns blue-green, roads go dark so the network reads at a glance, and the distance sinks into navy.</p>
+    <p>Anything you can tap is simply left out of the night. Stalls, bushes, trees, pickups and Wildlings keep near-daytime colours; markers are interface, so they never dim. At night each marker gains a pale rim.</p>
+    <dl>
+      <dt>Closest to</dt><dd>The reference night.</dd>
+      <dt>To build</dt><dd>A night colour for each biome, the roads and the sea; a fog colour; tappable objects on a material the night does not darken.</dd>
+      <dt>Watch for</dt><dd>Objects left fully day-bright look pasted on. Here they take about a tenth of the night tint.</dd>
+    </dl>
+  </div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="moonlit" data-zoom="default" id="screen-moonlit-default"></div></div><p class="rv-cap"><b>Default zoom</b>The far Wildling group sits in the navy distance at full brightness: you can see where to walk next.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="moonlit" data-zoom="zoom-in" id="screen-moonlit-zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The low camera shows sky, so night gets a moon and stars for free.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="moonlit" data-zoom="zoom-out" id="screen-moonlit-zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>Looking straight down there is no distance to fade, so the ground falls off gently toward the edges instead. Pickups glow.</p></div>
+</div>
+
+<div class="nm-row" id="row-reach">
+  <div class="nm-text">
+    <h3>Light is reach</h3>
+    <p>The pool of light is your reach. Inside the range circle the ground is moonlit; beyond it the same ground drops to about a third of the light. The range line, a one-pixel blue line by day, becomes the lit rim of the pool.</p>
+    <p>Wildling groups beyond reach shrink to embers: still findable, plainly not in play yet.</p>
+    <dl>
+      <dt>Closest to</dt><dd>The reference's bright ring, made to mean something.</dd>
+      <dt>To build</dt><dd>Moonlit, plus one falloff in the ground shading keyed to the range the game already knows.</dd>
+      <dt>Watch for</dt><dd>Darker surroundings make it harder to plan a walk. The ground beyond reach must stay above black.</dd>
+    </dl>
+  </div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="reach" data-zoom="default" id="screen-reach-default"></div></div><p class="rv-cap"><b>Default zoom</b>The rim crosses the upper map where today's blue line is. The group beyond it is an ember.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="reach" data-zoom="zoom-in" id="screen-reach-zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>Everything in view is within reach, so this reads like Moonlit with a lit horizon line.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="reach" data-zoom="zoom-out" id="screen-reach-zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>The treatment's best view: your reach as a lit disc in a dark world. In the painted plate the circle is drawn smaller than the real range; the regraded plate has the true size.</p></div>
+</div>
+
+<div class="nm-row" id="row-lanterns">
+  <div class="nm-text">
+    <h3>Lanterns</h3>
+    <p>The deepest night, with one strict rule: if it glows, you can tap it. Stalls spill warm light, resource patches carry fireflies, pickups and Wildling groups shine, and the player stands in a small pool of light.</p>
+    <p>Roads flip to pale moonlit paths, so the network still reads on dark ground.</p>
+    <dl>
+      <dt>Closest to</dt><dd>Nothing in the reference; it is the atmospheric option.</dd>
+      <dt>To build</dt><dd>The most work: a glow sprite or decal per tappable thing, a firefly effect, and a road colour flip. No real lights are needed.</dd>
+      <dt>Watch for</dt><dd>Busy places, where many glows merge into one. The ground away from lights is the darkest of the four.</dd>
+    </dl>
+  </div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="lanterns" data-zoom="default" id="screen-lanterns-default"></div></div><p class="rv-cap"><b>Default zoom</b>Tappable things are easier to find than by day. Halo colour follows rarity.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="lanterns" data-zoom="zoom-in" id="screen-lanterns-zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>A stall under its own lanterns, a crescent moon, fireflies at the edge.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="lanterns" data-zoom="zoom-out" id="screen-lanterns-zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>From above, the map becomes a field of small lights, each one something to walk to.</p></div>
+</div>
+
+<div class="nm-row" id="row-bluehour">
+  <div class="nm-text">
+    <h3>Blue hour</h3>
+    <p>The game never goes fully dark: night is the quarter of an hour after sunset. The land keeps its green, the distance turns lavender and the horizon glows. Tappable things need almost no help.</p>
+    <dl>
+      <dt>Closest to</dt><dd>The warm dusk preset the lighting prototype already has.</dd>
+      <dt>To build</dt><dd>The least work: a palette, a fog colour and a sky gradient.</dd>
+      <dt>Watch for</dt><dd>It reads as evening, not night. If night ever matters to play, it may not feel different enough from day.</dd>
+    </dl>
+  </div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="bluehour" data-zoom="default" id="screen-bluehour-default"></div></div><p class="rv-cap"><b>Default zoom</b>The brightest of the four; the far group is as clear as the near one.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="bluehour" data-zoom="zoom-in" id="screen-bluehour-zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The sky does the work: violet to peach, lit clouds, first stars.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-treatment="bluehour" data-zoom="zoom-out" id="screen-bluehour-zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>Without a sky in view, dusk is carried by ground colour and long soft shadows alone.</p></div>
+</div>
+
+<h2 class="rv-section">Measured the same way as the reference</h2>
+<p class="rv-note">The same measure on the regraded plates, which are the game's real map, at the default zoom. Roads and land are measured directly. The last column is the contrast between a marker's cream ring and the ground beside it; 3 to 1 is the usual floor for a graphic that must be seen.</p>
+<table class="nm-facts" id="facts-treatments">
+  <thead><tr><th></th><th>roads</th><th>land</th><th>gap</th><th>far away</th><th>marker to ground</th></tr></thead>
+  <tbody id="facts-body"></tbody>
+</table>
+
+<h2 class="rv-section">Helpers that work with any of them</h2>
+<div class="rv-principles">
+  <div><b>A ring that finds you</b>Today's player is a small yellow capsule, easy to lose at night. Every treatment here adds a soft ring on the ground at its foot. It pulses slowly on the page; the captures show it still.</div>
+  <div><b>A range line you can see</b>The one-pixel blue line becomes a lit line at night. In Light is reach it is the rim of the pool.</div>
+  <div><b>Icon chips on patches and stalls</b>By day a bush patch or a stall is its own button. At night a small cream chip above it makes that explicit. Switch it on at the top of the page. It costs map clutter, so it may suit only the darker treatments.</div>
+  <div><b>A night interface</b>A cream interface at full brightness glares outdoors at night and makes the map look darker. "Night glass" at the top of the page shows dark translucent controls, with the symbols keeping the cream backing the identity already asks for on dark terrain.</div>
+</div>
+
+
+
+
+
+<script src="geometry.js"></script>
+<script src="facts.js"></script>
+<script src="night.js"></script>
+</body>
+</html>

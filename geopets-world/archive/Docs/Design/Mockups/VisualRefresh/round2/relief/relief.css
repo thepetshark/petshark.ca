@@ -1,0 +1,77 @@
+/* Relief. The world is a faceted low-poly relief model, built the way the owned creature meshes are built.
+   The interface is an ATLAS: chart-white sheets, one ink, hairline rules, a cased route line for the range,
+   line-only symbols, and elevation tints that carry rarity (lowland, upland, summit). One motif: contour lines.
+   No shadow, bevel or gloss anywhere. */
+
+@font-face { font-family: "Archivo"; src: url("../shared/fonts/archivo/Archivo-Variable.ttf") format("truetype"); font-weight: 100 900; font-stretch: 62% 125%; font-display: block; }
+
+.rl { --chart: #F7F8F3; --rule: #DDE1D6; --ink: #1F2D3A; --low: #8CCB7E; --low-soft: #DDEFD6; --up: #E2C067; --up-soft: #F5E9C3; --peak: #FFFFFF; --peak-line: #E8553A; --survey: #FF6B2C; --water: #2F8FD6;
+  --contour: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='74' fill='none' stroke='%231F2D3A' stroke-opacity='.13' stroke-width='1.2'%3E%3Cpath d='M-6 58c22-16 38-8 56-20s30-30 56-26 34 22 52 18'/%3E%3Cpath d='M-6 72c26-18 40-8 60-20s30-32 58-26 30 22 46 20'/%3E%3Cpath d='M-6 42c18-12 32-6 48-16s30-26 52-24 38 20 62 14'/%3E%3Cpath d='M58 40c6-10 22-16 34-10s8 18-4 22-36-2-30-12z'/%3E%3Cpath d='M70 40c4-5 12-7 17-4s3 8-3 10-17-1-14-6z'/%3E%3C/svg%3E");
+  font-family: "Archivo", sans-serif; font-stretch: 88%; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.rl .sym svg * { stroke: var(--ink); fill: none; } .rl .sym svg g { stroke-width: 3.6; }
+.rl .sym-coin svg g > :first-child { fill: var(--up); } .rl .sym-water svg g > :first-child { fill: #BFE0F7; } .rl .sym-energy svg g > :first-child { fill: var(--up); }
+.rl h2, .rl .btn { font-stretch: 122%; font-weight: 800; letter-spacing: -.01em; }
+
+/* map */
+.rl .range-under { stroke: var(--chart); stroke-width: 6; } .rl .range-line { stroke: var(--survey); stroke-width: 2.5; }
+.rl .player .sym { left: -13px; top: -13px; width: 26px; height: 26px; transform: rotate(45deg); border-radius: 5px; background: var(--survey); border: 3px solid var(--chart); outline: 1.5px solid var(--ink); }
+.rl .player .sym svg { display: none; }
+.rl .mk .face { left: -23px; top: -52px; width: 46px; height: 46px; border-radius: 12px; background: var(--low-soft); border: 2px solid var(--ink); }
+.rl .mk.uncommon .face { background: var(--up-soft); } .rl .mk.rare .face { background: var(--peak); border-color: var(--peak-line); }
+.rl .mk .face .creature { width: 40px; height: 40px; margin-top: 3px; }
+.rl .mk .stem { left: -1px; top: -6px; width: 2px; height: 8px; background: var(--ink); } .rl .mk .stem::after { content: ""; position: absolute; left: -3px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--ink); border: 1.5px solid var(--chart); }
+.rl .mk .count { left: 14px; top: -60px; min-width: 20px; height: 20px; padding: 0 4px; border-radius: 5px; background: var(--ink); color: var(--chart); font-size: 13px; font-weight: 700; font-stretch: 100%; }
+.rl .pickup .sym { padding: 3px; border-radius: 7px; background: var(--chart); border: 1.5px solid var(--ink); }
+
+.rl .wallet { gap: 0; border-radius: 9px; background: var(--chart); border: 1.5px solid var(--ink); }
+.rl .purse { height: 34px; padding: 0 11px 0 7px; } .rl .purse + .purse { border-left: 1.5px solid var(--rule); } .rl .purse b { font-size: 16px; font-weight: 700; font-stretch: 100%; } .rl .purse .sym { width: 22px; height: 22px; }
+.rl .short { width: 48px; height: 48px; border-radius: 11px; background: var(--chart); border: 1.5px solid var(--ink); } .rl .short .sym { width: 30px; height: 30px; }
+.rl .short .badge { right: -7px; top: -7px; min-width: 20px; height: 20px; border-radius: 5px; background: var(--survey); color: var(--ink); font-size: 13px; font-weight: 800; border: 1.5px solid var(--ink); }
+.rl .side.right { gap: 0; border-radius: 11px; background: var(--chart); border: 1.5px solid var(--ink); overflow: hidden; }
+.rl .toggle { width: 40px; height: 40px; } .rl .toggle + .toggle { border-top: 1.5px solid var(--rule); } .rl .toggle.on { background: var(--low-soft); } .rl .toggle .sym { width: 25px; height: 25px; }
+.rl .nav { padding: 0 14px; }
+.rl .dest { width: 50px; height: 50px; border-radius: 14px; background: var(--chart); border: 1.5px solid var(--ink); } .rl .dest .sym { width: 30px; height: 30px; }
+.rl .dest.big { width: 64px; height: 64px; border-radius: 18px; border-width: 2px; } .rl .dest.big .sym { width: 38px; height: 38px; }
+
+/* sheets */
+.rl .scrim { background: rgba(31, 45, 58, .6); }
+.rl .sheet { border-radius: 16px 16px 0 0; background: var(--chart); border-top: 2px solid var(--ink); bottom: calc(var(--safe-bottom) + 84px); }
+.rl .sheet-head { height: 66px; padding: 0 14px 0 18px; background: var(--contour); border-bottom: 1.5px solid var(--ink); }
+.rl .sheet h2 { font-size: 25px; line-height: 1; }
+.rl .close { width: 36px; height: 36px; border-radius: 9px; border: 1.5px solid var(--ink); background: var(--chart); } .rl .close .sym { width: 18px; height: 18px; }
+.rl .progress { margin: 14px 18px 0; font-size: 14px; } .rl .lead { font-weight: 700; font-stretch: 100%; }
+.rl .meter { height: 9px; border-radius: 2px; background: var(--rule); outline: 1.5px solid var(--ink); } .rl .meter u { background: var(--low); border-right: 1.5px solid var(--ink); }
+.rl .chips { gap: 6px; margin: 13px 0 0; padding: 0 18px; }
+.rl .chip { height: 28px; gap: 6px; padding: 0 10px 0 8px; border-radius: 7px; border: 1.5px solid var(--ink); font-size: 12.5px; }
+.rl .chip i { width: 9px; height: 9px; border-radius: 2px; background: var(--dot, var(--ink)); outline: 1px solid var(--ink); } .rl .chip.on { background: var(--ink); color: var(--chart); } .rl .chip.on i { background: var(--chart); }
+.rl .biome-meadow { --dot: #9AD26A; } .rl .biome-grove { --dot: #4E9B68; } .rl .biome-marsh { --dot: #63C1B8; } .rl .biome-stonefield { --dot: #B9BBB4; } .rl .biome-snow { --dot: #CFE6F5; } .rl .biome-town { --dot: #F0B566; }
+.rl .grid.wild { grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 14px; padding: 0 14px; }
+.rl .card { display: grid; grid-template-columns: 78px 1fr; grid-template-rows: auto 1fr; column-gap: 10px; align-content: center; border-radius: 11px; border: 1.5px solid var(--ink); overflow: hidden; background: var(--chart); }
+.rl .card .stage { grid-row: 1 / span 2; height: 86px; background: var(--low-soft) var(--contour); border-right: 1.5px solid var(--ink); }
+.rl .card.uncommon .stage { background-color: var(--up-soft); } .rl .card.rare .stage { background-color: var(--peak); border-right-color: var(--peak-line); } .rl .card.rare { border-color: var(--peak-line); }
+.rl .card .creature { width: 70px; height: 70px; }
+.rl .card .name { align-self: end; padding-right: 6px; font-size: 15px; font-weight: 700; font-stretch: 100%; line-height: 1.15; }
+.rl .card .meta { display: grid; gap: 1px; align-self: start; margin-top: 3px; font-size: 11.5px; font-weight: 500; } .rl .card .tier { text-transform: capitalize; font-weight: 700; } .rl .card.rare .tier { color: var(--peak-line); }
+.rl .card.missing .stage { background-color: var(--rule); } .rl .card.missing .name { font-weight: 500; font-size: 13px; opacity: .75; }
+.rl .btn { height: 52px; gap: 6px; padding: 0 20px; border-radius: 11px; background: var(--survey); border: 1.5px solid var(--ink); font-size: 16.5px; }
+.rl .btn.quiet { background: var(--chart); font-weight: 700; font-stretch: 100%; } .rl .btn.small { height: 28px; padding: 0 11px; border-radius: 7px; font-size: 12.5px; font-stretch: 100%; font-weight: 700; }
+.rl .tabs { gap: 18px; margin: 16px 18px 0; border-bottom: 1.5px solid var(--rule); }
+.rl .tab { height: 32px; font-size: 14px; font-weight: 600; opacity: .62; } .rl .tab.on { opacity: 1; font-weight: 800; border-bottom: 3px solid var(--ink); margin-bottom: -1.5px; }
+.rl .grid.items { grid-template-columns: 1fr; margin-top: 2px; padding: 0 18px; }
+.rl .tile { display: grid; grid-template-columns: 44px 1fr auto auto; align-items: center; column-gap: 12px; height: 47px; border-bottom: 1.5px solid var(--rule); }
+.rl .tile .well { width: 44px; height: 44px; } .rl .tile .item-img { width: 40px; height: 40px; } .rl .tile .sym { width: 32px; height: 32px; }
+.rl .tile .name { font-size: 15.5px; font-weight: 700; font-stretch: 100%; } .rl .tile .kind { font-size: 12px; font-weight: 500; opacity: .66; }
+.rl .tile .count { min-width: 40px; text-align: right; font-size: 19px; font-weight: 800; font-stretch: 112%; }
+
+/* confirmation */
+.rl .modal { left: 18px; right: 18px; top: 250px; padding: 20px 18px 18px; border-radius: 16px; background: var(--chart); border: 2px solid var(--ink); }
+.rl .modal h2 { font-size: 22px; line-height: 1.1; padding-right: 40px; } .rl .modal .close { right: 12px; top: 12px; }
+.rl .facts { margin-top: 16px; border: 1.5px solid var(--ink); border-radius: 11px; overflow: hidden; background: var(--contour); }
+.rl .fact { gap: 4px; padding: 12px 8px; } .rl .fact + .fact { border-left: 1.5px solid var(--ink); } .rl .fact .item-img, .rl .fact .sym { width: 40px; height: 40px; } .rl .fact b { font-size: 14.5px; font-weight: 700; font-stretch: 100%; line-height: 1.2; }
+.rl .prompt { margin: 14px 0 12px; font-size: 14.5px; font-weight: 500; } .rl .actions { gap: 8px; }
+
+/* Hometown */
+.rl .bubble { gap: 7px; height: 40px; padding: 0 11px 0 6px; border-radius: 9px; background: var(--chart); border: 1.5px solid var(--ink); }
+.rl .bubble::after { content: ""; position: absolute; left: 50%; bottom: -11px; width: 2px; height: 10px; margin-left: -1px; background: var(--ink); }
+.rl .bubble .item-img, .rl .bubble .sym { width: 28px; height: 28px; } .rl .bubble b { font-size: 14.5px; font-weight: 800; font-stretch: 100%; line-height: 1; }
+.rl .bubble .meter { width: 56px; height: 5px; margin-top: 4px; outline-width: 1px; } .rl .bubble.locked { background: var(--ink); color: var(--chart); } .rl .bubble.locked .sym svg * { stroke: var(--chart); }

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toybox — Geo Pets World visual refresh, round one</title>
+<link rel="stylesheet" href="../shared/frame.css">
+<link rel="stylesheet" href="toybox.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Toybox</h1>
+  <p>Glossy, chunky and sunny, in the family of popular casual mobile games. Every surface is a toy you could press, and the real creatures — already chunky and big-eyed — look at home in it.</p>
+  <p class="rv-note">Concept only. Creature portraits are the game's real models; names, rarities, biomes and item titles are real; levels, counts and prices are illustrative. Backdrops, logos, icons and item art were generated for this study.</p>
+</header>
+
+
+
+<h2 class="rv-section">What makes it this direction</h2>
+<div class="rv-principles">
+  <div><b>Depth is solid, never blurry</b>Every button, card and panel has a lip beneath it, like a toy block. No soft grey shadows anywhere.</div>
+  <div><b>Colour always means something</b>Frame colour is rarity. Stage colour is the biome a Wildling lives in. Green means go. Yellow is currency.</div>
+  <div><b>Rewards look like prizes</b>Items and Wildlings always sit on a lit, coloured stage, so opening the collection feels like opening a toy shelf.</div>
+  <div><b>One loud thing per screen</b>The logo on the splash, the cards in the collection, the hire button in the popup. Everything else stays quiet.</div>
+</div>
+
+<h2 class="rv-section">Title logo and app icon</h2>
+<p class="rv-note">Three title treatments. In each, Geo Pets is the name and WORLD is at least as prominent, in different lettering — the globe letter, the hanging sign and the map-pin emblem. Two app icons keep the selected leaf-eared companion and redraw it in this style.</p>
+<div class="rv-brand tb-brand">
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-a.png" alt="Geo Pets World logo, globe letter"></div><figcaption><b>A — globe letter</b>The O in WORLD is the planet, with a paw-print continent.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-b.png" alt="Geo Pets World logo, hanging sign"></div><figcaption><b>B — hanging sign</b>WORLD swings beneath the name like a shop sign.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-c.png" alt="Geo Pets World logo, map-pin emblem"></div><figcaption><b>C — map-pin emblem</b>A pin and paw behind the name, WORLD on a ribbon.</figcaption></figure>
+</div>
+<div class="rv-brand tb-brand" style="margin-top:22px">
+  <figure class="rv-tile"><div class="icon-tile">
+    <img src="assets/appicon-a.png" width="128" height="128" alt="">
+    <img src="assets/appicon-a.png" width="64" height="64" alt=""><img src="assets/appicon-a.png" width="48" height="48" alt=""><img src="assets/appicon-a.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-a.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon A — face</b>128, 64, 48 and 32 px, then a circular crop.</figcaption></figure>
+  <figure class="rv-tile"><div class="icon-tile dark">
+    <img src="assets/appicon-b.png" width="128" height="128" alt="">
+    <img src="assets/appicon-b.png" width="64" height="64" alt=""><img src="assets/appicon-b.png" width="48" height="48" alt=""><img src="assets/appicon-b.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-b.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon B — map pin</b>The same sizes on a dark home screen.</figcaption></figure>
+</div>
+
+<h2 class="rv-section">The same six screens</h2>
+<p class="rv-note">Each phone is exactly 390×844. Scroll sideways.</p>
+
+<div class="rv-row">
+
+  <!-- 1. Splash -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-splash">
+    <div class="bg splash"></div>
+    <img class="logo" src="assets/logo-a.png" alt="Geo Pets World">
+    <section class="account slab framed">
+      <h2 class="display" id="splash-heading"></h2>
+      <p id="splash-status"></p>
+      <div class="btn inked" id="splash-primary"></div>
+      <div class="row">
+        <div class="btn sky small inked" id="splash-create"></div>
+        <div class="btn plain small" id="splash-signin"></div>
+      </div>
+    </section>
+  </div></div><p class="rv-cap"><b>Splash</b>The title gets the sky; the account card becomes a toy slab with one obvious green button.</p></div>
+
+  <!-- 2. World map -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-map">
+    <div class="bg map"></div>
+    <svg class="arc" viewBox="0 0 390 844" aria-hidden="true"><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#12609A" stroke-width="9" stroke-linecap="round"/><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round"/></svg>
+    <div class="marker" style="left:100px; top:520px"><div class="bubble"><img src="assets/items/softwood.png" alt="Wood ready"><span class="badge go">✓</span></div><div class="stem"></div></div>
+    <div class="marker common" style="left:172px; top:96px"><div class="bubble round" style="--stage:var(--b-grove)"><img src="../shared/creatures/mossbrush.png" alt="Mossbrush"></div><div class="stem"></div></div>
+    <div class="marker rare" style="left:36px; top:320px"><div class="bubble round" style="--stage:var(--b-marsh)"><img src="../shared/creatures/reedshield.png" alt="Reedshield"></div><div class="stem"></div></div>
+    <div class="marker" style="left:292px; top:530px"><div class="bubble"><img src="assets/items/wooden-trap.png" alt="Traps"><span class="badge">4</span></div><div class="stem"></div></div>
+
+    <div class="player"><div class="pin"><img src="assets/ui/profile.png" alt="You"></div><div class="tip"></div><div class="ground"></div></div>
+
+    <div class="hud-top">
+      <div class="cap"><img src="assets/items/coin.png" alt="Coins"><span id="hud-coins"></span></div>
+      <div class="cap"><img src="assets/items/water.png" alt="Water"><span id="hud-water"></span></div>
+    </div>
+    <div class="hud-left">
+      <div class="disc shortcut"><img src="assets/items/wooden-trap.png" alt="Traps"><span class="badge">3</span></div>
+      <div class="disc shortcut"><img src="assets/ui/worker.png" alt="Workers"><span class="badge go">20</span></div>
+    </div>
+    <div class="hud-right">
+      <div class="mini"><img src="assets/ui/worker.png" alt="Show workers"></div>
+      <div class="mini off"><img src="assets/items/wooden-trap.png" alt="Show traps"></div>
+    </div>
+
+    <div class="attribution">© Mapbox © OpenStreetMap</div>
+    <div class="nav">
+      <div class="disc big"><img src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid"><img src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid"><img src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid"><img src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big"><img src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>World map and HUD</b>The game's real map, restyled. The roads, the rocky biome, the sea, the tree patch and the market stall are where they are in today's game; only the look has changed. Markers carry the creature on its biome colour with a rarity rim, clusters carry a count, a finished harvest gets a green tick, and the range line is the far arc it really is.</p></div>
+
+  <!-- Hometown -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-home">
+    <div class="bg home"></div>
+    <div class="hb working" style="left:70px; top:345px"><div class="body"><img src="assets/items/flour.png" alt=""><b>0:42</b><span class="meter"><i></i></span></div><div class="stem"></div></div>
+    <div class="hb working" style="left:222px; top:322px"><div class="body"><img src="assets/items/biscuit.png" alt=""><b>1:10</b><span class="meter"><i style="width:28%"></i></span></div><div class="stem"></div></div>
+    <div class="hb locked" style="left:152px; top:312px"><div class="body"><span class="lock"></span></div></div>
+    <div class="toast"><img src="assets/items/biscuit.png" alt=""><b>+3 Biscuit</b><span>in your bag</span></div>
+    <div class="hud-top">
+      <div class="cap"><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="cap"><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <div class="hud-left"><div class="disc shortcut"><img src="assets/ui/worker.png" alt="Workers"><span class="badge go">2</span></div></div>
+    <div class="nav">
+      <div class="disc big"><img src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid"><img src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid"><img src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid"><img src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big"><img src="assets/ui/world.png" alt="World"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Hometown</b>The game's Hometown, restyled: the same five buildings, the props, the padlocked archway, the cloud blanket and the world below. Following today's decision that finished crafting is delivered automatically, nothing waits to be collected: working buildings show a timer, idle ones stay quiet instead of carrying a label, and goods arrive with a small notice.</p></div>
+
+  <!-- 3. Collection -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-collection">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="cap"><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="cap"><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <div class="sheet-wrap">
+      <section class="sheet slab framed">
+        <div class="ribbon display inked">Wildlings</div>
+        <div class="progress"><b id="found-count"></b><div class="bar"><div class="fill" id="found-fill"></div></div></div>
+        <div class="chips" id="biome-chips"></div>
+        <div class="grid three" id="collection-grid"></div>
+      </section>
+      <div class="close inked">✕</div>
+    </div>
+    <div class="nav">
+      <div class="disc big"><img src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid"><img src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid"><img src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid"><img src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big"><img src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Wildling collection</b>The trophy shelf. Wood, blue and purple frames are common, uncommon and rare. The stage behind each Wildling is its biome. Missing ones wait as silhouettes; the Petal family shows its three stages as dots.</p></div>
+
+  <!-- 4. Inventory -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-inventory">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="cap"><img src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="cap"><img src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <div class="sheet-wrap">
+      <section class="sheet slab framed">
+        <div class="ribbon display inked" style="background:linear-gradient(var(--sky-hi),var(--sky) 60%,var(--sky-lo)); box-shadow:0 5px 0 var(--sky-lip),0 5px 0 3px var(--cocoa)">Inventory</div>
+        <div class="progress storage"><b>Storage 105 / 150</b><div class="bar"><div class="fill" style="width:70%"></div></div><span class="up">Upgrade</span></div>
+        <div class="tabs"><div class="tab on">All</div><div class="tab">Materials</div><div class="tab">Products</div><div class="tab">Tools</div></div>
+        <div class="grid four" id="item-grid"></div>
+      </section>
+      <div class="close inked">✕</div>
+    </div>
+    <div class="nav">
+      <div class="disc big"><img src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid"><img src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid"><img src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid"><img src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big"><img src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Inventory</b>Items drawn as small prizes rather than outlined symbols, with the count where the thumb reads it first. The storage meter follows today's decision that the inventory has a capacity you can upgrade; whether materials and goods get separate limits is still open, so one is shown.</p></div>
+
+  <!-- 5. Confirm popup -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone tb" id="screen-confirm">
+    <div class="bg map"></div><div class="dim"></div>
+    <section class="modal slab framed">
+      <div class="ribbon display inked" id="hire-place"></div>
+      <div class="facts">
+        <div class="fact"><img src="assets/items/softwood.png" alt=""><b id="hire-yield-n"></b><span id="hire-yield"></span></div>
+        <div class="fact"><div class="clock"></div><b id="hire-time-n"></b><span id="hire-time"></span></div>
+      </div>
+      <p class="prompt" id="hire-prompt"></p>
+      <div class="btn inked">Hire
+        <span class="price"><img src="assets/items/coin.png" alt="coins"><span id="hire-coins"></span></span>
+        <span class="price"><img src="assets/items/water.png" alt="water"><span id="hire-water"></span></span>
+      </div>
+      <div class="close inked">✕</div>
+    </section>
+  </div></div><p class="rv-cap"><b>Confirmation popup</b>What you get, how long it takes and what it costs, with the price on the button itself. Tapping outside still dismisses it.</p></div>
+
+</div>
+
+<script src="../shared/content.js"></script>
+<script>
+(function () {
+  var G = window.GPW, $ = function (id) { return document.getElementById(id); };
+  if (location.hash === "#capture") document.body.classList.add("capture");
+
+  $("splash-heading").textContent = G.copy.splash.heading;
+  $("splash-status").textContent = G.copy.splash.status;
+  $("splash-primary").textContent = G.copy.splash.primary;
+  $("splash-create").textContent = G.copy.splash.secondary[0];
+  $("splash-signin").textContent = G.copy.splash.secondary[1];
+  $("hud-coins").textContent = G.wallet.coins;
+  $("hud-water").textContent = G.wallet.water;
+  document.querySelectorAll(".w-coins").forEach(function (e) { e.textContent = G.wallet.coins; });
+  document.querySelectorAll(".w-water").forEach(function (e) { e.textContent = G.wallet.water; });
+
+  var found = G.wildlings.filter(function (w) { return w.found; }).length;
+  $("found-count").textContent = found + " of " + G.wildlings.length + " found";
+  $("found-fill").style.width = Math.round(found / G.wildlings.length * 100) + "%";
+
+  var chips = [["All", "#fff"]].concat(Object.keys(G.biomes).map(function (b) { return [G.biomes[b], "var(--b-" + b + ")"]; }));
+  $("biome-chips").innerHTML = chips.map(function (c, i) {
+    return '<div class="chip' + (i === 0 ? " on" : "") + '" style="--dot:' + c[1] + '"><i></i>' + c[0] + "</div>";
+  }).join("");
+
+  $("collection-grid").innerHTML = G.wildlings.map(function (w) {
+    var dots = w.family ? '<span class="dots">' + [1, 2, 3].map(function (n) { return '<i class="' + (n <= w.family ? "on" : "") + '"></i>'; }).join("") + "</span>" : "";
+    var star = w.rarity === "rare" && w.found ? '<span class="star">★</span>' : "";
+    return '<article class="card ' + w.rarity + (w.found ? "" : " missing") + '">' + star + dots +
+      '<div class="stage' + (w.rarity === "rare" && w.found ? " shine" : "") + '" style="--stage:var(--b-' + w.biome + ')"><img src="../shared/creatures/' + w.slug + '.png" alt=""></div>' +
+      '<div class="name">' + (w.found ? w.name : "Not found yet") + "</div>" +
+      '<span class="lvl">' + (w.found ? "Level " + w.level : G.biomes[w.biome]) + "</span></article>";
+  }).join("");
+
+  $("item-grid").innerHTML = G.items.map(function (it) {
+    return '<div class="tile"><img src="assets/items/' + it.slug + '.png" alt=""><span class="count display inked">' + it.count + "</span>" +
+      '<div class="title">' + it.title + "</div></div>";
+  }).join("");
+
+  var h = G.copy.hire;
+  $("hire-place").textContent = h.place;
+  $("hire-yield-n").textContent = "5 wood"; $("hire-yield").textContent = "per worker";
+  $("hire-time-n").textContent = "60 sec"; $("hire-time").textContent = "of work";
+  $("hire-prompt").textContent = h.prompt;
+  $("hire-coins").textContent = h.coins; $("hire-water").textContent = h.water;
+})();
+</script>
+<!-- real-scenes pass applied -->
+</body>
+</html>

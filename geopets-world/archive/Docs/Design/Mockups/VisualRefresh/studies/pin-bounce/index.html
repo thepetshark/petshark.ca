@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>The pin bounce when tapped</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+<link rel="stylesheet" href="bounce.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>The pin bounce when tapped</h1>
+  <p>This study explores a vertical "bounce" as touch feedback when a player taps a 2D marker: today's pickups are destroyed
+  instantly, so a bounce would be cut off before it played, but that changes once objects fade in and out (animals
+  first), leaving time for one to run. Three shapes to choose from, each stated in pixels of a 390-wide portrait
+  screen and in seconds, playing on the game's real map at the three zooms. A quiet ring marks where the tap landed so the
+  cause of each bounce is visible.</p>
+  <p><b>Picked, 23 September:</b> squash and hop and settle, drawn as the fourth row: shape 3 whole, then shape 2's small second bounce. Every number stays a setting.</p>
+  <p class="rv-note">Motion is vertical only; every pin returns exactly to where it stood. Drawn over map screenshots of
+  2026-09-20, through today's flat interface. A tap plays automatically every 2 seconds, moving to the next pin;
+  use the controls to pause or slow it down.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <button class="st-btn" id="bp-pause" type="button" aria-pressed="false">Pause</button>
+  <fieldset><legend>Speed</legend><span class="nm-seg">
+    <label><input type="radio" name="bp-rate" value="1" checked>1 ×</label>
+    <label><input type="radio" name="bp-rate" value="0.25">0.25 × (slow motion)</label></span></fieldset>
+  <span class="rv-note" style="margin-left:4px">A tap lands on a different pin every 2 seconds: Energy, Water, the market, then a Wildling group.</span>
+</div>
+
+<div id="bp-shapes"></div>
+
+<h2 class="rv-section">How each would be built</h2>
+<p class="rv-note">Every number above is a setting, not a fixed rule, so it can be tuned after choosing a shape.</p>
+<table class="st-table">
+  <tr><th>piece</th><th>built as</th></tr>
+  <tr><td>The bounce itself</td><td>An extra upward screen-pixel offset added in <code>WorldMarkerCanvas.Place</code>, computed from the time since the tap; the pin's own local position is never touched, so it still tracks the world point it marks.</td></tr>
+  <tr><td>The curve</td><td>A small easing curve (a sine bell, or two in sequence for the settle) evaluated from elapsed time; no physics step, no per-frame accumulation, so it cannot drift.</td></tr>
+  <tr><td>The squash</td><td>A non-uniform local scale on the pin's canvas RectTransform, applied only while the shape calls for it, always anchored at the pin's own tip so the tip never moves off the point it marks.</td></tr>
+  <tr><td>Settings</td><td>Clamped fields on <code>WorldMarkerSettings</code> (height, duration, and the settle or squash amounts), one set per chosen shape, in pixels of the 390-wide reference canvas so they scale with the interface.</td></tr>
+  <tr><td>The tap moment</td><td>Read from the same input event that already resolves which marker was hit; the bounce starts the frame the tap is recognised, not on pointer-up.</td></tr>
+</table>
+
+<script src="../night-map/night.js"></script>
+<script src="../map-landmarks/pins.js"></script>
+<script src="bounce.js"></script>
+</body>
+</html>

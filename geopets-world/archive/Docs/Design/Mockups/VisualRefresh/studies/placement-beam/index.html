@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Beamed down from Hometown: placing a worker or a trap</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Beamed down from Hometown</h1>
+  <p>This study asks how a beam could come down from the sky, off camera, when the player places a worker or a trap on the map, as if it were being beamed down from the player's floating Hometown above. Here are six ways it could look if Unity's effects were used, playing on the game's real map. Drag the bar under any phone to move through its effect by hand.</p>
+  <p class="rv-note">Concepts only. These are browser simulations, not Unity captures. Each is made only of the kinds of parts Unity's effect tools provide, drawn through a camera set to the game's own numbers, so a vertical beam leans, widens and foreshortens at each zoom as it would in the game. Today a placement has no effect at all: the pin appears and a notice says "Trap placed".</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Placing</legend><span class="nm-seg">
+    <label><input type="radio" name="kind" value="trap" checked>A trap, on a spot you tap</label>
+    <label><input type="radio" name="kind" value="worker">A worker, at a resource patch</label></span></fieldset>
+  <fieldset id="surface-set"><legend>The trap lands on</legend><span class="nm-seg">
+    <label><input type="radio" name="surface" value="land" checked>Land</label>
+    <label><input type="radio" name="surface" value="water">Water</label></span></fieldset>
+  <fieldset><legend>Zoom</legend><span class="nm-seg">
+    <label><input type="radio" name="zoom" value="zoom-in">Fully zoomed in</label>
+    <label><input type="radio" name="zoom" value="default" checked>Default</label>
+    <label><input type="radio" name="zoom" value="zoom-out">Fully zoomed out</label></span></fieldset>
+  <fieldset><legend>Time</legend><span class="nm-seg">
+    <label><input type="radio" name="time" value="day" checked>Day</label>
+    <label><input type="radio" name="time" value="night">Night</label></span></fieldset>
+  <fieldset><legend>Bloom</legend><span class="nm-seg">
+    <label><input type="radio" name="bloom" value="on" checked>On</label>
+    <label><input type="radio" name="bloom" value="off">Off, as in the game today</label></span></fieldset>
+  <fieldset><legend>Speed</legend><span class="nm-seg">
+    <label><input type="radio" name="speed" value="1" checked>Real</label>
+    <label><input type="radio" name="speed" value="0.5">Half</label>
+    <label><input type="radio" name="speed" value="0.2">One fifth</label></span></fieldset>
+  <button class="st-btn" id="st-pause" type="button" aria-pressed="false">Pause</button>
+  <button class="st-btn" id="st-again" type="button">Play all from the start</button>
+</div>
+
+<h2 class="rv-section">Six beams, playing</h2>
+<p class="rv-note">Each loop shows the moment before you confirm, the effect, and the pin left behind. Times under a phone count from the confirmation. The grey bars show what happens when.</p>
+<div class="rv-row" id="beam-live"></div>
+
+<h2 class="rv-section">The key moments of each, side by side</h2>
+<p class="rv-note">The same effects frozen at six moments, in the state the switches above are set to.</p>
+<div id="beam-boards"></div>
+
+<h2 class="rv-section">The six compared</h2>
+<table class="st-table">
+  <thead><tr><th>Beam</th><th>Length</th><th>What says "from above"</th><th>What it is made of</th><th>Without bloom</th><th>Cost on a phone</th></tr></thead>
+  <tbody>
+    <tr><td>Column</td><td>1.6 s</td><td>A column that arrives from the top of the screen and is pulled back up</td><td>Two cylinders, a particle system, a ring, a light</td><td>Still reads; softer</td><td>Medium</td></tr>
+    <tr><td>Drop</td><td>1.0 s</td><td>A streak falling from the top of the screen</td><td>A sprite with a trail, three bursts, a ring</td><td>Reads the same</td><td>Low</td></tr>
+    <tr><td>Lowered</td><td>2.1 s</td><td>You watch the pin itself come down the shaft</td><td>One banded cylinder, a decal, a moving pin</td><td>Still reads</td><td>Medium</td></tr>
+    <tr><td>Sunshaft</td><td>2.2 s</td><td>Light from parted cloud, leaves drifting down</td><td>Three wide shafts, three particle systems, a light</td><td>Loses most of its glow</td><td>Highest</td></tr>
+    <tr><td>Print</td><td>1.5 s</td><td>A thin line from the sky that draws and builds</td><td>A line, a symbol quad, a mask on the pin, sparks</td><td>Reads the same</td><td>Lowest</td></tr>
+    <tr><td>Ribbons</td><td>1.6 s</td><td>Three trails spiralling down from the top of the screen</td><td>Three trail renderers, a star, a burst</td><td>Reads the same</td><td>Low</td></tr>
+  </tbody>
+</table>
+
+<h2 class="rv-section">What building this showed</h2>
+<div class="rv-principles">
+  <div><b>The zoom changes a beam more than its design does</b>Zoomed in, a beam stands against the sky. At the default zoom it leans away from the middle of the screen as it rises. Zoomed out you look down along it: it fans toward the top edge and is almost three times wider there than at the ground. Try the zoom switch on any of them.</div>
+  <div><b>By day, added light disappears on bright grass</b>A purely additive beam is nearly invisible at noon on the meadow. Every beam here also has a pale body drawn with ordinary blending by day. In Unity that is one premultiplied-alpha material instead of an additive one.</div>
+  <div><b>What arrives is a pin</b>The game has no model of a trap or a worker on the map, only a pin, so that is what these deliver. "Lowered" and "Print" would gain the most from a small model: there would be something real to lower, or to build from the ground up.</div>
+  <div><b>It runs under the interface</b>The beam is in the world and the interface is on top, so it passes behind the coin and water counters. Today's "Trap placed" notice would cover its top hundred pixels.</div>
+  <div><b>It will be seen twenty times in a row</b>A player setting out traps sees this again and again, so it should be short and never block the next tap. "Drop" is done in a second. The two-second ones suit a first placement better than the twentieth.</div>
+  <div><b>The cost is the tall see-through surface</b>What a phone pays for is large transparent areas drawn over each other, and a column that fills the screen from top to bottom when zoomed in is exactly that. "Drop", "Print" and "Ribbons" have almost none.</div>
+</div>
+
+
+
+
+
+<script src="../shared/scene.js"></script>
+<script src="../night-map/geometry.js"></script>
+<script src="../night-map/night.js"></script>
+<script src="../shared/mapfx.js"></script>
+<script src="beam.js"></script>
+</body>
+</html>

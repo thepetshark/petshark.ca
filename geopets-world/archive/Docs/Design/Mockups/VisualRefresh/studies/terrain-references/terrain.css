@@ -1,0 +1,32 @@
+/* Terrain references. The page frame is round one's neutral review frame; nothing of the game's interface is drawn
+   here, so there is nothing to keep flat except the page's own controls, which carry no shadows either. */
+
+.tr-pair { display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap; padding: 6px 4px 30px; }
+.tr-pair figure { margin: 0; flex: 0 0 auto; }
+.tr-pair figcaption, .tr-detail figcaption { margin-top: 10px; max-width: 390px; font-size: 13.5px; color: #aab2c2; }
+.tr-pair figcaption b, .tr-detail figcaption b { color: #fff; font-weight: 600; display: block; margin-bottom: 2px; font-size: 14.5px; }
+.tr-pair figcaption code, .tr-detail figcaption code { display: block; margin-top: 4px; color: #c3cad8; font-size: 12.5px; }
+
+.tr-phone { width: 390px; height: 844px; position: relative; overflow: hidden; border-radius: 26px; background: #000; }
+.tr-phone img { position: absolute; inset: 0; width: 390px; height: 844px; display: block; }
+body.capture .tr-phone { border-radius: 0; }
+
+/* the wipe: the top picture is clipped from the left at --at, and a plain line marks the cut */
+.tr-wipe .top { clip-path: inset(0 0 0 var(--at, 50%)); }
+.tr-wipe .cut { position: absolute; top: 0; bottom: 0; left: var(--at, 50%); width: 2px; margin-left: -1px; background: #fbf6e8; }
+.tr-wipe .tag { position: absolute; top: 12px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600; background: #fbf6e8; color: #24483b; border: 1.5px solid #24483b; }
+.tr-wipe .tag.l { left: 12px; } .tr-wipe .tag.r { right: 12px; }
+
+/* which strength the relief wipe shows: plain segmented radios */
+.tr-seg { display: inline-flex; border: 1px solid #3b4355; border-radius: 8px; overflow: hidden; flex: 0 0 auto; }
+.tr-seg label { padding: 5px 10px; font-size: 13px; color: #d6dbe6; background: #2f3644; cursor: pointer; border-left: 1px solid #3b4355; }
+.tr-seg label:first-child { border-left: 0; }
+.tr-seg input { position: absolute; opacity: 0; pointer-events: none; }
+.tr-seg label:has(input:checked) { background: #e9edf5; color: #1b202a; }
+.tr-seg label:has(input:focus-visible) { outline: 2px solid #9ec5ff; outline-offset: -2px; }
+
+.tr-detail { margin: 0; flex: 0 0 auto; }
+.tr-sheets { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.tr-sheets img { display: block; max-width: min(760px, 100%); height: auto; border-radius: 12px; border: 1px solid #3b4355; }
+.tr-foot { max-width: 100ch; margin-top: 14px; }
+.tr-missing { outline: 2px dashed #8a4a44; }

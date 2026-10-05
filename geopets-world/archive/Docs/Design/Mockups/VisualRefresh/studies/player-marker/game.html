@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Chosen for the game: the ring and the marker as Settings options</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+<link rel="stylesheet" href="game.css">
+<script>
+  /* open on the defaults of the implementation issue: the Pulse ring and the Waypoint gem */
+  window.MARKER_DEFAULTS = { ring: "sonar", marker: "gem" };
+</script>
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Chosen for the game: the ring and the marker as Settings options</h1>
+  <p>Three rings and three markers from the study became choices in Settings: Soft Edge, Marching Dashes and Pulse, and Ground Compass, Waypoint Gem and Hometown Tether. This page mocks that Settings screen. Tap an option on the Settings screen and the three phones beside it change, live, at the game's three zooms.</p>
+  <p class="rv-note">A browser mockup through the game's own camera numbers, not a Unity capture. The Settings screen is drawn in the game's own colours and layout; the Pulse ring and the Waypoint gem are the proposed defaults.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Time</legend><span class="nm-seg">
+    <label><input type="radio" name="time" value="day" checked>Day</label>
+    <label><input type="radio" name="time" value="night">Night</label></span></fieldset>
+  <fieldset><legend>The phone's compass</legend><span class="nm-seg">
+    <label><input type="radio" name="compass" value="on" checked>Available</label>
+    <label><input type="radio" name="compass" value="off">Unavailable</label></span></fieldset>
+  <button class="st-btn" id="st-pause" type="button" aria-pressed="false">Pause</button>
+</div>
+
+<div class="rv-row" id="game">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone gm-settings" id="settings-phone">
+    <h2>Settings</h2>
+    <div class="gm-tabs"><span>Account</span><span class="on">Map</span><span class="dev">Dev</span></div>
+
+    <div class="gm-section">PLAYER RING</div>
+    <div class="gm-options" role="radiogroup" aria-label="Player ring">
+      <label class="gm-opt"><input type="radio" name="pick-ring" value="band"><span class="body"><img src="handoff/settings-ring-soft-edge-128.png" alt=""><span><b>Soft edge</b><small>A soft band of light just inside the edge of your reach</small></span><i class="tick"></i></span></label>
+      <label class="gm-opt"><input type="radio" name="pick-ring" value="dashes"><span class="body"><img src="handoff/settings-ring-marching-dashes-128.png" alt=""><span><b>Marching dashes</b><small>A dashed edge that creeps slowly round</small></span><i class="tick"></i></span></label>
+      <label class="gm-opt"><input type="radio" name="pick-ring" value="sonar" checked><span class="body"><img src="handoff/settings-ring-pulse-128.png" alt=""><span><b>Pulse</b><small>A ripple leaves your spot every few seconds</small></span><i class="tick"></i></span></label>
+    </div>
+
+    <div class="gm-section">PLAYER MARKER</div>
+    <div class="gm-options" role="radiogroup" aria-label="Player marker">
+      <label class="gm-opt"><input type="radio" name="pick-marker" value="glyph"><span class="body"><img src="handoff/settings-marker-ground-compass-128.png" alt=""><span><b>Ground compass</b><small>A disc on the ground that points the way you face</small><span class="note">No compass on this phone: shows a plain disc</span></span><i class="tick"></i></span></label>
+      <label class="gm-opt"><input type="radio" name="pick-marker" value="gem" checked><span class="body"><img src="handoff/settings-marker-waypoint-gem-128.png" alt=""><span><b>Waypoint gem</b><small>A gem that hovers and turns above your spot</small></span><i class="tick"></i></span></label>
+      <label class="gm-opt"><input type="radio" name="pick-marker" value="tether"><span class="body"><img src="handoff/settings-marker-hometown-tether-128.png" alt=""><span><b>Hometown tether</b><small>A thread of light up to your Hometown</small></span><i class="tick"></i></span></label>
+    </div>
+
+    <div class="gm-back">BACK TO WORLD</div>
+  </div></div><p class="rv-cap"><b>Settings → Map</b>A new tab beside Account, in every build. A choice applies at once and is kept on this phone.</p></div>
+
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="gem" data-zoom-fixed="zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The camera 115 units away, 20 degrees above the ground. Only the far side of the ring is in view.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="gem" data-zoom-fixed="default"></div></div><p class="rv-cap"><b>Default</b>361 units, 40 degrees. The ring's far side runs across the upper third of the screen.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="gem" data-zoom-fixed="zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>650 units, 66 degrees. The whole ring shows, and the markers have grown with the square root of the distance so they never shrink away.</p></div>
+</div>
+
+
+
+<script src="../shared/scene.js"></script>
+<script src="../night-map/geometry.js"></script>
+<script src="../night-map/night.js"></script>
+<script src="../shared/mapfx.js"></script>
+<script>
+  /* the compass switch: "Unavailable" is what the game shows on a phone without a heading */
+  document.addEventListener("DOMContentLoaded", function () {
+    function set(v) { window.MARKER_HEADING = v === "off" ? "off" : undefined; document.body.classList.toggle("no-compass", v === "off"); }
+    var q = window.MAPFX.state(); set(q.compass === "off" ? "off" : "on");
+    Array.prototype.forEach.call(document.querySelectorAll('input[name="compass"]'), function (r) { r.checked = r.value === (q.compass === "off" ? "off" : "on"); r.addEventListener("change", function () { if (r.checked) set(r.value); }); });
+  });
+</script>
+<script src="marker.js"></script>
+</body>
+</html>

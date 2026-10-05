@@ -1,0 +1,54 @@
+/* Shared by the three live map studies (placement beam, player marker, water). The page frame is round one's neutral
+   review frame (../../round1/shared/frame.css) and the phone interface is the night study's (../night-map/night.css):
+   today's interface at today's positions. One change: it is drawn FLAT here. The owner ruled out pseudo shadows on
+   buttons, icons and windows after the night study was made, so every soft shadow becomes a plain outline. A ring made
+   with a zero-blur, zero-offset spread is an outline, not a shadow; the capture scripts fail on anything else. */
+
+.fx-canvas { position: absolute; inset: 0; width: 390px; height: 844px; display: block; }
+.fx-ui { position: absolute; inset: 0; pointer-events: none; }
+
+.fx .wallet, .fx .chipbox, .fx .hud-right { box-shadow: 0 0 0 1.5px rgba(36, 72, 59, .24); }
+.fx .disc { box-shadow: 0 0 0 3px var(--ink); }
+.fx .mk .face { box-shadow: 0 0 0 3px var(--paper); }
+.fx .mk.uncommon .face { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--water); }
+.fx .mk.rare .face { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--honey); }
+/* the night study's glow layers on a marker: these studies draw markers plain, as the owner said they stay */
+.fx .mk .rim, .fx .mk .halo, .fx .mk .pool { display: none; }
+.fx .attribution { text-shadow: none; -webkit-text-stroke: 2.5px rgba(10, 20, 16, .5); paint-order: stroke fill; }
+
+/* ---- page pieces ---------------------------------------------------------------------------------------------- */
+
+.st-controls { display: flex; align-items: center; gap: 10px; margin-top: 10px; max-width: 410px; }
+.st-controls input[type="range"] { flex: 1; accent-color: #e9edf5; min-width: 0; }
+.st-controls output { font: 12.5px ui-monospace, Consolas, monospace; color: #aab2c2; min-width: 46px; text-align: right; }
+.st-btn { padding: 5px 12px; border-radius: 8px; border: 1px solid #3b4355; background: #2f3644; color: #d6dbe6; font: inherit; font-size: 13.5px; cursor: pointer; }
+.st-btn:hover { background: #394154; } .st-btn:focus-visible { outline: 2px solid #9ec5ff; outline-offset: 1px; }
+.st-btn[aria-pressed="true"] { background: #e9edf5; color: #1b202a; border-color: #e9edf5; }
+
+/* what happens when, under a beam phone: the phases of the effect along its own time line */
+.st-phases { position: relative; height: 62px; margin-top: 6px; max-width: 410px; font-size: 11.5px; color: #98a1b3; }
+.st-phases i { position: absolute; top: 0; height: 4px; border-radius: 2px; background: #56617a; }
+.st-phases span { position: absolute; top: 22px; white-space: nowrap; }
+.st-phases .now { position: absolute; top: -3px; width: 2px; height: 22px; margin-left: -1px; background: #e9edf5; }
+
+.st-build { margin: 10px 0 0; padding: 0; max-width: 410px; list-style: none; font-size: 13px; color: #aab2c2; }
+.st-build li { padding: 3px 0 3px 14px; position: relative; } .st-build li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 1.5px; background: #6b7690; }
+.st-build b { color: #e3e7ef; font-weight: 600; }
+.st-cost { display: inline-block; margin-top: 8px; padding: 2px 9px; border-radius: 999px; font-size: 12.5px; border: 1px solid #3b4355; color: #d6dbe6; }
+.st-cost.low { border-color: #3f7a5a; color: #a9e6c0; } .st-cost.mid { border-color: #8a7a3a; color: #f0dc95; } .st-cost.high { border-color: #8a4a44; color: #ffb4a8; }
+
+/* key moments of one effect, side by side, half size */
+.st-board { display: flex; gap: 10px; align-items: flex-start; padding: 4px 4px 18px; overflow-x: auto; }
+.st-board figure { margin: 0; flex: 0 0 auto; width: 195px; }
+.st-board canvas { display: block; width: 195px; height: 422px; border-radius: 12px; background: #000; }
+.st-board figcaption { margin-top: 6px; font-size: 12.5px; color: #aab2c2; } .st-board figcaption b { color: #fff; font-weight: 600; margin-right: 6px; font-variant-numeric: tabular-nums; }
+.st-board-title { margin: 18px 0 8px; font-size: 15px; font-weight: 600; color: #fff; }
+body.capture .st-board { overflow: visible; flex-wrap: nowrap; }
+
+.st-table { border-collapse: collapse; font-size: 13.5px; margin-top: 4px; max-width: 1100px; }
+.st-table th, .st-table td { padding: 7px 16px 7px 0; text-align: left; vertical-align: top; border-bottom: 1px solid #3b4355; }
+.st-table th { color: #98a1b3; font-weight: 500; } .st-table td { color: #e3e7ef; } .st-table td:first-child { white-space: nowrap; color: #fff; font-weight: 600; }
+
+.st-text { max-width: 76ch; font-size: 14px; color: #c3cad8; } .st-text p { margin: 0 0 10px; }
+.st-pick { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; margin: 0 0 14px; }
+.st-pick fieldset { margin: 0; padding: 0; border: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; } .st-pick legend { float: left; padding: 0; margin-right: 4px; color: #98a1b3; font-size: 13.5px; }

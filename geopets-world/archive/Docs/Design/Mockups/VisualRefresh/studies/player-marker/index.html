@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Where you are: the player marker and the ring</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Where you are: the player marker and the ring</h1>
+  <p>This page explores a player position marker that is not a character that walks around, with no marker at all as an option while keeping a stylized version of the ring of interaction area. It has two halves, six rings that stand on their own and six markers that are objects or light rather than characters, and a chooser that puts any ring with any marker at the game's three zoom levels.</p>
+  <p class="rv-note" style="color:#b8dca6">On 22 September three of these rings and three of these markers were chosen as options in Settings: Soft edge, Marching dashes and Pulse, and Ground compass, Waypoint gem and Hometown tether. <a href="game.html" style="color:#9ec5ff">The Settings mock</a> is on its own page.</p>
+  <p class="rv-note">Everything is drawn live on real screenshots of the game from 20 September, through a camera set to the game's own numbers, so sizes and angles are what the game would show. The interface is today's, drawn flat. Use the switches: the zoom changes the camera angle, and the night is the half-way level of the second night round.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Zoom</legend><span class="nm-seg">
+    <label><input type="radio" name="zoom" value="zoom-in">Fully zoomed in</label>
+    <label><input type="radio" name="zoom" value="default" checked>Default</label>
+    <label><input type="radio" name="zoom" value="zoom-out">Fully zoomed out</label></span></fieldset>
+  <fieldset><legend>Time</legend><span class="nm-seg">
+    <label><input type="radio" name="time" value="day" checked>Day</label>
+    <label><input type="radio" name="time" value="night">Night</label></span></fieldset>
+  <button class="st-btn" id="st-pause" type="button" aria-pressed="false">Pause</button>
+</div>
+
+<h2 class="rv-section">The ring on its own, with no marker</h2>
+<p class="rv-note">One option: nothing stands where the player is, and a stylized ring carries everything. One thing to know before judging it: at the default zoom and zoomed in, only the far side of the ring is ever on screen, about 250 pixels above where you stand. Zoom out to see a whole ring.</p>
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="today" data-marker="today"></div></div><p class="rv-cap"><b>Today</b>A one-pixel blue line and an amber capsule. The line fades into water and grey rock; the capsule is ten pixels tall here and seven when zoomed out, and the night dulls it.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="none"></div></div><p class="rv-cap"><b>Cased line</b>Cream with a dark green edge, the way the approved symbols are drawn. It reads on grass, rock, road and water alike, by day and at night.</p><ul class="st-build"><li><b>Build:</b> today's line renderer with a two-tone texture, or two stacked lines; unlit material.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="band" data-marker="none"></div></div><p class="rv-cap"><b>Soft edge</b>The line plus a band of light that fades toward you, so the ring says which side is yours.</p><ul class="st-build"><li><b>Build:</b> a flat ring strip round the player with a gradient texture, unlit and transparent; or a few lines in the terrain shader from the player's position and the radius.</li></ul><span class="st-cost low">Low: one transparent strip</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="dashes" data-marker="none"></div></div><p class="rv-cap"><b>Marching dashes</b>A dashed line that creeps round slowly. It looks alive without anything having to move.</p><ul class="st-build"><li><b>Build:</b> the line renderer in tile mode with a dash texture whose offset moves over time.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="curtain" data-marker="none"></div></div><p class="rv-cap"><b>Low curtain</b>A knee-high wall of light standing on the line, brightest at its foot. Zoom in: it is the only ring that still reads when the camera looks along the ground.</p><ul class="st-build"><li><b>Build:</b> a ring strip standing upright with a gradient, additive at night; a shimmer from a scrolling noise.</li></ul><span class="st-cost mid">Medium: a tall transparent surface that fills many pixels when zoomed in</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="lit" data-marker="none"></div></div><p class="rv-cap"><b>Reach is lit</b>Hardly a line at all: the ground you can reach is simply brighter than the ground you cannot. By day the far side dims a little; at night your reach keeps its daytime colour. This is the night study's "Light is reach" again, as a ring.</p><ul class="st-build"><li><b>Build:</b> three lines in the terrain and road shaders, comparing distance from the player with the radius; nothing to animate.</li></ul><span class="st-cost low">Low, but it touches the terrain shaders</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="none"></div></div><p class="rv-cap"><b>Pulse</b>A thin cased line, and every few seconds a ripple that leaves the spot where you stand and dies at the line. With no marker at all, this is the ring that still says where "here" is.</p><ul class="st-build"><li><b>Build:</b> a second ring strip scaled from nothing to the radius while it fades; or one more term in the terrain shader.</li></ul><span class="st-cost low">Low</span></div>
+</div>
+
+<h2 class="rv-section">A marker that is not a character</h2>
+<p class="rv-note">Each hovers, lies flat or is made of light, so it can glide with you without ever having to walk. All are shown with the cased line. Every marker here grows a little as the camera pulls away, so it never shrinks to the seven pixels today's capsule has when zoomed out.</p>
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="glyph"></div></div><p class="rv-cap"><b>Ground compass</b>A cream disc with a dark green rim lying on the ground, and a soft wedge of light showing the way you face. Flat, so it never hides what is behind it; thin when the camera is low.</p><ul class="st-build"><li><b>Build:</b> one quad just above the terrain, or a decal; unlit.</li><li><b>Needs:</b> a heading, from the compass or the direction of travel. The game does not read one yet.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="gem"></div></div><p class="rv-cap"><b>Waypoint gem</b>A faceted gem hovering over your spot, slowly turning, with a small ring on the ground exactly beneath it. Faceted like the game's creature meshes. Unlit, so the night cannot dull it.</p><ul class="st-build"><li><b>Build:</b> an eight-triangle mesh with vertex colours, unlit; turn and bob from a script; a ring beneath.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="wisp"></div></div><p class="rv-cap"><b>Lantern wisp</b>A small ball of warm light with a few motes circling it. By day a cream bead with a halo. At night it lights the ground round you in the map's own colours, which keeps the ground near the player readable.</p><ul class="st-build"><li><b>Build:</b> two billboards, a five-particle system, and at night one point light without shadows.</li></ul><span class="st-cost mid">Low by day; at night one realtime light on the terrain</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="tether"></div></div><p class="rv-cap"><b>Hometown tether</b>A hair-thin thread of light from your spot straight up and off the top of the screen, to the Hometown floating above, with a bead of light that climbs it now and then. It says where you are, and why beams come down from the sky.</p><ul class="st-build"><li><b>Build:</b> a line renderer or thin strip, unlit; one sprite for the bead.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="leaf"></div></div><p class="rv-cap"><b>Leaf pointer</b>A folded leaf, cream with the dark green outline of the approved symbols, hovering flat over your spot and pointing the way you face.</p><ul class="st-build"><li><b>Build:</b> a four-triangle mesh, unlit, with an outline from the texture or a second, slightly larger mesh.</li><li><b>Needs:</b> a heading, as the compass does.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="cased" data-marker="island"></div></div><p class="rv-cap"><b>Hometown overhead</b>The floating Hometown in miniature, hovering over your spot with its shadow on the ground. The one marker no other map game could have. It changes the beam's story: a beam would come down from this, in view, rather than from off camera.</p><ul class="st-build"><li><b>Build:</b> one small low-poly model, a bob from a script. Lit by the scene, so at night it needs an emissive window or an unlit material.</li></ul><span class="st-cost low">Low: one small model</span></div>
+</div>
+
+<h2 class="rv-section">Put one ring with one marker</h2>
+<div class="st-pick" role="group" aria-label="Chooser">
+  <fieldset><legend>Ring</legend><span class="nm-seg">
+    <label><input type="radio" name="pick-ring" value="today">Today</label>
+    <label><input type="radio" name="pick-ring" value="cased">Cased line</label>
+    <label><input type="radio" name="pick-ring" value="band">Soft edge</label>
+    <label><input type="radio" name="pick-ring" value="dashes">Dashes</label>
+    <label><input type="radio" name="pick-ring" value="curtain">Curtain</label>
+    <label><input type="radio" name="pick-ring" value="lit">Reach is lit</label>
+    <label><input type="radio" name="pick-ring" value="sonar" checked>Pulse</label></span></fieldset>
+  <fieldset><legend>Marker</legend><span class="nm-seg">
+    <label><input type="radio" name="pick-marker" value="none">None</label>
+    <label><input type="radio" name="pick-marker" value="glyph">Compass</label>
+    <label><input type="radio" name="pick-marker" value="gem">Gem</label>
+    <label><input type="radio" name="pick-marker" value="wisp" checked>Wisp</label>
+    <label><input type="radio" name="pick-marker" value="tether">Tether</label>
+    <label><input type="radio" name="pick-marker" value="leaf">Leaf</label>
+    <label><input type="radio" name="pick-marker" value="island">Hometown</label></span></fieldset>
+</div>
+<div class="rv-row" id="chooser">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="wisp" data-zoom-fixed="zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The camera is 20 degrees above the ground. Flat things turn thin; things that stand or hover read best.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="wisp" data-zoom-fixed="default"></div></div><p class="rv-cap"><b>Default</b>40 degrees. Only the far side of the ring is in view.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-ring="sonar" data-marker="wisp" data-zoom-fixed="zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>66 degrees. The whole ring shows, and anything small at your spot has to fight for attention.</p></div>
+</div>
+
+<h2 class="rv-section">What building this showed</h2>
+<div class="rv-principles">
+  <div><b>With no marker, two zooms show nothing where you are</b>At the default zoom and zoomed in, the near side of the ring is off the bottom of the screen. Only the Pulse ring, or "Reach is lit" at night, still tells you where "here" is.</div>
+  <div><b>Hover, lie flat, or be light</b>A thing that stands on the ground looks wrong sliding along as you walk. A thing that hovers, a mark on the ground, or a light can glide, so none of these needs a walk cycle.</div>
+  <div><b>Lit or unlit decides the night</b>Today's capsule is lit by the scene, so the night dulls it. Every marker here is unlit or is itself a light, except the Hometown model, which would need an emissive window.</div>
+  <div><b>Two of them need a heading</b>The compass and the leaf show which way you face. The game reads no compass or travel direction yet, so those two carry a small piece of new runtime work.</div>
+</div>
+
+
+
+
+
+<script src="../shared/scene.js"></script>
+<script src="../night-map/geometry.js"></script>
+<script src="../night-map/night.js"></script>
+<script src="../shared/mapfx.js"></script>
+<script src="marker.js"></script>
+</body>
+</html>

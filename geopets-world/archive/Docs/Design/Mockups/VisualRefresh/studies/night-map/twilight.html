@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Between Moonlit and Blue hour — the map at night, second round</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="night.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Between Moonlit and Blue hour</h1>
+  <p>The reaction to the four night treatments was that Moonlit was fine, but something between Moonlit and Blue hour, with the map keeping more of its colour, would be better. This page turns "between" and "more" into nine levels you can point at, on the game's real map.</p>
+  <p class="rv-note">Concepts only. Every plate is a game screenshot with a night palette applied by a script, so each level is a set of colours the game could use. Markers are drawn exactly as by day, with no rim or glow: world-space canvases are not lit, so they stay bright on their own.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Stalls, bushes, trees, pickups, Wildlings and the player</legend><span class="nm-seg">
+    <label><input type="radio" name="objects" value="in" checked>Lit by the night, like the ground</label>
+    <label><input type="radio" name="objects" value="out">Left out of the night</label></span></fieldset>
+</div>
+
+<h2 class="rv-section">Pick a level</h2>
+<p class="rv-note">Left to right the night gets darker, from Blue hour toward Moonlit. Top to bottom the ground keeps more of its own daytime colour. Select any one to see it at three zooms below.</p>
+<div class="tw-grid" id="tw-grid">
+  <span class="tw-head" style="grid-column:3">a quarter of the way to Moonlit</span>
+  <span class="tw-head" style="grid-column:4">half-way</span>
+  <span class="tw-head" style="grid-column:5">three quarters</span>
+  <span class="tw-side" style="grid-row:2">some of the map's own colour</span>
+  <span class="tw-side" style="grid-row:3">more of it</span>
+  <span class="tw-side" style="grid-row:4">most of it</span>
+</div>
+
+<h2 class="rv-section">The selected level at three zooms</h2>
+<div class="nm-row" id="tw-chosen">
+  <div class="nm-text">
+    <h3 id="tw-name" style="font-size:17px; line-height:1.35"></h3>
+    <p>Lightness of the ground round the player at the default zoom, from 0 for black to 100 for white. The reference night holds roads at 16 and land at 36; this map by day has 44 and 55, a gap of only 11.</p>
+    <dl id="tw-facts"></dl>
+    <p style="margin-top:14px">The night colours of this level, for whoever builds it:</p>
+    <div class="rv-swatches tw-swatches" id="tw-swatches"></div>
+  </div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-tw-default"></div></div><p class="rv-cap"><b>Default zoom</b>The distance carries the night; the ground round the player keeps its colour and its contrast.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-tw-zoom-in"></div></div><p class="rv-cap"><b>Fully zoomed in</b>The sky blends too: a dusk glow on the horizon at the lighter levels, a moon and more stars from half-way on.</p></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" id="screen-tw-zoom-out"></div></div><p class="rv-cap"><b>Fully zoomed out</b>No sky and no distance here, so a ground that keeps its colour would read as an overcast day. The edges fall off into the haze colour instead, more strongly the more colour is kept.</p></div>
+</div>
+
+<h2 class="rv-section">What the grid shows</h2>
+<div class="rv-principles">
+  <div><b>Colour and contrast are separate</b>Keeping the map's colour changes hue only. Every level keeps the lightness the night gives each kind of ground, so roads stay 26 to 30 points darker than land at all nine levels. By day the gap is 11.</div>
+  <div><b>The more colour, the less the ground says "night"</b>At the bottom row the grass is green, the rock grey and the roads brown again. The night is then carried by the distance haze, the sea, the sky and, looking straight down, the fall-off at the edges.</div>
+  <div><b>Markers need nothing</b>Drawn as by day, a marker's cream ring has a contrast of 4.4 to 4.9 to 1 against this ground. A graphic needs 3 to 1 to be seen, and by day the same marker has 3.4 to 1.</div>
+  <div><b>Lit objects are the open question</b>A stall, a bush patch, a pickup or the player is a lit 3D object, not a canvas. Use the switch at the top: left in the night they go dull and grey, most visibly the stall and the player. Left out of it they read as clearly as the markers.</div>
+</div>
+
+
+
+
+
+<script src="geometry.js"></script>
+<script src="twilight-data.js"></script>
+<script src="night.js"></script>
+<script src="twilight.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storybook — Geo Pets World visual refresh, round one</title>
+<link rel="stylesheet" href="../shared/frame.css">
+<link rel="stylesheet" href="storybook.css">
+</head>
+<body>
+
+<!-- The hand-inked wobble used on every paper edge and on the range ring. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="sb-wobble" x="-6%" y="-6%" width="112%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="sb-wobble-soft" x="-6%" y="-6%" width="112%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="9" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs></svg>
+
+<header class="rv-head">
+  <h1>Storybook</h1>
+  <p>A painted picture book about a walk outside. Matte gouache, tinted papers, a blue ink line that wobbles a little, washi tape and fair-day rosettes. It grows out of the painted splash and the illustrated Home the game already has.</p>
+  <p class="rv-note">Concept only. Wildling names, rarities, biomes and item titles are real; levels, counts and prices are illustrative. All art on this board was generated for the study. The creature portraits are repaints of the game's real models: same animals, same shapes, painted skins.</p>
+</header>
+
+
+
+<h2 class="rv-section">What makes it this direction</h2>
+<div class="rv-principles">
+  <div><b>Everything is paper and paint</b>Pages are tinted washes with grain, cut a little unevenly and set down slightly crooked, with a flat cut-paper shadow. Nothing is glossy.</div>
+  <div><b>One blue ink line</b>Every edge is drawn in the same deep blue-teal ink and wobbles like a hand-drawn line. The lettering stays crisp.</div>
+  <div><b>Wildlings are plates in a field journal</b>Each sits in an oval painted with its biome's wash. Rarity is a rosette pinned to the card: none, blue, or gold.</div>
+  <div><b>Marigold means go</b>One warm yellow for the thing to press. Leaf green is the second choice; raspberry only ever marks a number.</div>
+</div>
+
+<h2 class="rv-section">Title logo and app icon</h2>
+<p class="rv-note">Three paper-cut titles, like a picture-book cover. Geo Pets is the name and WORLD is at least as prominent, in different lettering: a painted globe for the O, a string of bunting, and a leaf banner. Two app icons keep the selected leaf-eared companion and repaint it.</p>
+<div class="rv-brand sb-brand">
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-a.png" alt="Geo Pets World logo, painted globe"></div><figcaption><b>A — painted globe</b>The O in WORLD is the planet, with a paw-print continent.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-b.png" alt="Geo Pets World logo, bunting"></div><figcaption><b>B — bunting</b>WORLD strung out on five paper flags.</figcaption></figure>
+  <figure class="rv-tile"><div class="logo-tile"><img src="assets/logo-c.png" alt="Geo Pets World logo, leaf banner"></div><figcaption><b>C — leaf banner</b>WORLD on a painted ribbon, with a paw and a sprig.</figcaption></figure>
+</div>
+<div class="rv-brand sb-brand" style="margin-top:22px">
+  <figure class="rv-tile"><div class="icon-tile">
+    <img src="assets/appicon-a.png" width="128" height="128" alt="">
+    <img src="assets/appicon-a.png" width="64" height="64" alt=""><img src="assets/appicon-a.png" width="48" height="48" alt=""><img src="assets/appicon-a.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-a.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon A — portrait</b>128, 64, 48 and 32 px, then a circular crop.</figcaption></figure>
+  <figure class="rv-tile"><div class="icon-tile dark">
+    <img src="assets/appicon-b.png" width="128" height="128" alt="">
+    <img src="assets/appicon-b.png" width="64" height="64" alt=""><img src="assets/appicon-b.png" width="48" height="48" alt=""><img src="assets/appicon-b.png" width="32" height="32" alt="">
+    <img class="circle" src="assets/appicon-b.png" width="64" height="64" alt="">
+  </div><figcaption><b>Icon B — peeking</b>The same sizes on a dark home screen.</figcaption></figure>
+</div>
+
+<h2 class="rv-section">The same six screens</h2>
+<p class="rv-note">Each phone is exactly 390×844. Scroll sideways.</p>
+
+<div class="rv-row">
+
+  <!-- 1. Splash -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-splash">
+    <div class="bg splash"></div>
+    <img class="logo" src="assets/logo-a.png" alt="Geo Pets World">
+    <section class="account paper">
+      <span class="tape"></span>
+      <h2 class="hand" id="splash-heading"></h2>
+      <p id="splash-status"></p>
+      <div class="btn paper" id="splash-primary"></div>
+      <div class="row">
+        <div class="btn leaf small paper thin" id="splash-create"></div>
+        <div class="btn plain small paper thin" id="splash-signin"></div>
+      </div>
+    </section>
+  </div></div><p class="rv-cap"><b>Splash</b>A paper-cut title over the painted world, and an account note taped to the page.</p></div>
+
+  <!-- 2. World map -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-map">
+    <div class="bg map"></div>
+    <svg class="arc" viewBox="0 0 390 844" aria-hidden="true"><path d="M-5 211 Q205 165 395 207" fill="none" stroke="rgba(251,247,238,.75)" stroke-width="8" stroke-linecap="round"/><path d="M-5 211 Q205 165 395 207" fill="none" stroke="#1F3A4D" stroke-width="3" stroke-dasharray="12 9" stroke-linecap="round" filter="url(#sb-wobble)"/></svg>
+    <div class="marker" style="left:132px; top:580px"><div class="disc square paper"><img class="paint" src="assets/items/softwood.png" alt="Wood ready"><span class="dab go">✓</span></div><div class="stick"></div></div>
+    <div class="marker common" style="left:96px; top:170px"><div class="disc paper" style="--stage:var(--b-grove)"><img class="cut" src="assets/creatures/mossbrush.png" alt="Mossbrush"></div><div class="stick"></div></div>
+    <div class="marker rare" style="left:36px; top:320px"><div class="disc paper" style="--stage:var(--b-marsh)"><img class="cut" src="assets/creatures/reedshield.png" alt="Reedshield"><span class="rosette"><i></i></span></div><div class="stick"></div></div>
+    <div class="marker" style="left:292px; top:530px"><div class="disc square paper"><img class="paint" src="assets/items/wooden-trap.png" alt="Traps"><span class="dab">4</span></div><div class="stick"></div></div>
+
+    <div class="player"><div class="disc paper"><img class="paint" src="assets/ui/profile.png" alt="You"></div><div class="stick"></div><div class="ground"></div></div>
+
+    <div class="hud-top">
+      <div class="tag paper thin"><img class="paint" src="assets/items/coin.png" alt="Coins"><span id="hud-coins"></span></div>
+      <div class="tag paper thin"><img class="paint" src="assets/items/water.png" alt="Water"><span id="hud-water"></span></div>
+    </div>
+    <div class="hud-left">
+      <div class="disc shortcut paper"><img class="paint" src="assets/items/wooden-trap.png" alt="Traps"><span class="dab">3</span></div>
+      <div class="disc shortcut paper"><img class="paint" src="assets/ui/worker.png" alt="Workers"><span class="dab go">20</span></div>
+    </div>
+    <div class="hud-right">
+      <div class="disc mini paper thin"><img class="paint" src="assets/ui/worker.png" alt="Show workers"></div>
+      <div class="disc mini off paper thin"><img class="paint" src="assets/items/wooden-trap.png" alt="Show traps"></div>
+    </div>
+
+    <div class="attribution">© Mapbox © OpenStreetMap</div>
+    <div class="nav">
+      <div class="disc big paper"><img class="paint" src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big paper"><img class="paint" src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>World map and HUD</b>The game's real map, repainted. The roads, the rocky biome, the sea, the tree patch and the market stalls are where they are in today's game. Markers are paper discs on sticks; a rare Wildling wears its gold rosette out in the world too.</p></div>
+
+  <!-- Hometown -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-home">
+    <div class="bg home"></div>
+    <div class="hb working" style="left:78px; top:318px"><div class="body paper thin"><img class="paint" src="assets/items/flour.png" alt=""><b>0:42</b><span class="meter"><i></i></span></div><div class="stem"></div></div>
+    <div class="hb working" style="left:226px; top:290px"><div class="body paper thin"><img class="paint" src="assets/items/biscuit.png" alt=""><b>1:10</b><span class="meter"><i style="width:28%"></i></span></div><div class="stem"></div></div>
+    <div class="hb locked" style="left:140px; top:312px"><div class="body paper thin"><span class="lock"></span></div></div>
+    <div class="toast paper thin"><img class="paint" src="assets/items/biscuit.png" alt=""><b>+3 Biscuit</b><span>in your bag</span></div>
+    <div class="hud-top">
+      <div class="tag paper thin"><img class="paint" src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="tag paper thin"><img class="paint" src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <div class="hud-left"><div class="disc shortcut paper"><img class="paint" src="assets/ui/worker.png" alt="Workers"><span class="dab go">2</span></div></div>
+    <div class="nav">
+      <div class="disc big paper"><img class="paint" src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big paper"><img class="paint" src="assets/ui/world.png" alt="World"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Hometown</b>The game's Hometown, repainted, with every building it has today. Working buildings carry a paper tag with their timer; idle ones stay quiet; the padlocked archway gets a small lock; finished goods arrive with a note, as decided today.</p></div>
+
+  <!-- 3. Collection -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-collection">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="tag paper thin"><img class="paint" src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="tag paper thin"><img class="paint" src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <section class="page paper" style="--tint:var(--page-sage)">
+      <div class="close paper thin">✕</div>
+      <h2 class="page-title hand">Wildlings<svg viewBox="0 0 176 12" aria-hidden="true"><path d="M2 8 C 30 2, 60 11, 92 6 S 150 3, 174 7" fill="none" stroke="#F4B23E" stroke-width="5" stroke-linecap="round"/></svg></h2>
+      <div class="progress"><b id="found-count"></b><div class="bar paper thin"><div class="fill" id="found-fill"></div></div></div>
+      <div class="chips" id="biome-chips"></div>
+      <div class="grid three" id="collection-grid"></div>
+    </section>
+    <div class="nav">
+      <div class="disc big paper"><img class="paint" src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big paper"><img class="paint" src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Wildling collection</b>A field journal page. Each Wildling is a plate in an oval painted with its biome's wash; a blue rosette marks uncommon and a gold one rare. Missing ones are a pencilled question mark.</p></div>
+
+  <!-- 4. Inventory -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-inventory">
+    <div class="bg map"></div><div class="dim"></div>
+    <div class="hud-top">
+      <div class="tag paper thin"><img class="paint" src="assets/items/coin.png" alt="Coins"><span class="w-coins"></span></div>
+      <div class="tag paper thin"><img class="paint" src="assets/items/water.png" alt="Water"><span class="w-water"></span></div>
+    </div>
+    <section class="page paper" style="--tint:var(--page-peach)">
+      <div class="close paper thin">✕</div>
+      <h2 class="page-title hand">Inventory<svg viewBox="0 0 176 12" aria-hidden="true"><path d="M2 8 C 30 2, 60 11, 92 6 S 150 3, 174 7" fill="none" stroke="#5E9B4C" stroke-width="5" stroke-linecap="round"/></svg></h2>
+      <div class="progress storage"><b>Storage 105 / 150</b><div class="bar paper thin"><div class="fill" style="width:70%"></div></div><span class="up paper thin">Upgrade</span></div>
+      <div class="tabs"><div class="tab on paper thin">All</div><div class="tab paper thin">Materials</div><div class="tab paper thin">Products</div><div class="tab paper thin">Tools</div></div>
+      <div class="grid four" id="item-grid"></div>
+    </section>
+    <div class="nav">
+      <div class="disc big paper"><img class="paint" src="assets/ui/profile.png" alt="Profile"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/collection.png" alt="Collection"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/inventory.png" alt="Inventory"></div>
+      <div class="disc mid paper"><img class="paint" src="assets/ui/my-sales.png" alt="My Sales"></div>
+      <div class="disc big paper"><img class="paint" src="assets/ui/home.png" alt="Home"></div>
+    </div>
+  </div></div><p class="rv-cap"><b>Inventory</b>Items as sketchbook studies on little squares of paper, each count in a dab of marigold paint. The storage meter follows today's decision that the inventory has a capacity you can upgrade; whether materials and goods get separate limits is still open, so one is shown.</p></div>
+
+  <!-- 5. Confirm note -->
+  <div class="rv-item"><div class="rv-bezel"><div class="phone sb" id="screen-confirm">
+    <div class="bg map"></div><div class="dim"></div>
+    <section class="note paper">
+      <span class="tape green"></span>
+      <div class="close paper thin">✕</div>
+      <h2 class="hand" id="hire-place"></h2>
+      <div class="facts">
+        <div class="fact warm paper thin"><img class="paint" src="assets/items/softwood.png" alt=""><b id="hire-yield-n"></b><span id="hire-yield"></span></div>
+        <div class="fact paper thin"><div class="clock"></div><b id="hire-time-n"></b><span id="hire-time"></span></div>
+      </div>
+      <p class="prompt" id="hire-prompt"></p>
+      <div class="btn paper">Hire
+        <span class="price"><img class="paint" src="assets/items/coin.png" alt="coins"><span id="hire-coins"></span></span>
+        <span class="price"><img class="paint" src="assets/items/water.png" alt="water"><span id="hire-water"></span></span>
+      </div>
+    </section>
+  </div></div><p class="rv-cap"><b>Confirmation popup</b>A note taped over the map: what you get, how long it takes, and the price on the button. Tapping outside still dismisses it.</p></div>
+
+</div>
+
+<script src="../shared/content.js"></script>
+<script>
+(function () {
+  var G = window.GPW, $ = function (id) { return document.getElementById(id); };
+  if (location.hash === "#capture") document.body.classList.add("capture");
+
+  $("splash-heading").textContent = G.copy.splash.heading;
+  $("splash-status").textContent = G.copy.splash.status;
+  $("splash-primary").textContent = G.copy.splash.primary;
+  $("splash-create").textContent = G.copy.splash.secondary[0];
+  $("splash-signin").textContent = G.copy.splash.secondary[1];
+  $("hud-coins").textContent = G.wallet.coins;
+  $("hud-water").textContent = G.wallet.water;
+  document.querySelectorAll(".w-coins").forEach(function (e) { e.textContent = G.wallet.coins; });
+  document.querySelectorAll(".w-water").forEach(function (e) { e.textContent = G.wallet.water; });
+
+  var found = G.wildlings.filter(function (w) { return w.found; }).length;
+  $("found-count").textContent = found + " of " + G.wildlings.length + " found";
+  $("found-fill").style.width = Math.round(found / G.wildlings.length * 100) + "%";
+
+  var chips = [["All", "var(--paper)"]].concat(Object.keys(G.biomes).map(function (b) { return [G.biomes[b], "var(--b-" + b + ")"]; }));
+  $("biome-chips").innerHTML = chips.map(function (c, i) {
+    return '<div class="chip paper thin' + (i === 0 ? " on" : "") + '" style="--dot:' + c[1] + '"><i></i>' + c[0] + "</div>";
+  }).join("");
+
+  $("collection-grid").innerHTML = G.wildlings.map(function (w) {
+    var pips = w.family ? '<span class="pips">' + [1, 2, 3].map(function (n) { return '<i class="' + (n <= w.family ? "on" : "") + '"></i>'; }).join("") + "</span>" : "";
+    var rosette = w.found && w.rarity !== "common" ? '<span class="rosette"><i></i></span>' : "";
+    var stage = w.found
+      ? '<div class="stage" style="--stage:var(--b-' + w.biome + ')"><img class="cut" src="assets/creatures/' + w.slug + '.png" alt=""></div>'
+      : '<div class="stage">?</div>';
+    return '<article class="card paper thin ' + w.rarity + (w.found ? "" : " missing") + '">' + rosette + pips + stage +
+      '<div class="name">' + (w.found ? w.name : "Not found yet") + "</div>" +
+      '<span class="lvl">' + (w.found ? "Level " + w.level : G.biomes[w.biome]) + "</span></article>";
+  }).join("");
+
+  $("item-grid").innerHTML = G.items.map(function (it) {
+    return '<div class="tile paper thin"><img class="paint" src="assets/items/' + it.slug + '.png" alt=""><span class="count">' + it.count + "</span>" +
+      '<div class="title">' + it.title + "</div></div>";
+  }).join("");
+
+  var h = G.copy.hire;
+  $("hire-place").textContent = h.place;
+  $("hire-yield-n").textContent = "5 wood"; $("hire-yield").textContent = "per worker";
+  $("hire-time-n").textContent = "60 sec"; $("hire-time").textContent = "of work";
+  $("hire-prompt").textContent = h.prompt;
+  $("hire-coins").textContent = h.coins; $("hire-water").textContent = h.water;
+})();
+</script>
+<!-- real-scenes pass applied -->
+</body>
+</html>

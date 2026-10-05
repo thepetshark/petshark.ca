@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Small life: fireflies, butterflies and birds</title>
+<link rel="stylesheet" href="../../round1/shared/frame.css">
+<link rel="stylesheet" href="../night-map/night.css">
+<link rel="stylesheet" href="../shared/study.css">
+</head>
+<body>
+
+<header class="rv-head">
+  <h1>Small life: fireflies, butterflies and birds</h1>
+  <p>The idea: firefly particle effects at night over groves, water, marshland and meadow; butterflies by day; and flocks of birds, perhaps akin to the fish or done with particles, with no fixed picture of what a bird should be. Here they are on the game's real map, moving, with three different pictures of what birds could be.</p>
+  <p class="rv-note">None of this is a creature to collect: it is there so the world looks lived in. Each thing is placed where it would belong in the screenshots: the blackberry patch, the trees, the meadow, the shore, the water. The fireflies are always shown at night and the rest by day. What glows in the water at night is on the water page.</p>
+</header>
+
+
+
+<div class="nm-bar" role="group" aria-label="Page controls">
+  <fieldset><legend>Zoom</legend><span class="nm-seg">
+    <label><input type="radio" name="zoom" value="zoom-in">Fully zoomed in</label>
+    <label><input type="radio" name="zoom" value="default" checked>Default</label>
+    <label><input type="radio" name="zoom" value="zoom-out">Fully zoomed out</label></span></fieldset>
+  <button class="st-btn" id="st-pause" type="button" aria-pressed="false">Pause</button>
+</div>
+
+<h2 class="rv-section">Fireflies, at night</h2>
+<p class="rv-note">Over the blackberry patch, in the trees, and over the meadow, thickest where the meadow meets the water. Zoom in: close to the camera they are the best thing on this page.</p>
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="fireflies"></div></div><p class="rv-cap"><b>Each to its own beat</b>Every firefly drifts slowly round its own home and blinks to its own time: lit for a little under half of each beat, dark for the rest. Where there are many, the ground under them picks up a faint green light.</p><ul class="st-build"><li><b>Build:</b> one small particle system per place, about sixteen alive, the noise module for the drift, colour over lifetime for the blink, additive. The ground light can be a soft additive decal instead of a real light.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="fireflies-step"></div></div><p class="rv-cap"><b>In step</b>Some kinds of firefly really do this: the whole place shares one beat, and it runs across them as a wave. Rarer and stranger, so it could mark somewhere special: a grove worth walking to.</p><ul class="st-build"><li><b>Build:</b> the same system, with the blink taken from the time and the particle's place in the world instead of from its own age: a few lines in the particle's material.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+</div>
+
+<h2 class="rv-section">Butterflies, by day</h2>
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="butterflies"></div></div><p class="rv-cap"><b>A few to a place</b>Three to five over each patch and stretch of meadow, wandering and jittering, wings beating, each with a small shadow where the sun would put it. Five colours here; one colour to a biome would make them a quiet sign of where you are.</p><ul class="st-build"><li><b>Build:</b> a particle system with a two-frame texture sheet for the wings and noise for the path, drawn flat or as a small mesh turned to its direction. The shadow is optional: a dark blob on the ground below.</li></ul><span class="st-cost low">Costs almost nothing</span></div>
+</div>
+
+<h2 class="rv-section">Birds: three pictures to choose from</h2>
+<p class="rv-note">Yes, they can be done like the fish. A bird here is a body and two hinged wings, flown through the air above the map and seen through the game's camera, and its shadow is the same outline laid on the ground where the sun would throw it. The gap between a bird and its shadow is what says how high it is, and it would swing round the bird as the sun moves.</p>
+<div class="rv-row">
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="skein"></div></div><p class="rv-cap"><b>A skein passing</b>Seven in a V crossing the whole map in a straight line, high up, every fifteen seconds here and far less often in a game, from one side and then another. They flap, glide a moment, flap again. The map has a sky above it.</p><ul class="st-build"><li><b>Build:</b> the passing fish group with a table of V offsets, lifted 46 units into the air; the flap is a sway in the wing's vertex shader.</li></ul><span class="st-cost low">Low: seven small meshes and seven shadows</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="gulls"></div></div><p class="rv-cap"><b>Gulls wheeling over a fishing spot</b>Five gulls circling over the fishing spot from the water page, banked into the turn, mostly gliding. This is the circling school again, in the air. It is also how people really find fish: gulls over the water can be seen from far further away than anything in it.</p><ul class="st-build"><li><b>Build:</b> the fishing spot's school component with a height: an angle that advances round a middle, a radius, a bank.</li></ul><span class="st-cost low">Low</span></div>
+  <div class="rv-item"><div class="rv-bezel"><div class="phone" data-life="flock"></div></div><p class="rv-cap"><b>A flock from the trees</b>Sixteen small birds that live in the trees: they lift, swirl as a loose ball that stretches along the way it is going, sweep out over the meadow and come back. The liveliest of the three and the hardest to ignore.</p><ul class="st-build"><li><b>Build:</b> a middle that wanders on a looping path, and each bird circling that middle at its own pace; drawn as one instanced batch.</li></ul><span class="st-cost low">Low to medium: sixteen and their shadows, always moving</span></div>
+</div>
+
+<h2 class="rv-section">Where each belongs, and how it gets there</h2>
+<div class="rv-principles">
+  <div><b>Hang it on what is already there</b>The blackberry patch, the trees and the meadow plots are already placed on the map as resource patches. A child effect on each of those, fireflies at night and butterflies by day, puts small life in the right places with no new placement logic at all.</div>
+  <div><b>The shore comes from the water</b>"Near water" is the water study's distance from the shore, read from the land side: within a few units of the edge. The same value that colours the water and fences a fishing spot says where the fireflies are thickest.</div>
+  <div><b>The clock already exists</b>The sun and moon system already says whether it is day or night. Fireflies fade in at dusk, butterflies at sunrise, the glow in the water after dark, and a skein looks best low in the evening when its shadows are long.</div>
+  <div><b>Particles or the fish way</b>Fireflies and butterflies are what particle systems are for: many, small, each on its own. Birds want the fish way instead: a formation, a bank into a turn and a shadow are all about birds knowing where the others are, which particles cannot do.</div>
+</div>
+
+
+
+
+
+<script src="../shared/scene.js"></script>
+<script src="../night-map/geometry.js"></script>
+<script src="../night-map/night.js"></script>
+<script src="../shared/mapfx.js"></script>
+<script src="life.js"></script>
+</body>
+</html>
