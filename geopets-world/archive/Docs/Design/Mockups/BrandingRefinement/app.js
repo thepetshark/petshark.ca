@@ -1,0 +1,20 @@
+'use strict';
+const shared = 'source/baseline/';
+const concepts = [
+  {id:'grove', name:'Grove Paw', label:'A / CARE + WILDERNESS', subtitle:'Kindred Grove, with a more explicit paw silhouette.', app:'assets/grove-app.svg', original:shared+'grove-app.svg', change:'Four toe pads, one leaf cutout.', why:'Replaces the eye-like dots and leaf ears. The nature cue moves inside the pad, so the large shape reads as a paw first.', tradeoff:'Clearer care cue at 32 px. The small leaf becomes secondary; the emblem is less unusual than the source.', type:'Existing Fraunces lineage · Nunito WORLD'},
+  {id:'trail', name:'Field Trail', label:'B / DISCOVERY + COLLECTING', subtitle:'Field Notes, with more room for its central idea.', app:'assets/trail-app.svg', original:shared+'field-app.svg', change:'Larger paw and pin, no compass ring.', why:'Removes the weakest small detail and spends that space on the subject. Nunito brings the title closer to the game UI.', tradeoff:'Discovery reads quickly. A paw in a pin is a familiar motif, so it carries less distinctive brand character.', type:'Nunito 800 · enlarged WORLD'},
+  {id:'companion', name:'Hello, Wild', label:'C / CREATURE COMPANIONSHIP', subtitle:'A retained illustration and a firmer wordmark.', app:shared+'companion-app.png', original:shared+'companion-app.png', change:'Keep the face. Strengthen WORLD.', why:'The existing face already works at small sizes. Its source pixels are unchanged; the outlined second line is larger and more compact.', tradeoff:'Strongest immediate creature connection. It still commits the brand to an unselected concept mascot.', type:'Nunito 900 · enlarged WORLD'},
+];
+const mark = (c, colour='dark', cls='wordmark') => `<img class="${cls}" src="assets/${c.id}-wordmark-${colour}.svg" alt="Geo Pets World">`;
+function crops(c){return ['light','dark'].flatMap(context=>['rounded','round'].map(crop=>`<div class="crop-row ${context} ${crop}" data-context="${context}" data-crop="${crop}"><div class="row-label">${context.toUpperCase()}<br>${crop.toUpperCase()}</div>${[32,48,64].map(size=>`<figure><img src="${c.app}" alt="${c.name}, ${size} pixels, ${crop} crop" width="${size}" height="${size}" data-size="${size}"><figcaption>${size} px</figcaption></figure>`).join('')}</div>`)).join('');}
+function card(c){return `<article class="concept" data-concept="${c.id}"><header class="concept-head"><p class="eyebrow">${c.label}</p><h3>${c.name}</h3><p>${c.subtitle}</p></header><div class="brand-pair ${c.id}"><img class="hero-app" src="${c.app}" alt="${c.name} app concept">${mark(c)}</div><div class="dark-wordmark">${mark(c,'light')}</div><div class="change"><figure><img src="${c.original}" alt="Original ${c.name} study"><figcaption>BASELINE</figcaption></figure><p><strong>${c.change}</strong>${c.why}</p></div><p class="small-caption">ACTUAL SMALL SIZES · BOTH CROPS</p>${crops(c)}<p class="tradeoff"><strong>Tradeoff.</strong> ${c.tradeoff}</p></article>`;}
+function phone(c){return `<div class="phone" data-concept="${c.id}" aria-label="${c.name}, 390 by 844 splash placement"><div class="splash-brand"><img class="app" src="${c.app}" alt="${c.name} app concept">${mark(c,'light')}</div><section class="welcome"><h2>Ready to explore?</h2><p>Playing as a guest</p><button class="primary" type="button" aria-disabled="true" title="Static brand placement; Continue flow is unchanged">Continue</button><div class="account-actions"><button class="quiet" type="button" aria-disabled="true">Create Account</button><button class="quiet" type="button" aria-disabled="true">Sign in</button></div></section></div>`;}
+const params = new URLSearchParams(location.search);
+if(params.get('phone')==='1'){
+  document.body.classList.add('only');
+  const selected = concepts.find(c=>c.id===params.get('concept')) || concepts[0];
+  document.querySelector('#phone-only').innerHTML = phone(selected);
+}else{
+  document.querySelector('#contact-sheet').innerHTML=concepts.map(card).join('');
+  document.querySelector('#splash-sheet').innerHTML=concepts.map(c=>`<figure class="phone-wrap"><figcaption>${c.label} / ${c.name}<span>${c.type}</span></figcaption>${phone(c)}</figure>`).join('');
+}

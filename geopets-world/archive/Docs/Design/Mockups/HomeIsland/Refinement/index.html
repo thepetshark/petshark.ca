@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Village Green · Layout study</title><link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="review">
+    <aside class="notes">
+      <p class="eyebrow">Geo Pets World / Home / selected A</p>
+      <h1>A place to grow.</h1>
+      <p>A’s open village layout, B’s quiet checkered lawn and squared stone retaining walls.</p>
+      <div class="modes" aria-label="Study view"><button data-view="art" aria-pressed="true">Art direction</button><button data-view="layout" aria-pressed="false">Placement study</button></div>
+      <p class="fine">The artwork shows the visual target. The placement study is a measured diagram with simplified buildings, using one consistent isometric projection.</p>
+      <h2>Try the layout</h2>
+      <p>Pan by dragging the ground. Wheel or pinch to zoom. Arrange shows the grid; drag a building, then confirm its position. Edge and corner cells are usable.</p>
+      <div class="review-actions"><button id="overview">Overview</button><button id="reset-view">Working view</button><button id="reset-layout">Reset layout</button></div>
+      <label class="reveal"><input type="checkbox" id="preview-expansions"> Preview expanded land</label>
+      <label class="reveal"><input type="checkbox" id="background-motion" checked> Animate the world below</label>
+      <p class="fine">Blue clouds mark locked land; drifting pale clouds sit below it. Daylight only. These controls set no unlock cost or progression rule.</p>
+      <p id="metrics" class="metrics"></p>
+      <p class="fine">Trial footprints: Cottage 4 × 3; Mill 3 × 3; Bakery 3 × 2. Grid units and land sizes are provisional.</p>
+      
+    </aside>
+    <section class="phone" id="phone" aria-label="Portrait Home study">
+      <canvas id="depth-background" aria-hidden="true"></canvas>
+      <img class="art" id="art" src="../artwork/a-refined-square.png" alt="Village Green with a flat squared lawn, subtle checkered grass, stone perimeter walls and cloud-covered expansion areas">
+      <canvas id="scene" aria-label="Isometric Home placement study" tabindex="0"></canvas>
+      <div class="top-controls"><button id="arrange">Arrange</button><button id="center" aria-label="Recenter Home" title="Recenter Home">⌖</button></div>
+      <div id="status" class="status" role="status" hidden></div>
+      <section id="move-panel" class="move-panel" aria-label="Building placement" hidden>
+        <div class="move-heading"><strong id="move-name">Mill</strong><span id="move-size">3 × 3</span></div>
+        <p id="move-validity"></p>
+        <div class="move-actions"><button id="turn">Turn</button><button id="cancel">Cancel</button><button id="place" class="primary">Place here</button></div>
+      </section>
+      <nav id="navigation" aria-label="Navigation appearance"></nav>
+      <div id="modal" class="modal" hidden></div>
+      <div class="home-indicator"></div>
+    </section>
+  </main>
+  <script src="background.js"></script><script src="app.js"></script>
+</body>
+</html>

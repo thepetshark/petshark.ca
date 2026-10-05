@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img"><title>Grove Paw — concept refinement</title><path fill="#24483B" d="M0 0h512v512H0z"/><g fill="#FAF4E5">
+<ellipse cx="151" cy="234" rx="32" ry="45" transform="rotate(-28 151 234)"/>
+<ellipse cx="217" cy="173" rx="34" ry="49" transform="rotate(-12 217 173)"/>
+<ellipse cx="296" cy="173" rx="34" ry="49" transform="rotate(12 296 173)"/>
+<ellipse cx="361" cy="234" rx="32" ry="45" transform="rotate(28 361 234)"/>
+<path fill-rule="evenodd" d="M256 386C233 386 218 365 193 365C153 365 167 309 199 282C221 263 235 253 256 253C277 253 291 263 313 282C345 309 359 365 319 365C294 365 279 386 256 386ZM218 337C222 289 259 281 290 290C286 329 260 349 218 337Z"/>
+</g></svg>

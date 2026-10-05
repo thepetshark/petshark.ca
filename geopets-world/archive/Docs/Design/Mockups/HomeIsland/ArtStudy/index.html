@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Geo Pets World · Home art candidates</title>
+  <link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css">
+</head>
+<body data-study-scene="home" data-study-view="layout">
+  <main class="review">
+    <aside class="notes">
+      <p class="eyebrow">Geo Pets World / Home art / September 16</p>
+      <h1>A little village,<br>above the world.</h1>
+      <p>Refined 2D art for the selected Village Green direction: warm limestone, teal and terracotta roofs, a quiet checkered lawn, and blue clouds over future land.</p>
+      <div class="views" aria-label="Art view">
+        <button data-view="scene" aria-pressed="true">On the island</button>
+        <button data-view="mill" aria-pressed="false">Mill</button>
+        <button data-view="bakery" aria-pressed="false">Bakery</button>
+        <button data-view="island" aria-pressed="false">Ground & wall</button>
+        <button data-view="cloud" aria-pressed="false">Locked clouds</button>
+      </div>
+      <label class="control" for="backdrop">Cutout backdrop <select id="backdrop"><option value="green">Grass green</option><option value="cream">Warm cream</option><option value="night">Dark blue</option></select></label>
+      <label class="control"><input type="checkbox" id="background-motion" checked> Animate the distant world</label>
+      <h2 id="detail-title">Separate artwork, together.</h2>
+      <p id="detail-copy">The scene combines the generated cutouts over the existing distant-world motion study. Buildings are shown near phone gameplay size.</p>
+      <p class="fine">This is an art preview, not a Unity scene. Each building currently has one illustrated angle; the four-view set, exact grid registration and mixed 3D rendering still need a runtime proof. Animals will be 3D models.</p>
+      <p class="fine">The island image studies the grass and wall treatment. It is not a seamless tile set or the final island geometry.</p>
+      
+    </aside>
+    <section class="phone" id="phone" aria-label="Portrait Home art preview">
+      <canvas id="depth-background" aria-hidden="true"></canvas>
+      <div id="composition" aria-label="Generated Mill and Bakery on a checkered floating island">
+        <img class="piece expansion-land" src="assets/island-ground-study-v2.png" alt="" aria-hidden="true">
+        <img class="piece locked-clouds" src="assets/locked-cloud-study.png" alt="Blue clouds covering future land">
+        <img class="piece ground" src="assets/island-ground-study-v2.png" alt="Checkered lawn with a squared stone retaining wall">
+        <div class="contact-shadow mill-shadow"></div><div class="contact-shadow bakery-shadow"></div>
+        <img class="piece mill" src="assets/mill-front-study.png" alt="Teal-roof flour mill">
+        <img class="piece bakery" src="assets/bakery-front-study.png" alt="Terracotta-roof bakery">
+      </div>
+      <div class="focus" id="focus" hidden><img id="focus-image" alt=""></div>
+      <nav class="nav" aria-label="Existing navigation appearance, scale reference">
+        <span class="nav-symbol outer"><img src="../../VisualIdentity/assets/icons/profile.svg" alt="Profile"></span>
+        <span class="nav-symbol"><img src="../../VisualIdentity/assets/icons/collection.svg" alt="Collection"></span>
+        <span class="nav-symbol"><img src="../../VisualIdentity/assets/icons/inventory.svg" alt="Inventory"></span>
+        <span class="nav-symbol"><img src="../../VisualIdentity/assets/icons/market.svg" alt="Market"></span>
+        <span class="nav-symbol outer"><img src="../../VisualIdentity/assets/icons/world.svg" alt="World"></span>
+      </nav>
+      <div class="home-indicator"></div>
+    </section>
+  </main>
+  <script src="../Refinement/background.js"></script><script src="app.js"></script>
+</body>
+</html>

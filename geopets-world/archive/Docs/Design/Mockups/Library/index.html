@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Library: GeoPets World mockup</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <h1>Library</h1>
+  <p class="lede">A mockup of the species library: one entry per species, library stars, and a lore page for each. It grows from the game's Wildlings panel. Critters are ordinary animals caught in traps; Wildlings are the game's own creatures, caught with a dance and a lasso. The two sit under separate tabs, and the stars feed the house level. Content comes from the capture-ladder study. The player's catches are made up, and every number is a placeholder.</p>
+</header>
+
+<main class="wrap layout">
+  <aside class="panel" aria-label="Controls">
+    <section>
+      <h2>Jump to</h2>
+      <div class="jumps" id="jumps"></div>
+    </section>
+    <section>
+      <h2>Phone</h2>
+      <div class="choice" id="opt-size" role="radiogroup" aria-label="Phone size"></div>
+    </section>
+    <section>
+      <h2>The example player</h2>
+      <p class="note">House level 6. Roams Grove and Meadow, with a little shore. 13 of 43 critters and 2 of 54 Wildling forms caught: 21 library stars, two short of house level 7.</p>
+    </section>
+    <section>
+      <h2>What is proposed here</h2>
+      <ul class="note list">
+        <li>Uncaught species show as silhouettes with a clue about where and when, and their lore unlocks with the first catch.</li>
+        <li>Wildlings count toward library stars too, one entry per form, laid out one family per row.</li>
+        <li>Each Wildling form has a grade, and its sightings are either shared between players or private to one.</li>
+        <li>The stars card sits on top of the library, because stars raise the house.</li>
+      </ul>
+    </section>
+  </aside>
+
+  <section class="stage-col">
+    <div class="phone" id="phone">
+      <div class="screen" id="screen">
+        <img class="bg" src="assets/map-default.png" alt="The world map at the default zoom, with today's interface">
+        <div class="lib" id="lib" role="dialog" aria-label="Library"></div>
+        <div class="band status" aria-hidden="true"><span class="time">9:41</span><span class="cutout"></span><span class="sys"><i></i><i></i><b></b></span></div>
+        <div class="band gesture" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <p class="caption" id="caption"></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Critter portraits are AI-generated placeholders; final art would be rendered from the game's own 3D models. Wildling portraits are renders of 3D models from purchased asset packs. The map behind the panel is an unmodified in-game capture. Map imagery © Mapbox © OpenStreetMap. Browser mockup only.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

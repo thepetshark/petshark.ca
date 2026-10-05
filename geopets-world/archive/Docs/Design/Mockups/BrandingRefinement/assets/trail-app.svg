@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img"><title>Field Trail — concept refinement</title><path fill="#FAF4E5" d="M0 0h512v512H0z"/><path d="M256 439C210 390 105 311 105 218C105 131 171 74 256 74C341 74 407 131 407 218C407 311 302 390 256 439Z" fill="#24483B"/>
+<g fill="#FAF4E5"><ellipse cx="186" cy="233" rx="20" ry="28" transform="rotate(-27 186 233)"/>
+<ellipse cx="231" cy="193" rx="22" ry="31" transform="rotate(-10 231 193)"/>
+<ellipse cx="281" cy="193" rx="22" ry="31" transform="rotate(10 281 193)"/>
+<ellipse cx="326" cy="233" rx="20" ry="28" transform="rotate(27 326 233)"/>
+<path d="M256 329C240 329 231 314 215 314C189 314 195 283 218 265C233 251 242 244 256 244C270 244 279 251 294 265C317 283 323 314 297 314C281 314 272 329 256 329Z"/></g></svg>
