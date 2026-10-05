@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geo Pets World Dev Log</title>
+<meta name="description" content="Design experiments from building Geo Pets World, a location-based creature-collecting game, in the order they were made. Each is a working page shown as built.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="devlog.css">
+</head>
+<body>
+<header class="masthead">
+<a class="org" href="https://petshark.ca/">Pet Shark Productions</a>
+<h1>Geo Pets World Dev Log</h1>
+<p class="lede">Design experiments from building a location-based creature-collecting game, in the order they were made. Each one is a working page from the project. AI agents made the mockups under my direction.</p>
+<div class="controls">
+<div class="controls" role="group" aria-label="Filter by topic"><button class="chip" type="button" data-topic-filter="all" aria-pressed="true">All</button><button class="chip" type="button" data-topic-filter="map" aria-pressed="false">Map and world</button><button class="chip" type="button" data-topic-filter="creatures" aria-pressed="false">Creatures and capture</button><button class="chip" type="button" data-topic-filter="production" aria-pressed="false">Crafting and production</button><button class="chip" type="button" data-topic-filter="hometown" aria-pressed="false">Hometown and art direction</button><button class="chip" type="button" data-topic-filter="look" aria-pressed="false">Visual direction</button><button class="chip" type="button" data-topic-filter="interface" aria-pressed="false">Screens and menus</button><button class="chip" type="button" data-topic-filter="game" aria-pressed="false">The game as built</button></div>
+<button class="sort" id="sort" type="button" aria-pressed="false">Oldest first</button>
+<p class="count" id="count" aria-live="polite"></p>
+</div>
+</header>
+<main>
+<ol class="route">
+<li class="day" data-date="2026-09-09" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-09">9 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="first-week" data-topic="game" data-created="2026-09-09T12:00:00-07:00">
+<a class="thumb" href="first-week/" tabindex="-1" aria-hidden="true"><img src="thumbs/first-week.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="first-week/">The first week, in screenshots</a></h3>
+<p>The earliest captures of the game, 9 to 13 September: a map plug-in&#x27;s test scene with a simulated player, a first screen that mixes the map with a job, a landscape drawn from map data, a floating Home island and a first market screen. All are rough prototypes, and several are desktop-sized rather than phone-sized.</p>
+<p class="meta"><span class="topic">The game as built</span><span>Dated 9 Sep 2026</span><span>11 images</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-11" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-11">11 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="day-one" data-topic="look" data-created="2026-09-11T12:00:00-07:00">
+<a class="thumb" href="day-one/" tabindex="-1" aria-hidden="true"><img src="thumbs/day-one.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="day-one/">Day one: two generated boards</a></h3>
+<p>The first two pictures made for the game, generated on 11 September before any code or page existed: a floating Home island beside a public market, which was set aside as impractical, and a forest on a map in three states, which became the look of the map.</p>
+<p class="meta"><span class="topic">Visual direction</span><span>Dated 11 Sep 2026</span><span>2 images</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-13" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-13">13 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="player-market" data-topic="interface" data-created="2026-09-13T05:37:25-07:00">
+<a class="thumb" href="player-market/" tabindex="-1" aria-hidden="true"><img src="thumbs/player-market.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="player-market/">The player market</a></h3>
+<p>A dense four-column grid of player offers, with buying, selling, listing, withdrawing and the offline and lost-connection cases all clickable. Two follow-ups add a sale notification with a History tab, then a Collect step so sellers claim their own payment.</p>
+<p class="outcome">The grid was built, and manual Collect replaced the automatic credit shown in the second page.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 05:37</span><span>3 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-14" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-14">14 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="checkpoints" data-topic="game" data-created="2026-09-14T12:00:00-07:00">
+<a class="thumb" href="checkpoints/" tabindex="-1" aria-hidden="true"><img src="thumbs/checkpoints.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="checkpoints/">Three checkpoints</a></h3>
+<p>The game on a 390 by 844 portrait screen at three moments: a dark prototype with a chequered ground and a floating island (14 September), the first icon navigation (16 September), and a polished slice with meadow, rock fields, roads, a coast and a Home in the clouds (20 September).</p>
+<p class="meta"><span class="topic">The game as built</span><span>Dated 14 Sep 2026</span><span>14 images</span></p>
+</div></li>
+<li class="entry" data-id="startup-accounts" data-topic="interface" data-created="2026-09-14T15:18:25-07:00">
+<a class="thumb" href="startup-accounts/" tabindex="-1" aria-hidden="true"><img src="thumbs/startup-accounts.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="startup-accounts/">Startup, guest and account screens</a></h3>
+<p>The first screens a player sees: loading, a splash with Continue, guest play, account creation, sign-in, password reset and log-out, with twenty selectable states and a board that shows twelve at once. A guest who creates an account keeps their progress, and switching accounts never merges silently.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 15:18</span></p>
+</div></li>
+<li class="entry" data-id="world-navigation" data-topic="interface" data-created="2026-09-14T19:00:17-07:00">
+<a class="thumb" href="world-navigation/" tabindex="-1" aria-hidden="true"><img src="thumbs/world-navigation.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="world-navigation/">World navigation: strip or floating</a></h3>
+<p>Two live phones side by side keep five destinations one tap away: a continuous bottom strip (A) against separate floating buttons (B). Open each destination, the Profile edge panel and Home, and compare either layout on its own.</p>
+<p class="outcome">Option B was built, with the Profile and Home/World buttons larger than the three in between.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 19:00</span></p>
+</div></li>
+<li class="entry" data-id="identity" data-topic="look" data-created="2026-09-14T21:58:48-07:00">
+<a class="thumb" href="identity/" tabindex="-1" aria-hidden="true"><img src="thumbs/identity.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="identity/">Visual identity: three brand directions</a></h3>
+<p>Three brand directions (Kindred Grove, Field Notes, Hello, Wild), each with an app icon, wordmark and font pairing, tried on a splash, Inventory, My Sales, the map and an account screen, beside a 31-symbol icon family and a type test. A second look tightens two of the marks and shows exact splash placements.</p>
+<p class="outcome">The Nunito UI font, the filled icon family and the cream-and-green surfaces were adopted, and the Hello, Wild face became the app image.</p>
+<p class="meta"><span class="topic">Visual direction</span><span>First committed 21:58</span><span>2 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-15" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-15">15 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="workers" data-topic="interface" data-created="2026-09-15T17:48:14-07:00">
+<a class="thumb" href="workers/" tabindex="-1" aria-hidden="true"><img src="thumbs/workers.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="workers/">Worker roster and cancel</a></h3>
+<p>One phone over the map with a small worker shortcut. It opens a roster of assignments (task, place, status, time left) with Show on map, and a confirmation that warns the hire cost and the harvest are forfeited if the assignment is cancelled. Four states: Empty, Working, Ready, Mixed.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 17:48</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-16" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-16">16 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="home-crafting" data-topic="production" data-created="2026-09-16T01:46:30-07:00">
+<a class="thumb" href="home-crafting/" tabindex="-1" aria-hidden="true"><img src="thumbs/home-crafting.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="home-crafting/">Working at home: Mill, Bakery and a Care Bench</a></h3>
+<p>A clickable portrait study of making things at home: tap the Mill or the Bakery on a floating lawn, queue up to three jobs, watch the timers, collect the finished goods and visit the world map. A second page adds a Care Bench that brews berry tonic.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 01:46</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="home-island" data-topic="hometown" data-created="2026-09-16T08:24:57-07:00">
+<a class="thumb" href="home-island/" tabindex="-1" aria-hidden="true"><img src="thumbs/home-island.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="home-island/">Hometown: a village above the world</a></h3>
+<p>Three concept pictures of a spacious starting Home with more land waiting beneath the clouds, then an interactive study that snaps buildings to a measured grid, and cut-out art for the village that was chosen.</p>
+<p class="outcome">Village Green went forward, with the checker lawn and squared stone walls of Garden Terraces.</p>
+<p class="meta"><span class="topic">Hometown and art direction</span><span>First committed 08:24</span><span>3 pages</span></p>
+</div></li>
+<li class="entry" data-id="hometown-grows" data-topic="game" data-created="2026-09-16T12:00:00-07:00">
+<a class="thumb" href="hometown-grows/" tabindex="-1" aria-hidden="true"><img src="thumbs/hometown-grows.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="hometown-grows/">The Hometown grows</a></h3>
+<p>A floating lawn in the clouds that began with a mill and a bakery and grew to ten more buildings, then to a back lawn that opens up when the cloud is cleared. The building art is placeholder.</p>
+<p class="meta"><span class="topic">The game as built</span><span>Dated 16 Sep 2026</span><span>7 images</span></p>
+</div></li>
+<li class="entry" data-id="requests" data-topic="production" data-created="2026-09-16T16:58:08-07:00">
+<a class="thumb" href="requests/" tabindex="-1" aria-hidden="true"><img src="thumbs/requests.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="requests/">The request board</a></h3>
+<p>A noticeboard of nine pinned notes asking for goods such as biscuits, milk and flour, each with item icons, how many are held against how many are needed, a coin reward and a ready tick. Eight states cover missing supplies, an offline board and a lost response.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 16:58</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-18" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-18">18 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="wildling-traps" data-topic="creatures" data-created="2026-09-18T13:23:53-07:00">
+<a class="thumb" href="wildling-traps/" tabindex="-1" aria-hidden="true"><img src="thumbs/wildling-traps.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="wildling-traps/">Wooden traps and biscuit bait</a></h3>
+<p>The whole trap loop on one phone: craft a wooden trap, pack the bag, choose a trap, a bait and a spot on the map, wait, then open the trap to find a visitor or an empty trap. Fifteen states, clock buttons, map toggles and a demo of the small text messages that fade at the top.</p>
+<p class="meta"><span class="topic">Creatures and capture</span><span>First committed 13:23</span></p>
+</div></li>
+<li class="entry" data-id="crafting-tree" data-topic="production" data-created="2026-09-18T16:01:48-07:00">
+<a class="thumb" href="crafting-tree/" tabindex="-1" aria-hidden="true"><img src="thumbs/crafting-tree.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="crafting-tree/">Crafting and creature field guide</a></h3>
+<p>Every proposed recipe on one page. Pick a crafted item to trace its ingredients back to raw materials, then browse the creature roster and its evolution families.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 16:01</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-20" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-20">20 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="round-one" data-topic="look" data-created="2026-09-20T13:14:40-07:00">
+<a class="thumb" href="round-one/" tabindex="-1" aria-hidden="true"><img src="thumbs/round-one.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="round-one/">Round one: four ways it could look</a></h3>
+<p>Four whole-game looks side by side: a glossy Toybox, a painted Storybook, an Explorer&#x27;s kit of canvas and enamel pins, and the existing cream and green pushed further. Each draws the same splash, map, Hometown, collection, inventory and confirmation, set against the game as it looked on 20 September.</p>
+<p class="meta"><span class="topic">Visual direction</span><span>First committed 13:14</span><span>6 pages</span></p>
+</div></li>
+<li class="entry" data-id="map-polish" data-topic="map" data-created="2026-09-20T16:01:56-07:00">
+<a class="thumb" href="map-polish/" tabindex="-1" aria-hidden="true"><img src="thumbs/map-polish.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="map-polish/">Making the map&#x27;s roads and borders read</a></h3>
+<p>Real captures of the running game at three places, before and after roads gained worn edges and the borders between biomes blended softly instead of ending in a hard line, with a viewer for each camera. A second page compares three ways of choosing which real roads to draw.</p>
+<p class="outcome">The worn road edges and blended biome borders went into the game.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 16:01</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="night-map" data-topic="map" data-created="2026-09-20T16:17:12-07:00">
+<a class="thumb" href="night-map/" tabindex="-1" aria-hidden="true"><img src="thumbs/night-map.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="night-map/">The map at night</a></h3>
+<p>Four ways the world map could read as night while everything tappable stays easy to find, at three zoom levels, with a day-to-night slider. A second round turns the request for something between Moonlit and Blue hour, with more of the map&#x27;s colour kept, into a grid of nine levels to point at.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 16:17</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="round-two" data-topic="look" data-created="2026-09-20T18:18:43-07:00">
+<a class="thumb" href="round-two/" tabindex="-1" aria-hidden="true"><img src="thumbs/round-two.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="round-two/">Round two: one world, three finishes, four hours</a></h3>
+<p>Three answers to one brief: bold light in the world, a completely flat interface. Playset is a smooth toy diorama, Relief a faceted low-poly model with an atlas-like interface, Miniature a tilt-shift tabletop whose two interface colours follow the hour. Each shows one view at dawn, midday, golden hour and night.</p>
+<p class="outcome">The Playset world later became the reference look for the terrain work.</p>
+<p class="meta"><span class="topic">Visual direction</span><span>First committed 18:18</span><span>4 pages</span></p>
+</div></li>
+<li class="entry" data-id="placement-beam" data-topic="map" data-created="2026-09-20T22:23:29-07:00">
+<a class="thumb" href="placement-beam/" tabindex="-1" aria-hidden="true"><img src="thumbs/placement-beam.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="placement-beam/">Beamed down from Hometown</a></h3>
+<p>Six ways a worker or trap could arrive on the map as a beam from the floating Hometown above, simulated live over the game&#x27;s map at three zoom levels, by day and night, with a scrubber to step through each effect.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 22:23</span></p>
+</div></li>
+<li class="entry" data-id="water" data-topic="map" data-created="2026-09-20T22:23:29-07:00">
+<a class="thumb" href="water/" tabindex="-1" aria-hidden="true"><img src="thumbs/water.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="water/">Water: depth, fish and things that glow</a></h3>
+<p>Three looks for water that deepens away from the shore (Lagoon, Chart bands, Deep glass), with shadow fish swimming in small groups. Then a fishing spot as a circle of circling fish, a water critter that surfaces briefly, and bioluminescent answers for the night.</p>
+<p class="outcome">The Lagoon look with its schooling fish went into the game, with a turtle, ray and eel as decoration.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 22:23</span></p>
+</div></li>
+<li class="entry" data-id="player-marker" data-topic="map" data-created="2026-09-20T22:23:29-07:00">
+<a class="thumb" href="player-marker/" tabindex="-1" aria-hidden="true"><img src="thumbs/player-marker.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="player-marker/">Where you are: the player marker and the ring</a></h3>
+<p>Six rings with no marker and six markers that are not characters, shown at three zoom levels, by day and at night, all moving.</p>
+<p class="outcome">Three rings and three markers went forward as Settings options.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 22:23</span><span>2 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-21" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-21">21 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="small-life" data-topic="map" data-created="2026-09-21T00:20:23-07:00">
+<a class="thumb" href="small-life/" tabindex="-1" aria-hidden="true"><img src="thumbs/small-life.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="small-life/">Small life: fireflies, butterflies and birds</a></h3>
+<p>Fireflies at night, butterflies by day and three pictures of what birds could be (a skein in a V, gulls wheeling over a fishing spot, a flock from the trees), drawn live over the map with their shadows.</p>
+<p class="outcome">The skein of seven became a passing decoration in the game.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 00:20</span></p>
+</div></li>
+<li class="entry" data-id="terrain-references" data-topic="map" data-created="2026-09-21T02:54:44-07:00">
+<a class="thumb" href="terrain-references/" tabindex="-1" aria-hidden="true"><img src="thumbs/terrain-references.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="terrain-references/">Terrain references: shores, rocky Stonefield and roads</a></h3>
+<p>Reference pictures for improving the generated terrain meshes: Stonefield as low rocky mountains at three strengths, banks and beaches, roads over ridges. Each is laid beside the game&#x27;s own capture of the same view with a drag-to-wipe handle.</p>
+<p class="outcome">Stonefield&#x27;s rugged relief was built to match these.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 02:54</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-22" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-22">22 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="map-landmarks" data-topic="map" data-created="2026-09-22T12:55:02-07:00">
+<a class="thumb" href="map-landmarks/" tabindex="-1" aria-hidden="true"><img src="thumbs/map-landmarks.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="map-landmarks/">Landmarks: the market, Energy and Water</a></h3>
+<p>Small objects for the places a player collects Energy and Water, and for the market, with a larger pin of its own for the market, set into the game&#x27;s map at two zoom levels and switchable. A second page gives the chosen ones their effects (a glowing orb, a spring that runs dry, a pavilion lantern), by day and at night.</p>
+<p class="outcome">The Orb post, the Spring, the Pavilion and the Emblem pin went into the game.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 12:55</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="capture-ladder" data-topic="creatures" data-created="2026-09-22T21:59:47-07:00">
+<a class="thumb" href="capture-ladder/" tabindex="-1" aria-hidden="true"><img src="thumbs/capture-ladder.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="capture-ladder/">Capture ladder viewer</a></h3>
+<p>What one Legendary catch costs, tier by tier: traps, drops, biome trade and the Hometown tech tree. Sliders redraw the pyramid.</p>
+<p class="outcome">The game loaded this ladder&#x27;s items and critters the next day.</p>
+<p class="meta"><span class="topic">Creatures and capture</span><span>First committed 21:59</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-23" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-23">23 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="pin-bounce" data-topic="map" data-created="2026-09-23T02:24:06-07:00">
+<a class="thumb" href="pin-bounce/" tabindex="-1" aria-hidden="true"><img src="thumbs/pin-bounce.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="pin-bounce/">The pin bounce when tapped</a></h3>
+<p>Touch feedback for the map&#x27;s pins: shapes of vertical bounce stated in pixels and seconds, played at the map&#x27;s three zoom levels over the game&#x27;s screenshots, with a quiet ring where the tap landed.</p>
+<p class="outcome">Squash, hop and settle was picked and went into the game.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 02:24</span></p>
+</div></li>
+<li class="entry" data-id="dance-off" data-topic="creatures" data-created="2026-09-23T03:03:55-07:00">
+<a class="thumb" href="dance-off/" tabindex="-1" aria-hidden="true"><img src="thumbs/dance-off.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="dance-off/">Dance-Off capture scene</a></h3>
+<p>A playable mockup of catching a Wildling: tap a sighting on the map, choose a dancer, dance, then throw a lasso. Dance controls and progress displays can be switched; the creatures are low-poly placeholders.</p>
+<p class="outcome">Approved as a mockup; building it was deferred until the levelling and evolution rules are redesigned.</p>
+<p class="meta"><span class="topic">Creatures and capture</span><span>First committed 03:03</span></p>
+</div></li>
+<li class="entry" data-id="library" data-topic="creatures" data-created="2026-09-23T04:19:11-07:00">
+<a class="thumb" href="library/" tabindex="-1" aria-hidden="true"><img src="thumbs/library.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="library/">Menus for the capture loop</a></h3>
+<p>Three phone menus around one example player: the species library with stars and lore pages, a new player&#x27;s choice of three baby Wildlings, and the house catalog that says exactly why a building is locked.</p>
+<p class="outcome">The critter library and the house catalog were built into the game that day; the starter choice and the Wildling tab were deferred to a later Wildling release.</p>
+<p class="meta"><span class="topic">Creatures and capture</span><span>First committed 04:19</span><span>3 pages</span></p>
+</div></li>
+<li class="entry" data-id="offline-reconnect" data-topic="interface" data-created="2026-09-23T08:22:05-07:00">
+<a class="thumb" href="offline-reconnect/" tabindex="-1" aria-hidden="true"><img src="thumbs/offline-reconnect.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="offline-reconnect/">When the connection drops</a></h3>
+<p>What a player sees when the connection drops: the world stays in place under a pause sheet while the connection, account, saved progress and clock are checked, with states for a failed time check and for an account that moved to another device. A second page previews the confirmation for moving an account to a new device.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 08:22</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="icons-and-portraits" data-topic="game" data-created="2026-09-23T12:00:00-07:00">
+<a class="thumb" href="icons-and-portraits/" tabindex="-1" aria-hidden="true"><img src="thumbs/icons-and-portraits.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="icons-and-portraits/">Icons, portraits and pins</a></h3>
+<p>One flat, outlined family for the game&#x27;s small pictures: item icons for materials, drops, crafted goods, traps and bait; round painted portraits for fifty critters, which replaced renders of their 3D models; and map pins for the farm animals.</p>
+<p class="meta"><span class="topic">The game as built</span><span>Dated 23 Sep 2026</span><span>11 images</span></p>
+</div></li>
+<li class="entry" data-id="modal-windows" data-topic="interface" data-created="2026-09-23T22:16:48-07:00">
+<a class="thumb" href="modal-windows/" tabindex="-1" aria-hidden="true"><img src="thumbs/modal-windows.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="modal-windows/">Market and Settings as windows</a></h3>
+<p>The market and the Settings screen redrawn as inset windows over the map, which stays visible under a dim backdrop. Both previews are interactive: four market tabs with browsing, selling, collecting and withdrawing, and three Settings tabs.</p>
+<p class="outcome">Approved and built in the game.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 22:16</span><span>2 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-25" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-25">25 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="biome-horizons" data-topic="map" data-created="2026-09-25T01:32:42-07:00">
+<a class="thumb" href="biome-horizons/" tabindex="-1" aria-hidden="true"><img src="thumbs/biome-horizons.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="biome-horizons/">Biome horizons: hiding the edge of the map</a></h3>
+<p>Zoomed all the way in, the map ends in a band of bare sky about 80 pixels tall. A fresh study measures that gap, weighs eight ways to hide it and draws each biome at the low camera, today and as a mockup, with a moonlit night, a sunset and six strange formations. The three earlier rounds of terrain concept boards sit beside it.</p>
+<p class="outcome">The first set was set aside and the study restarted from real captures.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 01:32</span><span>4 pages</span></p>
+</div></li>
+<li class="entry" data-id="biome-ground" data-topic="map" data-created="2026-09-25T21:37:20-07:00">
+<a class="thumb" href="biome-ground/" tabindex="-1" aria-hidden="true"><img src="thumbs/biome-ground.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="biome-ground/">Biome ground: how each biome&#x27;s terrain could look</a></h3>
+<p>Round two repaints one coast as Meadow, Grove, Marsh, Stonefield and Snow, with a thumbnail glance test and colour-distance tables. Round three answers the review with crop fields, irregular swamps, grey slabs and a Stonefield tone strip. A third board adds a tree copse, boulders and a wheat field to every biome under one rule.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 21:37</span><span>3 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-27" style="--gap:2">
+<h2 class="date"><time datetime="2026-09-27">27 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="worker-hiring" data-topic="interface" data-created="2026-09-27T03:15:43-07:00">
+<a class="thumb" href="worker-hiring/" tabindex="-1" aria-hidden="true"><img src="thumbs/worker-hiring.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="worker-hiring/">Fewer taps to hire a worker</a></h3>
+<p>Six ways to hire workers on the world map, today&#x27;s flow plus five concepts, each drawn as a live phone in eight situations (enough Energy, short, none, out of range, harvest ready, hiring, hired, save failed) over a capture of the map. Hire, undo, collect, and hold + or − to count.</p>
+<p class="outcome">Concept A won: a stepper with the price on the button and an Undo in place of a confirm step.</p>
+<p class="meta"><span class="topic">Screens and menus</span><span>First committed 03:15</span></p>
+</div></li>
+<li class="entry" data-id="quarries-and-ore" data-topic="map" data-created="2026-09-27T12:00:00-07:00">
+<a class="thumb" href="quarries-and-ore/" tabindex="-1" aria-hidden="true"><img src="thumbs/quarries-and-ore.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="quarries-and-ore/">Quarries and ore: material groups for custom 3D</a></h3>
+<p>Ways that stone, clay, copper, iron, quartz and thunderstone could be built as custom low-poly props: concept sheets and an edit of the Stonefield map for each, with a rough triangle budget. Round two adds a colour plan that avoids too many reds, new copper shapes, quartz in pieces and crater variants.</p>
+<p class="outcome">Round one&#x27;s picks: the tor, stepped clay pits, iron columns, a quartz vein and a thunderstone crater. Round two recolours the set to avoid too many reds.</p>
+<p class="meta"><span class="topic">Map and world</span><span>Dated 27 Sep 2026</span></p>
+</div></li>
+<li class="entry" data-id="single-finds" data-topic="map" data-created="2026-09-27T15:44:10-07:00">
+<a class="thumb" href="single-finds/" tabindex="-1" aria-hidden="true"><img src="thumbs/single-finds.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="single-finds/">Single finds on the map</a></h3>
+<p>For each biome, a shelf of the small things a player can pick up (chamomile, hazelnuts, glowcap, wisp lily, frostbloom and six candidate Stonefield plants) on discs of local ground, then painted default and close-up map tiles with the game&#x27;s pickup pins over each find. Switch between day and night, and between two pin rims: A takes a family colour, B keeps paper.</p>
+<p class="meta"><span class="topic">Map and world</span><span>First committed 15:44</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-28" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-28">28 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="production-lines" data-topic="production" data-created="2026-09-28T03:59:32-07:00">
+<a class="thumb" href="production-lines/" tabindex="-1" aria-hidden="true"><img src="thumbs/production-lines.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="production-lines/">From crafting menus to production lines</a></h3>
+<p>Crafting buildings that touch form a line: queue an order at its end and only the finished item reaches the bag. Three phones, a timeline and a planner compare ways to build one, followed by the recipe tree behind it and the crafting-sheet study that came before.</p>
+<p class="outcome">The hybrid, which splits the fibre family along the flow of materials, became the working direction.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 03:59</span><span>3 pages</span></p>
+</div></li>
+<li class="entry" data-id="market-one-hand" data-topic="production" data-created="2026-09-28T04:24:20-07:00">
+<a class="thumb" href="market-one-hand/" tabindex="-1" aria-hidden="true"><img src="thumbs/market-one-hand.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="market-one-hand/">A market that fits in one hand</a></h3>
+<p>A clickable portrait mock of the player market: Buy and Sell tabs, a full-height item grid for a new listing, a quantity and price composer with a simulated keyboard, SOLD cards and an offline state, at two phone sizes.</p>
+<p class="outcome">Approved and built.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 04:24</span></p>
+</div></li>
+<li class="entry" data-id="line-screens" data-topic="production" data-created="2026-09-28T11:06:09-07:00">
+<a class="thumb" href="line-screens/" tabindex="-1" aria-hidden="true"><img src="thumbs/line-screens.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="line-screens/">Production lines on the real screens</a></h3>
+<p>The line idea redrawn on today&#x27;s crafting sheet and the real Hometown: five boards of live phones set beside Unity captures, then how buildings join and split lines when moved, with three ways to show a line at rest.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 11:06</span><span>2 pages</span></p>
+</div></li>
+<li class="entry" data-id="production-art" data-topic="production" data-created="2026-09-28T11:56:12-07:00">
+<a class="thumb" href="production-art/" tabindex="-1" aria-hidden="true"><img src="thumbs/production-art.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="production-art/">Icons and buildings for production</a></h3>
+<p>Concept art for the production tree&#x27;s eleven buildings standing touching in lines, with the Loom at three levels, and one icon for each of the tree&#x27;s 97 items, drawn in the game&#x27;s icon language.</p>
+<p class="meta"><span class="topic">Crafting and production</span><span>First committed 11:56</span><span>2 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day" data-date="2026-09-29" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-29">29 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="town-perspective" data-topic="hometown" data-created="2026-09-29T02:35:43-07:00">
+<a class="thumb" href="town-perspective/" tabindex="-1" aria-hidden="true"><img src="thumbs/town-perspective.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="town-perspective/">Choosing Hometown&#x27;s camera</a></h3>
+<p>A live camera tool, seven candidate cameras on the same small town, tests for touching, hiding and drawing templates, a table of how other games set their camera, and a recommended 45 degree view.</p>
+<p class="meta"><span class="topic">Hometown and art direction</span><span>First committed 02:35</span></p>
+</div></li>
+<li class="entry" data-id="hometown-3d" data-topic="hometown" data-created="2026-09-29T04:55:01-07:00">
+<a class="thumb" href="hometown-3d/" tabindex="-1" aria-hidden="true"><img src="thumbs/hometown-3d.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="hometown-3d/">Could Hometown be 3D?</a></h3>
+<p>A look test of whether Hometown&#x27;s buildings could be real 3D models instead of painted sprites: a Mill, a Kitchen and a house beside today&#x27;s paintings, turned to four sides and touching as a line. The same brief was built three times, and the three views differ in how much detail the models carry.</p>
+<p class="meta"><span class="topic">Hometown and art direction</span><span>First committed 04:55</span><span>3 pages</span></p>
+</div></li>
+</ul></li>
+<li class="day latest" data-date="2026-09-30" style="--gap:1">
+<h2 class="date"><time datetime="2026-09-30">30 September</time></h2>
+<ul class="entries">
+<li class="entry" data-id="relit-sprites" data-topic="hometown" data-created="2026-09-30T02:09:49-07:00">
+<a class="thumb" href="relit-sprites/" tabindex="-1" aria-hidden="true"><img src="thumbs/relit-sprites.jpg" width="640" height="400" alt="" loading="lazy"></a>
+<div>
+<h3><a href="relit-sprites/">Relit billboards: one Kitchen, lit at runtime</a></h3>
+<p>A look test. Can a flat-painted building, lit through a normal map, give consistent results? The board sets baked and relit sprites, and their mirrors, side by side under four suns.</p>
+<p class="outcome">Relit mirrors matched. The generated painting was only partly flat-lit.</p>
+<p class="meta"><span class="topic">Hometown and art direction</span><span>First committed 02:09</span></p>
+</div></li>
+</ul></li>
+</ol>
+</main>
+<footer class="foot">
+<p>Dates are when each page was first committed to the project's repository, shown in the author's time zone, or the date its folder carries where it never was. Gaps on the route are drawn in proportion to the days between entries.</p>
+<p>Pages are trimmed for public reading: review notes, links to the project's internal files and its private tracker, and third-party images are removed, and a few files are replaced. Every entry that was changed says so.</p>
+</footer>
+<script>(function(){
+  var chips=[].slice.call(document.querySelectorAll('[data-topic-filter]')),route=document.querySelector('.route'),
+      count=document.getElementById('count'),sort=document.getElementById('sort'),topic='all',newest=false,total=document.querySelectorAll('.entry').length;
+  function days(){return [].slice.call(route.querySelectorAll('.day'));}
+  function layout(){
+    var list=days().filter(function(d){return !d.hidden;}),prev=null;
+    list.forEach(function(d){
+      var g=d.querySelector('.gap');if(g)g.remove();
+      var n=prev?Math.round(Math.abs(Date.parse(d.dataset.date)-Date.parse(prev.dataset.date))/864e5):1;
+      d.style.setProperty('--gap',Math.min(n,8));
+      if(prev&&n>=3){var p=document.createElement('p');p.className='gap';p.textContent=n+(newest?' days earlier':' days later');d.insertBefore(p,d.firstChild);}
+      prev=d;
+    });
+    var all=days(),max=all.reduce(function(a,d){return d.dataset.date>a?d.dataset.date:a;},'');
+    all.forEach(function(d){d.classList.toggle('latest',d.dataset.date===max&&!d.hidden);});
+  }
+  function apply(){
+    var shown=0;
+    [].forEach.call(document.querySelectorAll('.entry'),function(e){var on=topic==='all'||e.dataset.topic===topic;e.hidden=!on;if(on)shown++;});
+    days().forEach(function(d){d.hidden=!d.querySelector('.entry:not([hidden])');});
+    count.textContent='Showing '+shown+' of '+total+(shown===1?' page':' pages');
+    layout();
+  }
+  // Where the reader was: scroll position, filter and order, kept for this tab only.
+  var KEY='gpw-devlog',from=null,st=null,timer=0;
+  function read(k){try{return sessionStorage.getItem(k);}catch(e){return null;}}
+  function save(){try{sessionStorage.setItem(KEY,JSON.stringify({y:Math.round(scrollY),topic:topic,newest:newest,from:from}));}catch(e){}}
+  function flip(){newest=!newest;sort.textContent=newest?'Newest first':'Oldest first';sort.setAttribute('aria-pressed',newest);
+    days().reverse().forEach(function(d){route.appendChild(d);});}
+  function pick(c){topic=c.dataset.topicFilter;chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});}
+  chips.forEach(function(c){c.addEventListener('click',function(){pick(c);apply();save();});});
+  sort.addEventListener('click',function(){flip();apply();save();});
+  try{st=JSON.parse(read(KEY)||'null');}catch(e){}
+  if(st){
+    if(st.newest)flip();
+    var chip=chips.filter(function(c){return c.dataset.topicFilter===st.topic;})[0];if(chip)pick(chip);
+    from=st.from||null;
+  }
+  apply();
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  // If the reader stepped on to other entries, centre the last one they saw; otherwise go back to where they were.
+  function target(){
+    var last=read(KEY+'-last'),el=last&&last!==from?route.querySelector('.entry[data-id="'+last+'"]'):null;
+    try{sessionStorage.removeItem(KEY+'-last');}catch(e){}
+    if(el&&!el.hidden){from=last;return function(){var r=el.getBoundingClientRect();return scrollY+r.top-Math.max(0,(innerHeight-r.height)/2);};}
+    return st?function(){return st.y;}:null;
+  }
+  function place(where){
+    if(!where)return;
+    scrollTo(0,where());var set=scrollY;
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(Math.abs(scrollY-set)<2)scrollTo(0,where());});
+  }
+  place(target());
+  addEventListener('pageshow',function(e){if(e.persisted){var w=target();if(w&&from)place(w);}});
+  addEventListener('scroll',function(){clearTimeout(timer);timer=setTimeout(save,150);},{passive:true});
+  addEventListener('pagehide',save);
+  route.addEventListener('click',function(e){var li=e.target.closest&&e.target.closest('.entry');if(li){from=li.dataset.id;save();}});
+})();</script>
+</body>
+</html>
