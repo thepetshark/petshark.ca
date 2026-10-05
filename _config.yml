@@ -24,7 +24,7 @@ plugins:
 # -----------------------------------------------------------------------------
 include:
   - _pages
-  - geopets-world/archive/Assets/_GeoPets
+  - _GeoPets
 #  - _projects  #  now a collection. do not add to include
 
 # -----------------------------------------------------------------------------
