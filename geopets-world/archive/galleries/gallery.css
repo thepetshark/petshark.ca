@@ -1,0 +1,30 @@
+@font-face{font-family:Nunito;src:url(../../devlog/assets/fonts/Nunito-Variable.ttf) format("truetype");font-weight:200 1000;font-display:swap}
+:root{--paper:#e4eadd;--ink:#1d3a30;--soft:#486556;--leaf:#366950;--amber:#e8a838;--water:#2c7d9b;--rule:#a9bba1;--mat:#cfdac7;--white:#f7f9f3}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;color:var(--ink);font:400 1.0625rem/1.55 Nunito,system-ui,sans-serif;overflow-wrap:anywhere}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.top,.part,.end{max-width:78rem;margin:0 auto;padding-left:1.25rem;padding-right:1.25rem}
+.top{padding-top:2.25rem;padding-bottom:.25rem}
+h1{margin:0 0 .9rem;font-size:clamp(2.1rem,6.5vw,3.8rem);line-height:.98;font-weight:900;letter-spacing:-.025em}
+.lede{max-width:40rem;margin:0;font-size:1.15rem;color:var(--soft)}
+.part{position:relative;margin-top:2.4rem;padding-top:1.5rem}
+.part::before{content:"";position:absolute;left:1.25rem;right:1.25rem;top:0;border-top:3px dashed var(--rule)}
+.part::after{content:"";position:absolute;left:calc(1.25rem + .55rem + 4px);top:0;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--leaf);border:4px solid var(--paper);box-sizing:content-box;transform:translate(-50%,calc(-50% + 1.5px))}
+.part h2{margin:0;font-size:1.6rem;line-height:1.15;font-weight:900;letter-spacing:-.01em}
+.part .note{max-width:40rem;margin:.35rem 0 0;color:var(--soft)}
+.shots{--h:23rem;list-style:none;margin:1.25rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:1.5rem 1rem}
+.shots::after{content:"";flex:1000 1 0px;margin-left:-1rem}
+.shot{flex:calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h));min-width:min(7rem,100%);max-width:calc(var(--ar) * var(--h) * 1.6)}
+.shot figure{margin:0}
+.shot a{display:block;border-radius:.6rem;overflow:hidden;background:var(--mat);outline:2px solid var(--rule);outline-offset:-2px;line-height:0}
+.shot a:hover{outline-color:var(--amber)}
+.shot a:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{margin:.5rem .1rem 0;font-size:.93rem;font-weight:700;line-height:1.3;color:var(--soft)}
+.end{padding-top:2.4rem;padding-bottom:3rem;color:var(--soft);font-size:.95rem}
+.end p{max-width:40rem;margin:0 0 .5rem}
+.end a{font-weight:800;color:var(--leaf)}
+@media (max-width:640px){.shots{--h:21rem}.part h2{font-size:1.4rem}}
+@media (max-width:360px){.shots{--h:18rem}}
