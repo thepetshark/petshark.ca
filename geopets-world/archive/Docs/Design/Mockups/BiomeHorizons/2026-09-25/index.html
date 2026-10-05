@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Biome Horizons · Geo Pets World</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #243129; background: #f4f1e9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header, main, footer { max-width: 1100px; margin: auto; padding: 1.4rem clamp(1rem, 4vw, 3rem); }
+    header { padding-top: 2.5rem; }
+    h1 { margin: 0 0 .5rem; font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { margin: 0 0 .35rem; font-size: 1.5rem; }
+    p { line-height: 1.55; }
+    a { color: #245b47; }
+    a:focus-visible { outline: 3px solid #ab652b; outline-offset: 4px; }
+    .intro { max-width: 75ch; }
+    .cards { display: grid; gap: 1.5rem; }
+    article { background: #fffdf8; border: 1px solid #d9d5c9; border-radius: 12px; padding: clamp(1rem, 2.5vw, 1.5rem); box-shadow: 0 4px 20px #24312910; }
+    article p { margin: .25rem 0 1rem; }
+    article a.image-link { display: block; }
+    img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .caption { font-size: .95rem; color: #48544c; margin: .8rem 0 0; }
+    footer { color: #48544c; padding-bottom: 3rem; }
+    @media (prefers-reduced-motion: no-preference) { a { transition: color .15s ease; } a:hover { color: #8b461e; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Biome Horizons</h1>
+    <p class="intro">Five terrain concepts for Geo Pets World. Each landscape comparison board contains two portrait views: a grounded environment on the left and a restrained fantasy landmark on the right. Select any image to open its full-size original.</p>
+    
+  </header>
+  <main>
+    <div class="cards">
+      <article><h2>Meadow</h2><p>Sunfold Downs · The Sleeping Giant</p><a class="image-link" href="meadow.png" aria-label="Open full-size Meadow board"><img src="meadow.png" alt="Meadow comparison board: rounded green hills and a pond beside a variant with weathered tilted stone slabs on a ridge" loading="eager"></a><p class="caption">Open terrain, flower patches and a rare buried-stone landmark.</p></article>
+      <article><h2>Grove</h2><p>Folded Woodland · Lanternroot Hollow</p><a class="image-link" href="grove.png" aria-label="Open full-size Grove board"><img src="grove.png" alt="Grove comparison board: forested hills and gullies beside a twilight woodland with a mossy stone arch and subtle glowing growth" loading="lazy"></a><p class="caption">Layered trees and gullies, with one gentle luminous focal point.</p></article>
+      <article><h2>Stonefield</h2><p>Splitback Ridges · Ember Springs</p><a class="image-link" href="stonefield.png" aria-label="Open full-size Stonefield board"><img src="stonefield.png" alt="Stonefield comparison board: ochre eroded ridges beside rocky hills with basalt, a small glowing fissure and a geyser" loading="lazy"></a><p class="caption">Faceted rock relief with small heat and mineral accents.</p></article>
+      <article><h2>Marsh</h2><p>Hummock Wetlands · The Sunken Choir</p><a class="image-link" href="marsh.png" aria-label="Open full-size Marsh board"><img src="marsh.png" alt="Marsh comparison board: raised dry hummocks and shallow pools beside leaning slate spires and softly glowing mineral formations" loading="lazy"></a><p class="caption">Dry routes weave through water and raised ground.</p></article>
+      <article><h2>Snow</h2><p>Glacier Shoulders · Moonfracture</p><a class="image-link" href="snow.png" aria-label="Open full-size Snow board"><img src="snow.png" alt="Snow comparison board: rolling snowy hills and chunky glaciers beside a moonlit ridge with leaning ice slabs and turquoise seams" loading="lazy"></a><p class="caption">Broad glacier faces and readable roads across sculpted snow.</p></article>
+    </div>
+  </main>
+  <footer><p>AI-generated concept targets, not Unity screenshots or exact asset-pack geometry. Road layouts are illustrative; future roads should follow the real-world map.</p></footer>
+</body>
+</html>

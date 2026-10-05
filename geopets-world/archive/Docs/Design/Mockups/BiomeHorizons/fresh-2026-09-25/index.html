@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Biome horizons, fresh study, 2026-09-25</title>
+<style>
+  body { font: 15px/1.5 "Segoe UI", system-ui, sans-serif; background: #FAF4E5; color: #24483B; margin: 0; padding: 24px 32px 64px; max-width: 1400px; }
+  h1 { font-size: 26px; font-weight: 800; margin: 0 0 8px; }
+  h2 { font-size: 20px; font-weight: 800; margin: 36px 0 8px; }
+  h3 { font-size: 16px; font-weight: 700; margin: 22px 0 6px; }
+  p { max-width: 78ch; }
+  img { display: block; max-width: 100%; height: auto; border: 2px solid #24483B; background: #fff; }
+  .note { background: #F1EAD8; padding: 10px 14px; border-left: 4px solid #24483B; max-width: 78ch; }
+  .row { display: grid; grid-template-columns: repeat(3, minmax(0, 300px)); gap: 14px; }
+  .row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 240px)); gap: 14px; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; margin-top: 4px; }
+  table { border-collapse: collapse; font-size: 14px; max-width: 1200px; }
+  th, td { border: 1px solid #24483B; padding: 5px 8px; text-align: left; vertical-align: top; }
+  th { background: #F1EAD8; }
+</style>
+</head>
+<body>
+<h1>Biome horizons: fog off, a stylised sky, relief and props in every biome</h1>
+<p class="note">Concepts. Every mockup was generated from a real capture of the game at the fully zoomed-in camera (43 units up, 20° down) with the interface hidden, and from a sheet of the asset pack's actual prefabs. Roads and stalls keep their routes but drift a few percent: no image is a layout reference. Map imagery © Mapbox © OpenStreetMap.</p>
+
+<h2>The problem, measured</h2>
+<p>Fully zoomed in, the map's far edge sits about 80 px below the true horizon, facing every direction, with fog on or off. Hills would have to be about as tall as the camera is high (43 units) to hide it.</p>
+<img src="plates/before-seam.png" alt="Four captures of the game fully zoomed in, each marked with the true horizon line and the map's far edge 78 to 81 pixels below it">
+
+<h2>Ways to hide the seam (brainstorm)</h2>
+<table>
+<tr><th>#</th><th>idea</th><th>how it closes the seam</th><th>cost</th><th>risk</th></tr>
+<tr><td>1</td><td>Horizon skirt: rings of far-hill silhouettes beyond the map, coloured by the edge biome</td><td>crests stand above the horizon at every zoom</td><td>≲ 6k triangles, 3 draws</td><td>must be world-hashed or it swims when the view pans</td></tr>
+<tr><td>2</td><td>Rim bowl: lift the outer terrain with distance, plus noise</td><td>the map's own edge rises to the horizon</td><td>a few shader lines</td><td>rim props and pins rise too; a quick first experiment</td></tr>
+<tr><td>3</td><td>Far tiles: a coarse outer ring of height and colour only</td><td>edge moves to 1–1.5° under the horizon</td><td>generation and memory</td><td>still a thin seam</td></tr>
+<tr><td>4</td><td>Horizon haze band, by angle, ±3°</td><td>edge lies inside the band</td><td>one shader term</td><td>adds no hills alone</td></tr>
+<tr><td>5</td><td>Hills painted into the sky</td><td>edge meets painted hills of the same colour</td><td>a texture</td><td>no parallax</td></tr>
+<tr><td>6</td><td>Far-sea plane where the edge is water</td><td>perfect at coasts</td><td>one quad</td><td>coasts only</td></tr>
+<tr><td>7</td><td>Lower the zoomed-in camera (25 u instead of 43)</td><td>halves the band</td><td>one number</td><td>changes the feel</td></tr>
+<tr><td>8</td><td>Cloud bank on the horizon</td><td>clouds cover the edge</td><td>sprites or meshes</td><td>reads as a wall if continuous</td></tr>
+</table>
+<p>Suggested direction: the skirt with the haze band, and the far-sea plane toward coasts. Try the rim bowl first, as a quick test of how it feels.</p>
+
+<h2>Five biomes at the low camera</h2>
+<h3>Meadow</h3>
+<div class="row">
+<figure><img src="plates/in-yaw090-nofog.png" alt="Meadow: the game today"><figcaption>The game today, same camera, fog off</figcaption></figure>
+<figure><img src="mockups/meadow-A.jpg" alt="Meadow A"><figcaption>A: ordinary gameplay area</figcaption></figure>
+<figure><img src="mockups/meadow-B.jpg" alt="Meadow B"><figcaption>B: with three tilted standing stones on a crest</figcaption></figure>
+</div>
+<h3>Grove</h3>
+<div class="row">
+<figure><img src="plates/in-yaw090-nofog.png" alt="Grove: the game today"><figcaption>The game today, same camera, fog off</figcaption></figure>
+<figure><img src="mockups/grove-A.jpg" alt="Grove A"><figcaption>A: ordinary gameplay area</figcaption></figure>
+<figure><img src="mockups/grove-B.jpg" alt="Grove B"><figcaption>B: with one giant tree ringed with red fungus</figcaption></figure>
+</div>
+<h3>Stonefield</h3>
+<div class="row">
+<figure><img src="plates/in-yaw270-nofog.png" alt="Stonefield: the game today"><figcaption>The game today, same camera, fog off</figcaption></figure>
+<figure><img src="mockups/stonefield-A.jpg" alt="Stonefield A"><figcaption>A: ordinary gameplay area</figcaption></figure>
+<figure><img src="mockups/stonefield-B.jpg" alt="Stonefield B"><figcaption>B: with a glowing fissure, basalt columns and a small geyser</figcaption></figure>
+</div>
+<h3>Marsh</h3>
+<div class="row">
+<figure><img src="plates/in-yaw000-nofog.png" alt="Marsh: the game today"><figcaption>The game today, same camera, fog off</figcaption></figure>
+<figure><img src="mockups/marsh-A.jpg" alt="Marsh A"><figcaption>A: ordinary gameplay area</figcaption></figure>
+<figure><img src="mockups/marsh-B.jpg" alt="Marsh B"><figcaption>B: with dark pointed outcrops and cyan crystals</figcaption></figure>
+</div>
+<h3>Snow</h3>
+<div class="row">
+<figure><img src="plates/in-yaw180-nofog.png" alt="Snow: the game today"><figcaption>The game today, same camera, fog off</figcaption></figure>
+<figure><img src="mockups/snow-A.jpg" alt="Snow A"><figcaption>A: ordinary gameplay area</figcaption></figure>
+<figure><img src="mockups/snow-B.jpg" alt="Snow B"><figcaption>B: with glacier blocks and a crevice, where ice is harvested</figcaption></figure>
+</div>
+
+<h2>Hours</h2>
+<div class="row4">
+<figure><img src="plates/in-yaw180-night-nofog.png" alt="Night today"><figcaption>Night today</figcaption></figure>
+<figure><img src="mockups/night-crescent.jpg" alt="Night, crescent moon"><figcaption>Night, waxing crescent</figcaption></figure>
+<figure><img src="mockups/night-full.jpg" alt="Night, full moon"><figcaption>Night, full moon</figcaption></figure>
+<figure><img src="mockups/sunset.jpg" alt="Sunset"><figcaption>Sunset</figcaption></figure>
+</div>
+
+<h2>Strange formations: lore accents for the occasional map</h2>
+<img src="mockups/formations-board.jpg" alt="Six formations: a ring of leaning stones, a buried stone gear, a tilted obelisk in a pool, a crystal bloom, stacked ice blocks, a line of cairns">
+<p>In order: The Sleepers; The Buried Gear; The Tilted Obelisk; The Crystal Bloom; The Ice Monolith (reads as a snowman here, so it needs squarer, offset blocks); The Cairn Road. Not yet drawn: a hot spring in Snow, a fairy ring in Grove, sea stacks, a sunken causeway, a lone dead giant tree, and fragments of fallen sky islands tying into the floating Hometown.</p>
+
+<h2>What the kit contains</h2>
+<p>Rendered from the imported prefabs in the Editor on 2026-09-25, LOD0, with height in map units and triangle count. The generator was shown these sheets.</p>
+<img src="kit/pack-nature-sheet.png" alt="Nature Forest prefabs">
+<br>
+<img src="kit/pack-accents-sheet.png" alt="Over Growth and Primitive Shapes prefabs">
+</body>
+</html>

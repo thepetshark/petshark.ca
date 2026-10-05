@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Biome terrain, round three, 2026-09-25</title>
+<style>
+  body { font: 15px/1.5 "Segoe UI", system-ui, sans-serif; background: #FAF4E5; color: #24483B; margin: 0; padding: 24px 32px 64px; max-width: 1400px; }
+  h1 { font-size: 26px; font-weight: 800; margin: 0 0 8px; }
+  h2 { font-size: 20px; font-weight: 800; margin: 36px 0 8px; }
+  h3 { font-size: 16px; font-weight: 700; margin: 22px 0 6px; }
+  p { max-width: 78ch; }
+  img { display: block; max-width: 100%; height: auto; border: 2px solid #24483B; background: #fff; }
+  .note { background: #F1EAD8; padding: 10px 14px; border-left: 4px solid #24483B; max-width: 78ch; }
+  .row { display: grid; grid-template-columns: repeat(3, minmax(0, 300px)); gap: 14px; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; margin-top: 4px; }
+  table { border-collapse: collapse; font-size: 14px; }
+  th, td { border: 1px solid #24483B; padding: 4px 8px; text-align: left; }
+  th { background: #F1EAD8; }
+</style>
+</head>
+<body>
+<h1>Biome terrain, round three: swamps, grey slabs, crop fields</h1>
+<p class="note">Concepts. The third review of 2026-09-25 asked for the Marsh's indents to become irregular swamps distinct from water, for Stonefield to take the grey cracked-slab look of the older mockups, and for Meadow's crops to appear as square-cornered fields of a chunky crop asset on the chosen green checker. Grove stays as in <a href="../round2-2026-09-25/index.html">round two</a>. Same cameras and geography as round two. Map imagery © Mapbox © OpenStreetMap.</p>
+
+<h2>The board, default zoom</h2>
+<p>Meadow with fields, Grove (round two), Marsh swamps, Stonefield slabs, Snow (round two).</p>
+<img src="board/board.png" alt="Five biomes side by side at the default zoom">
+<h2>The glance test</h2>
+<img src="board/thumbs.png" alt="The five as thumbnails">
+<h3>Ground colour distance (Lab units)</h3>
+<table><tr><th>pair</th><th>distance</th></tr><tr><td>meadow fields vs grove</td><td>19.3</td></tr><tr><td>meadow fields vs marsh swamps</td><td>46.1</td></tr><tr><td>meadow fields vs stonefield slabs</td><td>60.8</td></tr><tr><td>meadow fields vs snow</td><td>66.3</td></tr><tr><td>grove vs marsh swamps</td><td>27.9</td></tr><tr><td>grove vs stonefield slabs</td><td>48.2</td></tr><tr><td>grove vs snow</td><td>58.4</td></tr><tr><td>marsh swamps vs stonefield slabs</td><td>39.3</td></tr><tr><td>marsh swamps vs snow</td><td>55.6</td></tr><tr><td>stonefield slabs vs snow</td><td>18.9</td></tr></table>
+
+<h2>Each change</h2>
+<h3>Meadow, green checker with crop fields</h3><p>The chosen green checker with square-cornered farmland fields of chunky crop rows: ripe wheat, young wheat, flax with blue flowers, a leafy crop.</p>
+<div class="row"><figure class="portrait"><img src="mockups/meadow-fields.jpg" alt="Meadow, green checker with crop fields"><figcaption>Mockup, default zoom</figcaption></figure><figure><img src="../round2-2026-09-25/mockups/meadow-checker-default.jpg" alt="round two checker"><figcaption>Round two, the chosen checker without fields</figcaption></figure></div>
+<h3>Crop-field asset concept</h3><p>A proposed 3D field-block asset: one chunky low-poly mass of rows per field, square corners, a dirt margin; wheat, flax, leafy crop, and a half-harvested state; a pack tree for scale.</p>
+<img src="mockups/crop-field-asset.jpg" alt="Crop-field asset concept sheet">
+<h3>Marsh, irregular swamps</h3><p>Flat dark lowland with irregular reedy swamp patches: dark opaque pools with lily pads and reeds, never blue, never the sea's look. Replaces round two's bowls, which read as craters.</p>
+<div class="row"><figure class="portrait"><img src="mockups/marsh-swamps.jpg" alt="Marsh, irregular swamps"><figcaption>Round three, swamps</figcaption></figure><figure><img src="../round2-2026-09-25/mockups/marsh-default.jpg" alt="round two marsh"><figcaption>Round two, the bowls that read as craters</figcaption></figure></div>
+<h2>Round four: Stonefield's tone (2026-09-25)</h2>
+<p>Stonefield was reading too much like Snow. The request: use round three's grey slabs in round two's tan, or a grey-tan in between, so that its grey becomes a warm tone rather than a cool one. Left to right: round three's cool grey, A warm grey, B grey-tan, C grey-tan a step darker, round two's tan, and Snow; the number is the mean ground colour's distance from Snow in Lab units (30 reads as a different family).</p>
+<img src="board/stonefield-tones.jpg" alt="Stonefield tone candidates beside Snow">
+
+<h3>Stonefield, grey cracked slabs</h3><p>The grey cracked-slab ground and boulders of the older mockups, on the game's actual rocky mounds; pale tops kept subtle.</p>
+<div class="row"><figure class="portrait"><img src="mockups/stonefield-slabs.jpg" alt="Stonefield, grey cracked slabs"><figcaption>Round three, grey slabs</figcaption></figure><figure><img src="../round2-2026-09-25/mockups/stonefield-default.jpg" alt="round two stonefield"><figcaption>Round two, the approved tan repainted smooth</figcaption></figure></div>
+
+<h2>Round five: close-ups for the three biomes that changed after round two (2026-09-26)</h2>
+<p>Painted from each chosen default-zoom mockup as the style master, at the game's fully zoomed-in camera. These are the near-camera pixel targets.</p>
+<div class="row"><figure class="portrait"><img src="mockups/stonefield-b-in.jpg" alt="Stonefield B, fully zoomed in (round five)"><figcaption>Stonefield B, zoomed in</figcaption></figure><figure class="portrait"><img src="mockups/marsh-swamps-in.jpg" alt="Marsh swamps, fully zoomed in (round five)"><figcaption>Marsh swamps, zoomed in</figcaption></figure><figure class="portrait"><img src="mockups/meadow-fields-in.jpg" alt="Meadow fields, fully zoomed in (round five)"><figcaption>Meadow fields, zoomed in</figcaption></figure></div>
+
+
+</body>
+</html>

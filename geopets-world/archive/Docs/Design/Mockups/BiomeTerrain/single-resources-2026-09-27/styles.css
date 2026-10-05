@@ -1,0 +1,57 @@
+@font-face { font-family: Nunito; src: url("assets/fonts/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; font-display: block; }
+
+:root {
+  --paper: #FAF4E5; --cream: #F1EAD8; --ink: #24483B; --green: #366950; --line: #D5DDC9; --muted: #58695B;
+  --tile-w: 390px; --tile-h: 844px;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); font: 400 15px/1.45 Nunito, sans-serif; }
+
+.bar {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 24px;
+  padding: 14px 32px; background: var(--paper); border-bottom: 2px solid var(--line);
+}
+.bar h1 { margin: 0 auto 0 0; font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+.seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; }
+.seg button {
+  font: 700 14px/1 Nunito, sans-serif; color: var(--ink); background: var(--paper); border: 0; padding: 9px 16px; cursor: pointer;
+}
+.seg button + button { border-left: 2px solid var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--green); color: var(--paper); }
+.seg button:focus-visible { outline: 3px solid #E0A040; outline-offset: -3px; }
+
+main { padding: 8px 32px 64px; }
+.biome { padding: 28px 0 36px; border-bottom: 2px solid var(--line); }
+.biome:last-child { border-bottom: 0; }
+.biome > h2 { margin: 0 0 16px; font-size: 44px; line-height: 1; font-weight: 800; letter-spacing: -.02em; }
+
+/* the specimen shelf: each find on its disc, its name, and its pin in both rim concepts */
+.body { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.shelf { display: flex; flex-wrap: wrap; gap: 12px; width: 440px; flex: none; }
+.biome.wide .shelf { width: 100%; }
+.spec { background: var(--cream); border: 2px solid var(--line); border-radius: 18px; padding: 10px 10px 12px; width: 214px; }
+.spec.fantasy { width: 424px; }
+.spec .views { display: flex; gap: 6px; }
+.spec img.prop { display: block; width: 190px; height: 190px; object-fit: cover; border-radius: 12px; }
+.spec h3 { margin: 10px 2px 6px; font-size: 15px; font-weight: 800; line-height: 1.2; }
+.spec .tag { display: inline-block; margin-left: 5px; padding: 1px 6px; border: 1.5px solid var(--green); border-radius: 999px; font-size: 12px; font-weight: 700; color: var(--green); vertical-align: 2px; }
+.pins { display: flex; gap: 12px; align-items: end; }
+.pins figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.pins figcaption { font-size: 12px; font-weight: 700; color: var(--muted); }
+
+/* the tiles: game size, 390 points wide, with the page's pins over the painted finds */
+.tiles { display: flex; flex-wrap: wrap; gap: 16px; }
+.tile { margin: 0; }
+.tile figcaption { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
+.frame { position: relative; width: var(--tile-w); height: var(--tile-h); border-radius: 14px; overflow: hidden; outline: 2px solid var(--ink); outline-offset: 0; margin: 2px; }
+.frame img.map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.frame img.map.night { opacity: 0; }
+body.night .frame.has-night img.map.night { opacity: 1; }
+.pin { position: absolute; display: block; pointer-events: none; }
+.pin svg { display: block; }
+
+@media (max-width: 700px) {
+  .bar { flex-wrap: wrap; padding: 12px 16px; }
+  main { padding: 8px 16px 48px; }
+}
