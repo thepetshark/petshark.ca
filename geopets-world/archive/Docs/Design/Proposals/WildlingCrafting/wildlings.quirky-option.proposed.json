@@ -1,0 +1,4036 @@
+{
+  "schemaVersion": 1,
+  "id": "wildlings-quirky-review-option",
+  "status": "PROPOSED_OPTION_NOT_LOADED_BY_GAME",
+  "authoredOn": "2026-09-18",
+  "artDecision": "Mixed packs are permitted for this prototype. These 60 species are a proposed non-evolving Quirky baseline, with a separate evolving cohort in evolution-families.proposed.json. Exact species/forms are still review content, not a live catalog.",
+  "species": [
+    {
+      "id": "dapplehop",
+      "displayName": "Dapplehop",
+      "description": "A curious hopper that follows the scent of warm biscuits through meadow grass.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "park"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Rabbit",
+        "lod2SourceTriangleEquivalent": 1058,
+        "lod3SourceTriangleEquivalent": 538,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "dusknib",
+      "displayName": "Dusknib",
+      "description": "A tiny seed collector that leaves neat trails through tall grass.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "crop-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Mouse",
+        "lod2SourceTriangleEquivalent": 700,
+        "lod3SourceTriangleEquivalent": 396,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "mossshell",
+      "displayName": "Mossshell",
+      "description": "A patient grazer that settles near sunlit garden borders.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "park"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Tortoise",
+        "lod2SourceTriangleEquivalent": 808,
+        "lod3SourceTriangleEquivalent": 496,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "dawnwing",
+      "displayName": "Dawnwing",
+      "description": "A soft-voiced visitor to peaceful gardens and open squares.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "quiet-landmark"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Dove",
+        "lod2SourceTriangleEquivalent": 984,
+        "lod3SourceTriangleEquivalent": 624,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "reedrunner",
+      "displayName": "Reedrunner",
+      "description": "A long-legged wanderer that enjoys broad clear paths through the meadow.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "open-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Emu",
+        "lod2SourceTriangleEquivalent": 1224,
+        "lod3SourceTriangleEquivalent": 760,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "brighthollow",
+      "displayName": "Brighthollow",
+      "description": "A cheerful forager that emerges from grassy hollows at dusk.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "park"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Quokka",
+        "lod2SourceTriangleEquivalent": 928,
+        "lod3SourceTriangleEquivalent": 448,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "goldstep",
+      "displayName": "Goldstep",
+      "description": "A light-footed meadow spirit that follows the first warm light.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "open-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Gazelle",
+        "lod2SourceTriangleEquivalent": 1172,
+        "lod3SourceTriangleEquivalent": 702,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "windhorn",
+      "displayName": "Windhorn",
+      "description": "A watchful runner most comfortable where grassland meets open sky.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "grassland"
+        ],
+        "preferredSublocationIds": [
+          "open-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Pronghorn",
+        "lod2SourceTriangleEquivalent": 1118,
+        "lod3SourceTriangleEquivalent": 654,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "mossbrush",
+      "displayName": "Mossbrush",
+      "description": "Its sweeping tail brushes dew from brambles as it searches for fruit.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Fox",
+        "lod2SourceTriangleEquivalent": 944,
+        "lod3SourceTriangleEquivalent": 550,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "thimblepaw",
+      "displayName": "Thimblepaw",
+      "description": "A clever nighttime visitor drawn to the smells around public markets.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "market"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Raccoon",
+        "lod2SourceTriangleEquivalent": 856,
+        "lod3SourceTriangleEquivalent": 528,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "hushfeather",
+      "displayName": "Hushfeather",
+      "description": "A silent perch-watcher that favors quiet landmarks and sheltered groves.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "quiet-landmark"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Owl",
+        "lod2SourceTriangleEquivalent": 1040,
+        "lod3SourceTriangleEquivalent": 648,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "brackenhowl",
+      "displayName": "Brackenhowl",
+      "description": "A reserved companion that answers distant calls from leafy clearings.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-clearing"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Wolf",
+        "lod2SourceTriangleEquivalent": 1104,
+        "lod3SourceTriangleEquivalent": 594,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "burrowtusk",
+      "displayName": "Burrowtusk",
+      "description": "An eager root-sniffer that turns fallen leaves into tidy little piles.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Hog",
+        "lod2SourceTriangleEquivalent": 1038,
+        "lod3SourceTriangleEquivalent": 608,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "bloombeak",
+      "displayName": "Bloombeak",
+      "description": "A bright-beaked fruit seeker heard above the greener parts of a park.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-canopy"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Hornbill",
+        "lod2SourceTriangleEquivalent": 1044,
+        "lod3SourceTriangleEquivalent": 628,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "amberstripe",
+      "displayName": "Amberstripe",
+      "description": "A sleepy climber with a weakness for rich berry treats.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-canopy"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "RedPanda",
+        "lod2SourceTriangleEquivalent": 828,
+        "lod3SourceTriangleEquivalent": 480,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "lanternpocket",
+      "displayName": "Lanternpocket",
+      "description": "A shy forager drawn to the soft glow of Energy wells after dark.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "woodland"
+        ],
+        "preferredSublocationIds": [
+          "energy-well"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Possum",
+        "lod2SourceTriangleEquivalent": 748,
+        "lod3SourceTriangleEquivalent": 400,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "crumbcourier",
+      "displayName": "Crumbcourier",
+      "description": "A familiar plaza visitor that always seems to know where fresh crumbs fall.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "market"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Pigeon",
+        "lod2SourceTriangleEquivalent": 1000,
+        "lod3SourceTriangleEquivalent": 660,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "velvetwhisk",
+      "displayName": "Velvetwhisk",
+      "description": "A quiet rooftop explorer that lingers near friendly market stalls.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "market"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cream-cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Cat",
+        "lod2SourceTriangleEquivalent": 1046,
+        "lod3SourceTriangleEquivalent": 668,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "porchwhistle",
+      "displayName": "Porchwhistle",
+      "description": "An outgoing wanderer that greets visitors near busy Water sources.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "water-source"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Dog",
+        "lod2SourceTriangleEquivalent": 1126,
+        "lod3SourceTriangleEquivalent": 566,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "pennyplume",
+      "displayName": "Pennyplume",
+      "description": "A bright-eyed collector that becomes curious around Energy wells at night.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "energy-well"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Crow",
+        "lod2SourceTriangleEquivalent": 1010,
+        "lod3SourceTriangleEquivalent": 610,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "duskflutter",
+      "displayName": "Duskflutter",
+      "description": "A small night flier that loops around quiet gardens and sheltered courtyards.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "quiet-landmark"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Bat",
+        "lod2SourceTriangleEquivalent": 924,
+        "lod3SourceTriangleEquivalent": 540,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "lampprowl",
+      "displayName": "Lampprowl",
+      "description": "A cautious pathfinder that walks the seam between town and open land.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "settlement"
+        ],
+        "preferredSublocationIds": [
+          "settlement-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Coyote",
+        "lod2SourceTriangleEquivalent": 768,
+        "lod3SourceTriangleEquivalent": 494,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "lilykip",
+      "displayName": "Lilykip",
+      "description": "A springy waterside singer that pauses among reeds when evening arrives.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Frog",
+        "lod2SourceTriangleEquivalent": 648,
+        "lod3SourceTriangleEquivalent": 368,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "twigwright",
+      "displayName": "Twigwright",
+      "description": "A busy bank-side builder fascinated by neatly cut wooden frames.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Beaver",
+        "lod2SourceTriangleEquivalent": 954,
+        "lod3SourceTriangleEquivalent": 724,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "reedshield",
+      "displayName": "Reedshield",
+      "description": "A solid-shelled guardian that watches the shallows from a quiet bank.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SnappingTurtle",
+        "lod2SourceTriangleEquivalent": 1146,
+        "lod3SourceTriangleEquivalent": 728,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "silkdrift",
+      "displayName": "Silkdrift",
+      "description": "A graceful visitor that glides toward reed-fringed banks at dawn.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Swan",
+        "lod2SourceTriangleEquivalent": 1108,
+        "lod3SourceTriangleEquivalent": 648,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "brookflash",
+      "displayName": "Brookflash",
+      "description": "A quick streak of color between branch perches beside the water.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Kingfisher",
+        "lod2SourceTriangleEquivalent": 964,
+        "lod3SourceTriangleEquivalent": 576,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "ripplebill",
+      "displayName": "Ripplebill",
+      "description": "A playful bank explorer that prefers the quiet moment before nightfall.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Platypus",
+        "lod2SourceTriangleEquivalent": 800,
+        "lod3SourceTriangleEquivalent": 392,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "gildfin",
+      "displayName": "Gildfin",
+      "description": "A gleaming swimmer often seen just under the surface of still water.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Carp",
+        "lod2SourceTriangleEquivalent": 1258,
+        "lod3SourceTriangleEquivalent": 820,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "ribbonwake",
+      "displayName": "Ribbonwake",
+      "description": "A long-finned swimmer whose turns leave delicate ripples behind.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "wetland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Arowana",
+        "lod2SourceTriangleEquivalent": 1072,
+        "lod3SourceTriangleEquivalent": 760,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "foampaw",
+      "displayName": "Foampaw",
+      "description": "A playful shore visitor that carries smooth stones as keepsakes.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "coastal-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SeaOtter",
+        "lod2SourceTriangleEquivalent": 966,
+        "lod3SourceTriangleEquivalent": 574,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "breezebill",
+      "displayName": "Breezebill",
+      "description": "A broad-winged traveler that rests along open coastal banks.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "coastal-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Pelican",
+        "lod2SourceTriangleEquivalent": 1060,
+        "lod3SourceTriangleEquivalent": 656,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "pebblepinch",
+      "displayName": "Pebblepinch",
+      "description": "A sideways wanderer that arranges washed-up pebbles around its hiding place.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "coastal-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Crab",
+        "lod2SourceTriangleEquivalent": 1012,
+        "lod3SourceTriangleEquivalent": 572,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "coralclasp",
+      "displayName": "Coralclasp",
+      "description": "A deep-colored swimmer that leaves rocky shelter after sunset.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "saltwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Lobster",
+        "lod2SourceTriangleEquivalent": 1456,
+        "lod3SourceTriangleEquivalent": 880,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "anemoneglint",
+      "displayName": "Anemoneglint",
+      "description": "A tiny patterned swimmer that peeks between patches of sheltered water.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "saltwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Clownfish",
+        "lod2SourceTriangleEquivalent": 758,
+        "lod3SourceTriangleEquivalent": 444,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "curltide",
+      "displayName": "Curltide",
+      "description": "A delicate drifting companion that curls around underwater stems.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "saltwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "reed-pellet"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SeaHorse",
+        "lod2SourceTriangleEquivalent": 860,
+        "lod3SourceTriangleEquivalent": 530,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "inkwhirl",
+      "displayName": "Inkwhirl",
+      "description": "A curious night swimmer that traces slow circles around a soft glow.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "saltwater"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "water-with-shore-exception",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "floating-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Squid",
+        "lod2SourceTriangleEquivalent": 820,
+        "lod3SourceTriangleEquivalent": 448,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "tidebask",
+      "displayName": "Tidebask",
+      "description": "A sociable shore visitor that rests where the first waves meet sunlit stone.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "coast"
+        ],
+        "preferredSublocationIds": [
+          "coastal-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cookie"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SeaLion",
+        "lod2SourceTriangleEquivalent": 1036,
+        "lod3SourceTriangleEquivalent": 550,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "cragcurl",
+      "displayName": "Cragcurl",
+      "description": "A steady-footed grazer happiest beside exposed stone.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "rocky-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Bighorn",
+        "lod2SourceTriangleEquivalent": 944,
+        "lod3SourceTriangleEquivalent": 576,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "frostscamper",
+      "displayName": "Frostscamper",
+      "description": "A quick little explorer that slips between pale rocks.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "rocky-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SnowWeasel",
+        "lod2SourceTriangleEquivalent": 814,
+        "lod3SourceTriangleEquivalent": 534,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "crestwing",
+      "displayName": "Crestwing",
+      "description": "A broad-winged watcher that favors open overlooks.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "lookout"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Eagle",
+        "lod2SourceTriangleEquivalent": 1152,
+        "lod3SourceTriangleEquivalent": 676,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "snowbrush",
+      "displayName": "Snowbrush",
+      "description": "A soft-footed highland wanderer drawn to sweet fruit scents.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "open-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "ArcticFox",
+        "lod2SourceTriangleEquivalent": 922,
+        "lod3SourceTriangleEquivalent": 454,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "moonplume",
+      "displayName": "Moonplume",
+      "description": "A pale perch-watcher that glides over exposed ground under moonlight.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "lookout"
+        ],
+        "preferredTimeOfDayIds": [
+          "night"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "lantern-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "SnowOwl",
+        "lod2SourceTriangleEquivalent": 1042,
+        "lod3SourceTriangleEquivalent": 680,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "starantler",
+      "displayName": "Starantler",
+      "description": "A gentle traveler that appears where upland trees thin into open ground.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Reindeer",
+        "lod2SourceTriangleEquivalent": 1218,
+        "lod3SourceTriangleEquivalent": 750,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "cloudwarden",
+      "displayName": "Cloudwarden",
+      "description": "A massive, unhurried companion that patrols the cold edge of land and sea.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "epic",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "coastal-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cream-cookie"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 3,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "PolarBear",
+        "lod2SourceTriangleEquivalent": 844,
+        "lod3SourceTriangleEquivalent": 630,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "stonefleece",
+      "displayName": "Stonefleece",
+      "description": "A sturdy upland grazer with a patient, protective manner.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "highland"
+        ],
+        "preferredSublocationIds": [
+          "open-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Ox",
+        "lod2SourceTriangleEquivalent": 1180,
+        "lod3SourceTriangleEquivalent": 692,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "dunebuckle",
+      "displayName": "Dunebuckle",
+      "description": "An armored little wanderer that shelters beneath warm stones.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "rocky-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Armadillo",
+        "lod2SourceTriangleEquivalent": 918,
+        "lod3SourceTriangleEquivalent": 598,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "sandsprig",
+      "displayName": "Sandsprig",
+      "description": "A tiny sun-lover that blends into the edges of dry scrub.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "rocky-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "HornedLizard",
+        "lod2SourceTriangleEquivalent": 952,
+        "lod3SourceTriangleEquivalent": 642,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "cinderstripe",
+      "displayName": "Cinderstripe",
+      "description": "A bold-patterned dusk explorer that pauses on heat-holding rocks.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "rocky-ground"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "glow-crumb"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "GilaMonster",
+        "lod2SourceTriangleEquivalent": 920,
+        "lod3SourceTriangleEquivalent": 484,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "rattlewisp",
+      "displayName": "Rattlewisp",
+      "description": "A shy patterned slitherer that announces its presence before retreating.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "scrub-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Rattlesnake",
+        "lod2SourceTriangleEquivalent": 694,
+        "lod3SourceTriangleEquivalent": 438,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "oasisstride",
+      "displayName": "Oasisstride",
+      "description": "A calm long-distance wanderer that remembers every source of water.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "water-source"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Camel",
+        "lod2SourceTriangleEquivalent": 872,
+        "lod3SourceTriangleEquivalent": 494,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "suncrest",
+      "displayName": "Suncrest",
+      "description": "A soaring watcher whose feathers catch the warm afternoon light.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "arid"
+        ],
+        "preferredSublocationIds": [
+          "lookout"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "GoldenEagle",
+        "lod2SourceTriangleEquivalent": 1144,
+        "lod3SourceTriangleEquivalent": 676,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "leafnap",
+      "displayName": "Leafnap",
+      "description": "A drowsy leaf-lover happiest among dense green branches.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "common",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-canopy"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 100,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Koala",
+        "lod2SourceTriangleEquivalent": 1058,
+        "lod3SourceTriangleEquivalent": 656,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "chucklebeak",
+      "displayName": "Chucklebeak",
+      "description": "A noisy morning companion that greets the day with rolling calls.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "seed-cake"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Kookaburra",
+        "lod2SourceTriangleEquivalent": 900,
+        "lod3SourceTriangleEquivalent": 576,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "fernspring",
+      "displayName": "Fernspring",
+      "description": "A bounding traveler that crosses ferny clearings in long easy hops.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-clearing"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Kangaroo",
+        "lod2SourceTriangleEquivalent": 1058,
+        "lod3SourceTriangleEquivalent": 564,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "bamboodle",
+      "displayName": "Bamboodle",
+      "description": "A relaxed greenwood grazer that follows the freshest leafy aromas.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-canopy"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Panda",
+        "lod2SourceTriangleEquivalent": 960,
+        "lod3SourceTriangleEquivalent": 532,
+        "requiresSourceLodWiringRepair": true,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "emberpad",
+      "displayName": "Emberpad",
+      "description": "A secretive striped companion that emerges as the forest grows quiet.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "epic",
+      "sizeCategory": "large",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-edge"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "cookie"
+        ],
+        "recommendedTrapItemId": "reinforced-trap",
+        "relativeEncounterWeightWithinEligiblePool": 3,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Tiger",
+        "lod2SourceTriangleEquivalent": 1334,
+        "lod3SourceTriangleEquivalent": 720,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "mossnozzle",
+      "displayName": "Mossnozzle",
+      "description": "A long-snouted fruit seeker that follows damp trails near forest water.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "freshwater-shore"
+        ],
+        "preferredTimeOfDayIds": [
+          "dusk"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-biscuit"
+        ],
+        "recommendedTrapItemId": "shore-basket",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Tapir",
+        "lod2SourceTriangleEquivalent": 844,
+        "lod3SourceTriangleEquivalent": 500,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "swayleaf",
+      "displayName": "Swayleaf",
+      "description": "A slow-moving leaf connoisseur that takes its time with everything.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "uncommon",
+      "sizeCategory": "small",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "woodland-canopy"
+        ],
+        "preferredTimeOfDayIds": [
+          "day"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "herb-biscuit"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 40,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Sloth",
+        "lod2SourceTriangleEquivalent": 924,
+        "lod3SourceTriangleEquivalent": 528,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    },
+    {
+      "id": "jeweltrain",
+      "displayName": "Jeweltrain",
+      "description": "A showy garden visitor that spreads its colors in the early light.",
+      "status": "PROPOSED_ART_OPTION_NOT_RUNTIME",
+      "animalRole": "capturable-wildling",
+      "rarityId": "rare",
+      "sizeCategory": "medium",
+      "levelProfile": {
+        "initialCaptureLevelMin": 1,
+        "initialCaptureLevelMax": 3,
+        "proposedMaxLevel": 20,
+        "status": "placeholder; no leveling mechanic selected"
+      },
+      "habitat": {
+        "preferredBiomeIds": [
+          "humid-woodland"
+        ],
+        "preferredSublocationIds": [
+          "park"
+        ],
+        "preferredTimeOfDayIds": [
+          "dawn"
+        ],
+        "requiredSurfaceClass": "land-or-shore",
+        "seasonIds": [],
+        "weatherIds": [],
+        "seasonWeatherEnabled": false,
+        "ruleStatus": "Concept taxonomy; provider mappings, shore distance and eligibility policy require review."
+      },
+      "capture": {
+        "favoriteBaitItemIds": [
+          "berry-cookie"
+        ],
+        "recommendedTrapItemId": "wooden-trap",
+        "relativeEncounterWeightWithinEligiblePool": 12,
+        "weightStatus": "Illustrative weight, not a percent. Normalize only across eligible species."
+      },
+      "art": {
+        "modelAddress": null,
+        "iconAddress": null,
+        "spriteAddress": null,
+        "approvedFamily": null,
+        "status": "Mixed packs are permitted. This is a proposed Quirky source mapping; exact runtime subset and Addressable registration remain unselected."
+      },
+      "candidateArt": {
+        "vendorModelName": "Peacock",
+        "lod2SourceTriangleEquivalent": 1728,
+        "lod3SourceTriangleEquivalent": 1004,
+        "requiresSourceLodWiringRepair": false,
+        "visualClaim": "Animal body only. Names imply lore, not an existing fantasy sculpt, skin, effect or custom texture."
+      },
+      "futureInstanceFields": [
+        "customName",
+        "experience",
+        "level",
+        "traitIds",
+        "skillIds",
+        "skinId",
+        "outfitIds",
+        "homelandPlacement"
+      ],
+      "futureInstanceFieldsEnabled": false,
+      "evolutionFamilyId": null,
+      "evolutionProposal": "Non-evolving ordinary animal in the proposed mixed-pack roster."
+    }
+  ],
+  "domesticGatherers": [
+    {
+      "id": "map-chicken",
+      "role": "private-map-gatherer",
+      "yieldItemId": "egg",
+      "yieldPerAnimal": 1,
+      "capturableWildling": false,
+      "sourceOption": "Existing Chibi chicken remains unchanged; Quirky Hen is only an alternate art candidate."
+    },
+    {
+      "id": "map-cow",
+      "role": "private-map-gatherer",
+      "yieldItemId": "milk",
+      "yieldPerAnimal": 1,
+      "capturableWildling": false,
+      "sourceOption": "Existing Chibi cow remains unchanged; Quirky Cow is only an alternate art candidate."
+    }
+  ],
+  "capturePolicyProposal": {
+    "status": "RULE_DISCUSSION_NOT_SELECTED",
+    "rollStages": [
+      "Resolve context and eligible species",
+      "Normalize encounter weights and choose a species",
+      "Roll capture success",
+      "Keep result hidden until Open"
+    ],
+    "surfaceRules": {
+      "water": "Mapped water polygon permits eligible aquatic species with an aquatic trap.",
+      "shore": "A separate shore-band context may permit aquatic species at a much lower encounter weight. Illustrative multiplier 0.10; exact distance and value are not approved.",
+      "land": "No aquatic candidates when neither mapped water nor a valid shore exception applies.",
+      "unknown": "Missing or ambiguous geography must not silently claim water; hold specialized eligibility unresolved or offer a clearly defined ordinary land rule."
+    },
+    "hardVersusSoftRules": "Surface/trap compatibility is a candidate hard gate. Biome, POI and time are proposed weighted affinities, allowing broad accessibility. Specific species may later receive hard exclusions, explicitly authored rather than inferred.",
+    "placeholderSuccessRate": 0.4,
+    "successRateMeaning": "Illustrative baseline for discussing the first land prototype, not live economy tuning.",
+    "buffExamples": [
+      {
+        "id": "preferred-biome",
+        "probabilityPoints": 0.1
+      },
+      {
+        "id": "preferred-sublocation",
+        "probabilityPoints": 0.05
+      },
+      {
+        "id": "preferred-time",
+        "probabilityPoints": 0.1
+      },
+      {
+        "id": "favorite-bait",
+        "probabilityPoints": 0.15
+      }
+    ],
+    "stackingProposal": "Each authored buff applies at most once, even when multiple nearby POIs share the tag. Add probability points to baseline, then clamp. Trap tier and rarity modifiers need their own explicit table before adoption.",
+    "proposedSuccessCeiling": 0.9,
+    "snapshotProposal": "Freeze accepted definition revision and resolved habitat/time context with the placed trap; reloads, changing definitions and changing current time must not reroll an accepted assignment.",
+    "seasonWeather": "Reserved tags only; no season or weather service is assumed."
+  },
+  "questions": [
+    "Choose the first ordinary-animal and evolution-family subset for runtime adoption; using more than one pack is approved.",
+    "Decide whether a water-only species can ever be caught from shore and what the shore band means in meters.",
+    "Decide whether region-exclusive species are acceptable or whether later accessible alternatives are needed.",
+    "Decide whether very large aquatic models need another trap family; this roster leaves Dolphin and Orca out.",
+    "Biome names and time ranges in this proposal are design vocabulary, not proof of an implemented geographic classifier."
+  ],
+  "relatedEvolutionProposal": "evolution-families.proposed.json",
+  "taxonomyScope": "The broad habitat labels in this roster are prospective ecological concepts, not implemented gameplay biomes. Fantasy biomes are defined independent of real climate; Water is now a habitat within a biome, not its own biome. Do not derive region/climate restrictions or a final biome catalog from these labels."
+}

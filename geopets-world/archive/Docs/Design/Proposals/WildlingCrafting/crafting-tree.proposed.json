@@ -1,0 +1,5688 @@
+{
+  "schemaVersion": 1,
+  "id": "wildling-crafting-review",
+  "status": "PROPOSED_REVIEW_ONLY_NOT_LOADED_BY_GAME",
+  "authoredOn": "2026-09-20",
+  "items": [
+    {
+      "id": "softwood",
+      "name": "Softwood",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "Reliable wood for small cages and later joinery.",
+      "sources": [
+        "world.resource.woodland"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "existing prototype mode preserved",
+        "availabilityStage": "existing-prototype-worker",
+        "spawnIdentity": "Existing woodland/tree resource groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "The grain at the start of the starter bait chain.",
+      "sources": [
+        "world.resource.wheat"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "existing prototype mode preserved",
+        "availabilityStage": "existing-prototype-worker",
+        "spawnIdentity": "Existing grain resource groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "blackberry",
+      "name": "Blackberries",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "Fruit for tonic, preserves and woodland treats.",
+      "sources": [
+        "world.resource.blackberry"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "existing prototype mode preserved",
+        "availabilityStage": "existing-prototype-worker",
+        "spawnIdentity": "Existing berry resource groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "Weights and sturdy construction components.",
+      "sources": [
+        "world.resource.stone"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "existing prototype mode preserved",
+        "availabilityStage": "existing-prototype-worker",
+        "spawnIdentity": "Existing stone resource groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Eggs",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "One egg per animal in a harvestable private chicken flock.",
+      "sources": [
+        "world.gatherer.chicken"
+      ],
+      "tags": [
+        "animal-product"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "private-animal-group-harvest",
+        "status": "existing prototype mechanic preserved",
+        "spawnIdentity": "private POI-driven flock or herd with saved cooldown",
+        "notes": "A direct harvest acts on an explicit source. Loose drops are deferred; animal groups and POI pickups retain separate source identities. Newer worker suggestions for reeds/riverweed are in material-ideas.proposed.json."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "One milk per animal in a harvestable private cow herd.",
+      "sources": [
+        "world.gatherer.cow"
+      ],
+      "tags": [
+        "animal-product"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "private-animal-group-harvest",
+        "status": "existing prototype mechanic preserved",
+        "spawnIdentity": "private POI-driven flock or herd with saved cooldown",
+        "notes": "A direct harvest acts on an explicit source. Loose drops are deferred; animal groups and POI pickups retain separate source identities. Newer worker suggestions for reeds/riverweed are in material-ideas.proposed.json."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "kind": "raw",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "Restaurant/fallback Water pickups with saved cooldowns remain the existing source. Worker gathering is an additional proposal for the same Water item.",
+      "sources": [
+        "world.poi.water"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "poi-cooldown-pickup",
+        "status": "existing prototype mechanic preserved",
+        "spawnIdentity": "Restaurant POIs and approved fallback; the same Water item.",
+        "notes": "The same basic Water item has an additional proposed worker source; restaurant/fallback cooldown pickups remain available.",
+        "proposalSource": "material-ideas.proposed.json",
+        "proposedAdditionalSources": [
+          {
+            "mode": "worker-resource-group",
+            "availabilityStage": "proposed-next-worker-family",
+            "status": "requested candidate; details unselected; not implemented by this proposal",
+            "spawnIdentity": "Requested worker gathering on mapped water within a biome; restaurant Water remains an additional source of this same item."
+          }
+        ]
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "reed-fiber",
+      "name": "Reed fiber",
+      "kind": "raw",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Flexible stems from proposed Marsh reed worker groups for twine; direct harvesting from standing reeds remains an undecided alternative.",
+      "sources": [
+        "world.resource.shore-reeds"
+      ],
+      "tags": [
+        "shore"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "proposed-next-worker-family; not approved or implemented",
+        "availabilityStage": "proposed-next-worker-family",
+        "spawnIdentity": "Proposed Marsh reed worker groups; exact biome list is still in discussion. Direct harvesting from a standing reed source is only an undecided alternative.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [
+          {
+            "mode": "direct-world-harvest",
+            "status": "OPTIONAL_ALTERNATIVE_UNDECIDED_NOT_SIMULTANEOUS_INITIAL_ROLLOUT"
+          }
+        ],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "flax",
+      "name": "Flax",
+      "kind": "raw",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A later worker-harvested fiber-crop candidate for linen and rope.",
+      "sources": [
+        "world.resource.flax"
+      ],
+      "tags": [
+        "crop"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "later-worker-candidate; not approved or implemented",
+        "availabilityStage": "later-worker-candidate",
+        "spawnIdentity": "Proposed small fiber-crop groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [
+          {
+            "mode": "direct-world-harvest",
+            "status": "OPTIONAL_ALTERNATIVE_UNDECIDED_NOT_SIMULTANEOUS_INITIAL_ROLLOUT"
+          }
+        ],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "sugarcane",
+      "name": "Sugarcane",
+      "kind": "raw",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A later worker-harvested Marsh crop candidate for sugar and higher-tier cookies.",
+      "sources": [
+        "world.resource.shore-sugarcane"
+      ],
+      "tags": [
+        "shore",
+        "crop"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "later-worker-candidate; not approved or implemented",
+        "availabilityStage": "later-worker-candidate",
+        "spawnIdentity": "Proposed shoreline crop groups.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [
+          {
+            "mode": "direct-world-harvest",
+            "status": "OPTIONAL_ALTERNATIVE_UNDECIDED_NOT_SIMULTANEOUS_INITIAL_ROLLOUT"
+          }
+        ],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "wild-herb",
+      "name": "Wild herbs",
+      "kind": "raw",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Aromatic leaves from parks and woodland edges.",
+      "sources": [
+        "world.resource.herbs"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "status": "proposed-direct-harvest-pool; not approved or implemented",
+        "availabilityStage": "proposed-direct-harvest-pool",
+        "spawnIdentity": "A rooted aromatic herb plant.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "mooncap",
+      "name": "Mooncaps",
+      "kind": "raw",
+      "tier": 3,
+      "status": "proposed",
+      "description": "A softly luminous fantasy mushroom from woodland clearings.",
+      "sources": [
+        "world.resource.mooncap"
+      ],
+      "tags": [
+        "fantasy"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "status": "proposed-direct-harvest-pool; not approved or implemented",
+        "availabilityStage": "proposed-direct-harvest-pool",
+        "spawnIdentity": "A fantasy luminous fungus growing in soil.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "amber-resin",
+      "name": "Amber resin",
+      "kind": "raw",
+      "tier": 3,
+      "status": "proposed",
+      "description": "Sticky fragrant resin tapped from a tree source; no fallen resin drop feature is implied.",
+      "sources": [
+        "world.resource.resin"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "status": "proposed-direct-harvest-pool; not approved or implemented",
+        "availabilityStage": "proposed-direct-harvest-pool",
+        "spawnIdentity": "A resin-bearing tree with an authored tapping point.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "iron-ore",
+      "name": "Iron ore",
+      "kind": "raw",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A later Stonefield ore-worker candidate for fittings; direct deposit harvesting remains an undecided alternative.",
+      "sources": [
+        "world.resource.iron"
+      ],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "later-worker-candidate; not approved or implemented",
+        "availabilityStage": "later-worker-candidate",
+        "spawnIdentity": "Later Stonefield ore-worker group candidate; direct harvesting from an ore deposit is only an undecided acquisition alternative.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [
+          {
+            "mode": "direct-world-harvest",
+            "status": "OPTIONAL_ALTERNATIVE_UNDECIDED_NOT_SIMULTANEOUS_INITIAL_ROLLOUT"
+          }
+        ],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "riverweed",
+      "name": "Riverweed",
+      "kind": "raw",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Water greens from proposed freshwater aquatic-plant worker beds; direct harvesting from the plant source remains an undecided alternative.",
+      "sources": [
+        "world.resource.riverweed"
+      ],
+      "tags": [
+        "shore"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "worker-resource-group",
+        "status": "proposed-next-worker-family; not approved or implemented",
+        "availabilityStage": "proposed-next-worker-family",
+        "spawnIdentity": "Proposed freshwater habitat variant of aquatic-plant-bed workers within allowed fantasy biomes.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [
+          {
+            "mode": "direct-world-harvest",
+            "status": "OPTIONAL_ALTERNATIVE_UNDECIDED_NOT_SIMULTANEOUS_INITIAL_ROLLOUT"
+          }
+        ],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "sunseed",
+      "name": "Sunseeds",
+      "kind": "raw",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Ripe seedheads actively harvested from standing plants for seed-loving Wildlings.",
+      "sources": [
+        "world.resource.sunseed"
+      ],
+      "tags": [
+        "crop"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here.",
+        "worldPropFamilyCandidate": null,
+        "iconPolicy": "Generated item icons are allowed; a concrete icon/address is still unassigned."
+      },
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "status": "proposed-direct-harvest-pool; not approved or implemented",
+        "availabilityStage": "proposed-direct-harvest-pool",
+        "spawnIdentity": "A living or standing ripe seed plant with the seedhead still attached.",
+        "notes": "Latest matching material-pool proposal. Any alternative below is undecided and is not a simultaneous approved collection source. Loose drops remain deferred.",
+        "alternatives": [],
+        "proposalSource": "material-ideas.proposed.json"
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Unknown future balance fields. The existing tier value is a proposal graph grouping, not an approved player-level gate."
+      }
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "kind": "processed",
+      "tier": 0,
+      "status": "implemented prototype",
+      "description": "The shared base for biscuits and baked baits.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "plank",
+      "name": "Plank",
+      "kind": "processed",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Simple prepared wood for frames.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "reed-twine",
+      "name": "Reed twine",
+      "kind": "processed",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Light binding for woven and shoreline traps.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "rope",
+      "name": "Rope",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Stronger fiber binding.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "linen",
+      "name": "Linen",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Soft cloth for a padded, non-injuring enclosure.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "iron-fitting",
+      "name": "Iron fittings",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Reusable hardware ingredient; the finished trap remains single use for the prototype.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "stone-weight",
+      "name": "Stone weight",
+      "kind": "processed",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Keeps a shoreline basket from drifting.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Required for cookies; ordinary biscuits remain sugar-free.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A later use for collected milk.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "berry-preserves",
+      "name": "Berry preserves",
+      "kind": "processed",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Concentrated sweet fruit for higher tier baits.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "herbal-infusion",
+      "name": "Herbal infusion",
+      "kind": "processed",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Aromatic liquid for a plant-focused bait.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "glow-paste",
+      "name": "Glow paste",
+      "kind": "processed",
+      "tier": 3,
+      "status": "proposed",
+      "description": "A fantasy lure made from Mooncaps and resin.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "berry-tonic",
+      "name": "Berry tonic",
+      "kind": "care",
+      "tier": 0,
+      "status": "implemented prototype",
+      "description": "Existing Care Bench output; retained as a care/request item, not assumed to improve captures.",
+      "sources": [],
+      "tags": [],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "biscuit",
+      "name": "Biscuit",
+      "kind": "bait",
+      "tier": 0,
+      "status": "implemented prototype",
+      "description": "A broad starter bait for common land Wildlings.",
+      "sources": [],
+      "tags": [
+        "general",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "berry-biscuit",
+      "name": "Berry biscuit",
+      "kind": "bait",
+      "tier": 1,
+      "status": "proposed",
+      "description": "A fruit-scented step toward woodland and park discoveries.",
+      "sources": [],
+      "tags": [
+        "fruit",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "herb-biscuit",
+      "name": "Herb biscuit",
+      "kind": "bait",
+      "tier": 1,
+      "status": "proposed",
+      "description": "A leafy aroma for meadow and plant-like Wildlings.",
+      "sources": [],
+      "tags": [
+        "herb",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "seed-cake",
+      "name": "Seed cake",
+      "kind": "bait",
+      "tier": 1,
+      "status": "proposed",
+      "description": "A compact seed treat for small birds and grassland foragers.",
+      "sources": [],
+      "tags": [
+        "seed",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "reed-pellet",
+      "name": "Reed pellet",
+      "kind": "bait",
+      "tier": 1,
+      "status": "proposed",
+      "description": "Water greens and grain suited to aquatic or waterside Wildlings.",
+      "sources": [],
+      "tags": [
+        "aquatic",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "cookie",
+      "name": "Cookie",
+      "kind": "bait",
+      "tier": 2,
+      "status": "proposed",
+      "description": "Sugar and butter distinguish this higher tier bait from the starter biscuit.",
+      "sources": [],
+      "tags": [
+        "sweet",
+        "grain"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "berry-cookie",
+      "name": "Berry cookie",
+      "kind": "bait",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A richer fruit bait, especially appealing to shy woodland foragers.",
+      "sources": [],
+      "tags": [
+        "sweet",
+        "fruit"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "cream-cookie",
+      "name": "Cream cookie",
+      "kind": "bait",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A rich milk-scented bait for market and homestead visitors.",
+      "sources": [],
+      "tags": [
+        "sweet",
+        "dairy"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "glow-crumb",
+      "name": "Glow crumbs",
+      "kind": "bait",
+      "tier": 3,
+      "status": "proposed",
+      "description": "Luminous crumbs for nocturnal and Energy-well affinities.",
+      "sources": [],
+      "tags": [
+        "luminous",
+        "night"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      }
+    },
+    {
+      "id": "wooden-trap",
+      "name": "Wooden trap",
+      "kind": "trap",
+      "tier": 0,
+      "status": "proposed",
+      "description": "The simple starter live-capture box; no rope requirement.",
+      "sources": [],
+      "tags": [
+        "land"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "land"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium"
+      ]
+    },
+    {
+      "id": "woven-trap",
+      "name": "Woven trap",
+      "kind": "trap",
+      "tier": 1,
+      "status": "proposed",
+      "description": "A light woven shelter for shy and small land Wildlings.",
+      "sources": [],
+      "tags": [
+        "land"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "land"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium"
+      ]
+    },
+    {
+      "id": "shore-basket",
+      "name": "Shore basket",
+      "kind": "trap",
+      "tier": 1,
+      "status": "proposed",
+      "description": "A weighted basket placed on land at the water edge.",
+      "sources": [],
+      "tags": [
+        "shore-land"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "shore-land"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium"
+      ]
+    },
+    {
+      "id": "floating-trap",
+      "name": "Floating trap",
+      "kind": "trap",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A buoyant live-capture enclosure for mapped water.",
+      "sources": [],
+      "tags": [
+        "water"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "water"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium"
+      ]
+    },
+    {
+      "id": "reinforced-trap",
+      "name": "Reinforced trap",
+      "kind": "trap",
+      "tier": 2,
+      "status": "proposed",
+      "description": "A padded frame for larger land Wildlings.",
+      "sources": [],
+      "tags": [
+        "land"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "land"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    {
+      "id": "lantern-trap",
+      "name": "Lantern trap",
+      "kind": "trap",
+      "tier": 3,
+      "status": "proposed",
+      "description": "A softly glowing enclosure for night-affinity Wildlings.",
+      "sources": [],
+      "tags": [
+        "land",
+        "shore-land"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Existing art must be linked or new art reviewed; no address is invented here."
+      },
+      "proposedSurfaceTags": [
+        "land",
+        "shore-land"
+      ],
+      "proposedCaptureSizes": [
+        "small",
+        "medium"
+      ]
+    },
+    {
+      "id": "resin-glue",
+      "name": "Resin glue",
+      "kind": "processed",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A weather-resistant joinery ingredient; does not add a durability mechanic.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 13,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "reed-mat",
+      "name": "Reed mat",
+      "kind": "processed",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "Flexible panels for bird hides and floating baskets.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "marsh"
+        ],
+        "habitatIds": [
+          "land",
+          "shore"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "clay-cup",
+      "name": "Clay cup",
+      "kind": "processed",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "A small container for scent mixtures and resonant trap decorations.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "copper-wire",
+      "name": "Copper wire",
+      "kind": "processed",
+      "tier": 2,
+      "status": "creative library proposal",
+      "description": "Light hardware for latches, bells and later coils.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "spring-latch",
+      "name": "Spring latch",
+      "kind": "processed",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "Shared closure for specialist humane live-capture traps.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 14,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "soft-lining",
+      "name": "Soft lining",
+      "kind": "processed",
+      "tier": 2,
+      "status": "creative library proposal",
+      "description": "A padded interior for den-like and cold-biome traps.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 9,
+        "materialTier": 2,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "pumice-float",
+      "name": "Pumice float",
+      "kind": "processed",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "Buoyant basket support, not a new water placement rule.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 14,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield",
+          "marsh"
+        ],
+        "habitatIds": [
+          "water",
+          "shore"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mineral-syrup",
+      "name": "Mineral syrup",
+      "kind": "processed",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "Fantasy syrup for mineral and luminous bait branches; distinct from ordinary Water.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 14,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land",
+          "water"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "chamomile-syrup",
+      "name": "Chamomile syrup",
+      "kind": "processed",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A floral base for small aromatic sweets.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 14,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mushroom-paste",
+      "name": "Mushroom paste",
+      "kind": "processed",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "A savory filling harvested from living fungi, not animal ingredients.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mint-essence",
+      "name": "Mint essence",
+      "kind": "processed",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "Concentrated herbal flavor for woodland bait.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 6,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "meadow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "moon-ink",
+      "name": "Moon ink",
+      "kind": "processed",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "Luminous markings for a later lantern-trap variant.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 28,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land",
+          "energy-well"
+        ],
+        "timeIds": [
+          "night"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "crystal-lens",
+      "name": "Crystal lens",
+      "kind": "processed",
+      "tier": 2,
+      "status": "creative library proposal",
+      "description": "A polished lens for visual lures and lookout-style traps.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 10,
+        "materialTier": 2,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "sun-lens",
+      "name": "Sun lens",
+      "kind": "processed",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "A golden focal ornament for a bright canopy trap.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 39,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "meadow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "day"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "frost-liner",
+      "name": "Frost liner",
+      "kind": "processed",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "An insulated fantasy lining; melting and refrigeration mechanics are not introduced.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 28,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "snow"
+        ],
+        "habitatIds": [
+          "land",
+          "water"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "storm-coil",
+      "name": "Storm coil",
+      "kind": "processed",
+      "tier": 7,
+      "status": "creative library proposal",
+      "description": "Late fantasy trap hardware. Weather dependence is deliberately unspecified.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 53,
+        "materialTier": 7,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land",
+          "energy-well"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "dusk-prism",
+      "name": "Dusk prism",
+      "kind": "processed",
+      "tier": 7,
+      "status": "creative library proposal",
+      "description": "A violet light ornament for high-tier traps and sweets.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 53,
+        "materialTier": 7,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "night"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "star-nectar",
+      "name": "Star nectar",
+      "kind": "processed",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "A botanical fantasy concentrate for rare-creature bait ideas.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 39,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove"
+        ],
+        "habitatIds": [
+          "land",
+          "park"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [],
+        "evolutionFamilyIds": [],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "clover-cracker",
+      "name": "Clover cracker",
+      "kind": "bait",
+      "tier": 0,
+      "status": "creative library proposal",
+      "description": "An early alternative to biscuits for meadow grazers.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 3,
+        "materialTier": 0,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow"
+        ],
+        "habitatIds": [
+          "land",
+          "park"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "dapplehop",
+          "goldstep"
+        ],
+        "evolutionFamilyIds": [
+          "thistlemane",
+          "grovehorn"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mushroom-pocket",
+      "name": "Mushroom pocket",
+      "kind": "bait",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "Savory woodland bait for curious ground dwellers.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 5,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land",
+          "park"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "burrowtusk",
+          "thimblepaw"
+        ],
+        "evolutionFamilyIds": [
+          "bramblekin",
+          "rootwriggler"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mint-snap",
+      "name": "Mint snap",
+      "kind": "bait",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "A fresh-scented variation for small, alert woodland creatures.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 7,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "meadow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "mossbrush",
+          "brighthollow"
+        ],
+        "evolutionFamilyIds": [
+          "twigward"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "mineral-lick",
+      "name": "Mineral lick",
+      "kind": "bait",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "Stonefield bait with a mineral theme; no universal grazing bonus implied.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "cragcurl",
+          "stonefleece"
+        ],
+        "evolutionFamilyIds": [
+          "puffstone",
+          "burrback"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "kelp-roll",
+      "name": "Kelp roll",
+      "kind": "bait",
+      "tier": 2,
+      "status": "creative library proposal",
+      "description": "Plant-based shoreline bait for aquatic and coastal candidates.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 9,
+        "materialTier": 2,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove",
+          "stonefield",
+          "marsh"
+        ],
+        "habitatIds": [
+          "water",
+          "shore"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "gildfin",
+          "pebblepinch"
+        ],
+        "evolutionFamilyIds": [
+          "brookclaw",
+          "coralcrest",
+          "tidehaven"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "chamomile-drop",
+      "name": "Chamomile drop",
+      "kind": "bait",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A floral sweet associated with parks and quieter meeting places.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove"
+        ],
+        "habitatIds": [
+          "park",
+          "market"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "dawnwing",
+          "crumbcourier"
+        ],
+        "evolutionFamilyIds": [
+          "petalwisp",
+          "sunpetal"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "frostmallow",
+      "name": "Frostmallow",
+      "kind": "bait",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "A cool-colored fantasy confection for Snow-biome creatures.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 29,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "snow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "frostscamper",
+          "snowbrush",
+          "starantler"
+        ],
+        "evolutionFamilyIds": [
+          "moonhowl"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "glow-jelly",
+      "name": "Glow jelly",
+      "kind": "bait",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "A softly glowing bait idea for marsh edges and nighttime visitors.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 28,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "marsh",
+          "grove"
+        ],
+        "habitatIds": [
+          "shore",
+          "energy-well"
+        ],
+        "timeIds": [
+          "night"
+        ],
+        "wildlingIds": [
+          "lilykip",
+          "lanternpocket"
+        ],
+        "evolutionFamilyIds": [
+          "gloamspinner",
+          "reedsong"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "sunpetal-wafer",
+      "name": "Sunpetal wafer",
+      "kind": "bait",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "A bright wafer for open clearings; does not use real-world climate restrictions.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 39,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove"
+        ],
+        "habitatIds": [
+          "land",
+          "park"
+        ],
+        "timeIds": [
+          "day"
+        ],
+        "wildlingIds": [
+          "jeweltrain",
+          "suncrest"
+        ],
+        "evolutionFamilyIds": [
+          "sunpetal",
+          "petalwisp"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "ember-biscuit",
+      "name": "Ember biscuit",
+      "kind": "bait",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "A warm-colored mushroom biscuit for fantasy Stonefield affinity.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 39,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land",
+          "energy-well"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "cinderstripe",
+          "emberpad"
+        ],
+        "evolutionFamilyIds": [
+          "emberglide"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "star-bonbon",
+      "name": "Star bonbon",
+      "kind": "bait",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "An elaborate optional bait branch for rare discovery, never a guaranteed capture.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 40,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove"
+        ],
+        "habitatIds": [
+          "park",
+          "quiet-landmark"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "jeweltrain",
+          "moonplume"
+        ],
+        "evolutionFamilyIds": [
+          "hollowwing",
+          "dunebloom"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "dusk-bonbon",
+      "name": "Dusk bonbon",
+      "kind": "bait",
+      "tier": 7,
+      "status": "creative library proposal",
+      "description": "A night-themed end of the confection branch; exact buffs remain undecided.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 54,
+        "materialTier": 7,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "stonefield"
+        ],
+        "habitatIds": [
+          "energy-well",
+          "quiet-landmark"
+        ],
+        "timeIds": [
+          "night"
+        ],
+        "wildlingIds": [
+          "duskflutter",
+          "hushfeather"
+        ],
+        "evolutionFamilyIds": [
+          "gloamspinner",
+          "moonhowl"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "vine-crate",
+      "name": "Vine crate",
+      "kind": "trap",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "An early woven-looking land trap alternative.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 5,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "meadow"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "dapplehop",
+          "mossshell"
+        ],
+        "evolutionFamilyIds": [
+          "bramblekin",
+          "burrback"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "reed-hide",
+      "name": "Reed hide",
+      "kind": "trap",
+      "tier": 1,
+      "status": "creative library proposal",
+      "description": "A low-profile shelter appearance for birds and reed-edge creatures.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 6,
+        "materialTier": 1,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "marsh",
+          "meadow"
+        ],
+        "habitatIds": [
+          "land",
+          "shore"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "reedrunner",
+          "brookflash"
+        ],
+        "evolutionFamilyIds": [
+          "reedsong"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "padded-den",
+      "name": "Padded den",
+      "kind": "trap",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A cozy live-capture trap for small mammals; species restrictions are proposals only.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "mossbrush",
+          "velvetwhisk"
+        ],
+        "evolutionFamilyIds": [
+          "bramblekin",
+          "twigward"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "drift-basket",
+      "name": "Drift basket",
+      "kind": "trap",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A floating basket appearance for water habitats.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "marsh",
+          "grove",
+          "stonefield"
+        ],
+        "habitatIds": [
+          "water"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "ripplebill",
+          "gildfin"
+        ],
+        "evolutionFamilyIds": [
+          "tidehaven",
+          "brookclaw"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "tide-bell-trap",
+      "name": "Tide-bell trap",
+      "kind": "trap",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A bell-decorated shore basket concept; sound attraction is not implemented.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "stonefield",
+          "marsh"
+        ],
+        "habitatIds": [
+          "shore",
+          "water"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "curltide",
+          "pebblepinch"
+        ],
+        "evolutionFamilyIds": [
+          "coralcrest"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "quartz-lookout",
+      "name": "Quartz lookout",
+      "kind": "trap",
+      "tier": 3,
+      "status": "creative library proposal",
+      "description": "A gleaming lookout cage for exposed rocky habitats.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 15,
+        "materialTier": 3,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "crestwing",
+          "cragcurl"
+        ],
+        "evolutionFamilyIds": [
+          "puffstone",
+          "emberglide"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "frost-nest",
+      "name": "Frost nest",
+      "kind": "trap",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "A Snow-biome visual and affinity variant; not a temperature simulation.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 29,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "snow"
+        ],
+        "habitatIds": [
+          "land",
+          "shore"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "snowbrush",
+          "moonplume"
+        ],
+        "evolutionFamilyIds": [
+          "moonhowl"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "moon-lantern-trap",
+      "name": "Moon lantern",
+      "kind": "trap",
+      "tier": 5,
+      "status": "creative library proposal",
+      "description": "A later luminous trap with a possible night affinity.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 29,
+        "materialTier": 5,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "grove",
+          "marsh"
+        ],
+        "habitatIds": [
+          "land",
+          "energy-well"
+        ],
+        "timeIds": [
+          "night"
+        ],
+        "wildlingIds": [
+          "duskflutter",
+          "lanternpocket"
+        ],
+        "evolutionFamilyIds": [
+          "gloamspinner",
+          "hollowwing"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "sun-canopy",
+      "name": "Sun canopy",
+      "kind": "trap",
+      "tier": 6,
+      "status": "creative library proposal",
+      "description": "A bright open-canopy live-capture device for daytime discovery.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 40,
+        "materialTier": 6,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "meadow",
+          "grove"
+        ],
+        "habitatIds": [
+          "land",
+          "park"
+        ],
+        "timeIds": [
+          "day"
+        ],
+        "wildlingIds": [
+          "jeweltrain",
+          "goldstep"
+        ],
+        "evolutionFamilyIds": [
+          "sunpetal",
+          "dunebloom"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "storm-cage",
+      "name": "Storm cage",
+      "kind": "trap",
+      "tier": 7,
+      "status": "creative library proposal",
+      "description": "A late fantasy containment style. No electric harm, weather requirement or guaranteed catch.",
+      "sources": [],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generate icons when selected for runtime; generated 2D Home assets and map markers remain the direction."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 54,
+        "materialTier": 7,
+        "status": "Illustrative authoring gate, not runtime balance. Requires all ingredient and station access."
+      },
+      "affinityProposal": {
+        "biomeIds": [
+          "stonefield"
+        ],
+        "habitatIds": [
+          "land",
+          "energy-well"
+        ],
+        "timeIds": [
+          "any"
+        ],
+        "wildlingIds": [
+          "cinderstripe",
+          "crestwing"
+        ],
+        "evolutionFamilyIds": [
+          "emberglide",
+          "puffstone"
+        ],
+        "effect": null,
+        "captureProbability": null,
+        "status": "Creative affinity only; no capture buffs, exclusions or evolution costs are implemented."
+      }
+    },
+    {
+      "id": "button-mushroom",
+      "name": "Button mushroom",
+      "kind": "raw",
+      "tier": 0,
+      "status": "material-pool proposal",
+      "description": "A mushroom growing in the ground.",
+      "sources": [
+        "material-pool:button-mushroom"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "button-mushroom",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "growing-fungus",
+          "description": "A mushroom growing in the ground.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pick",
+          "description": "Harvest the growing mushroom.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 1,
+        "materialTier": 0,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "chamomile",
+      "name": "Chamomile",
+      "kind": "raw",
+      "tier": 1,
+      "status": "material-pool proposal",
+      "description": "A flowering chamomile plant.",
+      "sources": [
+        "material-pool:chamomile"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "chamomile",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-flower",
+          "description": "A flowering chamomile plant.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pick",
+          "description": "Pick blossoms from the plant.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "clay-lump",
+      "name": "Clay lump",
+      "kind": "raw",
+      "tier": 0,
+      "status": "material-pool proposal",
+      "description": "An exposed stationary clay bank.",
+      "sources": [
+        "material-pool:clay-lump"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "clay-lump",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "clay-deposit",
+          "description": "An exposed stationary clay bank.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "dig",
+          "description": "Dig clay from the deposit.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 1,
+        "materialTier": 0,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "clover-leaf",
+      "name": "Clover leaves",
+      "kind": "raw",
+      "tier": 0,
+      "status": "material-pool proposal",
+      "description": "A rooted clover plant.",
+      "sources": [
+        "material-pool:clover-leaf"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "clover-leaf",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-herb",
+          "description": "A rooted clover plant.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pluck",
+          "description": "Pluck a leaf cluster from the clover plant.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 1,
+        "materialTier": 0,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "copper-ore",
+      "name": "Copper ore",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "An exposed copper-bearing mineral deposit.",
+      "sources": [
+        "material-pool:copper-ore"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "copper-ore",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "ore-deposit",
+          "description": "An exposed copper-bearing mineral deposit.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "mine",
+          "description": "Mine the deposit; no loose ore drops.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "dusk-crystal",
+      "name": "Dusk crystal",
+      "kind": "raw",
+      "tier": 7,
+      "status": "material-pool proposal",
+      "description": "A fixed fantasy dusk-crystal vein.",
+      "sources": [
+        "material-pool:dusk-crystal"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "dusk-crystal",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "crystal-vein",
+          "description": "A fixed fantasy dusk-crystal vein.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "chip",
+          "description": "Extract crystal from the vein.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 52,
+        "materialTier": 7,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "embercap",
+      "name": "Embercap",
+      "kind": "raw",
+      "tier": 6,
+      "status": "material-pool proposal",
+      "description": "A fantasy warm-colored fungus growing in rocky soil.",
+      "sources": [
+        "material-pool:embercap"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "embercap",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "growing-fungus",
+          "description": "A fantasy warm-colored fungus growing in rocky soil.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pick",
+          "description": "Harvest the growing Embercap.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 38,
+        "materialTier": 6,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "frostbloom",
+      "name": "Frostbloom",
+      "kind": "raw",
+      "tier": 5,
+      "status": "material-pool proposal",
+      "description": "An intact fantasy flower rooted in a Snow biome.",
+      "sources": [
+        "material-pool:frostbloom"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "frostbloom",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-flower",
+          "description": "An intact fantasy flower rooted in a Snow biome.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pick",
+          "description": "Harvest the flower from its growth source.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 27,
+        "materialTier": 5,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "glowmoss",
+      "name": "Glowmoss",
+      "kind": "raw",
+      "tier": 4,
+      "status": "material-pool proposal",
+      "description": "An attached fantasy luminous moss cushion.",
+      "sources": [
+        "material-pool:glowmoss"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "glowmoss",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-moss",
+          "description": "An attached fantasy luminous moss cushion.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "gather",
+          "description": "Gather moss from its living cushion.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 19,
+        "materialTier": 4,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "golden-pollen",
+      "name": "Golden pollen",
+      "kind": "raw",
+      "tier": 3,
+      "status": "material-pool proposal",
+      "description": "An intact pollen-bearing flower head.",
+      "sources": [
+        "material-pool:golden-pollen"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "golden-pollen",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-flower",
+          "description": "An intact pollen-bearing flower head.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "gather",
+          "description": "Gather pollen from the flower; no automatic shed-pollen drops.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 13,
+        "materialTier": 3,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "green-water",
+      "name": "Green Water",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "Optional idea: worker-gathered water from a water Habitat within a Marsh biome; a distinct item from basic Water.",
+      "sources": [
+        "material-pool:green-water"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "green-water",
+      "gathering": {
+        "mode": "worker-resource-group",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "worker-harvest-source",
+          "description": "Optional idea: worker-gathered water from a water Habitat within a Marsh biome; a distinct item from basic Water.",
+          "isLooseDrop": false
+        },
+        "harvestAction": {
+          "verb": "assign-worker",
+          "description": "Assign a worker to harvest the resource source over time.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Existing four worker materials or clearly marked future candidate; no new yield logic defined."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "ice",
+      "name": "Ice",
+      "kind": "raw",
+      "tier": 3,
+      "status": "material-pool proposal",
+      "description": "Requested worker gathering on water within a fantasy Snow biome; exact yield/selection behavior is undecided.",
+      "sources": [
+        "material-pool:ice"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "ice",
+      "gathering": {
+        "mode": "worker-resource-group",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "worker-harvest-source",
+          "description": "Requested worker gathering on water within a fantasy Snow biome; exact yield/selection behavior is undecided.",
+          "isLooseDrop": false
+        },
+        "harvestAction": {
+          "verb": "assign-worker",
+          "description": "Assign a worker to harvest the resource source over time.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Existing four worker materials or clearly marked future candidate; no new yield logic defined."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 13,
+        "materialTier": 3,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "kelp-ribbon",
+      "name": "Kelp ribbon",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "Proposed saltwater habitat variant of the same aquatic-plant-bed worker family within allowed fantasy biomes.",
+      "sources": [
+        "material-pool:kelp-ribbon"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "kelp-ribbon",
+      "gathering": {
+        "mode": "worker-resource-group",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "worker-harvest-source",
+          "description": "Proposed saltwater habitat variant of the same aquatic-plant-bed worker family within allowed fantasy biomes.",
+          "isLooseDrop": false
+        },
+        "harvestAction": {
+          "verb": "assign-worker",
+          "description": "Assign a worker to harvest the resource source over time.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Existing four worker materials or clearly marked future candidate; no new yield logic defined."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "mineral-water",
+      "name": "Mineral Water",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "Optional idea: worker-gathered water from a water Habitat within a Stonefield biome; a distinct item from basic Water.",
+      "sources": [
+        "material-pool:mineral-water"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "mineral-water",
+      "gathering": {
+        "mode": "worker-resource-group",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "worker-harvest-source",
+          "description": "Optional idea: worker-gathered water from a water Habitat within a Stonefield biome; a distinct item from basic Water.",
+          "isLooseDrop": false
+        },
+        "harvestAction": {
+          "verb": "assign-worker",
+          "description": "Assign a worker to harvest the resource source over time.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Existing four worker materials or clearly marked future candidate; no new yield logic defined."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "moss-tuft",
+      "name": "Moss tuft",
+      "kind": "raw",
+      "tier": 0,
+      "status": "material-pool proposal",
+      "description": "A rooted moss cushion on a rock or shaded ground.",
+      "sources": [
+        "material-pool:moss-tuft"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "moss-tuft",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-moss",
+          "description": "A rooted moss cushion on a rock or shaded ground.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "gather",
+          "description": "Gather a portion of the living moss cushion.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 1,
+        "materialTier": 0,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "pumice",
+      "name": "Pumice",
+      "kind": "raw",
+      "tier": 3,
+      "status": "material-pool proposal",
+      "description": "A fixed porous-stone outcrop.",
+      "sources": [
+        "material-pool:pumice"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "pumice",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "mineral-outcrop",
+          "description": "A fixed porous-stone outcrop.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "chip",
+          "description": "Harvest porous stone from the outcrop.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 13,
+        "materialTier": 3,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "Quartz embedded in a small fixed rock vein.",
+      "sources": [
+        "material-pool:quartz"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "quartz",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "crystal-vein",
+          "description": "Quartz embedded in a small fixed rock vein.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "chip",
+          "description": "Extract quartz from the vein.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "salt-crystal",
+      "name": "Salt crystal",
+      "kind": "raw",
+      "tier": 2,
+      "status": "material-pool proposal",
+      "description": "A stationary salt crust or deposit.",
+      "sources": [
+        "material-pool:salt-crystal"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "salt-crystal",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "mineral-crust",
+          "description": "A stationary salt crust or deposit.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "scrape",
+          "description": "Gather salt from the attached crust.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 8,
+        "materialTier": 2,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "star-petal",
+      "name": "Star petal",
+      "kind": "raw",
+      "tier": 6,
+      "status": "material-pool proposal",
+      "description": "An intact fantasy star-petaled flower.",
+      "sources": [
+        "material-pool:star-petal"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "star-petal",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-flower",
+          "description": "An intact fantasy star-petaled flower.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "pick",
+          "description": "Harvest petals from the living flower; no fallen-petal finds.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 38,
+        "materialTier": 6,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "sunamber",
+      "name": "Sunamber",
+      "kind": "raw",
+      "tier": 6,
+      "status": "material-pool proposal",
+      "description": "A fantasy resin-bearing tree with an authored tapping point.",
+      "sources": [
+        "material-pool:sunamber"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "sunamber",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "resin-bearing-tree",
+          "description": "A fantasy resin-bearing tree with an authored tapping point.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "tap",
+          "description": "Tap Sunamber from its tree; no loose resin-stone drops.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 38,
+        "materialTier": 6,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "supple-vine",
+      "name": "Supple vine",
+      "kind": "raw",
+      "tier": 1,
+      "status": "material-pool proposal",
+      "description": "A living vine attached to vegetation.",
+      "sources": [
+        "material-pool:supple-vine"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "supple-vine",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-vine",
+          "description": "A living vine attached to vegetation.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "cut",
+          "description": "Cut a short living vine section.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "thunderstone",
+      "name": "Thunderstone",
+      "kind": "raw",
+      "tier": 7,
+      "status": "material-pool proposal",
+      "description": "A fixed fantasy crystal vein in rock.",
+      "sources": [
+        "material-pool:thunderstone"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "thunderstone",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "crystal-vein",
+          "description": "A fixed fantasy crystal vein in rock.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "chip",
+          "description": "Extract charged-looking crystal from the vein.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 52,
+        "materialTier": 7,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "wild-mint",
+      "name": "Wild mint",
+      "kind": "raw",
+      "tier": 1,
+      "status": "material-pool proposal",
+      "description": "A rooted mint plant.",
+      "sources": [
+        "material-pool:wild-mint"
+      ],
+      "tags": [
+        "library-2026-09-20"
+      ],
+      "materialPoolId": "wild-mint",
+      "gathering": {
+        "mode": "direct-world-harvest",
+        "proposalSource": "material-ideas.proposed.json",
+        "harvestSource": {
+          "kind": "living-herb",
+          "description": "A rooted mint plant.",
+          "isLooseDrop": false,
+          "candidateSourceArt": null,
+          "sourceWrapperStatus": "New harvest source wrapper is proposed, not built."
+        },
+        "harvestAction": {
+          "verb": "cut",
+          "description": "Cut a mint sprig.",
+          "requiredToolId": null,
+          "harvestAbilityRule": null,
+          "successRule": null,
+          "status": "Active harvesting intent only. Future ability/success mechanics are not selected or implemented."
+        },
+        "notes": "Uses the existing optional harvest-pool proposal; not a new implemented acquisition mechanic."
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": 4,
+        "materialTier": 1,
+        "status": "Existing material-pool provisional gate."
+      },
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null,
+        "status": "Generated icons later; reuse the pool art candidate when selected."
+      }
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "kind": "currency",
+      "tier": 0,
+      "status": "existing prototype",
+      "description": "Collected at financial POIs; explicit ingredient only where a recipe says so.",
+      "sources": [
+        "world.poi.financial"
+      ],
+      "tags": [
+        "currency"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null
+      },
+      "gathering": {
+        "mode": "poi-cooldown-pickup"
+      }
+    },
+    {
+      "id": "fast-grow-tonic",
+      "name": "Fast Grow Tonic",
+      "kind": "care",
+      "tier": 2,
+      "status": "ingredient concept; effects and balance undecided",
+      "description": "Green Water + Energy Currency. Eligible targets and growth effects have not been designed.",
+      "sources": [],
+      "tags": [
+        "ingredient-concept"
+      ],
+      "art": {
+        "iconAddress": null,
+        "modelAddress": null
+      },
+      "progressionGate": {
+        "minimumPlayerLevel": null,
+        "materialTier": null,
+        "status": "Undecided"
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "id": "wheat-to-flour",
+      "stationId": "mill",
+      "tier": 0,
+      "status": "implemented prototype",
+      "inputs": [
+        {
+          "itemId": "wheat",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "flour",
+        "quantity": 1
+      },
+      "durationSeconds": 30,
+      "durationStatus": "existing prototype",
+      "energyCost": 0
+    },
+    {
+      "id": "flour-to-biscuit",
+      "stationId": "bakery",
+      "tier": 0,
+      "status": "implemented prototype",
+      "inputs": [
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "egg",
+          "quantity": 1
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "biscuit",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "existing prototype",
+      "energyCost": 0
+    },
+    {
+      "id": "berries-to-tonic",
+      "stationId": "care-bench",
+      "tier": 0,
+      "status": "implemented prototype",
+      "inputs": [
+        {
+          "itemId": "blackberry",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "berry-tonic",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "existing prototype",
+      "energyCost": 0
+    },
+    {
+      "id": "wood-to-trap",
+      "stationId": "workbench",
+      "tier": 0,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "softwood",
+          "quantity": 5
+        }
+      ],
+      "output": {
+        "itemId": "wooden-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 30,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "wood-to-plank",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "softwood",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "plank",
+        "quantity": 1
+      },
+      "durationSeconds": 45,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "reeds-to-twine",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "reed-fiber",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "reed-twine",
+        "quantity": 1
+      },
+      "durationSeconds": 45,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "flax-to-rope",
+      "stationId": "loom",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "flax",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "rope",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "flax-to-linen",
+      "stationId": "loom",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "flax",
+          "quantity": 4
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "linen",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "ore-to-fittings",
+      "stationId": "forge",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "iron-ore",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "iron-fitting",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "stone-to-weight",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "stone",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "stone-weight",
+        "quantity": 1
+      },
+      "durationSeconds": 30,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "cane-to-sugar",
+      "stationId": "mill",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "sugarcane",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "sugar",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "milk-to-butter",
+      "stationId": "pantry",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "milk",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "butter",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "berries-to-preserves",
+      "stationId": "pantry",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "blackberry",
+          "quantity": 3
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "berry-preserves",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "herbs-to-infusion",
+      "stationId": "care-bench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "wild-herb",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "herbal-infusion",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "mooncaps-to-glow-paste",
+      "stationId": "care-bench",
+      "tier": 3,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "mooncap",
+          "quantity": 2
+        },
+        {
+          "itemId": "amber-resin",
+          "quantity": 1
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "glow-paste",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-berry-biscuit",
+      "stationId": "bakery",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "biscuit",
+          "quantity": 1
+        },
+        {
+          "itemId": "blackberry",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "berry-biscuit",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-herb-biscuit",
+      "stationId": "bakery",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "biscuit",
+          "quantity": 1
+        },
+        {
+          "itemId": "herbal-infusion",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "herb-biscuit",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-seed-cake",
+      "stationId": "bakery",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "sunseed",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "seed-cake",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "blend-reed-pellet",
+      "stationId": "care-bench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "riverweed",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "reed-pellet",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-cookie",
+      "stationId": "bakery",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "egg",
+          "quantity": 1
+        },
+        {
+          "itemId": "butter",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "cookie",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-berry-cookie",
+      "stationId": "bakery",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "cookie",
+          "quantity": 1
+        },
+        {
+          "itemId": "berry-preserves",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "berry-cookie",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "bake-cream-cookie",
+      "stationId": "bakery",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "cookie",
+          "quantity": 1
+        },
+        {
+          "itemId": "milk",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "cream-cookie",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "prepare-glow-crumb",
+      "stationId": "care-bench",
+      "tier": 3,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "biscuit",
+          "quantity": 1
+        },
+        {
+          "itemId": "glow-paste",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "glow-crumb",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "craft-woven-trap",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "plank",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-twine",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "woven-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "craft-shore-basket",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "reed-fiber",
+          "quantity": 4
+        },
+        {
+          "itemId": "reed-twine",
+          "quantity": 2
+        },
+        {
+          "itemId": "stone-weight",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "shore-basket",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "craft-floating-trap",
+      "stationId": "workbench",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "plank",
+          "quantity": 3
+        },
+        {
+          "itemId": "rope",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-fiber",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "floating-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "craft-reinforced-trap",
+      "stationId": "workbench",
+      "tier": 2,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "plank",
+          "quantity": 4
+        },
+        {
+          "itemId": "iron-fitting",
+          "quantity": 2
+        },
+        {
+          "itemId": "linen",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "reinforced-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 240,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "craft-lantern-trap",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "proposed",
+      "inputs": [
+        {
+          "itemId": "plank",
+          "quantity": 3
+        },
+        {
+          "itemId": "iron-fitting",
+          "quantity": 1
+        },
+        {
+          "itemId": "glow-paste",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "lantern-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 240,
+      "durationStatus": "illustrative placeholder",
+      "energyCost": 0
+    },
+    {
+      "id": "make-resin-glue",
+      "stationId": "care-bench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "amber-resin",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "resin-glue",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 13,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-reed-mat",
+      "stationId": "loom",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "reed-fiber",
+          "quantity": 3
+        }
+      ],
+      "output": {
+        "itemId": "reed-mat",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 4,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-clay-cup",
+      "stationId": "kiln",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "clay-lump",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "clay-cup",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 4,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-copper-wire",
+      "stationId": "forge",
+      "tier": 2,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "copper-ore",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "copper-wire",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 8,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-spring-latch",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "iron-fitting",
+          "quantity": 1
+        },
+        {
+          "itemId": "copper-wire",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "spring-latch",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 14,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-soft-lining",
+      "stationId": "loom",
+      "tier": 2,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "linen",
+          "quantity": 1
+        },
+        {
+          "itemId": "moss-tuft",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "soft-lining",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 9,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-pumice-float",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "pumice",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-twine",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "pumice-float",
+        "quantity": 1
+      },
+      "durationSeconds": 75,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 14,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mineral-syrup",
+      "stationId": "pantry",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "mineral-water",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mineral-syrup",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 14,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-chamomile-syrup",
+      "stationId": "pantry",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "chamomile",
+          "quantity": 2
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "chamomile-syrup",
+        "quantity": 1
+      },
+      "durationSeconds": 75,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 14,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mushroom-paste",
+      "stationId": "pantry",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "button-mushroom",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mushroom-paste",
+        "quantity": 1
+      },
+      "durationSeconds": 45,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 4,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mint-essence",
+      "stationId": "care-bench",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "wild-mint",
+          "quantity": 2
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mint-essence",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 6,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-moon-ink",
+      "stationId": "care-bench",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "mooncap",
+          "quantity": 1
+        },
+        {
+          "itemId": "glowmoss",
+          "quantity": 1
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "moon-ink",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 28,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-crystal-lens",
+      "stationId": "forge",
+      "tier": 2,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "quartz",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "crystal-lens",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 10,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-sun-lens",
+      "stationId": "forge",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "sunamber",
+          "quantity": 1
+        },
+        {
+          "itemId": "crystal-lens",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "sun-lens",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 39,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-frost-liner",
+      "stationId": "workbench",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "ice",
+          "quantity": 2
+        },
+        {
+          "itemId": "linen",
+          "quantity": 1
+        },
+        {
+          "itemId": "frostbloom",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "frost-liner",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 28,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-storm-coil",
+      "stationId": "forge",
+      "tier": 7,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "thunderstone",
+          "quantity": 1
+        },
+        {
+          "itemId": "copper-wire",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "storm-coil",
+        "quantity": 1
+      },
+      "durationSeconds": 240,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 53,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-dusk-prism",
+      "stationId": "forge",
+      "tier": 7,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "dusk-crystal",
+          "quantity": 1
+        },
+        {
+          "itemId": "quartz",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "dusk-prism",
+        "quantity": 1
+      },
+      "durationSeconds": 240,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 53,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-star-nectar",
+      "stationId": "care-bench",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "star-petal",
+          "quantity": 2
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        },
+        {
+          "itemId": "mineral-water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "star-nectar",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 39,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-clover-cracker",
+      "stationId": "bakery",
+      "tier": 0,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "clover-leaf",
+          "quantity": 2
+        },
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "water",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "clover-cracker",
+        "quantity": 1
+      },
+      "durationSeconds": 45,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 3,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mushroom-pocket",
+      "stationId": "bakery",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "mushroom-paste",
+          "quantity": 1
+        },
+        {
+          "itemId": "flour",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mushroom-pocket",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 5,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mint-snap",
+      "stationId": "bakery",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "mint-essence",
+          "quantity": 1
+        },
+        {
+          "itemId": "biscuit",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mint-snap",
+        "quantity": 1
+      },
+      "durationSeconds": 75,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 7,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-mineral-lick",
+      "stationId": "care-bench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "salt-crystal",
+          "quantity": 2
+        },
+        {
+          "itemId": "mineral-syrup",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "mineral-lick",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-kelp-roll",
+      "stationId": "pantry",
+      "tier": 2,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "kelp-ribbon",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-pellet",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "kelp-roll",
+        "quantity": 1
+      },
+      "durationSeconds": 60,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 9,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-chamomile-drop",
+      "stationId": "pantry",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "chamomile-syrup",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "chamomile-drop",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-frostmallow",
+      "stationId": "bakery",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "frostbloom",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        },
+        {
+          "itemId": "milk",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "frostmallow",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 29,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-glow-jelly",
+      "stationId": "pantry",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "glow-paste",
+          "quantity": 1
+        },
+        {
+          "itemId": "mineral-syrup",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "glow-jelly",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 28,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-sunpetal-wafer",
+      "stationId": "bakery",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "star-nectar",
+          "quantity": 1
+        },
+        {
+          "itemId": "flour",
+          "quantity": 1
+        },
+        {
+          "itemId": "golden-pollen",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "sunpetal-wafer",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 39,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-ember-biscuit",
+      "stationId": "bakery",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "embercap",
+          "quantity": 1
+        },
+        {
+          "itemId": "biscuit",
+          "quantity": 1
+        },
+        {
+          "itemId": "mineral-syrup",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "ember-biscuit",
+        "quantity": 1
+      },
+      "durationSeconds": 150,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 39,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-star-bonbon",
+      "stationId": "pantry",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "star-nectar",
+          "quantity": 1
+        },
+        {
+          "itemId": "butter",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "star-bonbon",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 40,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-dusk-bonbon",
+      "stationId": "pantry",
+      "tier": 7,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "moon-ink",
+          "quantity": 1
+        },
+        {
+          "itemId": "star-nectar",
+          "quantity": 1
+        },
+        {
+          "itemId": "sugar",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "dusk-bonbon",
+        "quantity": 1
+      },
+      "durationSeconds": 240,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 54,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-vine-crate",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "softwood",
+          "quantity": 4
+        },
+        {
+          "itemId": "supple-vine",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-mat",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "vine-crate",
+        "quantity": 1
+      },
+      "durationSeconds": 75,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 5,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-reed-hide",
+      "stationId": "workbench",
+      "tier": 1,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "reed-mat",
+          "quantity": 2
+        },
+        {
+          "itemId": "plank",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "reed-hide",
+        "quantity": 1
+      },
+      "durationSeconds": 90,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 6,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-padded-den",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "plank",
+          "quantity": 2
+        },
+        {
+          "itemId": "soft-lining",
+          "quantity": 1
+        },
+        {
+          "itemId": "spring-latch",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "padded-den",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-drift-basket",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "pumice-float",
+          "quantity": 2
+        },
+        {
+          "itemId": "reed-mat",
+          "quantity": 1
+        },
+        {
+          "itemId": "rope",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "drift-basket",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-tide-bell-trap",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "copper-wire",
+          "quantity": 1
+        },
+        {
+          "itemId": "clay-cup",
+          "quantity": 2
+        },
+        {
+          "itemId": "rope",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "tide-bell-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 120,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-quartz-lookout",
+      "stationId": "workbench",
+      "tier": 3,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "crystal-lens",
+          "quantity": 1
+        },
+        {
+          "itemId": "plank",
+          "quantity": 2
+        },
+        {
+          "itemId": "iron-fitting",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "quartz-lookout",
+        "quantity": 1
+      },
+      "durationSeconds": 135,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 15,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-frost-nest",
+      "stationId": "workbench",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "frost-liner",
+          "quantity": 1
+        },
+        {
+          "itemId": "reinforced-trap",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "frost-nest",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 29,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-moon-lantern-trap",
+      "stationId": "workbench",
+      "tier": 5,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "lantern-trap",
+          "quantity": 1
+        },
+        {
+          "itemId": "moon-ink",
+          "quantity": 1
+        },
+        {
+          "itemId": "crystal-lens",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "moon-lantern-trap",
+        "quantity": 1
+      },
+      "durationSeconds": 180,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 29,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-sun-canopy",
+      "stationId": "workbench",
+      "tier": 6,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "sun-lens",
+          "quantity": 1
+        },
+        {
+          "itemId": "linen",
+          "quantity": 2
+        },
+        {
+          "itemId": "plank",
+          "quantity": 2
+        }
+      ],
+      "output": {
+        "itemId": "sun-canopy",
+        "quantity": 1
+      },
+      "durationSeconds": 210,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 40,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    },
+    {
+      "id": "make-storm-cage",
+      "stationId": "workbench",
+      "tier": 7,
+      "status": "creative library proposal",
+      "inputs": [
+        {
+          "itemId": "storm-coil",
+          "quantity": 1
+        },
+        {
+          "itemId": "reinforced-trap",
+          "quantity": 1
+        },
+        {
+          "itemId": "dusk-prism",
+          "quantity": 1
+        }
+      ],
+      "output": {
+        "itemId": "storm-cage",
+        "quantity": 1
+      },
+      "durationSeconds": 300,
+      "durationStatus": "Illustrative prototype time, not an economy commitment",
+      "energyCost": 0,
+      "minimumPlayerLevel": 54,
+      "balanceStatus": "PROVISIONAL_AUTHORING_ONLY"
+    }
+  ],
+  "stations": [
+    {
+      "id": "mill",
+      "name": "Mill",
+      "status": "existing",
+      "role": "Grain and, later, cane processing."
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery",
+      "status": "existing",
+      "role": "Biscuits, cakes and cookies."
+    },
+    {
+      "id": "care-bench",
+      "name": "Care Bench",
+      "status": "existing",
+      "role": "Tonic and later aromatic/luminous baits."
+    },
+    {
+      "id": "workbench",
+      "name": "Workbench",
+      "status": "starter proposal",
+      "role": "Wood, bindings and all live-capture traps."
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "status": "later proposal",
+      "role": "Strong rope and cloth."
+    },
+    {
+      "id": "forge",
+      "name": "Forge",
+      "status": "later proposal",
+      "role": "Hardware for advanced traps."
+    },
+    {
+      "id": "pantry",
+      "name": "Pantry",
+      "status": "later proposal",
+      "role": "Milk and fruit preparation; a processing station, not an Energy-consuming generator."
+    },
+    {
+      "id": "kiln",
+      "name": "Kiln",
+      "status": "creative library proposal",
+      "role": "Small fired-clay components; consider merging into an existing station when selecting live content."
+    }
+  ],
+  "phases": [
+    {
+      "id": "starter",
+      "name": "Starter loop",
+      "tier": 0,
+      "focus": "Existing wheat, eggs and Water make biscuits; existing softwood makes a simple wooden trap. Catch common land Wildlings before adding resource families."
+    },
+    {
+      "id": "habitats",
+      "name": "Habitat branches",
+      "tier": 1,
+      "focus": "Add fruit/herb/seed baits and shore resources. First broad habitat affinities; no dependency on exact rare POIs."
+    },
+    {
+      "id": "specialists",
+      "name": "Specialist tools",
+      "tier": 2,
+      "focus": "Sugar, cookies, rope and hardware unlock aquatic/large-species tools. New station unlock pacing remains undesigned."
+    },
+    {
+      "id": "night",
+      "name": "Night discoveries",
+      "tier": 3,
+      "focus": "Mooncaps, luminous bait and lantern traps create an optional night branch. Weather/seasons remain disabled extensions."
+    }
+  ],
+  "invariants": [
+    "All new quantities, durations, tiers, names and station assignments are proposals, not approved balance.",
+    "Existing flour, biscuit and Berry tonic recipes are copied unchanged from crafting-v1.json.",
+    "Raw wood and crop collection stay in the world. No home wood/crop production is introduced.",
+    "Crafting is controlled by time and queue capacity, with no operating Energy cost. A recipe may explicitly consume Energy as an ingredient.",
+    "Current map chicken/cow gatherers provide one egg/milk per animal and are not captured Wildling species.",
+    "Future home animal/water generation is separate: it uses Energy and produces nontradable resources. That system is not implemented by this proposal.",
+    "No caught Wildling, animal body or harvested creature is consumed as a crafting ingredient.",
+    "Do not infer that crafting a more expensive item guarantees a catch or makes all earlier bait obsolete.",
+    "Species eligibility is separate from weighted selection and the success roll. Habitat suitability can change relative species selection without promising success.",
+    "Addressable paths remain null until approved art is imported and registered; catalog IDs are independent of vendor filenames."
+  ],
+  "designQuestions": [
+    "Whether different trap types exclude creature size categories or merely improve chances.",
+    "How far a shore band extends in meters and how to handle ambiguous/coarse water geometry.",
+    "Whether home-origin nontradable inputs make the whole crafted output nontradable; choose before that generator system ships.",
+    "Whether Sugar can also come from berries; this draft chooses sugarcane to keep the first tree legible.",
+    "The proposed Pantry/Loom/Forge can be consolidated if too many buildings make progression busy.",
+    "Which proposed products should enter runtime first, and which station proposals should be consolidated?",
+    "Fast Grow Tonic still needs quantities, station, time, level, target and effect before it can become a recipe."
+  ],
+  "worldMaterialVisibilityDirection": {
+    "status": "DIRECTION_NOT_IMPLEMENTATION",
+    "recordedOn": "2026-09-18",
+    "appliesToModes": [
+      "worker-resource-group",
+      "direct-world-harvest"
+    ],
+    "rule": "Show all currently collectible material tiers plus exactly the next tier. Higher-tier interaction uses Level <n> required.",
+    "minimumPlayerLevels": null,
+    "materialTierAssignments": null,
+    "harvestSuccessAndMaterialSkill": "Discussion only. No level-based success RNG or per-material skill progression is adopted by this proposal.",
+    "separateMechanics": [
+      "Private flock/herd yields remain one item per animal.",
+      "Water and Energy remain POI pickups with saved cooldowns; Energy is classified as currency and may be an explicit recipe ingredient."
+    ]
+  },
+  "conceptRecipes": [
+    {
+      "id": "green-water-energy-tonic",
+      "stationId": null,
+      "inputs": [
+        {
+          "itemId": "green-water",
+          "quantity": null
+        },
+        {
+          "itemId": "energy",
+          "quantity": null
+        }
+      ],
+      "output": {
+        "itemId": "fast-grow-tonic",
+        "quantity": null
+      },
+      "durationSeconds": null,
+      "minimumPlayerLevel": null,
+      "effect": null,
+      "eligibleTargets": null,
+      "status": "Ingredient concept only; does not activate resource regrowth or Home crop production."
+    }
+  ]
+}

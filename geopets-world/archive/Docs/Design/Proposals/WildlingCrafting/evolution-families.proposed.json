@@ -1,0 +1,1306 @@
+{
+  "schemaVersion": 1,
+  "id": "evolution-family-review",
+  "status": "PROPOSED_REVIEW_ONLY_NOT_RUNTIME",
+  "authoredOn": "2026-09-18",
+  "ownerDirection": "The prototype may combine packs: ordinary non-evolving animals plus a selected evolution-family pack. Exact families/forms are not selected by this file.",
+  "families": [
+    {
+      "id": "bramblekin",
+      "name": "Bramblekin",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "woodland",
+        "park"
+      ],
+      "favoriteBaitProposals": [
+        "berry-biscuit",
+        "berry-cookie"
+      ],
+      "forms": [
+        {
+          "id": "bramble-sprout",
+          "name": "Bramble Sprout",
+          "stage": 1,
+          "sourceVendorName": "Blueberry_01",
+          "sourceTriangleEquivalent": 1440,
+          "serializedSkinBones": 43,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "bramble-bloom",
+          "name": "Bramble Bloom",
+          "stage": 2,
+          "sourceVendorName": "Blueberry_02",
+          "sourceTriangleEquivalent": 1502,
+          "serializedSkinBones": 38,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "bramble-crown",
+          "name": "Bramble Crown",
+          "stage": 3,
+          "sourceVendorName": "Blueberry_03",
+          "sourceTriangleEquivalent": 2810,
+          "serializedSkinBones": 42,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "bramble-sprout",
+          "toFormId": "bramble-bloom",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "bramble-bloom",
+          "toFormId": "bramble-crown",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "burrback",
+      "name": "Burrback",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "grassland",
+        "rocky-ground"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "burrback-pebble",
+          "name": "Pebble Burrback",
+          "stage": 1,
+          "sourceVendorName": "Armadil_01",
+          "sourceTriangleEquivalent": 1036,
+          "serializedSkinBones": 28,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "burrback-bristle",
+          "name": "Bristle Burrback",
+          "stage": 2,
+          "sourceVendorName": "Armadil_02",
+          "sourceTriangleEquivalent": 1364,
+          "serializedSkinBones": 29,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "burrback-bastion",
+          "name": "Bastion Burrback",
+          "stage": 3,
+          "sourceVendorName": "Armadil_03",
+          "sourceTriangleEquivalent": 1798,
+          "serializedSkinBones": 21,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "burrback-pebble",
+          "toFormId": "burrback-bristle",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "burrback-bristle",
+          "toFormId": "burrback-bastion",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "thistlemane",
+      "name": "Thistlemane",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "grassland"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "thistle-tuft",
+          "name": "Thistle Tuft",
+          "stage": 1,
+          "sourceVendorName": "Bizun_1",
+          "sourceTriangleEquivalent": 1810,
+          "serializedSkinBones": 30,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "thistle-mane",
+          "name": "Thistle Mane",
+          "stage": 2,
+          "sourceVendorName": "Bizun_2",
+          "sourceTriangleEquivalent": 2309,
+          "serializedSkinBones": 37,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "thistle-warden",
+          "name": "Thistle Warden",
+          "stage": 3,
+          "sourceVendorName": "Bizun_3",
+          "sourceTriangleEquivalent": 3046,
+          "serializedSkinBones": 37,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "thistle-tuft",
+          "toFormId": "thistle-mane",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "thistle-mane",
+          "toFormId": "thistle-warden",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "dunebloom",
+      "name": "Dunebloom",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "arid",
+        "park"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "dune-bud",
+          "name": "Dune Bud",
+          "stage": 1,
+          "sourceVendorName": "Cactus lvl1",
+          "sourceTriangleEquivalent": 1404,
+          "serializedSkinBones": 20,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "dune-flower",
+          "name": "Dune Flower",
+          "stage": 2,
+          "sourceVendorName": "Cactus lvl2",
+          "sourceTriangleEquivalent": 1412,
+          "serializedSkinBones": 20,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "dune-crown",
+          "name": "Dune Crown",
+          "stage": 3,
+          "sourceVendorName": "Cactus lvl3",
+          "sourceTriangleEquivalent": 1840,
+          "serializedSkinBones": 21,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "dune-bud",
+          "toFormId": "dune-flower",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "dune-flower",
+          "toFormId": "dune-crown",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "brookclaw",
+      "name": "Brookclaw",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "freshwater-shore"
+      ],
+      "favoriteBaitProposals": [
+        "reed-pellet"
+      ],
+      "forms": [
+        {
+          "id": "brook-nipper",
+          "name": "Brook Nipper",
+          "stage": 1,
+          "sourceVendorName": "Crabik 01",
+          "sourceTriangleEquivalent": 1834,
+          "serializedSkinBones": 29,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "brook-claw",
+          "name": "Brook Claw",
+          "stage": 2,
+          "sourceVendorName": "Crabik 02",
+          "sourceTriangleEquivalent": 2156,
+          "serializedSkinBones": 32,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "brook-guardian",
+          "name": "Brook Guardian",
+          "stage": 3,
+          "sourceVendorName": "Crabik 03",
+          "sourceTriangleEquivalent": 2216,
+          "serializedSkinBones": 33,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "brook-nipper",
+          "toFormId": "brook-claw",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "brook-claw",
+          "toFormId": "brook-guardian",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "coralcrest",
+      "name": "Coralcrest",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "coastal-shore"
+      ],
+      "favoriteBaitProposals": [
+        "reed-pellet"
+      ],
+      "forms": [
+        {
+          "id": "coral-nipper",
+          "name": "Coral Nipper",
+          "stage": 1,
+          "sourceVendorName": "Crabik2 01",
+          "sourceTriangleEquivalent": 1440,
+          "serializedSkinBones": 36,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "coral-claw",
+          "name": "Coral Claw",
+          "stage": 2,
+          "sourceVendorName": "Crabik2 02",
+          "sourceTriangleEquivalent": 2028,
+          "serializedSkinBones": 36,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "coral-crest",
+          "name": "Coral Crest",
+          "stage": 3,
+          "sourceVendorName": "Crabik2 03",
+          "sourceTriangleEquivalent": 2382,
+          "serializedSkinBones": 42,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "coral-nipper",
+          "toFormId": "coral-claw",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "coral-claw",
+          "toFormId": "coral-crest",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "hollowwing",
+      "name": "Hollowwing",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "woodland",
+        "quiet-landmark"
+      ],
+      "favoriteBaitProposals": [
+        "glow-crumb"
+      ],
+      "forms": [
+        {
+          "id": "hollow-down",
+          "name": "Hollow Down",
+          "stage": 1,
+          "sourceVendorName": "Owl_01",
+          "sourceTriangleEquivalent": 1182,
+          "serializedSkinBones": 49,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "hollow-wing",
+          "name": "Hollow Wing",
+          "stage": 2,
+          "sourceVendorName": "Owl_02",
+          "sourceTriangleEquivalent": 1604,
+          "serializedSkinBones": 89,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "hollow-sage",
+          "name": "Hollow Sage",
+          "stage": 3,
+          "sourceVendorName": "Owl_03",
+          "sourceTriangleEquivalent": 2598,
+          "serializedSkinBones": 109,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "hollow-down",
+          "toFormId": "hollow-wing",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "hollow-wing",
+          "toFormId": "hollow-sage",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "grovehorn",
+      "name": "Grovehorn",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "woodland",
+        "park"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "grove-bud",
+          "name": "Grove Bud",
+          "stage": 1,
+          "sourceVendorName": "Pincerdeer 01",
+          "sourceTriangleEquivalent": 1910,
+          "serializedSkinBones": 24,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "grove-antler",
+          "name": "Grove Antler",
+          "stage": 2,
+          "sourceVendorName": "Pincerdeer 02",
+          "sourceTriangleEquivalent": 2980,
+          "serializedSkinBones": 23,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "grove-crown",
+          "name": "Grove Crown",
+          "stage": 3,
+          "sourceVendorName": "Pincerdeer 03",
+          "sourceTriangleEquivalent": 4516,
+          "serializedSkinBones": 28,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "grove-bud",
+          "toFormId": "grove-antler",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "grove-antler",
+          "toFormId": "grove-crown",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "gloamspinner",
+      "name": "Gloamspinner",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "woodland",
+        "energy-well"
+      ],
+      "favoriteBaitProposals": [
+        "glow-crumb"
+      ],
+      "forms": [
+        {
+          "id": "gloam-thread",
+          "name": "Gloam Thread",
+          "stage": 1,
+          "sourceVendorName": "Spiderbat_01",
+          "sourceTriangleEquivalent": 1560,
+          "serializedSkinBones": 21,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "gloam-wing",
+          "name": "Gloam Wing",
+          "stage": 2,
+          "sourceVendorName": "Spiderbat_02",
+          "sourceTriangleEquivalent": 2678,
+          "serializedSkinBones": 27,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "gloam-weaver",
+          "name": "Gloam Weaver",
+          "stage": 3,
+          "sourceVendorName": "Spiderbat_03",
+          "sourceTriangleEquivalent": 4450,
+          "serializedSkinBones": 61,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "gloam-thread",
+          "toFormId": "gloam-wing",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "gloam-wing",
+          "toFormId": "gloam-weaver",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "rootwriggler",
+      "name": "Rootwriggler",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "223446",
+      "habitatAffinityProposals": [
+        "crop-edge",
+        "woodland-edge"
+      ],
+      "favoriteBaitProposals": [
+        "seed-cake"
+      ],
+      "forms": [
+        {
+          "id": "root-wriggle",
+          "name": "Root Wriggle",
+          "stage": 1,
+          "sourceVendorName": "Worm 01",
+          "sourceTriangleEquivalent": 1036,
+          "serializedSkinBones": 16,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "root-coil",
+          "name": "Root Coil",
+          "stage": 2,
+          "sourceVendorName": "Worm 02",
+          "sourceTriangleEquivalent": 1706,
+          "serializedSkinBones": 27,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "root-keeper",
+          "name": "Root Keeper",
+          "stage": 3,
+          "sourceVendorName": "Worm 03",
+          "sourceTriangleEquivalent": 1706,
+          "serializedSkinBones": 28,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "root-wriggle",
+          "toFormId": "root-coil",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "root-coil",
+          "toFormId": "root-keeper",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "petalwisp",
+      "name": "Petalwisp",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "park",
+        "woodland"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "petal-bud",
+          "name": "Petal Bud",
+          "stage": 1,
+          "sourceVendorName": "Bud",
+          "sourceTriangleEquivalent": 616,
+          "serializedSkinBones": 15,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "petal-bloom",
+          "name": "Petal Bloom",
+          "stage": 2,
+          "sourceVendorName": "Bloom",
+          "sourceTriangleEquivalent": 1848,
+          "serializedSkinBones": 35,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "petal-blossom",
+          "name": "Petal Blossom",
+          "stage": 3,
+          "sourceVendorName": "Blossom",
+          "sourceTriangleEquivalent": 2512,
+          "serializedSkinBones": 43,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "petal-bud",
+          "toFormId": "petal-bloom",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "petal-bloom",
+          "toFormId": "petal-blossom",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "emberglide",
+      "name": "Emberglide",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "rocky-ground",
+        "energy-well"
+      ],
+      "favoriteBaitProposals": [
+        "cookie",
+        "glow-crumb"
+      ],
+      "forms": [
+        {
+          "id": "ember-spark",
+          "name": "Ember Spark",
+          "stage": 1,
+          "sourceVendorName": "Dragon Spark",
+          "sourceTriangleEquivalent": 1470,
+          "serializedSkinBones": 26,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "ember-flame",
+          "name": "Ember Flame",
+          "stage": 2,
+          "sourceVendorName": "Dragon Fire",
+          "sourceTriangleEquivalent": 2698,
+          "serializedSkinBones": 55,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "ember-aurora",
+          "name": "Ember Aurora",
+          "stage": 3,
+          "sourceVendorName": "Dragon Inferno",
+          "sourceTriangleEquivalent": 3304,
+          "serializedSkinBones": 59,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "ember-spark",
+          "toFormId": "ember-flame",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "ember-flame",
+          "toFormId": "ember-aurora",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "tidehaven",
+      "name": "Tidehaven",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "coastal-shore",
+        "freshwater-shore"
+      ],
+      "favoriteBaitProposals": [
+        "reed-pellet"
+      ],
+      "forms": [
+        {
+          "id": "tide-shell",
+          "name": "Tide Shell",
+          "stage": 1,
+          "sourceVendorName": "Shell",
+          "sourceTriangleEquivalent": 816,
+          "serializedSkinBones": 22,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "tide-spire",
+          "name": "Tide Spire",
+          "stage": 2,
+          "sourceVendorName": "Spike",
+          "sourceTriangleEquivalent": 1376,
+          "serializedSkinBones": 26,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "tide-citadel",
+          "name": "Tide Citadel",
+          "stage": 3,
+          "sourceVendorName": "Hermit King",
+          "sourceTriangleEquivalent": 2266,
+          "serializedSkinBones": 39,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "tide-shell",
+          "toFormId": "tide-spire",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "tide-spire",
+          "toFormId": "tide-citadel",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "reedsong",
+      "name": "Reedsong",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "wetland",
+        "woodland-edge"
+      ],
+      "favoriteBaitProposals": [
+        "reed-pellet"
+      ],
+      "forms": [
+        {
+          "id": "reed-whisper",
+          "name": "Reed Whisper",
+          "stage": 1,
+          "sourceVendorName": "Snakelet",
+          "sourceTriangleEquivalent": 602,
+          "serializedSkinBones": 17,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "reed-song",
+          "name": "Reed Song",
+          "stage": 2,
+          "sourceVendorName": "Snake",
+          "sourceTriangleEquivalent": 1030,
+          "serializedSkinBones": 26,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "reed-oracle",
+          "name": "Reed Oracle",
+          "stage": 3,
+          "sourceVendorName": "Snake Naga",
+          "sourceTriangleEquivalent": 2938,
+          "serializedSkinBones": 79,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "reed-whisper",
+          "toFormId": "reed-song",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "reed-song",
+          "toFormId": "reed-oracle",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "moonhowl",
+      "name": "Moonhowl",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "woodland",
+        "quiet-landmark"
+      ],
+      "favoriteBaitProposals": [
+        "cookie",
+        "glow-crumb"
+      ],
+      "forms": [
+        {
+          "id": "moon-pup",
+          "name": "Moon Pup",
+          "stage": 1,
+          "sourceVendorName": "Wolf Pup",
+          "sourceTriangleEquivalent": 1338,
+          "serializedSkinBones": 27,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "moon-wolf",
+          "name": "Moon Wolf",
+          "stage": 2,
+          "sourceVendorName": "Wolf",
+          "sourceTriangleEquivalent": 1534,
+          "serializedSkinBones": 32,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "moon-warden",
+          "name": "Moon Warden",
+          "stage": 3,
+          "sourceVendorName": "Werewolf",
+          "sourceTriangleEquivalent": 2178,
+          "serializedSkinBones": 40,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "moon-pup",
+          "toFormId": "moon-wolf",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "moon-wolf",
+          "toFormId": "moon-warden",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "puffstone",
+      "name": "Puffstone",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "rocky-ground",
+        "energy-well"
+      ],
+      "favoriteBaitProposals": [
+        "glow-crumb"
+      ],
+      "forms": [
+        {
+          "id": "puff-ember",
+          "name": "Ember Puffstone",
+          "stage": 1,
+          "sourceVendorName": "Bomb",
+          "sourceTriangleEquivalent": 622,
+          "serializedSkinBones": 6,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "puff-frost",
+          "name": "Frost Puffstone",
+          "stage": 2,
+          "sourceVendorName": "Snow Bomb",
+          "sourceTriangleEquivalent": 1018,
+          "serializedSkinBones": 10,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "puff-mist",
+          "name": "Mist Puffstone",
+          "stage": 3,
+          "sourceVendorName": "Poison Bomb",
+          "sourceTriangleEquivalent": 1968,
+          "serializedSkinBones": 9,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "puff-ember",
+          "toFormId": "puff-frost",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "puff-frost",
+          "toFormId": "puff-mist",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "sunpetal",
+      "name": "Sunpetal",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "grassland",
+        "park"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit",
+        "seed-cake"
+      ],
+      "forms": [
+        {
+          "id": "sun-bud",
+          "name": "Sun Bud",
+          "stage": 1,
+          "sourceVendorName": "Sun Blossom",
+          "sourceTriangleEquivalent": 559,
+          "serializedSkinBones": 14,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "sun-fairy",
+          "name": "Sun Fairy",
+          "stage": 2,
+          "sourceVendorName": "Sunflower Fairy",
+          "sourceTriangleEquivalent": 1740,
+          "serializedSkinBones": 30,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "sun-pixie",
+          "name": "Sun Pixie",
+          "stage": 3,
+          "sourceVendorName": "Sunflora Pixie",
+          "sourceTriangleEquivalent": 2844,
+          "serializedSkinBones": 33,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "sun-bud",
+          "toFormId": "sun-fairy",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "sun-fairy",
+          "toFormId": "sun-pixie",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    },
+    {
+      "id": "twigward",
+      "name": "Twigward",
+      "status": "PROPOSED_FAMILY_OPTION",
+      "packId": "179083",
+      "habitatAffinityProposals": [
+        "quiet-landmark",
+        "woodland"
+      ],
+      "favoriteBaitProposals": [
+        "herb-biscuit"
+      ],
+      "forms": [
+        {
+          "id": "twig-sprout",
+          "name": "Twig Sprout",
+          "stage": 1,
+          "sourceVendorName": "Practice Dummy",
+          "sourceTriangleEquivalent": 708,
+          "serializedSkinBones": 9,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "twig-watcher",
+          "name": "Twig Watcher",
+          "stage": 2,
+          "sourceVendorName": "Target Dummy",
+          "sourceTriangleEquivalent": 938,
+          "serializedSkinBones": 8,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        },
+        {
+          "id": "twig-warden",
+          "name": "Twig Warden",
+          "stage": 3,
+          "sourceVendorName": "Training Dummy",
+          "sourceTriangleEquivalent": 2896,
+          "serializedSkinBones": 20,
+          "modelAddress": null,
+          "iconAddress": null,
+          "artRegistrationStatus": "unregistered proposal"
+        }
+      ],
+      "evolutionPaths": [
+        {
+          "fromFormId": "twig-sprout",
+          "toFormId": "twig-watcher",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        },
+        {
+          "fromFormId": "twig-watcher",
+          "toFormId": "twig-warden",
+          "requirements": null,
+          "costs": null,
+          "durationSeconds": null,
+          "trigger": null,
+          "status": "Mechanics and balance intentionally not defined."
+        }
+      ],
+      "notes": "Vendor forms establish available artwork, not approved evolution rules or a requirement to use all three forms."
+    }
+  ],
+  "recommendedFirstComparisons": [
+    {
+      "familyId": "bramblekin",
+      "reason": "NOTFUN provides clear plant forms with one tiny palette/material and embedded idle/walk clips; good visual compatibility candidate alongside Quirky."
+    },
+    {
+      "familyId": "petalwisp",
+      "reason": "Meshtint provides rich plant motion and layered paint sources; compare its textured look and flying/ground changes before choosing."
+    },
+    {
+      "familyId": "moonhowl",
+      "reason": "If movement consistency matters most, this Meshtint family keeps a clearer land-creature theme and includes non-combat Happy/Sniff behavior."
+    }
+  ],
+  "continuityContract": {
+    "ownedCreatureId": "Remains stable when the form changes; never delete and regrant the creature to evolve it.",
+    "definitionIds": "Use project-owned family/form IDs. Do not use vendor model filenames as save identity.",
+    "persistedChange": "Update the same owned-creature record with the chosen form and operation receipt; leave acquisition identity intact.",
+    "fieldsToPreserve": [
+      "customName",
+      "capturedAtUtc",
+      "captureLocation",
+      "ownerUid",
+      "originalAcquisitionReceipt",
+      "instanceId"
+    ],
+    "fieldsWithUndesignedEvolutionPolicy": [
+      "experience",
+      "level",
+      "traits",
+      "skills",
+      "skins",
+      "outfits",
+      "homelandPlacementFootprint"
+    ],
+    "schemaNote": "This is a design contract. Adapt to the real player-save schema and transaction barriers; this JSON does not write gameplay saves."
+  },
+  "notDecided": [
+    "Evolution cost",
+    "Level gates",
+    "Crafted evolution materials",
+    "Timers",
+    "Manual versus automatic trigger",
+    "Branching/reversible evolution",
+    "Direct capture of higher forms",
+    "XP/trait/stat carryover",
+    "Whether all supplied vendor forms fit the final tone"
+  ],
+  "evidenceNotes": [
+    "NOTFUN ordinal filenames identify three supplied model forms per family; source paths and topology are verified locally.",
+    "Meshtint creator product page explicitly lists the 24 forms by evolution stage; groupings match verified local model files.",
+    "Vendor combat/evolution wording does not require combat or vendor balance in GeoPetsWorld.",
+    "No numeric evolve requirements, cost or trigger has been invented. Every transition remains disabled design data."
+  ]
+}
