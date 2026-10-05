@@ -1,0 +1,107 @@
+@font-face { font-family: Nunito; src: url("assets/fonts/Nunito-Variable.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+
+:root {
+  --paper: #FAF4E5; --cream: #F1EAD8; --tile: #EFE7D3; --white: #FFFDF6; --ink: #24483B; --green: #366950; --line: #D5DDC9; --muted: #58695B;
+  --t1: #6F7F64; --t2: #4A7F47; --t3: #2F6690; --t4: #6A4D96; --t5: #A87520;
+  --g-common: #6F7F64; --g-uncommon: #4A7F47; --g-rare: #2F6690; --g-legendary: #A87520;
+  --b-meadow: #569433; --b-grove: #2B6838; --b-stonefield: #A7886D; --b-marsh: #687A30; --b-snow: #DDE6EB;
+  --star: #E0B64E;
+  --w: 412px; --h: 883px; --status: 32px; --gesture: 24px;
+  --focus: #E0B64E;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { background: var(--paper); color: var(--ink); font: 400 16px/1.5 Nunito, system-ui, sans-serif; }
+body { margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1; margin: 28px 0 10px; letter-spacing: -.01em; }
+h2 { font-weight: 800; font-size: 1rem; margin: 0 0 8px; }
+p { margin: 0 0 10px; }
+.lede { max-width: 72ch; color: var(--muted); }
+.note { color: var(--muted); font-size: .86rem; }
+.list { margin: 0; padding-left: 1.1em; }
+.list li { margin-bottom: 4px; }
+
+.layout { display: grid; grid-template-columns: minmax(260px, 320px) minmax(0, 1fr); gap: 28px; align-items: start; padding-top: 14px; padding-bottom: 30px; }
+.panel { display: flex; flex-direction: column; gap: 16px; }
+.panel section { background: var(--cream); border: 2px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.jumps { display: flex; flex-wrap: wrap; gap: 6px; }
+.jumps button, .choice button { border: 2px solid var(--ink); background: var(--white); border-radius: 999px; padding: 3px 11px; font-weight: 700; font-size: .84rem; }
+.choice { display: flex; flex-direction: column; gap: 6px; }
+.choice button { text-align: left; border-radius: 12px; padding: 6px 10px; }
+.choice button[aria-checked="true"] { background: var(--green); border-color: var(--green); color: var(--white); }
+.stage-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.caption { max-width: 52ch; text-align: center; color: var(--muted); font-size: .88rem; min-height: 2.6em; }
+.foot { border-top: 2px solid var(--line); padding: 16px 20px 40px; color: var(--muted); font-size: .86rem; }
+
+/* The phone */
+.phone { padding: 11px; border: 3px solid var(--ink); border-radius: 46px; background: var(--white); }
+.screen { position: relative; width: var(--w); height: var(--h); border-radius: 34px; overflow: hidden; background: #A9C9DE; isolation: isolate; }
+.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; }
+.band { position: absolute; left: 0; right: 0; z-index: 20; pointer-events: none; }
+.band.status { top: 0; height: var(--status); display: flex; align-items: center; justify-content: space-between; padding: 0 22px; background: rgba(36, 72, 59, .12); border-bottom: 1.5px dashed rgba(36, 72, 59, .55); font-weight: 800; font-size: 13px; }
+.band .cutout { position: absolute; left: 50%; top: 9px; width: 13px; height: 13px; margin-left: -6.5px; border-radius: 50%; background: #111A16; }
+.band .sys { display: flex; gap: 4px; align-items: center; }
+.band .sys i { width: 12px; height: 9px; border-radius: 2px; background: var(--ink); opacity: .75; }
+.band .sys b { width: 20px; height: 10px; border: 2px solid var(--ink); border-radius: 3px; }
+.band.gesture { bottom: 0; height: var(--gesture); display: grid; place-items: center; background: rgba(36, 72, 59, .12); border-top: 1.5px dashed rgba(36, 72, 59, .55); }
+.band.gesture span { width: 108px; height: 4px; border-radius: 4px; background: var(--ink); opacity: .8; }
+
+/* The starter sheet: today's panel language (cream sheet, round corners), full height below the status band. */
+.veil { position: absolute; inset: 0; background: rgba(250, 244, 229, .55); z-index: 1; }
+.sheet { position: absolute; left: 10px; right: 10px; top: calc(var(--status) + 8px); bottom: calc(var(--gesture) + 8px); z-index: 5; background: var(--paper); border-radius: 26px; display: flex; flex-direction: column; padding: 18px 16px 14px; overflow: hidden; }
+.sheet h2 { font-size: 26px; line-height: 1.1; margin: 0 0 4px; }
+.sheet .sub { font-size: 14px; color: var(--muted); margin: 0 0 10px; line-height: 1.35; }
+
+.stage { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; background: var(--white); border: 2.5px solid var(--ink); border-radius: 22px; padding: 10px 14px 12px; }
+.floor { position: relative; width: 100%; flex: 1; min-height: 0; }
+.spot { position: absolute; left: 0; right: 0; bottom: 6px; margin: 0 auto; height: min(calc(100% - 12px), 300px); aspect-ratio: 1; }
+.ground { position: absolute; left: 10%; right: 10%; bottom: 0; height: 26%; border-radius: 50%; background: var(--biome); border: 2.5px solid var(--ink); }
+.dancer { position: absolute; left: 0; right: 0; top: 0; bottom: 9%; width: 100%; height: 91%; object-fit: contain; transform-origin: 50% 92%; }
+.dancer.twirl { animation: twirl 1.2s ease-in-out infinite; }
+.dancer.sway { animation: sway 1.2s ease-in-out infinite; }
+.dancer.shuffle { animation: shuffle 1.2s ease-in-out infinite; }
+@keyframes twirl { 0% { transform: scaleX(1) rotate(0deg); } 25% { transform: scaleX(.15) rotate(-6deg); } 50% { transform: scaleX(-1) rotate(0deg); } 75% { transform: scaleX(-.15) rotate(6deg); } 100% { transform: scaleX(1) rotate(0deg); } }
+@keyframes sway { 0%, 100% { transform: rotate(-9deg); } 50% { transform: rotate(9deg); } }
+@keyframes shuffle { 0%, 100% { transform: translateX(-16px); } 25% { transform: translateX(0) translateY(-6px); } 50% { transform: translateX(16px); } 75% { transform: translateX(0) translateY(-6px); } }
+@media (prefers-reduced-motion: reduce) { .dancer { animation: none !important; } }
+
+.about { width: 100%; text-align: left; }
+.about h3 { font-size: 24px; font-weight: 800; line-height: 1.1; margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
+.chip { border: 2px solid var(--c, var(--ink)); color: var(--c, var(--ink)); background: var(--white); border-radius: 999px; padding: 1px 10px; font-weight: 800; font-size: 13px; }
+.chip.fill { background: var(--c); color: var(--white); }
+.about p { font-size: 14px; line-height: 1.4; margin: 0 0 4px; }
+.about .wild { color: var(--muted); font-size: 13px; margin: 0; }
+
+.pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 10px; }
+.pick button { border: 0; background: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; font-weight: 800; font-size: 13px; }
+.pick .disc { width: 64px; height: 64px; border-radius: 50%; background: var(--tile); border: 3px solid var(--line); display: grid; place-items: center; overflow: hidden; }
+.pick .disc img { width: 88%; height: 88%; object-fit: contain; }
+.pick button[aria-pressed="true"] .disc { border-color: var(--green); background: var(--cream); outline: 3px solid var(--green); outline-offset: 2px; }
+.pick button[aria-pressed="false"] span:last-child { color: var(--muted); font-weight: 700; }
+
+.primary { width: 100%; min-height: 52px; border: 0; border-radius: 999px; background: var(--green); color: var(--white); font-weight: 800; font-size: 18px; }
+.later { text-align: center; color: var(--muted); font-size: 13px; margin: 8px 0 0; }
+
+/* After the choice */
+.joined .stage { justify-content: center; }
+.joined h3 { text-align: center; }
+.joined .about p { text-align: center; }
+.joined .chips { justify-content: center; }
+
+/* Short phones: a smaller stage, the same order */
+.short .sheet { padding: 14px 12px 10px; }
+.short .sheet h2 { font-size: 22px; }
+.short .sheet .sub { font-size: 13px; margin-bottom: 8px; }
+.short .about h3 { font-size: 20px; margin-bottom: 4px; }
+.short .about p { font-size: 13px; }
+.short .pick { margin: 8px 0 8px; }
+.short .pick .disc { width: 52px; height: 52px; }
+.short .primary { min-height: 46px; font-size: 16px; }
+.short .later { margin-top: 6px; font-size: 12px; }
+
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .stage-col { order: -1; } }
+@media (max-width: 460px) { .phone { padding: 0; border: 0; border-radius: 0; } .screen { border-radius: 0; } .wrap { padding: 0 10px; } }

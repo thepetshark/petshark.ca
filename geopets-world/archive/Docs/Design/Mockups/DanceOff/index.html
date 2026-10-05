@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dance-Off capture scene: GeoPets World mockup</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <h1>Dance-Off</h1>
+  <p class="lede">A playable mockup of catching a Wildling, one of the game's own creatures, from a sighting on the map to the lasso. The open parts are here as switchable options: what the player does while their Wildling dances, and how the scene shows it is working. The creatures are placeholder stand-ins: simple low-poly models with idle, walk and flourish animations of their own. Every number is a placeholder.</p>
+</header>
+
+<main class="wrap layout">
+  <aside class="panel" aria-label="Controls">
+    <section>
+      <h2>Play</h2>
+      <p class="note">Tap the Burrback on the map, then play the scene in the phone. Or jump to a moment:</p>
+      <div class="jumps" id="jumps"></div>
+    </section>
+    <section>
+      <h2>While your Wildling dances</h2>
+      <div class="choice" id="opt-control" role="radiogroup" aria-label="Dance control"></div>
+    </section>
+    <section>
+      <h2>How progress shows</h2>
+      <div class="choice" id="opt-progress" role="radiogroup" aria-label="Progress display"></div>
+    </section>
+    <section>
+      <h2>Phone</h2>
+      <div class="choice" id="opt-size" role="radiogroup" aria-label="Phone size"></div>
+    </section>
+    <section>
+      <h2>Try other outcomes</h2>
+      <label class="row">Burrback's level <input type="range" id="target-level" min="1" max="50" step="1"><output id="target-level-out"></output></label>
+      <p class="note">Changes the chance on each lasso.</p>
+      <div class="choice small" id="opt-lasso" role="radiogroup" aria-label="Lasso outcome"></div>
+      <div class="choice small" id="opt-stay" role="radiogroup" aria-label="After a failed dance"></div>
+    </section>
+    <section class="readout" id="readout" aria-live="polite"></section>
+  </aside>
+
+  <section class="stage-col">
+    <div class="phone" id="phone">
+      <div class="screen" id="screen">
+        <div class="map" id="map">
+          <img class="map-img" src="assets/map-default.png" alt="The world map at the default zoom, with today's interface">
+          <button type="button" class="sighting" id="sighting" aria-label="Burrback, a Wildling on the map">
+            <span class="pulse" id="pulse"></span><img src="assets/burrback-map.png" alt="">
+          </button>
+        </div>
+        <div class="scene" id="scene" hidden>
+          <img class="backdrop" src="assets/stage.jpg" alt="">
+          <canvas id="gl" aria-label="Burrback and your Wildling on the map"></canvas>
+          <svg class="fx" id="fx" aria-hidden="true"></svg>
+          <div class="hud">
+            <button type="button" class="leave" id="leave" aria-label="Leave">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M26 18H14V46H26" fill="none" stroke="#24483B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 32H52M42 22L52 32L42 42" fill="none" stroke="#24483B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="plate" id="plate"></div>
+          </div>
+          <div class="banner" id="banner" aria-live="polite"></div>
+          <div class="dock" id="dock"></div>
+          <div class="sheet" id="sheet" hidden></div>
+          <div class="modal" id="modal" hidden></div>
+        </div>
+        <div class="band status" aria-hidden="true"><span class="time">9:41</span><span class="cutout"></span><span class="sys"><i></i><i></i><b></b></span></div>
+        <div class="band gesture" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <p class="caption" id="caption"></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>The creatures are placeholders, rendered live with three.js. The stage is the game's closest-zoom map with its interface removed, and the map screen is an unmodified in-game capture. Map imagery © Mapbox © OpenStreetMap. Browser mockup only.</p>
+</footer>
+
+<script src="vendor/three-gltf.min.js"></script>
+<script src="assets/models/burrback.js"></script>
+<script src="assets/models/emberglide.js"></script>
+<script src="assets/models/petalwisp.js"></script>
+<script src="assets/models/tidehaven.js"></script>
+<script src="assets/models/hollowwing.js"></script>
+<script src="assets/models/bramblekin.js"></script>
+<script src="assets/models/grovehorn.js"></script>
+<script src="stage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

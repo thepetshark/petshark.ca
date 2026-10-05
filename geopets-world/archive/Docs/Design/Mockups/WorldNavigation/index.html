@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:,">
+  <title>GeoPets · World navigation study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="review-header">
+    <div class="eyebrow">GEOPETS / INTERACTION STUDY</div>
+    <div class="headline-row"><div><h1>A little navigation.<br><span>A lot more world.</span></h1><p class="lede">Two ways to keep five destinations one tap away.</p></div></div>
+    <div class="review-toolbar">
+      <div class="segmented" role="group" aria-label="Comparison layout"><button type="button" data-layout="both" aria-pressed="true">Compare both</button><button type="button" data-layout="a" aria-pressed="false">A · Strip</button><button type="button" data-layout="b" aria-pressed="false">B · Floating</button></div>
+      <button class="reset-button" type="button" id="reset">Reset previews <span aria-hidden="true">↺</span></button>
+    </div>
+  </header>
+  <main>
+    <section class="comparison" aria-label="Interactive portrait navigation concepts">
+      <article class="concept" data-concept="a"><div class="concept-heading"><span class="letter">A</span><div><h2>The simple strip</h2><p>One familiar, continuous home for navigation.</p></div></div><div class="phone" id="phone-a" data-variant="a" aria-label="Option A, simple bottom strip, 390 by 844"></div><div class="concept-caption"><span class="caption-dot"></span>Predictable placement. More of the map is covered.</div></article>
+      <article class="concept" data-concept="b"><div class="concept-heading"><span class="letter">B</span><div><h2>Room to explore <span class="recommendation">Chosen</span></h2><p>Larger Profile and Home controls frame three equal actions.</p></div></div><div class="phone" id="phone-b" data-variant="b" aria-label="Option B, floating controls, 390 by 844"></div><div class="concept-caption"><span class="caption-dot"></span>Strong outer controls, with the map visible between destinations.</div></article>
+    </section>
+    <section class="review-notes" aria-label="Review guidance">
+      <div><span class="note-number">01</span><h3>Try the Profile edge panel</h3><p>Tap the avatar. Settings, sample coins and the Home energy reserve open upward in a narrow panel. Tap outside to close; that tap does nothing underneath.</p></div>
+      <div><span class="note-number">02</span><h3>Five buttons. Five destinations.</h3><p>Collection is the field guide. Inventory stays centered; all three middle actions have equal weight. Market opens <strong>My Sales</strong>. Home switches to <strong>World</strong> while you are at Home.</p></div>
+      <div><span class="note-number">03</span><h3>Only the navigation is being studied</h3><p>Destination content and Home are placeholders. Coins and energy are illustrative; values, capacity and progression remain <strong>TBD</strong>. Public market browsing is tied to market locations.</p></div>
+    </section>
+  </main>
+  <footer class="review-footer"><span>390 × 844 · portrait · local interactive mockup</span><span>Esc / Back closes the panel or current destination. No account or cloud connection.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

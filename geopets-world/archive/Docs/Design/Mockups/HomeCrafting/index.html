@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:,">
+  <title>GeoPets · Home crafting study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="study">
+    <aside class="review" aria-label="Mockup review controls">
+      <p class="eyebrow">GEOPETS / HOME CRAFTING</p>
+      <h1>A little work<br>at home.</h1>
+      <p class="intro">Turn gathered ingredients into something useful. Tap a building, add work, then collect its finished goods.</p>
+      <p class="scope"><strong>Placeholder buildings.</strong> The Mill and Bakery are original vector studies based on the simple Cottage shape the Home had at the time.</p>
+      <div class="size-picker" role="group" aria-label="Portrait size">
+        <button data-size="standard" aria-pressed="true">390 × 844</button>
+        <button data-size="compact" aria-pressed="false">360 × 640</button>
+      </div>
+      <h2 class="control-title">Review a state</h2>
+      <div class="state-picker" role="group" aria-label="Preview fixture">
+        <button data-state="idle">Home · idle</button>
+        <button data-state="mill">Mill</button>
+        <button data-state="bakery">Bakery</button>
+        <button data-state="missing">Missing ingredient</button>
+        <button data-state="working">Working + queued</button>
+        <button data-state="full">Queue full</button>
+        <button data-state="ready">Ready to collect</button>
+        <button data-state="pending">Connection pending</button>
+        <button data-state="retry">Retry request</button>
+        <button data-state="arrange">Arrange</button>
+        <button data-state="invalid">Invalid placement</button>
+        <button data-state="world">Visit World</button>
+      </div>
+      <button class="advance" data-review-action="advance">Advance the study clock by 30s</button>
+      <p class="fixture-note">State buttons reset this browser study's sample inventory and queues. Visiting World or Inventory does not reset them.</p>
+      <details class="assumptions">
+        <summary>Proposed values and boundaries</summary>
+        <ul>
+          <li>Mill: 2 wheat → 1 flour, 30 seconds.</li>
+          <li>Bakery: 1 flour + 1 egg + 1 water → 1 biscuit, 60 seconds.</li>
+          <li>3 slots per station. Ingredients are spent when work is accepted.</li>
+          <li>Completed goods hold their slot until collection. No cancellation in this first slice.</li>
+          <li>No Energy cost, construction, unlocks, real account or backend.</li>
+        </ul>
+        <p>All values and station names are proposals. Timers use one shared mocked engine with saved timestamps during this page visit.</p>
+      </details>
+    </aside>
+    <div class="preview-column">
+      <section id="phone" class="phone" data-size="standard" aria-label="Portrait Home crafting prototype">
+        <div id="scene" class="scene"></div>
+        <div class="status-bar" aria-hidden="true"><span>9:41</span><span class="status-symbols">••• <span class="battery"></span></span></div>
+        <div id="scene-controls" class="scene-controls"></div>
+        <div id="notifications" class="notifications" aria-live="polite" aria-atomic="false"></div>
+        <nav id="navigation" class="bottom-nav" aria-label="Primary navigation"></nav>
+        <div class="gesture" aria-hidden="true"></div>
+        <div id="overlay-root"></div>
+      </section>
+      <p class="interaction-note">Tap Mill or Bakery. Use Arrange to move a building. Outside taps and Escape/Back close the active panel; the closing tap does not activate anything behind it.</p>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

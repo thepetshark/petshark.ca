@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="icon" href="data:,"><title>Geo Pets World · Wooden traps</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="study">
+    <aside class="review">
+      <p class="eyebrow">GEOPETS / CAPTURE STUDY</p><h1>A biscuit.<br>A little patience.</h1>
+      <p>Craft a wooden trap. Choose a spot on the map. Come back to find out who visited. Wildlings are the creatures that visit the traps.</p>
+      <div class="sizes"><button data-size="390" class="selected">390 × 844</button><button data-size="360">360 × 640</button></div>
+      <h2>Walk through the loop</h2><div class="fixtures">
+        <button data-state="world">Map layers</button><button data-state="many">30-trap list</button>
+        <button data-state="craft">Craft a trap</button><button data-state="bag">Pack your bag</button>
+        <button data-state="choose-trap">1 · Trap type</button><button data-state="choose-bait">2 · Bait</button>
+        <button data-state="place">3 · Map location</button><button data-state="confirm-place">4 · Confirm</button>
+        <button data-state="waiting">Waiting</button><button data-state="ready">Ready to open</button>
+        <button data-state="success">A visitor!</button><button data-state="empty">Empty trap</button>
+        <button data-state="collection">Your Wildlings</button><button data-state="home">Traps from Home</button>
+        <button data-state="expired">Expired / removed</button>
+      </div>
+      <h2>Try the interaction</h2><p>The trap shortcut is always above Workers. Open it, choose Place trap, then pick a trap, bait and location. Only final confirmation spends your supplies.</p>
+      <div class="time-controls"><button id="wait-minute">Advance 60s</button><button id="wait-day">Advance 24h</button></div>
+      <h2>Text notifications</h2><p>Use the small icons on the right to hide workers or traps. Their lists and timers keep working. Rapid presses show the three-row stack.</p>
+      <div class="feedback-controls"><button data-feedback="info">White info</button><button data-feedback="range">Red / bold range</button><button data-feedback="warning">Amber warning</button><button data-feedback="burst">Rapid burst</button></div>
+      <p class="feedback-note">Each message holds for 1s, then fades for 0.5s. New messages go below older ones. Previous messages still holding become 50% opaque without restarting their timer.</p>
+      <section class="proposal"><strong>Prototype values</strong><p>5 Wood → 1 trap / 30s.<br>1 trap + 1 Biscuit per placement.<br>60s wait, then 24h to collect.</p><p>Both successful and empty traps say “Ready to open”. Uncollected traps break; nobody receives their contents.</p><p>Illustrations, Wildling names and the zero-stock trap/bait types are layout placeholders. This is a browser study with sample state, not Firebase or live gameplay.</p></section>
+    </aside>
+    <div class="preview">
+      <section id="phone" aria-label="Portrait trap prototype">
+        <div class="map" aria-hidden="true"></div><div class="status" aria-hidden="true"><b>9:41</b><span>● ▰</span></div>
+        <div class="player" aria-label="Player position"><span></span></div>
+        <div id="markers"></div><button id="map-input" aria-label="Choose a trap position on the map" hidden></button>
+        <div id="placement-pin" hidden><img src="assets/trap.svg" alt=""><i></i></div>
+        <div id="placement-hint" hidden>Tap the map to choose a spot</div>
+        <div class="shortcuts"><button id="traps" aria-label="Open traps"><img src="assets/trap.svg" alt=""><b id="trap-count">4</b></button><button id="workers" aria-label="Open workers"><img src="../VisualIdentity/assets/icons/worker.svg" alt=""><b>2</b></button></div>
+        <div id="map-toggles" aria-label="Map visibility"><button data-map-layer="workers" aria-label="Show workers on map" aria-pressed="true"><img src="../VisualIdentity/assets/icons/worker.svg" alt=""></button><button data-map-layer="traps" aria-label="Show traps on map" aria-pressed="true"><img src="assets/trap.svg" alt=""></button></div>
+        <div id="layers"></div><div id="notices" aria-live="polite"></div><div id="text-notices" aria-live="polite" aria-atomic="false"></div>
+        <nav aria-label="Primary navigation"><button data-nav="profile" class="large"><img src="../VisualIdentity/assets/icons/profile.svg" alt="Profile"></button><button data-nav="collection"><img src="../VisualIdentity/assets/icons/collection.svg" alt="Wildlings"></button><button data-nav="bag"><img src="../VisualIdentity/assets/icons/inventory.svg" alt="Inventory"></button><button data-nav="market"><img src="../VisualIdentity/assets/icons/market.svg" alt="My Sales"></button><button data-nav="home" class="large"><img src="../VisualIdentity/assets/icons/home.svg" alt="Home"></button></nav>
+        <div class="attribution">© Mapbox © OpenStreetMap</div>
+      </section>
+      <p class="caption">Interaction study · tap outside a panel or press Escape to close</p>
+    </div>
+  </main><script src="text-notifications.js"></script><script src="app.js"></script>
+</body>
+</html>

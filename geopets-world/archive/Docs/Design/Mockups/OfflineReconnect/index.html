@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Geo Pets World · Connection pause study</title>
+  <link rel="stylesheet" href="../StartupAccounts/styles.css">
+  <style>
+    .review-rail h1{font-size:37px}
+    .review-rail .rail-buttons{display:grid;grid-template-columns:1fr 1fr}
+    .review-rail .rail-buttons button{min-height:44px}
+    .review-rail .scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+    .scenario-grid button{min-height:44px;border:1px solid #c6d2be;border-radius:9px;background:#f8f9f0;font-size:12px;padding:8px}
+    .scenario-grid button[aria-pressed="true"]{background:#dce8d4;border-color:#769b75;font-weight:700}
+    .phone{background:#b8cba8}
+    #screen{position:relative;height:100%}
+    .phone .artwork{z-index:-1;filter:saturate(.82)}
+    .scene{height:100%;position:relative;display:flex;flex-direction:column;pointer-events:none}
+    .scene-top{display:flex;align-items:center;gap:9px;padding:42px 16px 14px;color:#254935}
+    .scene-top .mark{font:700 22px Georgia,serif;flex:1;text-shadow:0 1px #f5f4e6}
+    .scene-top .fake-control{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:#fbf9edf0;box-shadow:0 3px 14px #294a3528;font-size:18px}
+    .location-chip{align-self:center;background:#f9f8e9ed;padding:9px 15px;border-radius:16px;color:#3d674b;font-size:12px;font-weight:700;box-shadow:0 3px 14px #294a3528}
+    .scene-bottom{margin-top:auto;padding:0 16px 95px;display:flex;justify-content:space-between;gap:10px}
+    .scene-bottom span{background:#fffdf2e8;border-radius:13px;padding:10px 14px;font-size:11px;font-weight:700;color:#456449}
+    .pause-overlay{position:absolute;inset:0;z-index:5;display:flex;align-items:flex-end;background:linear-gradient(#15362d91,#142f29ac);padding:0;overflow:hidden}
+    .pause-sheet{width:100%;background:#faf9f1;border-radius:26px 26px 0 0;padding:13px 23px max(27px,env(safe-area-inset-bottom));box-shadow:0 -9px 40px #0f2c2773;max-height:calc(100% - 95px);overflow-y:auto}
+    .pause-sheet .handle{margin-bottom:21px}
+    .pause-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:15px;background:#e8eedf;color:#34634c;font-size:24px;font-weight:700;margin-bottom:16px}
+    .pause-icon.warn{background:#f0e5d4;color:#946524}
+    .pause-icon.error{background:#f2e4df;color:#954f3c}
+    .pause-tag{font-size:10px;font-weight:700;letter-spacing:1.6px;color:#6a8566;margin:0 0 9px}
+    .pause-sheet h2{font:500 28px/1.13 Georgia,serif;letter-spacing:-.5px;margin:0 0 10px;color:#243e34}
+    .pause-copy{font-size:14px;line-height:1.5;color:#607467;margin:0 0 17px}
+    .pause-note{display:flex;align-items:flex-start;gap:8px;padding:12px 13px;background:#eef2e7;border-radius:12px;color:#526b59;font-size:12px;line-height:1.45;margin:0 0 17px}
+    .pause-note span:first-child{font-size:15px;line-height:1}
+    .pause-sheet .primary{margin-top:9px}
+    .pause-sheet .primary:disabled{opacity:.65}
+    .pause-small{font-size:11px;line-height:1.45;color:#758677;text-align:center;margin:12px 0 0}
+    .checks{display:grid;gap:7px;margin:3px 0 19px}
+    .check{display:flex;align-items:center;gap:9px;min-height:25px;font-size:12px;color:#718173}
+    .check .symbol{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#e5eadf;color:#5b795c;font-size:12px;font-weight:700;flex:none}
+    .check.current{color:#294e3c;font-weight:700}.check.current .symbol{background:#d9e8d4}
+    .check.done{color:#486c50}.check.done .symbol{background:#d6e9cf}
+    .check.wait{color:#8b7954}.check.wait .symbol{background:#f2e6ce}
+    .ready-toast{position:absolute;top:91px;left:17px;right:17px;z-index:6;background:#fbfbf0;border:1px solid #d0ddc5;border-radius:13px;padding:13px 15px;box-shadow:0 8px 30px #193c2c4a;color:#2f5d44;font-size:13px;font-weight:700;line-height:1.4}
+    .start-screen{height:100%;padding:59px 24px 22px;display:flex;flex-direction:column}
+    .start-screen .brand{margin-top:0}.start-screen .welcome{margin-top:auto}
+    .start-screen .welcome p{margin-bottom:17px}
+    .start-screen .welcome .primary{margin-bottom:0}
+    @media(max-width:690px){.review-rail .scenario-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<main class="review">
+  <div class="phone" id="phone" aria-label="Portrait connection pause preview">
+    <div class="artwork" aria-hidden="true"></div>
+    <div id="screen"></div>
+  </div>
+  <aside class="review-rail">
+    <p class="eyebrow">GEOPETS WORLD · DESIGN STUDY</p>
+    <h1>Stay in your world.</h1>
+    <p class="review-lead">A portrait pause and reconnect study. The current Home or map stays in place while account, progress and time are checked.</p>
+    <div class="review-warning"><strong>Interactive mockup only</strong><p>These screens use simulated events. No account, network request or saved game is touched.</p></div>
+    <label class="rail-label" for="state-picker">Review a state</label>
+    <select id="state-picker">
+      <option value="offline">Connection lost</option>
+      <option value="reconnecting">Reconnecting</option>
+      <option value="saving">Checking saved progress</option>
+      <option value="clock-failure">Time check failed</option>
+      <option value="displaced">Account moved</option>
+      <option value="ready">Back in the world</option>
+      <option value="start">Start screen after displacement</option>
+    </select>
+    <div class="rail-buttons"><button id="advance" type="button">Advance check →</button><button id="reset" type="button">Reset</button></div>
+    <label class="rail-label">Simulate an event</label>
+    <div class="scenario-grid">
+      <button data-state="offline" type="button">Lose connection</button>
+      <button data-state="clock-failure" type="button">Time unavailable</button>
+      <button data-state="displaced" type="button">Account moved</button>
+      <button data-state="saving" type="button">Save still syncing</button>
+    </div>
+    <p class="state-note" id="state-note" role="status" aria-live="polite"></p>
+    <p class="rail-footnote">Advance represents simulated backend results.</p>
+  </aside>
+</main>
+<script>
+(() => {
+  'use strict';
+  const phone = document.getElementById('phone');
+  const screen = document.getElementById('screen');
+  const picker = document.getElementById('state-picker');
+  const note = document.getElementById('state-note');
+  const notes = {
+    offline: 'Gameplay actions block immediately. A short notice delay may avoid flicker, but the command gate never waits for the animation.',
+    reconnecting: 'Connection and account checks can overlap while play stays blocked. This screen does not claim Wi-Fi alone is enough.',
+    saving: 'A pending native save or market handoff remains owned and must settle safely. This study does not clear or repeat it.',
+    'clock-failure': 'Internet and account access may work while the online time sample fails. Retry time without presenting this as an ordinary network outage.',
+    displaced: 'An old save generation cannot resume. Return to the start screen with the existing account-moved notice.',
+    ready: 'The retained map or Home scene is revealed after every readiness check succeeds. No routine full bootstrap is shown.',
+    start: 'The displaced account returns to the existing start path; no automatic transfer is offered.'
+  };
+  let state = new URLSearchParams(location.search).get('state') || 'offline';
+  if (!Object.hasOwn(notes, state)) state = 'offline';
+  if (new URLSearchParams(location.search).get('size') === '360') phone.classList.add('small');
+  const world = `<div class="scene" aria-hidden="true"><div class="scene-top"><span class="mark">Geo Pets World</span><span class="fake-control">⌖</span><span class="fake-control">⚙</span></div><div class="location-chip">Your neighborhood</div><div class="scene-bottom"><span>WORLD MAP</span><span>HOME</span></div></div>`;
+  const checks = (which) => `<div class="checks" aria-label="Reconnect steps">
+    <div class="check done"><span class="symbol">✓</span><span>Connection found</span></div>
+    <div class="check ${which === 'account' ? 'current' : 'done'}"><span class="symbol">${which === 'account' ? '·' : '✓'}</span><span>${which === 'account' ? 'Confirming account' : 'Account confirmed'}</span></div>
+    <div class="check ${which === 'save' ? 'wait' : which === 'time' ? 'done' : ''}"><span class="symbol">${which === 'save' ? '·' : which === 'time' ? '✓' : '○'}</span><span>${which === 'save' ? 'Checking saved progress' : which === 'time' ? 'Saved progress checked' : 'Check saved progress'}</span></div>
+    <div class="check ${which === 'time' ? 'current' : ''}"><span class="symbol">${which === 'time' ? '·' : '○'}</span><span>${which === 'time' ? 'Checking current time' : 'Check current time'}</span></div></div>`;
+  const sheet = (icon, tone, tag, title, copy, detail, action, target, extra='') =>
+    `<div class="pause-overlay"><section class="pause-sheet" role="dialog" aria-modal="true" aria-labelledby="pause-title"><div class="handle"></div><div class="pause-icon ${tone}" aria-hidden="true">${icon}</div><p class="pause-tag">${tag}</p><h2 id="pause-title">${title}</h2><p class="pause-copy">${copy}</p>${extra || `<div class="pause-note"><span aria-hidden="true">◇</span><span>${detail}</span></div>`}${action ? `<button type="button" class="primary" data-next="${target}">${action}</button>` : '<button type="button" class="primary" disabled>Checking…</button>'}${extra ? '' : '<p class="pause-small">Gameplay actions are paused.</p>'}</section></div>`;
+  function render(focus=false) {
+    picker.value = state;
+    note.textContent = notes[state];
+    document.querySelectorAll('.scenario-grid [data-state]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.state === state)));
+    document.getElementById('advance').disabled = state === 'ready' || state === 'start';
+    if (state === 'start') {
+      screen.innerHTML = `<section class="start-screen"><div class="brand"><span class="brand-title">Geo Pets</span><span class="brand-world">WORLD</span><div class="brand-rule"></div></div><div class="welcome"><h2>Welcome back.</h2><p>Choose an account to continue.</p><button type="button" class="primary" data-next="offline">PREVIEW CONNECTION PAUSE</button></div><p class="splash-footer">INTERACTIVE DESIGN PREVIEW</p></section>`;
+    } else {
+      let overlay = '';
+      if (state === 'offline') overlay = sheet('⌁','warn','CONNECTION PAUSED','Your world is paused','Reconnect to keep exploring. Your current view will stay here.','We’ll check your account and progress before actions resume.','TRY RECONNECTING','reconnecting');
+      if (state === 'reconnecting') overlay = sheet('↻','','RECONNECTING','Finding your way back','We’re checking your connection and account. Your world will reopen here.',null,null,null,checks('account'));
+      if (state === 'saving') overlay = sheet('◇','','ALMOST READY','Checking your progress','A save or trade may still be finishing. We’ll wait before you continue.',null,null,null,checks('save'));
+      if (state === 'clock-failure') overlay = sheet('!','error','TIME CHECK NEEDED','Time check needs another try','You’re connected, but we couldn’t confirm the current time. Try again to resume.','Your world stays here while time is checked.','TRY TIME CHECK','reconnecting');
+      if (state === 'displaced') overlay = sheet('↗','warn','ACCOUNT MOVED','This account moved','This account was opened on another device. Return to the start screen to continue.','This device can’t make changes to that account.','BACK TO START','start');
+      screen.innerHTML = world + (state === 'ready' ? '<div class="ready-toast" role="status">You’re back in your world.</div>' : overlay);
+    }
+    if (focus) screen.querySelector('button:not([disabled])')?.focus({preventScroll:true});
+  }
+  function set(next, focus=false) { state = next; render(focus); }
+  picker.addEventListener('change', () => set(picker.value));
+  document.getElementById('advance').addEventListener('click', () => set(({offline:'reconnecting',reconnecting:'saving',saving:'ready','clock-failure':'reconnecting',displaced:'start'})[state] || state));
+  document.getElementById('reset').addEventListener('click', () => set('offline'));
+  document.querySelectorAll('.scenario-grid [data-state]').forEach(button => button.addEventListener('click', () => set(button.dataset.state)));
+  screen.addEventListener('click', event => { const button = event.target.closest('[data-next]'); if (button) set(button.dataset.next, true); });
+  render();
+})();
+</script>
+</body>
+</html>

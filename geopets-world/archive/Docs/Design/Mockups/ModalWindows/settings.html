@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:,">
+  <title>GeoPets · Settings modal preview</title>
+  <style>
+    :root { --ink:#24483b; --muted:#58695b; --paper:#faf4e5; --cream:#f1ead8; --green:#366950; --line:#d5ddc9; --gold:#9d713f; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none !important; }
+    body { margin:0; padding:24px; background:#e7eddf; color:var(--ink); font-family:Nunito,Arial,sans-serif; }
+    .review { max-width:740px; margin:0 auto; }
+    h1 { font-size:22px; margin:0 0 7px; }
+    .note { color:var(--muted); font-size:13px; line-height:1.45; margin:0 0 18px; }
+    .phone { position:relative; width:390px; height:844px; max-width:100%; margin:auto; overflow:hidden; border:7px solid #243a30; border-radius:32px; box-shadow:0 20px 50px #243a3050; background:#567b66 url('../WorldNavigation/assets/map-background.png') center/cover no-repeat; }
+    .world { position:absolute; inset:0; background:linear-gradient(#4d70551a,#25493622); }
+    .world-label { position:absolute; top:73px; left:25px; border-radius:16px; padding:9px 15px; color:var(--ink); background:#faf4e5e6; font-weight:800; font-size:14px; }
+    .reopen { position:absolute; top:76px; right:24px; display:none; border:0; border-radius:14px; padding:10px 14px; background:var(--paper); color:var(--ink); font:800 14px Nunito,Arial,sans-serif; cursor:pointer; }
+    .world-nav { position:absolute; bottom:24px; left:22px; right:22px; display:flex; justify-content:space-between; gap:8px; }
+    .world-nav span { flex:1; text-align:center; padding:12px 0; border-radius:18px; background:#faf4e5dd; font-size:18px; }
+    .shade { position:absolute; inset:0; background:rgba(8,31,22,.58); }
+    .scene-link { position:absolute; top:14px; right:23px; z-index:1; color:var(--paper); font-size:12px; font-weight:800; text-decoration:underline; text-underline-offset:3px; }
+    .sheet { position:absolute; inset:42px 14px 48px; display:flex; flex-direction:column; min-height:0; border-radius:23px; background:var(--paper); box-shadow:0 14px 35px #0b291f55; overflow:hidden; }
+    .sheet-head { flex:none; padding:21px 20px 0; }
+    .head-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    h2 { margin:0; font-size:31px; line-height:1.2; }
+    .close { border:0; border-radius:12px; background:var(--cream); color:var(--ink); font-size:22px; font-weight:700; width:38px; height:38px; cursor:pointer; }
+    .tabs { display:flex; gap:6px; margin-top:19px; }
+    .tabs button { flex:1; min-width:0; border:0; border-radius:13px; background:var(--cream); color:var(--ink); height:44px; font:700 14px Nunito,Arial,sans-serif; cursor:pointer; }
+    .tabs button[aria-selected=true] { background:var(--green); color:var(--paper); }
+    .body { flex:1; min-height:0; overflow:auto; margin:12px 20px 0; padding:2px 2px 12px 0; scrollbar-color:#bac9b7 transparent; }
+    .panel { display:none; }
+    .panel.active { display:block; }
+    h3 { margin:8px 0 11px; font-size:23px; }
+    h4 { margin:17px 0 10px; font-size:13px; letter-spacing:.07em; }
+    p { margin:0 0 13px; line-height:1.36; }
+    .account-name { font-size:17px; font-weight:800; margin-bottom:14px; }
+    .hint { font-size:15px; color:var(--muted); }
+    .action { display:block; width:100%; min-height:44px; border:0; border-radius:13px; padding:9px 12px; margin:0 0 10px; background:var(--cream); color:var(--ink); text-align:center; font:800 14px Nunito,Arial,sans-serif; cursor:pointer; }
+    .action.primary { background:var(--green); color:var(--paper); }
+    .option { width:100%; min-height:72px; display:flex; align-items:center; gap:10px; border:0; border-radius:14px; background:var(--cream); color:var(--ink); padding:8px 10px; margin-bottom:12px; text-align:left; cursor:pointer; }
+    .option.selected { background:var(--green); color:var(--paper); }
+    .option-icon { flex:none; display:grid; place-items:center; width:48px; height:48px; border-radius:50%; background:#faf4e577; font-size:24px; }
+    .option-word { flex:1; min-width:0; }
+    .option-word strong { display:block; font-size:15px; }
+    .option-word small { display:block; font-size:12px; line-height:1.23; margin-top:2px; }
+    .tick { flex:none; border:5px solid var(--line); border-radius:50%; width:21px; height:21px; background:var(--paper); }
+    .selected .tick { border-color:var(--paper); background:var(--green); }
+    .control { display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:44px; margin-bottom:10px; font-size:16px; }
+    .control button, .two button { border:0; border-radius:12px; background:var(--cream); color:var(--ink); height:44px; padding:0 14px; font:800 14px Nunito,Arial,sans-serif; cursor:pointer; }
+    .control button.on { background:var(--green); color:var(--paper); }
+    .two { display:flex; gap:6px; margin-bottom:10px; }
+    .two button { flex:1; }
+    .tiny { font-size:12px; color:var(--muted); margin:0 0 12px; }
+    .sheet-foot { flex:none; padding:10px 20px 18px; border-top:1px solid var(--line); background:var(--paper); }
+    .sheet-foot button { margin:0; }
+    .phone-only { padding:0; background:#243a30; }
+    .phone-only .review>h1,.phone-only .review>.note { display:none; }
+    .phone-only .phone { width:100vw; height:100dvh; max-width:none; border:0; border-radius:0; box-shadow:none; }
+    @media(max-width:430px) { body{padding:0;background:#243a30;} .review{width:100%;} .review>h1,.review>.note{display:none;} .phone{width:100vw;height:100dvh;max-width:none;border:0;border-radius:0;box-shadow:none;} }
+  </style>
+</head>
+<body>
+  <main class="review">
+    <h1>Settings · portrait modal preview</h1>
+    <p class="note">Review the inset, scroll, and Account / Map / Dev tabs. This local preview uses representative current Settings content; controls do not change game data.</p>
+    <section class="phone" aria-label="390 by 844 portrait Settings modal preview">
+      <div class="world"><span class="world-label">World map</span><button class="reopen" type="button">Open Settings preview</button><div class="world-nav"><span>◉</span><span>▦</span><span>◇</span><span>⌂</span></div></div>
+      <div class="shade"></div>
+      <a class="scene-link" href="market.html?phone">View Market ↗</a>
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+        <header class="sheet-head"><div class="head-row"><h2 id="settings-title">Settings</h2><button class="close" type="button" aria-label="Close Settings">×</button></div>
+          <div class="tabs" role="tablist" aria-label="Settings tabs"><button id="tab-account" type="button" role="tab" aria-controls="panel-account" aria-selected="true">Account</button><button id="tab-map" type="button" role="tab" aria-controls="panel-map" aria-selected="false">Map</button><button id="tab-dev" type="button" role="tab" aria-controls="panel-dev" aria-selected="false">Dev</button></div>
+        </header>
+        <div class="body" id="settings-scroll">
+          <section class="panel active" id="panel-account" role="tabpanel" aria-labelledby="tab-account"><h3>Your account</h3><p class="account-name">Playing as a guest</p><p class="hint">Create an account to keep this same player when you sign in on another device.</p><button class="action primary" type="button">CREATE ACCOUNT</button><button class="action" type="button">Sign in to another account</button></section>
+          <section class="panel" id="panel-map" role="tabpanel" aria-labelledby="tab-map"><h4>PLAYER RING</h4>
+            <button class="option" type="button"><span class="option-icon">◯</span><span class="option-word"><strong>Soft edge</strong><small>A soft band of light just inside the edge of your reach</small></span><span class="tick"></span></button>
+            <button class="option" type="button"><span class="option-icon">◌</span><span class="option-word"><strong>Marching dashes</strong><small>A dashed edge that creeps slowly round</small></span><span class="tick"></span></button>
+            <button class="option selected" type="button"><span class="option-icon">◎</span><span class="option-word"><strong>Pulse</strong><small>A ripple leaves your spot every few seconds</small></span><span class="tick"></span></button>
+            <h4>PLAYER MARKER</h4>
+            <button class="option" type="button"><span class="option-icon">◈</span><span class="option-word"><strong>Ground compass</strong><small>A disc on the ground that points the way you face</small></span><span class="tick"></span></button>
+            <button class="option selected" type="button"><span class="option-icon">◆</span><span class="option-word"><strong>Waypoint gem</strong><small>A gem that hovers and turns above your spot</small></span><span class="tick"></span></button>
+            <button class="option" type="button"><span class="option-icon">⌁</span><span class="option-word"><strong>Hometown tether</strong><small>A thread of light up to your Hometown</small></span><span class="tick"></span></button>
+            <button class="option" type="button"><span class="option-icon">—</span><span class="option-word"><strong>None</strong><small>No marker: only your ring shows</small></span><span class="tick"></span></button>
+          </section>
+          <section class="panel" id="panel-dev" role="tabpanel" aria-labelledby="tab-dev"><h4>WORLD MAP LIGHTING</h4><div class="control"><span>Real-world time</span><button type="button" class="on">ON</button></div><p>Quick preview</p><div class="two"><button type="button">Day</button><button type="button">Night</button></div><div class="control"><span>Time of day</span><button type="button">Day · 12:00</button></div><div class="control"><span>Realtime shadows</span><button type="button" class="on">ON</button></div><h4>MAP CACHES</h4><button class="action" type="button">Clear map tile cache</button><p class="tiny">Source tiles will download again.</p><button class="action" type="button">Clear generated terrain</button><p class="tiny">Meshes and masks will regenerate.</p><h4>MAP CAMERA</h4><div class="control"><span>Unlimited camera drag</span><button type="button">OFF</button></div><h4>MARKET</h4><div class="control"><span>Market selling</span><button type="button">OFF</button></div><p class="tiny">Checking market permission…</p></section>
+        </div>
+        <footer class="sheet-foot"><button class="action" type="button" id="back">BACK TO WORLD</button></footer>
+      </div>
+    </section>
+  </main>
+  <script>
+    const tabs=[...document.querySelectorAll('[role=tab]')];
+    const panels=[...document.querySelectorAll('[role=tabpanel]')];
+    const scroll=document.getElementById('settings-scroll');
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(item=>item.setAttribute('aria-selected',String(item===tab)));panels.forEach(panel=>panel.classList.toggle('active',panel.id===tab.getAttribute('aria-controls')));scroll.scrollTop=0;}));
+    document.querySelectorAll('.option').forEach(option=>option.addEventListener('click',()=>{const group=option.closest('#panel-map');const siblings=[...group.querySelectorAll('.option')];const index=siblings.indexOf(option);const range=index<3?siblings.slice(0,3):siblings.slice(3);range.forEach(item=>item.classList.toggle('selected',item===option));}));
+    const shade=document.querySelector('.shade'),sheet=document.querySelector('.sheet'),link=document.querySelector('.scene-link'),reopen=document.querySelector('.reopen');
+    function setOpen(open){shade.hidden=!open;sheet.hidden=!open;link.hidden=!open;reopen.style.display=open?'none':'block';}
+    document.querySelector('.close').addEventListener('click',()=>setOpen(false));
+    document.getElementById('back').addEventListener('click',()=>setOpen(false));
+    shade.addEventListener('click',()=>setOpen(false));
+    reopen.addEventListener('click',()=>setOpen(true));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false);});
+    if(new URLSearchParams(location.search).has('phone')) document.body.classList.add('phone-only');
+  </script>
+</body>
+</html>

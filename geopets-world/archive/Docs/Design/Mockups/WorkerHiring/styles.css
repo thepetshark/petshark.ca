@@ -1,0 +1,186 @@
+@font-face{font-family:Nunito;src:url('assets/fonts/Nunito-Variable.ttf') format('truetype');font-weight:200 1000}
+:root{
+  --ink:#24483b;--muted:#58695b;--paper:#faf4e5;--cream:#f1ead8;--green:#366950;--green-deep:#2b5842;--line:#d5ddc9;--gold:#9d713f;
+  --energy:#e9be6a;--warn-ink:#7a4a0e;--warn-bg:#fbeacb;--warn-line:#e2b25f;--range:#b8322a;--range-bg:#fbe3de;--range-line:#e9a397;
+  --error-ink:#7e2c20;--error-bg:#f7e0da;--error-line:#d9a091;--off-bg:#e3e5d9;--off-ink:#8a968c;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#e3e9da;color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-size:15px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #d99a2b;outline-offset:2px}
+button:disabled{cursor:default}
+
+/* review page */
+.study{display:grid;grid-template-columns:340px auto;gap:48px;justify-content:center;padding:40px 24px 60px}
+.review{align-self:start;position:sticky;top:24px}
+.review h1{font-size:42px;font-weight:800;line-height:1;letter-spacing:-1px;margin:0 0 14px}
+.lede{color:var(--muted);line-height:1.5;margin:0 0 22px}
+.picker{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.picker button{border:1.5px solid #c9d5c3;background:#f7f5ea;border-radius:12px;padding:8px 12px;font-weight:700;font-size:14px}
+.picker button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:var(--paper)}
+.states button{font-size:13px;padding:6px 10px;border-radius:10px}
+.about{border-top:1.5px solid #cbd6c4;padding-top:16px;line-height:1.5}
+.about h2{font-size:22px;font-weight:800;margin:0 0 6px}
+.about p{margin:0 0 10px;color:#3d5a4d}
+.about .concept-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px}
+.taps{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:12px 0;padding:12px 14px;border-radius:14px;background:#f5f3e8;border:1.5px solid #d6dfcf}
+.taps b{font-size:24px;font-weight:800;line-height:1;text-align:right}
+.taps span{align-self:center;color:var(--muted);font-size:13px}
+.about .rec{padding:10px 12px;border-left:4px solid var(--gold);background:#f5efdd;border-radius:0 10px 10px 0;color:#4e3f24}
+.views a{color:var(--green);font-weight:700}
+.stage{display:flex;gap:28px;align-items:flex-start}
+.frame{display:flex;flex-direction:column;gap:8px}
+.frame figcaption{font-weight:800;font-size:16px}
+.frame figcaption small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+figure{margin:0}
+body.grid .study{grid-template-columns:1fr}
+body.grid .review{position:static;max-width:900px}
+body.grid .review .about{display:none}
+body.grid .stage{overflow-x:auto;padding-bottom:12px}
+body.capture .review{display:none}
+body.capture .study{grid-template-columns:auto;padding:12px}
+
+/* the phone: everything inside is flat, no pseudo shadows */
+.phone{position:relative;width:412px;height:883px;overflow:hidden;border-radius:30px;background:#6f9a4a url('assets/grove-plate-412x883.png') 0 0/412px 883px no-repeat;border:0;outline:6px solid #fbf8ee;outline-offset:0;flex:none;user-select:none}
+.phone .i{width:20px;height:20px;flex:none}
+.map-svg{position:absolute;inset:0;pointer-events:none}
+.hud{position:absolute;top:6px;right:12px;display:flex;gap:8px}
+.chip{display:flex;align-items:center;gap:8px;height:32px;min-width:92px;padding:0 14px 0 8px;border-radius:16px;background:#faf4e5f0;border:2px solid transparent;font-weight:800;font-size:16px;justify-content:space-between}
+.chip.warn{border-color:var(--warn-line);background:var(--warn-bg);color:var(--warn-ink)}
+.chip .delta{position:absolute;top:6px;right:calc(100% + 6px);font-size:13px;font-weight:800;color:var(--paper);background:var(--gold);border-radius:8px;padding:1px 7px}
+.hud .chip{position:relative}
+
+/* pins drawn like the game's worker pins */
+.pin{position:absolute;width:46px;height:46px;border-radius:14px;background:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;transform:translate(-50%,-100%)}
+.pin:after{content:'';position:absolute;bottom:-8px;left:50%;width:12px;height:12px;background:var(--paper);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+.pin img{width:32px;height:32px}
+.pin .count{position:absolute;top:-10px;right:-12px;min-width:24px;height:24px;border-radius:12px;background:var(--green);color:var(--paper);font-weight:800;font-size:13px;display:grid;place-items:center;padding:0 6px;border:2px solid var(--paper)}
+.pin.ready .count{background:var(--gold)}
+
+/* bottom sheet, same place as the game's gathering sheet */
+.sheet{position:absolute;left:12px;right:12px;bottom:136px;padding:16px 16px 16px;border-radius:24px;background:var(--paper);border:1.5px solid var(--line)}
+.head{display:flex;align-items:center;gap:12px}
+.tile{width:46px;height:46px;border-radius:14px;background:var(--cream);display:grid;place-items:center;flex:none}
+.tile img{width:34px;height:34px}
+.head h3{margin:0;font-size:21px;font-weight:800;line-height:1.1}
+.head p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.x{margin-left:auto;width:40px;height:40px;border-radius:12px;border:0;background:var(--cream);display:grid;place-items:center;flex:none}
+.x img{width:18px;height:18px}
+.row{display:flex;align-items:center;gap:10px;margin-top:14px}
+.balance{margin-left:auto;flex:none;display:flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:700}
+.balance b{color:var(--ink);font-size:17px}
+.balance.low b{color:var(--warn-ink)}
+.stepper{display:flex;align-items:center;gap:4px}
+.stepper button{width:44px;height:44px;border-radius:14px;border:2px solid var(--line);background:#fffdf6;font-size:24px;font-weight:800;line-height:1;display:grid;place-items:center;color:var(--green)}
+.stepper button:disabled{color:#bcc5b8;border-color:#e6e9de;background:#f6f3e8}
+.stepper output{min-width:44px;text-align:center;font-size:26px;font-weight:800}
+.stepper-label{font-weight:700;font-size:14px;color:var(--muted);margin-right:4px}
+.cta{width:100%;min-height:54px;margin-top:14px;border:0;border-radius:16px;background:var(--green);color:var(--paper);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 10px 0 18px}
+.cta .price{margin-left:auto}
+.cta.center{justify-content:center}
+.cta:disabled{background:var(--off-bg);color:var(--off-ink)}
+.cta:disabled .price{background:#d3d7c9;color:var(--off-ink)}
+.cta:disabled .price img{opacity:.55}
+.cta.busy{background:var(--green-deep)}
+.cta.secondary{background:transparent;border:2px solid var(--green);color:var(--green);min-height:44px;font-size:16px}
+.price{display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px 0 8px;border-radius:11px;background:var(--green-deep);font-weight:800;font-size:17px;color:var(--paper)}
+.price img{width:20px;height:20px}
+.spin{width:18px;height:18px;border-radius:50%;border:3px solid #fffdf5;border-right-color:transparent;animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}.pop{animation:none!important}}
+
+/* notices: what happened, whether anything was spent, and what to do */
+.note{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:11px 12px;border-radius:14px;border:1.5px solid;font-size:14px;line-height:1.35}
+.note img{width:22px;height:22px;flex:none;margin-top:-1px}
+.note b{font-weight:800}
+.note.warn{background:var(--warn-bg);border-color:var(--warn-line);color:var(--warn-ink)}
+.note.range{background:var(--range-bg);border-color:var(--range-line);color:var(--range)}
+.note.range b{font-size:15px}
+.note.error{background:var(--error-bg);border-color:var(--error-line);color:var(--error-ink)}
+.note.ok{background:#e6efdc;border-color:#b9cfa9;color:#2f5a3e}
+.note.soft{background:#f3efe0;border-color:#e2dcc6;color:var(--muted)}
+.note .mark{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:900;font-size:14px;color:var(--paper)}
+.note.range .mark{background:var(--range)}
+.note.error .mark{background:#a4432f}
+.harvest{display:flex;align-items:center;gap:10px;margin-top:14px;padding:8px 8px 8px 12px;border-radius:14px;background:#f6e9c9;border:1.5px solid #e6cf97;font-weight:800}
+.harvest img{width:26px;height:26px}
+.harvest button{margin-left:auto;border:0;border-radius:11px;background:var(--gold);color:var(--paper);font-weight:800;padding:9px 16px}
+.today-body{text-align:center;color:var(--ink);font-size:16px;line-height:1.35;margin:14px 0 0}
+.today-notice{text-align:center;color:var(--muted);font-size:13px;margin:18px 0 0;min-height:18px}
+
+/* concept B: each tap hires one */
+.big{min-height:64px;font-size:20px}
+.crew{display:flex;align-items:center;gap:6px;margin-top:14px;min-height:40px}
+.crew .head-token{width:34px;height:34px;border-radius:50%;background:var(--cream);border:2px solid var(--line);display:grid;place-items:center}
+.crew .head-token img{width:26px;height:26px}
+.crew .head-token.pending{border:2px dashed var(--green);background:#fffdf6}
+.crew .head-token.failed{border-color:#a4432f;background:var(--error-bg)}
+.crew-text{font-size:14px;color:var(--muted);font-weight:700}
+.link{margin-left:auto;border:0;background:none;color:var(--green);font-weight:800;text-decoration:underline;text-underline-offset:3px;padding:8px 2px}
+
+/* concept C: the card on the map */
+.card{position:absolute;left:18px;right:18px;top:204px;padding:14px;border-radius:22px;background:var(--paper);border:2px solid var(--ink)}
+.card:after{content:'';position:absolute;left:50%;bottom:-11px;width:18px;height:18px;background:var(--paper);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+.card .head h3{font-size:19px}
+.card .tile{width:40px;height:40px}
+.amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.amount{border:2px solid var(--green);background:#fffdf6;border-radius:16px;padding:8px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:92px}
+.amount .n{font-size:26px;font-weight:900;line-height:1;color:var(--green)}
+.amount .w{font-size:12px;font-weight:700;color:var(--muted);margin-top:-4px}
+.amount .price{height:28px;font-size:15px;padding:0 9px 0 6px;background:var(--green)}
+.amount .price img{width:17px;height:17px}
+.amount:disabled{border-color:#e0e3d6;background:#f4f1e5}
+.amount:disabled .n{color:#b3bcb0}
+.amount:disabled .price{background:#dcdfd2;color:#909a90}
+.amount:disabled .price img{opacity:.5}
+.amount .need{font-size:11px;font-weight:800;color:var(--warn-ink);margin-top:-2px}
+.amount.chosen{background:var(--green);border-color:var(--green)}
+.amount.chosen .n,.amount.chosen .w{color:var(--paper)}
+.amount.chosen .price{background:var(--green-deep)}
+.amount.failed{border-color:#a4432f;background:var(--error-bg)}
+.card .note{margin-top:10px}
+.card .balance{margin:10px 0 0;justify-content:flex-end}
+
+/* concept D: the nearby list */
+.panel{position:absolute;left:12px;right:12px;top:48px;bottom:136px;border-radius:24px;background:var(--paper);border:1.5px solid var(--line);display:flex;flex-direction:column}
+.panel header{padding:16px 16px 10px;display:flex;align-items:flex-start;gap:10px;border-bottom:1.5px solid var(--line)}
+.panel header h3{margin:0;font-size:24px;font-weight:800}
+.panel header p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.places{flex:1;overflow:hidden;padding:4px 12px}
+.place{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1.5px solid #ebe6d4}
+.place:last-child{border-bottom:0}
+.place .tile{width:42px;height:42px}
+.place .tile img{width:30px;height:30px}
+.place h4{margin:0;font-size:16px;font-weight:800}
+.place p{margin:1px 0 0;font-size:13px;color:var(--muted)}
+.place .stepper{margin-left:auto}
+.place .stepper button{width:38px;height:38px;border-radius:12px;font-size:20px}
+.place .stepper output{min-width:30px;font-size:21px}
+.place.far{opacity:.62}
+.place.far .far-note{margin-left:auto;font-size:13px;font-weight:800;color:var(--range);text-align:right}
+.place .done{margin-left:auto;font-size:13px;font-weight:800;color:#2f5a3e;display:flex;align-items:center;gap:4px}
+.place .done img{width:18px;height:18px}
+.place .ready-tag{font-size:12px;font-weight:800;color:var(--paper);background:var(--gold);border-radius:8px;padding:3px 8px;border:0}
+.panel footer{padding:10px 14px 14px;border-top:1.5px solid var(--line)}
+.panel footer .cta{margin-top:10px}
+.panel footer .note{margin-top:0;margin-bottom:10px}
+.empty{padding:18px 8px;color:var(--muted);line-height:1.45}
+
+/* toast: flat, under the chips, same voice as the button that caused it */
+.toast{position:absolute;left:12px;right:60px;top:46px;display:flex;align-items:center;gap:10px;padding:10px 10px 10px 14px;border-radius:16px;background:var(--ink);color:var(--paper);font-weight:700;font-size:15px}
+.toast img{width:22px;height:22px}
+.toast small{display:block;font-weight:600;font-size:12px;opacity:.8}
+.toast button{margin-left:auto;border:2px solid #fffdf5;background:transparent;color:var(--paper);border-radius:11px;padding:7px 14px;font-weight:800}
+.pop{animation:pop .35s ease-out}
+@keyframes pop{from{transform:translateY(-8px);opacity:0}to{transform:none;opacity:1}}
+.dim{position:absolute;inset:0;background:#1a3a2e33}
+
+/* selection and the tab form of the nearby list */
+.stepper button.held,.stepper button:active{background:#e3eed8;border-color:var(--green)}
+.panel.roster{top:92px;bottom:133px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 14px 0;padding:4px;border-radius:14px;background:var(--cream)}
+.tabs button{border:0;border-radius:11px;background:transparent;min-height:40px;font-weight:800;font-size:15px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px}
+.tabs button[aria-selected=true]{background:var(--paper);color:var(--ink);outline:1.5px solid var(--line)}
+.tab-count{min-width:22px;height:22px;border-radius:11px;background:var(--gold);color:var(--paper);font-size:12px;display:grid;place-items:center;padding:0 6px}
+.panel header .x{align-self:center}

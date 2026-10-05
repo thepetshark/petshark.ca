@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>House catalog: GeoPets World mockup</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <h1>House catalog</h1>
+  <p class="lede">A mockup of the gated catalog. Tapping your house opens it: buildings are bought with items, never coins, and gated by your house level, the buildings you own and their levels. Upgrades and levelling up the house live here too. Hometown is the player's own village; the house level is the player's level, raised with items and with library stars earned by catching species. Buildings, costs and gates come from the capture-ladder study. The player's buildings and items are made up, and every number is a placeholder.</p>
+</header>
+
+<main class="wrap layout">
+  <aside class="panel" aria-label="Controls">
+    <section>
+      <h2>Jump to</h2>
+      <div class="jumps" id="jumps"></div>
+    </section>
+    <section>
+      <h2>Phone</h2>
+      <div class="choice" id="opt-size" role="radiogroup" aria-label="Phone size"></div>
+    </section>
+    <section>
+      <h2>The example player</h2>
+      <p class="note">The same player as in the Library view: house level 6, with 21 library stars. They own nine buildings and carry what the Items section of each page shows. Buying really spends their items in the mockup; Reset puts them back.</p>
+      <button type="button" class="plain" id="reset">Reset the player</button>
+    </section>
+    <section>
+      <h2>What is proposed here</h2>
+      <ul class="note list">
+        <li>The catalog opens from your house. The house level is your level (a Town Hall model), so the house is where you grow.</li>
+        <li>Every locked or unaffordable row says exactly why: the house level, the building it needs, or the items it's short of.</li>
+        <li>A missing item offers its route: make it at the building that crafts it, or find it on the market (drops and other biomes' goods included).</li>
+        <li>Levelling up the house asks for items and library stars, with a link to the library.</li>
+      </ul>
+    </section>
+  </aside>
+
+  <section class="stage-col">
+    <div class="phone" id="phone">
+      <div class="screen" id="screen">
+        <img class="bg" src="assets/hometown.png" alt="Today's Hometown, an unmodified in-game capture">
+        <div class="lib" id="cat" role="dialog" aria-label="House catalog"></div>
+        <div class="toast" id="toast" role="status" hidden></div>
+        <div class="band status" aria-hidden="true"><span class="time">9:41</span><span class="cutout"></span><span class="sys"><i></i><i></i><b></b></span></div>
+        <div class="band gesture" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <p class="caption" id="caption"></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>The Hometown behind the panel is an unmodified in-game capture from 20 September 2026. The building symbols are drawn for this mockup in the game's icon language, and the item symbols are the game's own. Browser mockup only.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

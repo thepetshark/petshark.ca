@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light"><link rel="icon" href="data:,">
+  <title>Geo Pets World · Request board study</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="study">
+    <aside class="review">
+      <p class="eyebrow">GEOPETS / REQUEST BOARD</p><h1>Small supplies.<br>A little good.</h1>
+      <p>A little noticeboard for the supplies the neighbours need: Willow at the wildlife shelter, Rowan at the recovery nursery and Juniper, a travelling Geo Vet. Browse the goods at a glance, then select a note to see the whole exchange.</p>
+      <div class="sizes"><button data-size="390">390 × 844</button><button data-size="360">360 × 640</button></div>
+      <h2>Review a state</h2>
+      <div class="fixtures">
+        <button data-fixture="board">Request board</button><button data-fixture="home">Home entrance</button>
+        <button data-fixture="missing">Missing supplies</button><button data-fixture="confirm">Delivery check</button>
+        <button data-fixture="offline">Offline</button><button data-fixture="uncertain">Response lost</button>
+        <button data-fixture="recipe">Care recipe</button><button data-fixture="history">Completed orders</button>
+      </div>
+      <section class="proposal"><strong>The proposal</strong><p>Nine pinned notes with item icons, quantities, Coin rewards and ready checks. The selected request stays below the board in portrait.</p><p>Care Bench: 2 Blackberries + 1 Water → 1 Berry tonic, 60s. This recipe, all rewards and the nine-slot capacity are proposals. The study uses local sample data.</p></section>
+      <p class="note">The airship dock is a separate future idea: larger cargo deliveries, with cadence and rules still to discuss.</p>
+    </aside>
+    <div class="preview">
+      <section id="phone" aria-label="Portrait request board prototype">
+        <div class="home" aria-hidden="true"></div>
+        <button id="board-entrance" aria-label="Open request board"><span class="board-art"><i></i><i></i><i></i></span><span class="entrance-tag">Requests <b>2</b></span></button>
+        <div id="wallet"><img src="../VisualIdentity/assets/icons/coin.svg" alt="Coins"><strong id="coins">100</strong></div>
+        <div id="layers"></div><div id="notifications" aria-live="polite"></div>
+      </section>
+      <p class="note instruction">Tap a note to select it. Delivery has a separate confirmation. Outside taps and Escape/Back close the active sheet.</p>
+    </div>
+  </main><script src="app.js"></script>
+</body>
+</html>

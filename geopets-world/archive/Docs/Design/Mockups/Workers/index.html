@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>GeoPets · Workers interaction study</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>.cancel-backdrop{position:absolute;inset:0 0 auto;border:0;height:170px;background:transparent}.modal-card{position:relative;z-index:1}</style>
+</head>
+<body>
+  <main class="study">
+    <header class="review" aria-label="Review controls">
+      <p class="eyebrow">GEOPETS / WORKER MANAGEMENT STUDY</p>
+      <h1>Work, where<br>the world is.</h1>
+      <p>A worker is a hired helper who harvests a resource patch while the player explores. Portrait interaction study only. Assignment data, location, and cancellation are illustrative.</p>
+      <div class="state-picker" role="group" aria-label="Preview state">
+        <button data-state="empty">Empty</button><button data-state="working">Working</button><button data-state="ready">Ready</button><button data-state="mixed" class="selected">Mixed</button>
+      </div>
+    </header>
+    <section class="phone" aria-label="390 by 844 worker-management prototype">
+      <div class="map" role="img" aria-label="Existing world-map background"></div>
+      <div class="status"><span>9:41</span><span>● ● ●</span></div>
+      <button class="worker-shortcut" aria-label="Open workers" aria-expanded="false"><img src="../VisualIdentity/assets/icons/worker.svg" alt=""><span class="badge"></span></button>
+      <div class="focus-chip" hidden><img src="../VisualIdentity/assets/icons/worker.svg" alt="">Woodland coppice<br><b>Map focus only</b></div>
+      <section class="roster" aria-modal="true" role="dialog" aria-label="Your workers" hidden>
+        <header><div><span class="kicker">WORLD ASSIGNMENTS</span><h2>Your workers</h2></div><button class="close" aria-label="Close workers"><img src="../VisualIdentity/assets/icons/close.svg" alt=""></button></header>
+        <p class="summary"></p><div class="worker-list"></div>
+      </section>
+      <section class="cancel-modal" role="dialog" aria-modal="true" aria-label="Cancel assignment" hidden><button class="cancel-backdrop" data-action="cancel-backdrop" aria-label="Close cancellation confirmation"></button>
+        <div class="modal-card"><img class="warning-icon" src="../VisualIdentity/assets/icons/worker.svg" alt=""><span class="kicker">END THIS ASSIGNMENT?</span><h3>Cancel woodland harvest?</h3><p>The hire cost and all harvest will be forfeited. You will receive no refund or output.</p><button class="confirm">Forfeit and cancel</button><button class="keep">Keep working</button></div>
+      </section>
+      <nav aria-label="Primary navigation"><button aria-label="Profile" class="large profile"><img src="../VisualIdentity/assets/icons/profile.svg" alt=""></button><button aria-label="Collection"><img src="../VisualIdentity/assets/icons/collection.svg" alt=""></button><button aria-label="Inventory"><img src="../VisualIdentity/assets/icons/inventory.svg" alt=""></button><button aria-label="My Sales"><img src="../VisualIdentity/assets/icons/market.svg" alt=""></button><button aria-label="Home" class="large home"><img src="../VisualIdentity/assets/icons/home.svg" alt=""></button></nav>
+      <div class="attribution">© Mapbox © OpenStreetMap · interaction study</div>
+    </section>
+    <p class="notes">Try the left shortcut in working, ready, or mixed states. “Show on map” focuses a patch without moving the player. Click outside a panel or press Escape to close it.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

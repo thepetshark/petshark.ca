@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Capture ladder: GeoPets World proposal</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <h1>Capture ladder</h1>
+    <p class="lede">Critters caught in traps leave drops. Drops make the next tier's traps, bait and lassos, and lassos catch Wildlings. Critters are ordinary animals; Wildlings are the game's own creatures. This is a proposal, and every number is a placeholder.</p>
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" data-view="pyramid" aria-selected="true">The pyramid</button>
+      <button type="button" role="tab" data-view="tiers" aria-selected="false">Tiers and drops</button>
+      <button type="button" role="tab" data-view="biomes" aria-selected="false">Biomes and trade</button>
+      <button type="button" role="tab" data-view="hometown" aria-selected="false">Hometown tech tree</button>
+      <button type="button" role="tab" data-view="wildlings" aria-selected="false">Wildlings</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="view-pyramid" class="view" aria-labelledby="pyr-title">
+    <div class="pyr-layout">
+      <div class="pyr-figure">
+        <h2 id="pyr-title">What one Legendary catch costs</h2>
+        <p class="readout" id="readout" aria-live="polite"></p>
+        <div class="pyr" id="pyr"></div>
+        <div class="bill" id="bill" aria-live="polite"></div>
+        <p class="how" id="how"></p>
+      </div>
+      <form class="dials" id="dials" aria-label="Balance dials">
+        <h3>Chance a baited trap catches something</h3>
+        <div id="success-dials"></div>
+        <h3>Drops per release</h3>
+        <label class="dial"><span>Average</span><input type="range" id="yield" min="1" max="3" step="0.25"><output id="yield-out"></output></label>
+        <h3>Traps out at once</h3>
+        <label class="dial"><span>Traps</span><input type="range" id="traps-out" min="5" max="100" step="5"><output id="traps-out-out"></output></label>
+        <p class="dial-note" id="traps-note"></p>
+        <label class="toggle"><input type="checkbox" id="habitat"> Set traps where critters like to be <small>Each critter has favourite places and times, like parks at dawn. A trap set there catches 1.5 times as often, up to 98%.</small></label>
+        <label class="toggle"><input type="checkbox" id="charm"> Use charms <small>+15 points on every trap from Uncommon up; charms are made from rare drops</small></label>
+        <button type="button" id="reset" class="plain">Reset to the proposal's numbers</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="view-tiers" class="view" hidden aria-label="Tiers and drops">
+    <div class="tier-picker" id="tier-picker" role="group" aria-label="Tier"></div>
+    <div class="tier-body">
+      <div class="col">
+        <h2>Catch them with</h2>
+        <p class="note" id="catch-note"></p>
+        <div id="farm" class="farm"></div>
+        <div id="catch-with" class="stack"></div>
+      </div>
+      <div class="col col-mid">
+        <h2 id="critter-title"></h2>
+        <div id="critter-list" class="critters"></div>
+      </div>
+      <div class="col">
+        <h2>Their drops make</h2>
+        <p class="note" id="make-note"></p>
+        <div id="drops-make" class="stack"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-biomes" class="view" hidden aria-label="Biomes and trade">
+    <div class="home-top">
+      <div>
+        <h2>If you can reach only one biome</h2>
+        <p class="note">Big biomes may keep a player in one place for a long time. Nothing is out of reach: goods from other biomes are bought on the market, paid for by selling your own and by request boards. Pick a home to see what its player catches, buys and sells at each tier.</p>
+      </div>
+      <div class="home-picker" id="home-picker" role="group" aria-label="Home biome"></div>
+    </div>
+    <div class="home" id="home"></div>
+    <div class="basics" id="basics"></div>
+    <h2>Every home at a glance</h2>
+    <div class="glance" id="glance"></div>
+  </section>
+
+  <section id="view-hometown" class="view" hidden aria-label="Hometown tech tree">
+    <p class="note wide-note">Buildings are bought with items, never coins. The house level is the player's level: each level costs a set of items and a number of library stars, and opens the next buildings. Up to house level 3, everything is built from goods found in every biome. Upgrades add a queue slot and speed. Tap any building for its recipe and gates.</p>
+    <div class="tech" id="tech"></div>
+  </section>
+
+  <section id="view-wildlings" class="view" hidden aria-label="Wildlings">
+    <div class="w-top">
+      <div>
+        <h2>Catching a Wildling</h2>
+        <ol class="steps">
+          <li>Tap a Wildling you can see on the map.</li>
+          <li>Pick one of your own Wildlings to dance.</li>
+          <li>If your dancer's level is high enough and its dance is one the wild Wildling loves, the wild one is entranced.</li>
+          <li>While it is entranced, throw a lasso strong enough for its level.</li>
+        </ol>
+        <p class="note">Every player starts by choosing one of three baby Wildlings, so there is always a dancer. The dance rules below are a proposal.</p>
+      </div>
+      <figure class="cycle" id="cycle"></figure>
+    </div>
+    <h2>Starters</h2>
+    <div class="starters" id="starters"></div>
+    <h2>Lassos</h2>
+    <div class="lassos" id="lassos"></div>
+    <h2>All eighteen families</h2>
+    <div class="families" id="families"></div>
+  </section>
+</main>
+
+<footer class="wrap foot" id="foot"></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-live="polite" aria-label="Details"></aside>
+
+<script src="data.js"></script>
+<script src="portraits.js"></script>
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

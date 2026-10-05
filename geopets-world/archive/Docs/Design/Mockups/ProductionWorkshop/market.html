@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23366950'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='20' fill='white'%3E%24%3C/text%3E%3C/svg%3E">
+<title>Geo Pets World · Market workshop proposal</title>
+<style>
+@font-face{font-family:Nunito;src:url('../VisualIdentity/assets/fonts/Nunito-Variable.ttf') format('truetype');font-weight:200 1000;font-display:swap}
+@font-face{font-family:Fraunces;src:url('../VisualIdentity/assets/fonts/Fraunces-Variable.ttf') format('truetype');font-weight:100 900;font-display:swap}
+:root{--paper:#faf4e5;--card:#fffdf7;--ink:#24483b;--muted:#58695b;--green:#366950;--pale:#e9efdf;--line:#d5ddc9;--gold:#9d713f;--danger:#a54835;--keyboard:0px}
+*{box-sizing:border-box}body{margin:0;background:#e8eddf;color:var(--ink);font:14px/1.35 Nunito,Arial,sans-serif}button,input{font:inherit}button{border:0;cursor:pointer;color:inherit;touch-action:manipulation}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #2a849b;outline-offset:2px}button:disabled{cursor:default;opacity:.55}a{color:var(--green);font-weight:800}img{object-fit:contain}.review{max-width:1010px;margin:0 auto;padding:24px;display:grid;grid-template-columns:minmax(270px,1fr) auto;gap:28px;align-items:start}.notes{padding:24px;background:#fffdf6;border:1px solid var(--line);border-radius:20px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.5px;color:var(--green);text-transform:uppercase}.notes h1{font:600 32px/1.12 Fraunces,Georgia,serif;margin:8px 0 12px}.notes p{max-width:53ch;margin:0 0 15px}.notes .small{font-size:12px;color:var(--muted)}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.controls button{min-height:44px;border-radius:11px;background:var(--pale);padding:9px 13px;font-weight:800}.controls button[aria-pressed=true]{background:var(--green);color:white}.phone{--pw:390px;--ph:844px;position:relative;width:var(--pw);height:var(--ph);max-width:100vw;overflow:hidden;isolation:isolate;background:var(--paper);border:5px solid #293f34;border-radius:29px;box-shadow:0 14px 34px #24483b30;display:flex;flex-direction:column}.phone.compact{--pw:360px;--ph:640px}.statusbar{height:23px;flex:none;background:var(--card);display:flex;justify-content:space-between;padding:3px 20px;font-size:10px;font-weight:900}.market-head{height:58px;flex:none;background:var(--card);display:flex;gap:9px;align-items:center;padding:5px 11px}.back,.icon-button{width:44px;height:44px;min-width:44px;border-radius:13px;background:var(--pale);font-size:26px;display:grid;place-items:center}.heading{min-width:0;flex:1}.heading small{display:block;font-size:9px;letter-spacing:1.1px;color:var(--muted);font-weight:900}.heading strong{display:block;font:600 20px/1.1 Fraunces,Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.wallet{display:flex;align-items:center;gap:4px;padding:5px 8px;border-radius:18px;background:#f6e9ca;font-weight:900;white-space:nowrap}.wallet img{width:18px;height:18px}.tabs{height:53px;flex:none;background:var(--card);display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:4px 12px 0;border-bottom:1px solid var(--line)}.tab{background:transparent;font-size:15px;font-weight:900;border-bottom:3px solid transparent}.tab[aria-selected=true]{color:var(--green);border-color:var(--green)}.section-head{min-height:49px;flex:none;display:flex;align-items:center;gap:8px;padding:5px 13px;border-bottom:1px solid var(--line)}.section-head .summary{min-width:0;flex:1;font-size:12px;color:var(--muted);font-weight:800}.section-head .summary strong{color:var(--ink);font-size:15px;display:block}.section-head button{min-height:44px;padding:0 12px;background:var(--pale);border-radius:11px;font-weight:900;white-space:nowrap}.section-head .primary{background:var(--green);color:white}.collect-line{min-height:50px;flex:none;margin:7px 12px 0;padding:3px 4px 3px 10px;border-radius:11px;background:#e6efdf;display:flex;gap:6px;align-items:center;font-size:12px;font-weight:800}.collect-line span{flex:1;min-width:0}.collect-line button{min-height:44px;min-width:112px;padding:0 8px;background:var(--green);color:white;border-radius:9px;font-weight:900}.scroll{min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;padding:11px 12px 18px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.offer{position:relative;min-width:0;min-height:112px;padding:20px 3px 5px;background:var(--card);border:1px solid var(--line);border-radius:10px;text-align:center;display:flex;flex-direction:column;align-items:center}.offer img{width:42px;height:42px;flex:none}.offer .qty{position:absolute;top:3px;right:5px;font-size:10px;font-weight:900}.offer .name{font-size:10px;line-height:12px;font-weight:900;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.offer .price{margin-top:auto;color:var(--gold);font-size:11px;font-weight:900}.offer.sold{background:#edf0e7;color:#69796b}.offer.sold img{filter:grayscale(.7);opacity:.7}.sold-tag{position:absolute;top:0;left:0;right:0;height:18px;border-radius:9px 9px 0 0;background:#d4dfd0;color:var(--ink);font-size:9px;font-weight:1000;line-height:18px;letter-spacing:.6px}.offer.own-sold{min-height:144px}.offer.own-sold .collect-card{width:100%;height:44px;min-height:44px;margin-top:3px;border-radius:8px;background:var(--green);color:white;font-size:11px;font-weight:900}.offer.own-sold .price{font-size:11px}.offer.own-active{min-height:116px}.empty{padding:45px 22px;text-align:center;color:var(--muted)}.empty img{width:48px;height:48px;margin:0 auto 10px}.empty h2{font:600 22px Fraunces,Georgia,serif;color:var(--ink);margin:0 0 8px}.empty p{margin:0 0 18px}.empty button{min-height:44px;padding:0 18px;background:var(--green);color:white;border-radius:10px;font-weight:900}.history-row{width:100%;min-height:66px;padding:7px 4px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;background:transparent;text-align:left}.history-row img{width:38px;height:38px}.history-row .copy{flex:1;min-width:0}.history-row strong,.history-row small{display:block}.history-row strong{font-size:13px}.history-row small{color:var(--muted);font-size:11px}.history-row .paid{text-align:right;font-size:11px;color:var(--muted)}.history-row .paid b{display:block;color:var(--gold);font-size:13px}.history-row .collect-history{min-height:44px;padding:0 10px;border-radius:9px;background:var(--green);color:white;font-size:11px;font-weight:900}.notice{min-height:33px;flex:none;padding:7px 13px;color:var(--muted);font-size:11px;background:var(--pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.homebar{height:17px;flex:none;display:grid;place-items:center;background:var(--paper)}.homebar:before{content:'';display:block;width:91px;height:4px;border-radius:5px;background:var(--ink)}.layer{position:absolute;inset:0;z-index:5;background:#142d2599;display:flex;align-items:flex-end}.layer .outside{position:absolute;inset:0;width:100%;height:100%;background:transparent}.sheet{position:relative;width:100%;max-height:calc(100% - 23px);background:var(--card);border-radius:19px 19px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -8px 22px #142d2540}.sheet-header{min-height:60px;padding:8px 13px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}.sheet-header h2{font:600 22px Fraunces,Georgia,serif;margin:0;flex:1}.sheet-header .back{font-size:23px}.sheet-body{min-height:0;overflow-y:auto;padding:13px}.sheet-footer{flex:none;padding:8px 13px max(12px, env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--card)}.main-action{min-height:46px;width:100%;border-radius:11px;background:var(--green);color:white;font-weight:900;font-size:15px}.sub-action{min-height:44px;width:100%;margin-top:5px;background:var(--pale);border-radius:11px;font-weight:900}.selection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.stock-card{min-height:106px;padding:8px 3px;background:var(--paper);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:10px;font-weight:900}.stock-card img{width:43px;height:43px}.stock-card small{color:var(--muted)}.composer-layer{bottom:var(--keyboard);transition:bottom .12s}.composer-layer .sheet{max-height:calc(100% - 18px)}.item-picked{display:flex;align-items:center;gap:11px;padding:9px;background:var(--pale);border-radius:11px;margin-bottom:12px}.item-picked img{width:49px;height:49px}.item-picked strong,.item-picked small{display:block}.item-picked small{color:var(--muted)}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:900;margin-bottom:5px}.number-row{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:6px}.step{min-height:44px;background:var(--pale);border-radius:10px;font-size:22px;font-weight:900}.number-row input{width:100%;min-height:44px;border:1px solid #aabca8;border-radius:10px;background:#fff;padding:7px;text-align:center;font-size:17px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}.unit{font-size:12px;color:var(--muted);min-height:18px}.validation{min-height:18px;color:var(--danger);font-size:11px;font-weight:800}.keyboard{position:absolute;left:0;right:0;bottom:0;height:218px;z-index:8;background:#d5d9d7;border-top:1px solid #abb5b0;padding:7px 5px 11px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.keyboard button{background:#f9faf9;border-radius:5px;min-height:36px;font-size:20px;font-weight:700;box-shadow:0 1px 1px #888}.keyboard .done{background:#afcdb8;color:var(--ink);font-size:14px}.review-item{display:flex;align-items:center;gap:12px;padding:8px 0 17px}.review-item img{width:65px;height:65px;padding:8px;background:var(--pale);border-radius:12px}.review-item strong{font-size:18px}.detail{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.detail span:last-child{font-weight:900;text-align:right}.detail.total{font-size:17px;border:0}.offline-panel{padding:40px 20px;text-align:center}.offline-panel h2{font:600 22px Fraunces,Georgia,serif;margin:0 0 8px}.offline-panel p{color:var(--muted)}.closed{position:absolute;inset:0;z-index:12;display:grid;place-items:center;background:var(--paper);padding:25px;text-align:center}.closed h2{font:600 27px Fraunces,Georgia,serif}.closed button{min-height:48px;padding:0 27px;border-radius:11px;background:var(--green);color:white;font-weight:900}.fixture-flag{font-size:10px;font-weight:900;color:#566f59;letter-spacing:.4px}.phone.compact .scroll{padding-top:7px}.phone.compact .offer{min-height:103px}.phone.compact .offer img{width:38px;height:38px}.phone.compact .section-head{min-height:46px}.phone.compact .offer.own-sold{min-height:138px}@media(max-width:760px){.review{display:block;padding:0}.notes{border-radius:0;margin:0 0 12px}.phone{margin:0 auto}.review>div:last-child{padding-bottom:16px}}
+.phone{display:block;background:#79956f url('../WorldNavigation/assets/map-background.png') center 52%/auto 138% no-repeat}
+.scene-dim{position:absolute;inset:0;background:#12271f91}
+.statusbar{position:absolute;z-index:1;top:0;left:0;right:0;height:25px;background:#1a322b77;color:#fff;display:flex;justify-content:space-between;padding:4px 18px}
+.statusbar,.homebar{pointer-events:none}
+.statusbar .fixture-flag{color:#fff}
+.market-panel{position:absolute;z-index:2;top:37px;bottom:36px;left:11px;right:11px;min-height:0;overflow:hidden;display:flex;flex-direction:column;background:var(--paper);border:1px solid #c7d4bd;border-radius:18px;box-shadow:0 7px 25px #102b2366}
+.phone.compact .market-panel{top:29px;bottom:26px;left:8px;right:8px;border-radius:16px}
+.homebar{position:absolute;z-index:1;left:0;right:0;bottom:2px;background:transparent}.homebar:before{background:#fff}
+.phone.compact .homebar{bottom:0}
+.layer{z-index:5}
+.closed{background:#142d25ac;color:#fff}.closed>div{padding:25px;background:var(--paper);color:var(--ink);border-radius:16px}
+.phone-only{overflow:hidden}.phone-only .review{display:block;max-width:none;margin:0;padding:0}.phone-only .notes{display:none}.phone-only .review>div:last-child{padding:0}.phone-only .phone{--pw:100vw;--ph:100dvh;width:100vw;height:100dvh;max-width:none;margin:0;border:0;border-radius:0;box-shadow:none}
+.picker-scroll{padding-top:8px}.selection-grid{gap:6px}.stock-card{height:80px;min-height:80px;padding:4px 2px;justify-content:flex-start;overflow:hidden}.stock-card img{width:36px;height:36px;flex:none}.stock-card span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:14px}.stock-card small{line-height:13px}.phone.compact .stock-card{height:76px;min-height:76px}.phone.compact .stock-card img{width:32px;height:32px}
+@media(max-width:760px){.phone-only .notes{display:none}}
+</style>
+</head>
+<body>
+<div class="review">
+  <aside class="notes">
+    <div class="eyebrow">Production workshop · proposal · simulated state</div>
+    <h1>Market: Buy &amp; Sell</h1>
+    <p>A clickable portrait proposal for navigating listings and composing a sale. Counts, coins, offers and transactions here are fixture values; this page never contacts the game or Firebase.</p>
+    <div class="controls" aria-label="Review controls">
+      <button data-control="size390" aria-pressed="true">390 × 844</button><button data-control="size360" aria-pressed="false">360 × 640</button>
+      <button data-control="buy">Open Buy</button><button data-control="sell">Open Sell</button>
+      <button data-control="keyboard">Keyboard</button><button data-control="offline">Offline</button><button data-control="nosales">No sales</button><button data-control="reset">Reset fixture</button>
+    </div>
+    <p class="small">Try New listing → scroll the full Sell panel and select an item → edit quantity or price → Review → Post. Back from the form returns to the item grid and keeps the draft. Press and hold +/−, press Escape, or tap outside a sheet. Buy an offer to see its SOLD card. In Sell, collect one payment or all pending payments with no confirmation.</p>
+    <p class="small">Phone backdrop: game map imagery, © Mapbox © OpenStreetMap.</p>
+  </aside>
+  <div><main class="phone" id="phone" aria-label="Interactive portrait market proposal"><div id="app" style="display:contents"></div></main></div>
+</div>
+<script>
+(() => {
+  'use strict';
+  const iconBase = '../PublicMarket/icons/';
+  const products = [
+    {id:'wheat',name:'Wheat',icon:'wheat.png'}, {id:'blackberry',name:'Blackberry',icon:'blackberry.png'},
+    {id:'water',name:'Water',icon:'water.png'}, {id:'egg',name:'Egg',icon:'egg.png'},
+    {id:'log',name:'Softwood',icon:'log.png'}, {id:'apple',name:'Apple',icon:'apple_red.png'},
+    {id:'carrot',name:'Carrot',icon:'carrot.png'}, {id:'fish',name:'Fish',icon:'fish.png'},
+    {id:'tomato',name:'Tomato',icon:'tomato.png'}, {id:'strawberry',name:'Strawberry',icon:'strawberry.png'},
+    {id:'potato',name:'Potato',icon:'potato.png'}, {id:'pepper',name:'Pepper',icon:'pepper_green.png'},
+    {id:'peach',name:'Peach',icon:'peach.png'}, {id:'corn',name:'Corn',icon:'corn.png'},
+    {id:'cherry',name:'Cherry',icon:'cherry.png'}, {id:'beet',name:'Beet',icon:'beet.png'},
+    {id:'leaf',name:'Leaf',icon:'leaf.png'}, {id:'bread',name:'Bread',icon:'bread.png'},
+    {id:'bun',name:'Bun',icon:'bun.png'}, {id:'cheese',name:'Cheese',icon:'cheese.png'},
+    {id:'cookie',name:'Cookie',icon:'cookie.png'}, {id:'rope',name:'Rope',icon:'rope.png'},
+    {id:'basket',name:'Basket',icon:'basket.png'}, {id:'bucket',name:'Bucket',icon:'bucket.png'},
+    {id:'saw',name:'Saw',icon:'saw.png'}, {id:'mortar',name:'Mortar',icon:'mortar.png'},
+    {id:'blue-potion',name:'Blue potion',icon:'potion_phial_blue.png'},
+    {id:'green-potion',name:'Green potion',icon:'potion_phial_green.png'},
+    {id:'yellow-potion',name:'Yellow potion',icon:'potion_phial_yellow.png'}
+  ];
+  const product = id => products.find(x => x.id === id) || products[0];
+  const icon = id => iconBase + product(id).icon;
+  const coin = iconBase + 'coin_gold.png';
+  const fmt = n => Number(n).toLocaleString('en-US');
+  const initialOffers = () => Array.from({length:28},(_,i)=>({id:'offer-'+i,item:products[i%products.length].id,qty:2+(i*3)%19,price:7+(i*7)%43,seller:'Other player',sold:false}));
+  const initialOwn = () => [
+    {id:'mine-1',item:'wheat',qty:8,price:40,sold:false},
+    {id:'mine-2',item:'water',qty:5,price:25,sold:false},
+    {id:'mine-3',item:'blackberry',qty:6,price:30,sold:true,paid:false},
+    {id:'mine-4',item:'egg',qty:4,price:24,sold:true,paid:false},
+    {id:'mine-5',item:'log',qty:12,price:48,sold:false},
+    {id:'mine-6',item:'apple',qty:7,price:28,sold:false},
+    {id:'mine-7',item:'carrot',qty:9,price:27,sold:false},
+    {id:'mine-8',item:'fish',qty:3,price:33,sold:false},
+    {id:'mine-9',item:'blackberry',qty:5,price:25,sold:false},
+    {id:'mine-10',item:'wheat',qty:16,price:64,sold:false},
+    {id:'mine-11',item:'egg',qty:6,price:36,sold:false},
+    {id:'mine-12',item:'water',qty:10,price:40,sold:false},
+    {id:'mine-13',item:'apple',qty:4,price:20,sold:false},
+    {id:'mine-14',item:'carrot',qty:8,price:24,sold:false},
+    {id:'mine-15',item:'log',qty:15,price:60,sold:false},
+    {id:'mine-16',item:'fish',qty:2,price:22,sold:false}
+  ];
+  let state;
+  const app = document.querySelector('#app');
+  const phone = document.querySelector('#phone');
+  function reset() { state={tab:'sell',sub:'listings',layer:null,item:null,draft:{qty:'1',price:'1'},focusedInput:'quantity',dirty:false,pickerScroll:0,keyboard:false,offline:false,closed:false,offers:initialOffers(),own:initialOwn(),stock:Object.fromEntries(products.map((p,i)=>[p.id,[32,18,20,12,24,10,15,8][i]||4+(i*7)%39])),coins:1240,selectedOffer:null,notice:'Fixture market · values are illustrative',size:window.innerWidth<=370?'360':'390'}; render(); }
+  function paidPending(){return state.own.filter(x=>x.sold&&!x.paid)}
+  function activeOwn(){return state.own.filter(x=>!x.sold)}
+  function itemCard(x,kind){
+    const p=product(x.item),sold=kind==='own'&&x.sold||kind==='buy'&&x.sold;
+    const action=kind==='own'&&x.sold?`<button class="collect-card" data-act="collect" data-id="${x.id}">Collect ${fmt(x.price)}</button>`:'';
+    const disabled=sold?'disabled aria-disabled="true"':'';
+    return `<div class="offer ${sold?'sold':''} ${kind==='own'?(x.sold?'own-sold':'own-active'):''}">${sold?'<span class="sold-tag">SOLD</span>':''}<span class="qty">×${fmt(x.qty)}</span><img src="${icon(x.item)}" alt=""><span class="name">${p.name}</span><span class="price">${fmt(x.price)} Coins</span>${action}${!sold?`<button style="position:absolute;inset:0;background:transparent" data-act="offer" data-id="${x.id}" data-kind="${kind}" aria-label="${kind==='own'?'View':'Buy'} ${fmt(x.qty)} ${p.name} for ${fmt(x.price)} Coins" ${disabled}></button>`:''}</div>`;
+  }
+  function historyRow(x){const p=product(x.item);return `<div class="history-row"><img src="${icon(x.item)}" alt=""><span class="copy"><strong>${fmt(x.qty)} × ${p.name}</strong><small>Sold · Today</small></span>${x.paid?`<span class="paid"><b>${fmt(x.price)} Coins</b>Collected</span>`:`<button class="collect-history" data-act="collect" data-id="${x.id}">Collect ${fmt(x.price)}</button>`}</div>`}
+  function body(){
+    if(state.offline)return `<div class="offline-panel"><h2>Market unavailable</h2><p>Reconnect to browse or trade.</p><button class="main-action" data-act="online">Reconnect</button></div>`;
+    if(state.tab==='buy')return `<div class="section-head"><span class="summary"><strong>Live offers</strong>${state.offers.filter(x=>!x.sold).length} available · whole stacks</span></div><div class="scroll"><div class="grid">${state.offers.map(x=>itemCard(x,'buy')).join('')}</div></div>`;
+    if(state.sub==='picker'){
+      const available=products.filter(p=>state.stock[p.id]>0);
+      return `<div class="section-head"><button data-act="listings" aria-label="Back to my listings">‹ Listings</button><span class="summary"><strong>New listing</strong>${available.length} items in stock</span></div><div class="scroll picker-scroll"><div class="selection-grid">${available.map(p=>`<button class="stock-card" data-act="pick" data-id="${p.id}" aria-label="Select ${p.name}, ${fmt(state.stock[p.id])} available"><img src="${icon(p.id)}" alt=""><span>${p.name}</span><small>×${fmt(state.stock[p.id])}</small></button>`).join('')}</div></div>`;
+    }
+    if(state.sub==='history'){
+      const sold=state.own.filter(x=>x.sold);
+      return `<div class="section-head"><button data-act="listings" aria-label="Back to my listings">‹ Listings</button><span class="summary"><strong>History</strong>${sold.length} sales</span></div><div class="scroll">${sold.length?sold.map(historyRow).join(''):`<div class="empty"><img src="${icon('wheat')}" alt=""><h2>No sales yet</h2><button data-act="listings">My listings</button></div>`}</div>`;
+    }
+    const pending=paidPending(),shown=[...pending,...activeOwn()];
+    return `<div class="section-head"><span class="summary"><strong>My listings</strong>${activeOwn().length} active · ${pending.length} sold</span><button data-act="history">History</button><button class="primary" data-act="new">+ New</button></div>${pending.length?`<div class="collect-line"><span>${pending.length} sold · ${fmt(pending.reduce((a,x)=>a+x.price,0))} Coins</span><button data-act="collect-all">Collect All</button></div>`:''}<div class="scroll">${shown.length?`<div class="grid">${shown.map(x=>itemCard(x,'own')).join('')}</div>`:`<div class="empty"><img src="${icon('wheat')}" alt=""><h2>No listings yet</h2><button data-act="new">New listing</button></div>`}</div>`;
+  }
+  function valid(){const q=Number(state.draft.qty),p=Number(state.draft.price),max=state.stock[state.item]||0;return Number.isInteger(q)&&q>=1&&q<=Math.min(max,100000)&&Number.isInteger(p)&&p>=1&&p<=1000000}
+  function layer(){
+    if(!state.layer)return '';
+    if(state.layer==='compose'){
+      const p=product(state.item),qty=Number(state.draft.qty),price=Number(state.draft.price);
+      return `<div class="layer composer-layer" role="presentation"><button class="outside" data-act="outside" aria-label="Dismiss listing form"></button><section class="sheet" role="dialog" aria-modal="true" aria-label="Create listing"><div class="sheet-header"><button class="back" data-act="back" aria-label="Back to items">‹</button><h2>New listing</h2><button class="icon-button" data-act="dismiss" aria-label="Dismiss listing form">×</button></div><div class="sheet-body"><div class="item-picked"><img src="${icon(state.item)}" alt=""><div><strong>${p.name}</strong><small>${fmt(state.stock[state.item])} available</small></div></div><div class="field"><label for="quantity">Quantity</label><div class="number-row"><button class="step" data-step="qty:-1" aria-label="Decrease quantity">−</button><input id="quantity" type="number" min="1" max="100000" inputmode="numeric" value="${state.draft.qty}" aria-label="Quantity"><button class="step" data-step="qty:1" aria-label="Increase quantity">+</button></div></div><div class="field"><label for="price">Total price · Coins</label><div class="number-row"><button class="step" data-step="price:-1" aria-label="Decrease total price">−</button><input id="price" type="number" min="1" max="1000000" inputmode="numeric" value="${state.draft.price}" aria-label="Total price in Coins"><button class="step" data-step="price:1" aria-label="Increase total price">+</button></div></div><div class="unit">${valid()?`${(price/qty).toFixed(2).replace(/\.00$/,'')} Coins / item`:''}</div><div class="validation">${valid()?'':'Enter a quantity in stock and a positive whole-Coin total.'}</div></div><div class="sheet-footer"><button class="main-action" data-act="review" ${valid()&&!state.offline?'':'disabled'}>Review listing</button></div></section></div>`;
+    }
+    const x=state.layer==='post'?{item:state.item,qty:Number(state.draft.qty),price:Number(state.draft.price)}:state.selectedOffer;
+    const p=product(x.item),post=state.layer==='post',buy=state.layer==='buy',withdraw=state.layer==='withdraw';
+    return `<div class="layer" role="presentation"><button class="outside" data-act="outside" aria-label="Close review"></button><section class="sheet" role="dialog" aria-modal="true" aria-label="${post?'Review listing':buy?'Review purchase':'Review withdrawal'}"><div class="sheet-header"><button class="back" data-act="back" aria-label="Back">‹</button><h2>${post?'Review listing':buy?'Buy this stack?':'Withdraw listing?'}</h2></div><div class="sheet-body"><div class="review-item"><img src="${icon(x.item)}" alt=""><strong>${p.name}</strong></div><div class="detail"><span>Quantity</span><span>${fmt(x.qty)}</span></div><div class="detail"><span>Per item</span><span>${(x.price/x.qty).toFixed(2).replace(/\.00$/,'')} Coins</span></div><div class="detail total"><span>Total</span><span>${fmt(x.price)} Coins</span></div></div><div class="sheet-footer"><button class="main-action" data-act="confirm" ${state.offline?'disabled':''}>${post?'Post listing':buy?'Confirm purchase':'Confirm withdrawal'}</button></div></section></div>`;
+  }
+  function keyboard(){return state.keyboard&&state.layer==='compose'?`<div class="keyboard" aria-label="Simulated numeric keyboard">${['1','2','3','4','5','6','7','8','9','←','0','Done'].map(k=>`<button class="${k==='Done'?'done':''}" data-key="${k}">${k}</button>`).join('')}</div>`:''}
+  function render(){
+    const currentPicker=app.querySelector('.picker-scroll');
+    if(currentPicker&&state.tab==='sell'&&state.sub==='picker')state.pickerScroll=currentPicker.scrollTop;
+    phone.classList.toggle('compact',state.size==='360');phone.style.setProperty('--keyboard',state.keyboard&&state.layer==='compose'?'218px':'0px');
+    app.innerHTML=`<button class="scene-dim" data-act="backdrop" aria-label="Close market"></button><div class="statusbar"><span>9:41</span><span class="fixture-flag">PROPOSAL · FIXTURE</span><span>◕  ▰</span></div><div class="market-panel"><header class="market-head"><button class="back" data-act="close" aria-label="Close market">‹</button><div class="heading"><small>PUBLIC MARKET</small><strong>${state.tab==='sell'?'Your market':'Public market'}</strong></div><div class="wallet"><img src="${coin}" alt=""><span>${fmt(state.coins)}</span></div></header><nav class="tabs" role="tablist" aria-label="Market sections"><button class="tab" role="tab" aria-selected="${state.tab==='buy'}" data-act="buy">Buy</button><button class="tab" role="tab" aria-selected="${state.tab==='sell'}" data-act="sell">Sell</button></nav>${body()}<div class="notice" role="status">${state.notice}</div></div><div class="homebar"></div>${layer()}${keyboard()}${state.closed?`<div class="closed"><div><h2>Market closed</h2><p>Fixture session ended.</p><button data-act="reopen">Open market</button></div></div>`:''}`;
+    if(state.tab==='sell'&&state.sub==='picker'&&!state.offline)document.querySelector('.picker-scroll').scrollTop=state.pickerScroll;
+  }
+  function dismiss(){state.layer=null;state.keyboard=false;render()}
+  function back(){if(state.keyboard){state.keyboard=false;render();return}if(state.layer==='post'){state.layer='compose';render();return}if(state.layer==='buy'||state.layer==='withdraw'){dismiss();return}if(state.layer==='compose'){state.layer=null;state.sub='picker';render();return}if(state.tab==='sell'&&state.sub!=='listings'){state.sub='listings';render();return}state.closed=true;state.item=null;state.dirty=false;render()}
+  function collect(id){const x=state.own.find(y=>y.id===id&&y.sold&&!y.paid);if(!x||state.offline)return;x.paid=true;state.coins+=x.price;state.notice=`+${fmt(x.price)} Coins collected`;render()}
+  function step(field,delta){if(!state.item)return;const max=field==='qty'?Math.min(state.stock[state.item],100000):1000000;const current=Number(state.draft[field]);state.draft[field]=String(Math.max(1,Math.min(max,(Number.isFinite(current)?current:1)+delta)));state.dirty=true;const input=document.querySelector(field==='qty'?'#quantity':'#price');if(input)input.value=state.draft[field];updateForm()}
+  function updateForm(){const unit=document.querySelector('.unit'),error=document.querySelector('.validation'),review=document.querySelector('[data-act="review"]');if(!unit||!error||!review)return;const q=Number(state.draft.qty),p=Number(state.draft.price);unit.textContent=valid()?`${(p/q).toFixed(2).replace(/\.00$/,'')} Coins / item`:'';error.textContent=valid()?'':'Enter a quantity in stock and a positive whole-Coin total.';review.disabled=!valid()||state.offline}
+  let holdTimer=null,repeatTimer=null,suppressClick=false;
+  function stopHold(){clearTimeout(holdTimer);clearInterval(repeatTimer);holdTimer=repeatTimer=null}
+  document.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-step]');if(!b)return;const [field,d]=b.dataset.step.split(':');step(field,Number(d));suppressClick=true;stopHold();holdTimer=setTimeout(()=>{repeatTimer=setInterval(()=>step(field,Number(d)),95)},400)});
+  document.addEventListener('pointerup',stopHold);document.addEventListener('pointercancel',stopHold);window.addEventListener('blur',stopHold);
+  app.addEventListener('input',e=>{if(e.target.id==='quantity'||e.target.id==='price'){state.draft[e.target.id==='quantity'?'qty':'price']=e.target.value;state.dirty=true;updateForm()}});
+  app.addEventListener('focusin',e=>{if((e.target.id==='quantity'||e.target.id==='price')&&state.layer==='compose')state.focusedInput=e.target.id});
+  app.addEventListener('scroll',e=>{if(e.target.classList.contains('picker-scroll')&&e.target.isConnected)state.pickerScroll=e.target.scrollTop},true);
+  app.addEventListener('click',e=>{
+    if(e.target.closest('[data-step]')){if(suppressClick){suppressClick=false;return}const [f,d]=e.target.closest('[data-step]').dataset.step.split(':');step(f,Number(d));return}
+    const b=e.target.closest('[data-act],[data-key]');if(!b)return;
+    if(b.dataset.key){if(b.dataset.key==='Done'){state.keyboard=false;render();return}const input=document.querySelector('#'+state.focusedInput);if(input){input.value=b.dataset.key==='←'?input.value.slice(0,-1):input.value+b.dataset.key;state.draft[input.id==='price'?'price':'qty']=input.value;state.dirty=true;updateForm()}return}
+    const act=b.dataset.act;
+    if(act==='close'){back();return}if(act==='backdrop'){if(!state.layer){state.closed=true;state.item=null;state.dirty=false;state.keyboard=false;render()}return}if(act==='reopen'){reset();return}if(act==='buy'||act==='sell'){state.tab=act;state.sub='listings';state.layer=null;state.keyboard=false;render();return}
+    if(act==='history'){state.sub='history';render();return}if(act==='listings'){state.sub='listings';render();return}
+    if(act==='new'){state.sub='picker';state.layer=null;state.pickerScroll=0;render();return}
+    if(act==='pick'){state.pickerScroll=b.closest('.picker-scroll').scrollTop;if(state.item!==b.dataset.id){state.item=b.dataset.id;state.draft={qty:'1',price:'1'};state.focusedInput='quantity';state.dirty=false}state.layer='compose';render();return}
+    if(act==='review'){if(valid()){state.keyboard=false;state.layer='post';render()}return}
+    if(act==='offer'){const x=b.dataset.kind==='own'?state.own.find(v=>v.id===b.dataset.id):state.offers.find(v=>v.id===b.dataset.id);if(!x||x.sold)return;state.selectedOffer=x;state.layer=b.dataset.kind==='own'?'withdraw':'buy';render();return}
+    if(act==='confirm'){
+      if(state.offline)return;
+      if(state.layer==='post'&&valid()){const x={id:'mine-'+Date.now(),item:state.item,qty:Number(state.draft.qty),price:Number(state.draft.price),sold:false};state.own.unshift(x);state.stock[x.item]-=x.qty;state.item=null;state.draft={qty:'1',price:'1'};state.dirty=false;state.tab='sell';state.sub='listings';state.notice='Listing posted';dismiss();return}
+      if(state.layer==='buy'&&state.selectedOffer&&!state.selectedOffer.sold){const x=state.selectedOffer;if(state.coins<x.price){state.notice='Not enough Coins';dismiss();return}state.coins-=x.price;state.stock[x.item]+=x.qty;x.sold=true;state.notice='Purchase complete';dismiss();return}
+      if(state.layer==='withdraw'&&state.selectedOffer&&!state.selectedOffer.sold){const x=state.selectedOffer;state.stock[x.item]+=x.qty;state.own=state.own.filter(y=>y!==x);state.notice='Listing withdrawn';dismiss();return}
+    }
+    if(act==='collect'){collect(b.dataset.id);return}if(act==='collect-all'){if(state.offline)return;const pending=paidPending();let amount=0;pending.forEach(x=>{x.paid=true;amount+=x.price});state.coins+=amount;state.notice=`+${fmt(amount)} Coins collected`;render();return}
+    if(act==='back'){back();return}if(act==='outside'){if(state.layer==='post'){state.layer='compose';render()}else dismiss();return}if(act==='dismiss'){state.sub='listings';dismiss();return}if(act==='online'){state.offline=false;render()}
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();back()}});
+  document.querySelectorAll('[data-control]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.control;if(c==='reset'){reset();return}if(c==='size390'||c==='size360'){state.size=c==='size360'?'360':'390';document.querySelector('[data-control="size390"]').setAttribute('aria-pressed',String(state.size==='390'));document.querySelector('[data-control="size360"]').setAttribute('aria-pressed',String(state.size==='360'));render();return}if(c==='buy'||c==='sell'){state.closed=false;state.tab=c;state.sub='listings';state.layer=null;state.keyboard=false;render();return}if(c==='offline'){state.offline=!state.offline;state.layer=null;state.keyboard=false;state.notice=state.offline?'Offline fixture':'Fixture market · values are illustrative';render();return}if(c==='nosales'){state.own=state.own.filter(x=>!x.sold);state.notice='No-sales fixture';render();return}if(c==='keyboard'){if(state.layer!=='compose'){state.tab='sell';state.sub='listings';state.item=state.item||'wheat';state.layer='compose'}state.keyboard=!state.keyboard;render();return}}));
+  if(new URLSearchParams(location.search).has('phone'))document.body.classList.add('phone-only');
+  window.addEventListener('resize',()=>{if(document.body.classList.contains('phone-only')){state.size=innerWidth<=370?'360':'390';render()}});
+  reset();
+})();
+</script>
+</body>
+</html>

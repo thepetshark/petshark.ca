@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Geo Pets World · Startup & accounts study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="review" id="review">
+    <div class="phone" id="phone" aria-label="Portrait game preview">
+      <div class="artwork" aria-hidden="true"></div>
+      <div class="app" id="app"></div>
+      <div class="overlay" id="overlay"></div>
+      <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    </div>
+    <aside class="review-rail" id="rail">
+      <p class="eyebrow">GEOPETS WORLD · DESIGN STUDY</p>
+      <h1>A welcome back to<br>your world.</h1>
+      <p class="review-lead">Startup, guest progress and account access.</p>
+      <div class="review-warning"><strong>Interactive mockup only</strong><p>Use made-up details only. There is no Firebase connection, credential submission or saved player data. All interactions are temporary, in-memory examples.</p></div>
+      <label class="rail-label" for="state-picker">Review a screen</label>
+      <select id="state-picker"></select>
+      <div class="rail-buttons"><button id="advance" type="button">Advance this step →</button><button id="reset-demo" type="button">Reset demo</button></div>
+      <label class="rail-label" for="size-picker">Portrait display</label>
+      <select id="size-picker"><option value="390">390 × 844</option><option value="360">360 × 800</option></select>
+      <div class="state-note" id="state-note"></div>
+      <dl class="session-summary"><div><dt>Simulated identity</dt><dd id="session-identity"></dd></div><div><dt>Session ID</dt><dd id="session-uid"></dd></div><div><dt>Operation</dt><dd id="session-operation"></dd></div></dl>
+      <p class="rail-footnote">Selected loading screens stay still for review. Use Advance to continue. In the normal flow, Continue briefly simulates the world-loading step.</p>
+      <a class="board-link" href="?board=1">View the portrait screen board ↗</a>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

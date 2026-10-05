@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Starter choice: GeoPets World mockup</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <h1>Starter choice</h1>
+  <p class="lede">A mockup of a new player's first choice: one of three baby Wildlings, the game's own creatures, picked once, after the save loads and before the map shows. Each starter dances its own style, because dancing is how Wildlings are captured. The three were picked by the designer: Petal Bud, Ember Spark and Tide Shell.</p>
+</header>
+
+<main class="wrap layout">
+  <aside class="panel" aria-label="Controls">
+    <section>
+      <h2>Jump to</h2>
+      <div class="jumps" id="jumps"></div>
+    </section>
+    <section>
+      <h2>Phone</h2>
+      <div class="choice" id="opt-size" role="radiogroup" aria-label="Phone size"></div>
+    </section>
+    <section>
+      <h2>What is proposed here</h2>
+      <ul class="note list">
+        <li>The screen shows once per player, on their first session, over the map as it loads. It cannot be skipped: the player needs a dancer from the start.</li>
+        <li>One starter at a time takes the stage and dances its style. The three round buttons switch between them.</li>
+        <li>The button names the Wildling it will choose, so a mis-tap can't pick the wrong one.</li>
+        <li>After the choice, one screen says it has joined and how to use it, then the map.</li>
+        <li>Each starter's dance, the style it wins over, and where its wild relatives live come from the capture-ladder study.</li>
+      </ul>
+    </section>
+  </aside>
+
+  <section class="stage-col">
+    <div class="phone" id="phone">
+      <div class="screen" id="screen">
+        <img class="bg" src="assets/map-default.png" alt="Today's map at the default zoom, an unmodified in-game capture">
+        <div class="veil"></div>
+        <div class="sheet" id="sheet" role="dialog" aria-label="Choose your first Wildling"></div>
+        <div class="band status" aria-hidden="true"><span class="time">9:41</span><span class="cutout"></span><span class="sys"><i></i><i></i><b></b></span></div>
+        <div class="band gesture" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <p class="caption" id="caption"></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>The map behind the screen is an unmodified in-game capture. Map imagery © Mapbox © OpenStreetMap. The portraits are renders of 3D models from a purchased asset pack, the same renders as in the Library view. Browser mockup only.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

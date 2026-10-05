@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GeoPets crafting sheet study</title><link rel="icon" href="data:,"><link rel="stylesheet" href="crafting.css"></head>
+<body><main class="study">
+<aside class="review" aria-label="Controls">
+<p class="eyebrow">GEOPETSWORLD · CRAFTING WORKSHOP</p><h1>Crafting sheet study</h1>
+<p class="warning">This proposal keeps the current Hometown, bottom navigation and station sheet. It is a layout study, not a replacement screen.</p>
+<fieldset><legend>Compare</legend><div class="controls" id="mode-controls"><button data-mode="current" aria-pressed="true">Current game</button><button data-mode="proposed" aria-pressed="false">Proposed changes</button></div></fieldset>
+<fieldset><legend>Phone size</legend><div class="controls" id="size-controls"><button data-size="large" aria-pressed="true">390 × 844</button><button data-size="compact" aria-pressed="false">360 × 640</button></div></fieldset>
+<fieldset><legend>Station</legend><div class="controls" id="station-controls"><button data-station="bakery" aria-pressed="true">Bakery</button><button data-station="mill" aria-pressed="false">Mill</button></div></fieldset>
+<fieldset><legend>Illustrative fixture · proposal only</legend><div class="controls" id="fixture-controls"><button data-fixture="capture" aria-pressed="true">As captured</button><button data-fixture="ready" aria-pressed="false">More ingredients</button><button data-fixture="full" aria-pressed="false">Queue full</button></div></fieldset>
+<p class="note">Current game uses unmodified 390 × 844 Unity captures. The 360 × 640 current view scales the same capture for comparison; it is not a native compact capture. The proposed recipe and inventory data are a small illustrative subset: Bakery has 11 recipes in the live capture. No catalog, player inventory, queue, or building data is changed.</p>
+<p class="note">In the proposal, arrows and horizontal swipes explore stations. “All crafting” and “Item path” are compact entries within the existing sheet; their placement and behavior remain proposals. Tap a recipe to select it, then use the single fixed bottom action. Current gameplay remains manual and per station.</p>
+
+</aside>
+<section class="preview" aria-label="Portrait crafting comparison"><div id="phone" class="phone" data-size="large">
+<img id="current-capture" class="current-capture" src="Captures/current-crafting-bakery-390.png" alt="Unmodified Unity capture of the Bakery crafting sheet at 390 by 844">
+<div id="proposal" class="proposal" hidden><div class="sheet"><div id="sheet-header" class="sheet-header"></div><div id="sheet-scroll" class="sheet-scroll"></div><div id="sheet-footer" class="sheet-footer"></div></div></div>
+</div><p id="below" class="below">Current Unity capture · 390 × 844 native</p></section>
+</main><script src="crafting.js"></script></body></html>

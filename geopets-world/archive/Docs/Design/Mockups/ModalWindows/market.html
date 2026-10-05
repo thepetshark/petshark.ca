@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoPets · Market modal review</title>
+  <style>
+    :root { --ink:#24483b; --muted:#58695b; --paper:#faf4e5; --card:#fffef9;
+      --pale:#eaf0e2; --green:#366950; --line:#d5ddc9; --gold:#9d713f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#dce5d5; color:var(--ink); font:14px Arial,Helvetica,sans-serif; }
+    button,input { font:inherit; }
+    button { cursor:pointer; }
+    button:focus-visible, input:focus-visible, a:focus-visible { outline:3px solid #3a9eba; outline-offset:2px; }
+    .review { display:flex; justify-content:center; gap:28px; align-items:flex-start; padding:24px; }
+    .phone { width:390px; height:844px; flex:none; position:relative; overflow:hidden;
+      background:#86a968 url('../../References/WorldMap/entry.png') center/cover;
+      box-shadow:0 12px 40px #20372740; border-radius:20px; }
+    .shade { position:absolute; inset:0; background:#142a22b8; }
+    .scene-links { position:absolute; top:8px; left:14px; right:14px; display:flex;
+      justify-content:space-between; z-index:3; }
+    .scene-links a,.reopen { color:white; background:#24483bdd; border:1px solid #fff8;
+      border-radius:8px; padding:5px 9px; font-size:12px; text-decoration:none; }
+    .reopen { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      display:none; z-index:3; }
+    .dismissed .panel { display:none; }
+    .dismissed .reopen { display:block; }
+    .panel { position:absolute; left:14px; right:14px; top:50px; bottom:50px; display:flex;
+      flex-direction:column; background:var(--paper); border:1px solid #eff3e7;
+      border-radius:20px; overflow:hidden; box-shadow:0 18px 36px #10241f70; }
+    .head { height:68px; flex:none; display:flex; align-items:center; gap:9px;
+      padding:8px 10px; background:var(--card); }
+    .back { width:44px; height:44px; flex:none; border:0; border-radius:12px;
+      background:var(--pale); font-size:27px; color:var(--ink); }
+    .heading { flex:1; min-width:0; }
+    .heading small { display:block; color:var(--muted); font-size:10px; font-weight:bold; letter-spacing:.9px; }
+    .heading strong { display:block; font-size:19px; white-space:nowrap; overflow:hidden;
+      text-overflow:ellipsis; margin-top:3px; }
+    .wallet { background:#f4ecd5; border-radius:10px; padding:8px 6px; min-width:78px;
+      display:flex; align-items:center; justify-content:center; gap:3px; color:var(--gold); font-weight:bold; }
+    .wallet img,.coin { width:16px; height:16px; object-fit:contain; vertical-align:middle; }
+    .tabs { height:44px; flex:none; display:flex; gap:5px; padding:0 8px 4px;
+      background:var(--card); border-bottom:1px solid var(--line); }
+    .tabs button { flex:1; min-width:0; border:0; border-radius:9px; background:var(--card);
+      color:var(--muted); font-size:12px; padding:0 2px; }
+    .tabs button.active { background:var(--pale); color:var(--green); font-weight:bold; }
+    .meta { height:30px; flex:none; display:flex; justify-content:space-between;
+      align-items:center; padding:0 12px; color:var(--muted); font-size:11px; }
+    .live { color:var(--green); }
+    .content { flex:1; min-height:0; overflow:auto; padding:5px 10px 12px; }
+    .grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; }
+    .item { height:102px; min-width:0; position:relative; border:1px solid var(--line);
+      border-radius:10px; background:var(--card); padding:5px 3px; text-align:center; overflow:hidden; }
+    .item img { height:51px; width:54px; object-fit:contain; display:block; margin:0 auto; }
+    .item strong { display:block; font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .item .price { display:block; color:var(--gold); font-weight:bold; font-size:12px; margin-top:2px; }
+    .item .qty { position:absolute; right:3px; top:3px; background:#edf1e8ed;
+      border-radius:4px; padding:1px 3px; font-size:10px; }
+    .item.selected { outline:2px solid var(--green); outline-offset:-2px; }
+    .item.sold { height:128px; padding-bottom:0; }
+    .item.sold img { height:34px; }
+    .item.sold .sold-strip { display:block; position:absolute; left:0; right:0; top:0;
+      background:#dce8d5; color:var(--green); font-size:10px; font-weight:bold; line-height:16px; }
+    .item.sold img { margin-top:12px; }
+    .item.sold .qty { z-index:1; }
+    .collect-card { position:absolute; bottom:2px; left:3px; right:3px; height:44px;
+      border:0; border-radius:6px; background:var(--green); color:white; font-size:10px; font-weight:bold; }
+    .item.sold.collected { opacity:.65; }
+    .item.sold.collected .collected-label { position:absolute; bottom:7px; left:0; right:0;
+      color:var(--green); font-size:10px; font-weight:bold; }
+    .summary { min-height:42px; display:flex; align-items:center; gap:4px; margin-bottom:8px;
+      padding:0 6px; white-space:nowrap; font-size:12px; font-weight:bold; }
+    .summary .amount { color:var(--gold); }
+    .summary button { margin-left:auto; min-height:36px; border:0; border-radius:8px;
+      background:var(--green); color:white; padding:0 8px; font-size:11px; font-weight:bold; }
+    .summary button:disabled { background:#cfdac7; color:var(--muted); }
+    .sell-form { background:var(--card); border:1px solid var(--line); border-radius:12px;
+      padding:10px; margin-top:10px; }
+    .sell-form h2 { font-size:17px; margin:0 0 9px; }
+    .formrow { display:flex; gap:8px; }
+    .step-field { flex:1; min-width:0; font-size:12px; font-weight:bold; }
+    .stepper { display:flex; margin-top:5px; }
+    .stepper button { width:44px; height:44px; flex:none; border:1px solid var(--line);
+      background:var(--pale); color:var(--ink); font-size:22px; }
+    .stepper button:first-child { border-radius:8px 0 0 8px; }
+    .stepper button:last-child { border-radius:0 8px 8px 0; }
+    .stepper input { width:100%; min-width:0; height:44px; border:1px solid var(--line);
+      border-left:0; border-right:0; text-align:center; color:var(--ink); appearance:textfield; }
+    .stepper input::-webkit-inner-spin-button { appearance:none; }
+    .formhint { min-height:25px; padding-top:8px; font-size:11px; color:var(--muted); }
+    .action { background:var(--green); color:white; border:0; border-radius:9px;
+      padding:10px 12px; font-weight:bold; min-height:44px; }
+    .action:disabled { background:#cfdac7; color:var(--muted); }
+    .secondary { background:var(--pale); color:var(--green); }
+    .history-row { height:44px; display:flex; align-items:center; gap:8px; padding:0 7px;
+      border-bottom:1px solid var(--line); background:var(--card); }
+    .history-row img { width:28px; height:28px; object-fit:contain; }
+    .history-row .name { flex:1; min-width:0; white-space:nowrap; overflow:hidden;
+      text-overflow:ellipsis; font-size:12px; font-weight:bold; }
+    .history-row .time { color:var(--muted); font-size:10px; }
+    .history-row .money { color:var(--gold); font-size:12px; font-weight:bold; }
+    .history-row .status { width:59px; text-align:right; color:var(--muted); font-size:10px; }
+    .history-row .status.pending { color:var(--green); }
+    .collect-history { width:64px; height:44px; flex:none; border:0; border-radius:6px;
+      background:var(--green); color:white; font-size:11px; font-weight:bold; }
+    .footer { height:48px; flex:none; background:var(--pale); border-top:1px solid var(--line);
+      padding:9px 11px; display:flex; align-items:center; font-size:11px; color:var(--muted); }
+    .detail { position:absolute; inset:0; background:#142a22a8; display:none;
+      align-items:flex-end; z-index:2; }
+    .detail.show { display:flex; }
+    .sheet { width:100%; background:var(--card); border-radius:20px 20px 0 0;
+      padding:19px 19px 16px; box-shadow:0 -8px 25px #142a2250; }
+    .sheet h2 { font-size:22px; margin:0 0 14px; }
+    .sheet p { font-size:14px; line-height:1.45; }
+    .sheet .buttons { display:grid; gap:8px; }
+    .sheet .buttons button { width:100%; }
+    .notes { width:290px; max-width:calc(100vw - 24px); font-size:14px;
+      line-height:1.5; color:#45594a; }
+    .notes h1 { font:29px Georgia,serif; color:var(--ink); margin:8px 0; }
+    .notes p { margin:0 0 12px; }
+    .notes small { color:#5d705f; }
+    .note { padding:12px; border-left:3px solid var(--green); background:#f5f7ee; }
+    .phone-only .review { padding:0; }
+    .phone-only .phone { width:100vw; height:100dvh; border-radius:0; box-shadow:none; }
+    .phone-only .notes { display:none; }
+    @media(max-width:760px) {
+      .review { padding:0; display:block; }
+      .phone { width:100vw; height:100dvh; border-radius:0; }
+      .notes { padding:20px; width:auto; }
+      .panel { top:max(24px,5.9dvh); bottom:max(24px,5.9dvh); }
+    }
+  </style>
+</head>
+<body>
+  <main class="review">
+    <section class="phone" aria-label="390 by 844 portrait Market modal preview">
+      <div class="shade" id="outer-dismiss"></div>
+      <nav class="scene-links"><span></span><a href="settings.html?phone=1">Settings preview →</a></nav>
+      <button class="reopen" id="reopen">Open market</button>
+      <div class="panel">
+        <header class="head">
+          <button class="back" id="close-market" aria-label="Close market">‹</button>
+          <div class="heading"><small>PUBLIC MARKET</small><strong>Waterfront market</strong></div>
+          <div class="wallet"><img class="coin" src="../PublicMarket/icons/coin_gold.png" alt=""><span id="wallet">1,240</span></div>
+        </header>
+        <nav class="tabs" aria-label="Market tabs">
+          <button data-tab="Browse">Browse</button>
+          <button data-tab="Sell">Sell</button>
+          <button data-tab="My listings" class="active">My listings</button>
+          <button data-tab="History">History</button>
+        </nav>
+        <div class="meta"><span id="count"></span><span class="live">● Live</span></div>
+        <div class="content" id="content"></div>
+        <footer class="footer" id="footer">Whole stacks · total prices in coins</footer>
+        <div class="detail" id="detail">
+          <div class="sheet">
+            <h2 id="detail-title"></h2>
+            <p id="detail-body"></p>
+            <div class="buttons">
+              <button class="action" id="detail-action"></button>
+              <button class="action secondary" id="detail-close">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="notes">
+      <small>GEOPETS · DESIGN REVIEW · MARKET MODAL</small>
+      <h1>The market stays on the map.</h1>
+      <p>This preview insets the existing four-column market within a portrait screen.</p>
+      <p class="note">The sample state is interactive and local to this page. Purchases, listings, and collections here do not contact the game or market service.</p>
+      <p><small>At 390 × 844, the panel uses 14 px side gutters and 50 px top and bottom gutters, occupying 88% of the screen height.</small></p>
+    </aside>
+  </main>
+  <script>
+    const icons = '../PublicMarket/icons/';
+    const coin = '../PublicMarket/icons/coin_gold.png';
+    const catalog = [
+      ['wheat','Wheat'],['egg','Egg'],['water','Water'],['log','Softwood'],
+      ['stone','Stone'],['carrot','Carrot'],['apple_red','Apple'],['milk','Milk'],
+      ['bread','Bread'],['cheese','Cheese'],['corn','Corn'],['fish','Fish']
+    ];
+    const icon = id => icons + ({stone:'mortar',milk:'bucket'}[id] || id) + '.png';
+    const format = value => value.toLocaleString('en-US');
+    const originalListings = Array.from({length:24}, (_, i) => ({
+      id:'browse-'+i, item:catalog[i % catalog.length][0],
+      name:catalog[i % catalog.length][1], qty:5+(i%8), price:15+i*3
+    }));
+    const inventory = catalog.slice(0,8).map(([item,name],i) => ({item,name,stock:20-i}));
+    const salePrices = [32,24,18,16,12,9,7,5]; // Eight uncollected sales total 123 coins.
+    const saleItems = ['wheat','egg','water','log','stone','carrot','apple_red','milk'];
+    const sales = salePrices.map((price,i) => ({
+      id:'sale-'+i, item:saleItems[i], name:catalog.find(x=>x[0]===saleItems[i])[1],
+      qty:1, price, time:(i+1)+'h', collected:false
+    }));
+    sales.push(
+      {id:'sale-8',item:'bread',name:'Bread',qty:1,price:14,time:'Yesterday',collected:true},
+      {id:'sale-9',item:'cheese',name:'Cheese',qty:1,price:11,time:'Yesterday',collected:true},
+      {id:'sale-10',item:'corn',name:'Corn',qty:1,price:9,time:'Mon',collected:true},
+      {id:'sale-11',item:'fish',name:'Fish',qty:1,price:8,time:'Mon',collected:true}
+    );
+    const own = [
+      {id:'own-0',item:'wheat',name:'Wheat',qty:5,price:20},
+      {id:'own-1',item:'egg',name:'Egg',qty:8,price:30},
+      {id:'own-2',item:'water',name:'Water',qty:3,price:18},
+      {id:'own-3',item:'log',name:'Softwood',qty:7,price:42}
+    ];
+    let wallet = 1240;
+    let tab = 'My listings';
+    let selectedItem = inventory[0].item;
+    let draft = {qty:5,price:20};
+    let holdTimer = null;
+    let repeatTimer = null;
+    const phone = document.querySelector('.phone');
+    const content = document.querySelector('#content');
+    const detail = document.querySelector('#detail');
+
+    function stopRepeat() {
+      clearTimeout(holdTimer);
+      clearInterval(repeatTimer);
+      holdTimer = repeatTimer = null;
+    }
+    function closeDetail() { detail.classList.remove('show'); }
+    function openDetail(title, body, action, callback) {
+      document.querySelector('#detail-title').textContent = title;
+      document.querySelector('#detail-body').textContent = body;
+      const button = document.querySelector('#detail-action');
+      button.textContent = action;
+      button.onclick = () => { closeDetail(); callback(); };
+      detail.classList.add('show');
+    }
+    function notify(message) { document.querySelector('#footer').textContent = message; }
+    function updateWallet() { document.querySelector('#wallet').textContent = format(wallet); }
+    function pendingSales() { return sales.filter(sale => !sale.collected); }
+    function collect(id) {
+      const sale = sales.find(entry => entry.id === id);
+      if (!sale || sale.collected) return;
+      sale.collected = true;
+      wallet += sale.price;
+      updateWallet();
+      notify('+ ◉ ' + format(sale.price));
+      render();
+    }
+    function collectAll() {
+      const pending = pendingSales();
+      if (!pending.length) return;
+      const amount = pending.reduce((sum,sale) => sum+sale.price,0);
+      pending.forEach(sale => sale.collected = true);
+      wallet += amount;
+      updateWallet();
+      notify('+ ◉ ' + format(amount));
+      render();
+    }
+    function marketCard(listing, type) {
+      const sold = type === 'sold';
+      return `<div class="item ${sold?'sold'+(listing.collected?' collected':''):''}" data-id="${listing.id}">
+        ${sold?'<span class="sold-strip">SOLD</span>':''}
+        <span class="qty">×${listing.qty}</span><img src="${icon(listing.item)}" alt="">
+        <strong>${listing.name}</strong><span class="price">◉ ${format(listing.price)}</span>
+        ${sold?(listing.collected?'<span class="collected-label">Collected</span>':
+          `<button class="collect-card" data-collect="${listing.id}">Collect</button>`):''}</div>`;
+    }
+    function renderBrowse() {
+      document.querySelector('#count').textContent = originalListings.length + ' listings';
+      content.innerHTML = `<div class="grid">${originalListings.map(item=>marketCard(item,'browse')).join('')}</div>`;
+      content.querySelectorAll('.item').forEach(card => card.onclick = () => {
+        const listing = originalListings.find(item => item.id === card.dataset.id);
+        if (!listing) return;
+        openDetail('Buy this whole stack?',
+          `${listing.qty} × ${listing.name} · ${format(listing.price)} coins total.`,
+          'Buy stack', () => {
+            if (wallet < listing.price) { notify('Not enough coins for this stack.'); return; }
+            wallet -= listing.price;
+            originalListings.splice(originalListings.indexOf(listing),1);
+            const bagItem = inventory.find(item => item.item === listing.item);
+            if (bagItem) bagItem.stock += listing.qty;
+            else inventory.push({item:listing.item,name:listing.name,stock:listing.qty});
+            updateWallet();
+            notify('Bought ' + listing.qty + ' × ' + listing.name + '.');
+            render();
+          });
+      });
+    }
+    function renderListings() {
+      const pending = pendingSales();
+      const amount = pending.reduce((sum,sale) => sum+sale.price,0);
+      document.querySelector('#count').textContent = own.length + pending.length + ' of your listings';
+      content.innerHTML = `<div class="summary"><span>${pending.length} items sold ·</span>
+        <img class="coin" src="${coin}" alt="coins"><span class="amount">${format(amount)}</span>
+        <button id="collect-all" ${pending.length?'':'disabled'}>Collect All</button></div>
+        <div class="grid">${own.map(item=>marketCard(item,'own')).join('')}
+        ${pending.map(item=>marketCard(item,'sold')).join('')}</div>`;
+      document.querySelector('#collect-all').onclick = collectAll;
+      content.querySelectorAll('[data-collect]').forEach(button => {
+        button.onclick = event => { event.stopPropagation(); collect(button.dataset.collect); };
+      });
+      content.querySelectorAll('.item:not(.sold)').forEach(card => card.onclick = () => {
+        const listing = own.find(item => item.id === card.dataset.id);
+        if (!listing) return;
+        openDetail('Withdraw this listing?',
+          `${listing.qty} × ${listing.name} · ${format(listing.price)} coins total.`,
+          'Withdraw', () => {
+            own.splice(own.indexOf(listing),1);
+            const bagItem = inventory.find(item => item.item === listing.item);
+            if (bagItem) bagItem.stock += listing.qty;
+            notify('Withdrawn');
+            render();
+          });
+      });
+    }
+    function renderHistory() {
+      document.querySelector('#count').textContent = sales.length + ' completed sales';
+      content.innerHTML = sales.map(sale => `<div class="history-row">
+        <img src="${icon(sale.item)}" alt=""><span class="name">${sale.qty} × ${sale.name}</span>
+        <span class="time">${sale.time}</span><span class="money">◉ ${sale.price}</span>
+        ${sale.collected?'<span class="status">Collected</span>':
+          `<button class="collect-history" data-collect="${sale.id}">Collect</button>`}
+      </div>`).join('');
+      content.querySelectorAll('[data-collect]').forEach(button =>
+        button.onclick = () => collect(button.dataset.collect));
+    }
+    function selectedInventory() { return inventory.find(item => item.item === selectedItem); }
+    function clamp(value,min,max) { return Math.max(min,Math.min(max,Math.trunc(value))); }
+    function inputValues() {
+      const qty = Number(document.querySelector('#quantity').value);
+      const price = Number(document.querySelector('#total-price').value);
+      const valid = Number.isInteger(qty) && qty>=1 && qty<=selectedInventory().stock &&
+        Number.isInteger(price) && price>=1 && price<=1000000;
+      document.querySelector('#review-post').disabled = !valid;
+      document.querySelector('#form-hint').textContent = valid
+        ? format(price/qty) + ' coins per item'
+        : 'Enter an available quantity and a positive total price.';
+      if (valid) draft = {qty,price};
+    }
+    function clampInput(input,min,max) {
+      const parsed = Number(input.value);
+      input.value = Number.isFinite(parsed) ? clamp(parsed,min,max) : min;
+      inputValues();
+    }
+    function step(field,delta) {
+      const input = document.querySelector(field);
+      const maximum = field === '#quantity' ? selectedInventory().stock : 1000000;
+      input.value = clamp((Number(input.value)||1)+delta,1,maximum);
+      inputValues();
+    }
+    function wireStepper(field) {
+      document.querySelectorAll(`[data-field="${field}"]`).forEach(button => {
+        const delta = Number(button.dataset.step);
+        button.onpointerdown = event => {
+          stopRepeat();
+          button.setPointerCapture(event.pointerId);
+          step(field,delta);
+          holdTimer = setTimeout(() => { repeatTimer = setInterval(() => step(field,delta),95); },400);
+        };
+        button.onpointerup = stopRepeat;
+        button.onpointercancel = stopRepeat;
+        button.onlostpointercapture = stopRepeat;
+        button.onblur = stopRepeat;
+        button.onclick = event => { if (event.detail === 0) step(field,delta); };
+      });
+    }
+    function renderSell() {
+      const selected = selectedInventory();
+      document.querySelector('#count').textContent = 'Choose something from your bag';
+      content.innerHTML = `<div class="grid">${inventory.map(item =>
+        `<button class="item ${item.item===selectedItem?'selected':''}" data-item="${item.item}">
+          <span class="qty">×${item.stock}</span><img src="${icon(item.item)}" alt="">
+          <strong>${item.name}</strong><span class="price">In bag</span></button>`).join('')}</div>
+        <div class="sell-form"><h2>Sell ${selected.name}</h2>
+          <div class="formrow">
+            <label class="step-field">Quantity<div class="stepper">
+              <button data-field="#quantity" data-step="-1" aria-label="Decrease quantity">−</button>
+              <input id="quantity" type="number" inputmode="numeric" min="1" max="${selected.stock}" value="${draft.qty}">
+              <button data-field="#quantity" data-step="1" aria-label="Increase quantity">+</button>
+            </div></label>
+            <label class="step-field">Total price<div class="stepper">
+              <button data-field="#total-price" data-step="-1" aria-label="Decrease total price">−</button>
+              <input id="total-price" type="number" inputmode="numeric" min="1" max="1000000" value="${draft.price}">
+              <button data-field="#total-price" data-step="1" aria-label="Increase total price">+</button>
+            </div></label>
+          </div><div class="formhint" id="form-hint"></div>
+          <button class="action" id="review-post">Review listing</button>
+        </div>`;
+      content.querySelectorAll('[data-item]').forEach(button => button.onclick = () => {
+        stopRepeat();
+        selectedItem = button.dataset.item;
+        draft.qty = clamp(draft.qty,1,selectedInventory().stock);
+        renderSell();
+      });
+      for (const [selector,max] of [['#quantity',selected.stock],['#total-price',1000000]]) {
+        const input = document.querySelector(selector);
+        input.oninput = inputValues;
+        input.onchange = () => clampInput(input,1,max);
+        input.onblur = () => clampInput(input,1,max);
+        wireStepper(selector);
+      }
+      document.querySelector('#review-post').onclick = () => {
+        inputValues();
+        if (document.querySelector('#review-post').disabled) return;
+        const item = selectedInventory();
+        const {qty,price} = draft;
+        openDetail('Post this listing?',
+          `${qty} × ${item.name} · ${format(price)} coins total.`,
+          'Post listing', () => {
+            if (item.stock < qty) { notify('Your bag has changed.'); return; }
+            item.stock -= qty;
+            own.unshift({id:'own-'+Date.now(),item:item.item,name:item.name,qty,price});
+            draft.qty = clamp(qty,1,Math.max(1,item.stock));
+            notify('Listing posted.');
+            setTab('My listings');
+          });
+      };
+      inputValues();
+    }
+    function render() {
+      if (tab === 'Browse') renderBrowse();
+      if (tab === 'Sell') renderSell();
+      if (tab === 'My listings') renderListings();
+      if (tab === 'History') renderHistory();
+    }
+    function setTab(next) {
+      stopRepeat();
+      closeDetail();
+      tab = next;
+      document.querySelectorAll('[data-tab]').forEach(button =>
+        button.classList.toggle('active',button.dataset.tab === next));
+      render();
+    }
+    function dismissMarket() { stopRepeat(); closeDetail(); phone.classList.add('dismissed'); }
+    document.querySelectorAll('[data-tab]').forEach(button => button.onclick = () => setTab(button.dataset.tab));
+    document.querySelector('#close-market').onclick = dismissMarket;
+    document.querySelector('#outer-dismiss').onclick = dismissMarket;
+    document.querySelector('#reopen').onclick = () => phone.classList.remove('dismissed');
+    document.querySelector('#detail-close').onclick = closeDetail;
+    detail.onclick = event => { if (event.target === detail) closeDetail(); };
+    window.addEventListener('blur',stopRepeat);
+    document.addEventListener('visibilitychange',() => { if (document.hidden) stopRepeat(); });
+    if (new URLSearchParams(location.search).has('phone')) document.body.classList.add('phone-only');
+    render();
+    window.marketPreview = {setTab,collect,collectAll,get state(){return {
+      tab,wallet,pending:pendingSales().length,pendingCoins:pendingSales().reduce((n,s)=>n+s.price,0),
+      own:own.length,history:sales.length,selectedItem,draft:{...draft}
+    };}};
+  </script>
+</body>
+</html>
