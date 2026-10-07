@@ -29,7 +29,7 @@ Rules added to keep a site edited by several agents consistent. The owner may ch
    per-page CSS, `<style>`, `<script>` or `<iframe>` to a project page. If you need something the layouts cannot do, say so
    to the owner and propose a change.
 6. **Do not edit shared files unprompted:** `_config.yml`, `_layouts/`, `_includes/`, `_data/`, `assets/css/site.css`,
-   `scripts/`, this file, or any other project's pages. Adding files for your own project is fine.
+   `scripts/`, `.github/`, this file, or any other project's pages. Adding files for your own project is fine.
 7. **No trackers, analytics, third-party scripts, extra web fonts or embeds** (YouTube, social widgets) without the owner's
    approval. The site's one font is Archivo, self-hosted in `assets/fonts/` under its open licence; do not add another. Link to
    a video instead of embedding it.
@@ -37,9 +37,10 @@ Rules added to keep a site edited by several agents consistent. The owner may ch
    the owner or from the project itself. If you do not know, leave it out and tell the owner.
 9. **Privacy policies say only what the shipped build does.** List every third-party library that sends data anywhere. The
    owner approves the final wording of any policy.
-10. **Commits:** one logical change per commit, with a message that says what changed
-    (`Mushi Poi: add screenshots to the project page`). Never `git push --force`. Push to `main` only when whoever asked you
-    to update the site has told you to publish; otherwise commit and say that you have not pushed.
+10. **Branches and pull requests.** Never commit to `main` or push to it directly. Work on a branch named
+    `<slug>/<what>` (`idlings/project-page`), make one logical change per commit with a message that says what changed
+    (`Mushi Poi: add screenshots to the project page`), push the branch and open a pull request. Never `git push --force`.
+    A reviewing agent checks the PR against this file and merges it; merging publishes the site (section 10).
 
 ## 2. How the site works
 
@@ -148,7 +149,7 @@ Do this when a game is on, or about to go on, the App Store or Google Play. Thes
    (purchases, ads, analytics, crash reports, game services). Keep only the sections that apply. Set `Last updated`.
 3. Remove every `<<...>>` and every `TEMPLATE` comment. The check script fails while any is left.
 4. Rule 1 applies: no links to the portfolio, home page or any other project. The layout is `standalone`; leave it so.
-5. Get the owner's approval of the wording before pushing (rule 9).
+5. Get the owner's approval of the wording before the PR is merged (rule 9).
 6. Add `support:` and `privacy:` under `links:` on the game's project page.
 
 ## 5. Dev logs
@@ -201,6 +202,7 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
 - [ ] No placeholder text; no invented facts (rule 8)
 - [ ] Only your own project's files changed, apart from the pointers in section 3 (rule 6)
 - [ ] The commit message says what changed
+- [ ] You are on a branch, not `main`; open a pull request (section 10)
 
 ## 8. Known pitfalls
 
@@ -229,3 +231,24 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
 - **Typeface:** Archivo, self-hosted from `assets/fonts/` (open licence, file included). The design is an editorial index:
   hairline rules, small corners, no hard shadows, and the light blue used as one field rather than everywhere.
 - The design system lives in `assets/css/site.css`; use its variables rather than copying hex values into a page.
+
+## 10. Pull requests: review and merge
+
+Merging a pull request into `main` publishes the site. The owner has delegated review and merging to the reviewing agent.
+
+**Author:** branch from an up-to-date `main`, finish section 3 (and section 4 if it applies), run `python scripts/check-site.py`
+and, with Docker, `scripts/build-check.sh`, push the branch and open a PR. The PR text says what changed and anything you
+left out because you did not know it (rule 8). The `build check` workflow runs on the PR; it must be green.
+
+**Reviewer:** check out the branch, then:
+
+1. The diff touches only that project's files, apart from the pointers in section 3 (rule 6). Changes to shared files, to
+   `.github/` or to this file are the owner's to approve.
+2. `python scripts/check-site.py --base origin/main` and `scripts/build-check.sh` pass; the `build check` run is green.
+3. The pre-commit checklist (section 7) holds: no moved URLs, no links out of standalone pages, no invented facts, images
+   within limits.
+4. Merge with squash (`gh pr merge <n> --squash --delete-branch`), then open the live page a minute or two later and look.
+
+**Ask the owner instead of merging** when the PR contains privacy policy or support wording (rule 9), a new project the owner has
+not asked for, a new `status: released` or store link the owner has not supplied, a dev log (rule 4), a shared file, anything
+that moves or deletes a published page, or large files (section 6). Say what the question is in the PR and leave it open.
