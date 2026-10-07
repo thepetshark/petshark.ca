@@ -1,0 +1,15 @@
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/petshark-logo.png' | relative_url }}" width="630" height="326" alt="">
+      <span>Pet Shark Productions</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+{%- for item in site.data.nav %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+{%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

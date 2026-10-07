@@ -1,0 +1,4 @@
+# Links in the top bar, in order. Keep it short; the bar is meant to stay slim.
+# Projects are not listed here: the home page lists them all (see _data/project_statuses.yml).
+- title: Projects
+  url: /#projects

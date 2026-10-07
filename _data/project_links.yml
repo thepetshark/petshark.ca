@@ -1,0 +1,14 @@
+# Allowed keys under `links:` in a project's front matter, with the label shown on the page.
+# The order here is the order on the page. The first four (app_store, google_play, download, demo)
+# are shown as buttons; see _layouts/project.html. One `key: Label` per line.
+# `source` must point at a PUBLIC repository; a private one shows visitors a 404.
+app_store: App Store
+google_play: Google Play
+download: Download
+demo: Live demo
+devlog: Dev Log
+docs: Documentation
+support: Support
+privacy: Privacy Policy
+source: Source code
+website: Website

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Pet Shark Productions</title>
+  <defs><clipPath id="r"><rect width="512" height="512" rx="112"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="512" fill="#00aeff"/>
+    <path d="M128 380C168 290 262 190 356 84C318 190 338 300 418 380Z" fill="#fff" stroke="#2a3945" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M0 372C43 382 85 382 128 372S213 362 256 372S341 382 384 372S469 362 512 372V512H0Z" fill="#2a3945"/>
+  </g>
+</svg>

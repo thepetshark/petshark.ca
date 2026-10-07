@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- comment -%}
+  A project page (every file in _projects/). Front matter is described in AGENTS.md.
+  The title, subtitle, description, facts and link buttons are built here from front matter;
+  the body of the page starts at the first H2 and must not repeat them.
+  Link buttons: the keys listed in `primary` are shown as buttons, the rest as outlined links.
+  Labels and order come from _data/project_links.yml.
+{%- endcomment -%}
+{%- assign primary = "app_store,google_play,download,demo" | split: "," -%}
+{%- assign status_label = site.data.project_statuses[page.status] | default: page.status -%}
+{%- assign kind_label = site.data.project_kinds[page.kind] | default: page.kind -%}
+<div class="project-page">
+<p class="crumb"><a href="{{ '/#projects' | relative_url }}">All projects</a></p>
+<article class="project">
+  {%- if page.theme.hero %}
+    {%- capture hero_src %}{% include url.html src=page.theme.hero %}{% endcapture %}
+  <img class="project-hero" src="{{ hero_src | strip }}" alt="{{ page.theme.hero_alt | escape }}">
+  {%- endif %}
+  <div class="panel">
+    <header class="project-head">
+      <h1>{{ page.title }}</h1>
+      {%- if page.subtitle %}
+      <p class="subtitle">{{ page.subtitle }}</p>
+      {%- endif %}
+      <p class="lede">{{ page.description }}</p>
+      <dl class="facts">
+        <div><dt>Status</dt><dd>{{ status_label }}</dd></div>
+        <div><dt>Type</dt><dd>{{ kind_label }}</dd></div>
+        {%- if page.platforms %}
+        <div><dt>Platforms</dt><dd>{{ page.platforms | join: ", " }}</dd></div>
+        {%- endif %}
+        <div><dt>Year</dt><dd>{{ page.year }}</dd></div>
+      </dl>
+      {%- capture actions %}
+        {%- for l in site.data.project_links %}
+          {%- assign key = l[0] %}
+          {%- assign link_url = page.links[key] %}
+          {%- if link_url %}
+            {%- capture href %}{% include url.html src=link_url %}{% endcapture %}
+            {%- if primary contains key %}
+        <li><a class="btn" href="{{ href | strip }}"{% if link_url contains '://' %} rel="noopener"{% endif %}>{{ l[1] }}</a></li>
+            {%- else %}
+        <li><a href="{{ href | strip }}"{% if link_url contains '://' %} rel="noopener"{% endif %}>{{ l[1] }}</a></li>
+            {%- endif %}
+          {%- endif %}
+        {%- endfor %}
+      {%- endcapture %}
+      {%- assign actions = actions | strip %}
+      {%- if actions != '' %}
+      <ul class="actions">
+        {{ actions }}
+      </ul>
+      {%- endif %}
+    </header>
+    <div class="project-body prose">
+{{ content }}
+    </div>
+  </div>
+</article>
+</div>

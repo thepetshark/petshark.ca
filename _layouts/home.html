@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%- comment -%}
+  The landing page: a headline and a short introduction (both from index.md), the featured project if there is
+  one (`featured: true` in a project's front matter), then an index of every project.
+{%- endcomment -%}
+{%- assign featured = site.projects | where: "featured", true | sort: "year" | reverse | first -%}
+<section class="intro">
+  <h1>{{ page.headline | default: site.title }}</h1>
+  <div class="side">
+{{ content }}
+  </div>
+</section>
+
+{%- if featured %}
+{% include project-feature.html p=featured %}
+{%- endif %}
+
+{% include project-index.html %}

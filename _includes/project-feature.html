@@ -1,0 +1,18 @@
+{%- comment -%}
+  The featured project on the home page: the block on the logo's light blue.
+  Pass the project as `p`. Without `image` the block is text only.
+{%- endcomment -%}
+{%- assign p = include.p -%}
+{%- assign status_label = site.data.project_statuses[p.status] | default: p.status -%}
+<a class="feat{% unless p.image %} no-art{% endunless %}" href="{{ p.url | relative_url }}">
+  <div class="feat-copy">
+    <p class="status">{{ status_label }}{% if p.platforms %} for {{ p.platforms | join: ", " }}{% endif %}</p>
+    <h2>{{ p.title }}</h2>
+    <p class="desc">{{ p.description }}</p>
+    <span class="more">Read about {{ p.title }}</span>
+  </div>
+  {%- if p.image %}
+    {%- capture feat_src %}{% include url.html src=p.image %}{% endcapture %}
+  <div class="feat-art"><img src="{{ feat_src | strip }}" alt="{{ p.image_alt | escape }}"></div>
+  {%- endif %}
+</a>

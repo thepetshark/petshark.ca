@@ -1,0 +1,6 @@
+{%- comment -%}
+  Turns a path or a full URL into something usable in src/href.
+  `{% include url.html src=page.image %}` gives a site-relative URL for "/assets/..." and leaves "https://..." alone.
+  Wrap it in {% capture %} when the value is needed inside an attribute.
+{%- endcomment -%}
+{%- if include.src contains '://' -%}{{ include.src }}{%- else -%}{{ include.src | relative_url }}{%- endif -%}

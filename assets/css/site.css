@@ -1,0 +1,204 @@
+/*
+  Pet Shark Productions - site stylesheet. Plain CSS, no build step.
+
+  Design: an editorial index. Archivo (self-hosted, assets/fonts) for everything, hairline rules,
+  small corners, and the logo's light blue used as one deliberate field rather than everywhere.
+
+  The page has a fixed Pet Shark frame (top bar, footer) and a "stage" in between. A project page may
+  re-colour the stage through the custom properties below, which _layouts/default.html sets from the
+  page's `theme:` front matter; it may also tint the top bar (`theme.bar`, light colours only, because
+  the logo's navy outline has to stay visible). All text sits on --surface. See AGENTS.md ("Themes").
+*/
+
+@font-face {
+  font-family: Archivo;
+  src: url(../fonts/archivo-latin.woff2) format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100% 112%;
+  font-display: swap;
+}
+
+:root {
+  --ink: #2a3945;       /* the logo's outline navy */
+  --sky: #d1f1fe;       /* the light blue used behind the logo */
+  --blue: #00aeff;      /* the logo's blue: accents only, never body text */
+  --blue-ink: #0069ad;  /* the blue that passes as text on white */
+  --mist: #eef5f9;
+  --line: #d9e3ea;
+  --font: Archivo, "Helvetica Neue", Arial, sans-serif;
+
+  /* Stage: themeable per page */
+  --page-bg: #fff;
+  --surface: #fff;
+  --text: var(--ink);
+  --accent: var(--blue-ink);
+  --accent-ink: #fff;
+
+  --wrap: 70rem;
+  --measure: 44rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: var(--ink);
+  font: 400 1.0625rem/1.55 var(--font);
+  font-stretch: 100%;
+}
+
+h1, h2, h3, p, dl, dd, figure { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.skip { position: absolute; left: .75rem; top: -4rem; z-index: 20; padding: .5rem .9rem; border-radius: 4px; background: var(--ink); color: #fff; }
+.skip:focus { top: .75rem; }
+
+/* ---- Top bar ---------------------------------------------------------- */
+
+.topbar { position: sticky; top: 0; z-index: 10; background: var(--bar-bg, #fff); border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, var(--bar-bg, #fff)); }
+.topbar-inner { max-width: var(--wrap); margin: 0 auto; min-height: 3.25rem; padding: .3rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .65rem; color: var(--ink); font-weight: 650; font-stretch: 108%; letter-spacing: -.005em; text-decoration: none; }
+.brand img { height: 2.4rem; width: auto; }
+.topbar nav { margin-left: auto; }
+.topbar ul { display: flex; flex-wrap: wrap; gap: .15rem; }
+.topbar nav a { display: block; padding: .4rem .8rem; border-radius: 4px; color: var(--ink); font-weight: 550; text-decoration: none; }
+.topbar nav a:hover, .topbar nav a[aria-current="page"] { background: color-mix(in srgb, var(--ink) 9%, transparent); }
+.topbar :focus-visible { outline-color: var(--ink); }
+
+@media (max-width: 30rem) {
+  .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* ---- Stage ------------------------------------------------------------ */
+
+.stage {
+  /* declared here, not on :root, so it is worked out from this page's own --text and --surface */
+  --muted: color-mix(in srgb, var(--text) 78%, var(--surface));
+  --rule: color-mix(in srgb, var(--text) 16%, transparent);
+  flex: 1;
+  background-color: var(--page-bg);
+  background-image: var(--page-pattern, none);
+  background-repeat: repeat;
+  color: var(--text);
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+
+/* A panel is just a section until the page is themed; then it becomes the surface the text sits on */
+.stage.themed .wrap { padding-top: 2rem; padding-bottom: 3.5rem; }
+.stage.themed .panel { background: var(--surface); color: var(--text); border: 1px solid var(--rule); border-radius: 6px; padding: clamp(1.25rem, 4vw, 2.5rem); }
+.stage.themed .crumb, .stage.themed .project { max-width: 52rem; margin-left: auto; margin-right: auto; }
+
+.page-title, .intro h1, .project-head h1 { font-weight: 680; font-stretch: 112%; line-height: 1.02; letter-spacing: -.028em; }
+
+/* ---- Home ------------------------------------------------------------- */
+
+.intro { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 2rem 4rem; align-items: end; padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.intro h1 { font-size: clamp(2.4rem, 5.2vw, 4.2rem); text-wrap: balance; }
+.intro .side { max-width: 22rem; color: var(--muted); }
+.intro .side > :last-child { margin-bottom: 0; }
+
+.feat { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: 2.5rem; padding: clamp(1.5rem, 4vw, 3rem); background: var(--sky); border-radius: 6px; color: var(--ink); text-decoration: none; }
+.feat.no-art { grid-template-columns: 1fr; }
+.feat-copy .status { font-size: .95rem; font-weight: 550; }
+.feat-copy h2 { margin-top: .6rem; font-size: clamp(2rem, 3.6vw, 2.9rem); font-weight: 680; font-stretch: 110%; line-height: 1.05; letter-spacing: -.022em; }
+.feat-copy .desc { margin-top: 1rem; max-width: 26rem; }
+.feat-copy .more { display: inline-block; margin-top: 1.6rem; padding-bottom: 2px; border-bottom: 2px solid var(--ink); font-weight: 650; }
+.feat:hover .more { border-color: var(--blue-ink); color: var(--blue-ink); }
+.feat-art img { width: 100%; border-radius: 4px; box-shadow: 0 1px 0 rgba(42, 57, 69, .12); }
+
+.index { padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 5rem); scroll-margin-top: 4rem; }
+.index > h2 { font-size: 1.05rem; font-weight: 650; font-stretch: 108%; }
+.row { display: grid; grid-template-columns: 6.5rem minmax(0, 4fr) minmax(0, 2.2fr) minmax(0, 1.8fr) 3.5rem; align-items: center; gap: 0 1.75rem; }
+.row.head { margin-top: 1.1rem; padding: .6rem 0; border-bottom: 1px solid var(--ink); color: var(--muted); font-size: .875rem; }
+.row.head span:nth-child(1) { grid-column: 2; }
+.row.head span:last-child { text-align: right; }
+.item a.row { padding: 1.1rem 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: background-color .15s ease; }
+.item a.row:hover, .item a.row:focus-visible { background: var(--mist); }
+.thumb { grid-column: 1; width: 6.5rem; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb.ph {
+  background:
+    radial-gradient(120% 90% at 18% 8%, rgba(255, 255, 255, .30), transparent 58%),
+    linear-gradient(150deg, color-mix(in srgb, var(--a, #7fa6bd) 35%, #fff), var(--a, #7fa6bd));
+}
+.item .t { font-size: clamp(1.25rem, 2.4vw, 1.75rem); font-weight: 650; font-stretch: 108%; letter-spacing: -.015em; line-height: 1.15; }
+.item .d { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: .25rem; color: color-mix(in srgb, var(--ink) 78%, #fff); font-size: .95rem; font-weight: 400; font-stretch: 100%; letter-spacing: 0; line-height: 1.4; }
+.item .k, .item .s { font-size: .975rem; }
+.item .k .pl { display: block; color: color-mix(in srgb, var(--ink) 78%, #fff); font-size: .9rem; }
+.item .y { color: color-mix(in srgb, var(--ink) 78%, #fff); text-align: right; font-size: .975rem; font-variant-numeric: tabular-nums; }
+
+/* ---- Project page ----------------------------------------------------- */
+
+.project-page { padding-top: 1.5rem; padding-bottom: 4rem; }
+.crumb { padding-top: 1.75rem; font-size: .95rem; font-weight: 550; }
+.crumb a { color: var(--muted); text-decoration: none; }
+.crumb a:hover { color: var(--text); text-decoration: underline; }
+.stage.themed .crumb { padding-top: 0; margin-bottom: 1rem; }
+
+.project { padding-top: 1.25rem; }
+.project-hero { width: 100%; max-height: 26rem; margin-bottom: 1.25rem; border-radius: 6px; object-fit: cover; }
+.project-head h1 { font-size: clamp(2.3rem, 5.4vw, 4rem); }
+.subtitle { margin-top: .5rem; color: var(--muted); font-size: 1.25rem; font-weight: 520; font-stretch: 106%; }
+.lede { max-width: var(--measure); margin-top: 1.1rem; font-size: 1.2rem; line-height: 1.5; }
+
+.facts { display: flex; flex-wrap: wrap; gap: .9rem 2.75rem; margin-top: 1.75rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.facts dt { color: var(--muted); font-size: .85rem; }
+.facts dd { font-weight: 550; }
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; margin-top: 1.5rem; }
+.btn { display: inline-block; padding: .65rem 1.25rem; border: 1.5px solid var(--accent); border-radius: 4px; background: var(--accent); color: var(--accent-ink); font-weight: 650; text-decoration: none; }
+.btn:hover { filter: brightness(1.12); }
+.actions a:not(.btn) { display: inline-block; padding: .65rem 1.1rem; border: 1.5px solid var(--rule); border-radius: 4px; color: var(--text); font-weight: 600; text-decoration: none; }
+.actions a:not(.btn):hover { border-color: var(--text); }
+
+.project-body { margin-top: 2.25rem; }
+
+/* ---- Running text (home intro, project pages, 404) -------------------- */
+
+.prose { max-width: var(--measure); }
+.prose > :first-child { margin-top: 0; }
+.prose h2 { margin: 2.5rem 0 .6rem; font-size: 1.55rem; font-weight: 650; font-stretch: 108%; line-height: 1.2; letter-spacing: -.015em; }
+.prose h3 { margin: 1.9rem 0 .4rem; font-size: 1.2rem; font-weight: 650; line-height: 1.3; }
+.prose p, .prose ul, .prose ol { margin: 0 0 1rem; }
+.prose ul { list-style: disc; padding-left: 1.3rem; }
+.prose ol { padding-left: 1.4rem; }
+.prose li { margin-bottom: .35rem; }
+.prose img, .prose video { max-width: 100%; height: auto; border-radius: 4px; }
+.prose figure { margin: 1.25rem 0; }
+.prose figcaption { margin-top: .4rem; color: var(--muted); font-size: .9rem; }
+.prose blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
+.prose code { padding: .1em .35em; border-radius: 3px; background: color-mix(in srgb, var(--text) 8%, transparent); font-size: .92em; }
+.prose pre { overflow-x: auto; padding: 1rem; border-radius: 4px; background: color-mix(in srgb, var(--text) 8%, transparent); }
+.prose pre code { padding: 0; background: none; }
+.prose table { border-collapse: collapse; margin: 0 0 1rem; }
+.prose th, .prose td { padding: .4rem .8rem; border: 1px solid var(--rule); text-align: left; }
+.prose hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--rule); }
+
+/* ---- Footer ----------------------------------------------------------- */
+
+.sitefoot { border-top: 1px solid var(--line); background: #fff; color: #566774; font-size: .875rem; }
+.sitefoot p { max-width: var(--wrap); margin: 0 auto; padding: 1.1rem 1.5rem; }
+
+/* ---- Small screens ---------------------------------------------------- */
+
+@media (max-width: 52rem) {
+  .intro, .feat { grid-template-columns: 1fr; }
+  .feat-art { order: -1; }
+  .row.head { display: none; }
+  .row { grid-template-columns: 5rem minmax(0, 1fr); gap: .15rem 1.1rem; }
+  .thumb { width: 5rem; grid-row: 1 / span 3; }
+  .item .t, .item .k, .item .s { grid-column: 2; }
+  .item .y { display: none; }
+  .item .k, .item .s { color: color-mix(in srgb, var(--ink) 78%, #fff); font-size: .9rem; }
+  .item .k .pl { display: inline; }
+  .item .k .pl::before { content: ", "; }
+}

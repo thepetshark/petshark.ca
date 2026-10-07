@@ -1,0 +1,8 @@
+# Allowed values for `kind:` in a project's front matter: what sort of thing the project is.
+# It is the "Type" column on the home page. Adding a kind is the owner's decision.
+# Keep it to one `key: Label` per line (scripts/check-site.py reads this file).
+game: Game
+app: App
+tool: Tool
+library: Library
+experiment: Experiment

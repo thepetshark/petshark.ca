@@ -1,0 +1,31 @@
+{%- comment -%}
+  The list of every project on the home page. Order: by `status` in the order set in _data/project_statuses.yml,
+  then newest `year` first. The columns come from the project's front matter: image, title, description,
+  kind (_data/project_kinds.yml), platforms, status and year. Without `image` the thumbnail is a tint of the
+  project's theme accent, or a neutral blue-grey.
+{%- endcomment -%}
+<section class="index" id="projects">
+  <h2>All projects</h2>
+  <ul>
+    <li class="row head" aria-hidden="true"><span>Project</span><span>Type</span><span>Status</span><span>Year</span></li>
+{%- for s in site.data.project_statuses %}
+  {%- assign items = site.projects | where: "status", s[0] | sort: "title" | sort: "year" | reverse %}
+  {%- for p in items %}
+    <li class="item">
+      <a class="row" href="{{ p.url | relative_url }}">
+      {%- if p.image %}
+        {%- capture thumb_src %}{% include url.html src=p.image %}{% endcapture %}
+        <span class="thumb"><img src="{{ thumb_src | strip }}" alt="" loading="lazy"></span>
+      {%- else %}
+        <span class="thumb ph"{% if p.theme.accent %} style="--a:{{ p.theme.accent | escape }}"{% endif %}></span>
+      {%- endif %}
+        <span class="t">{{ p.title }}<span class="d">{{ p.description }}</span></span>
+        <span class="k">{{ site.data.project_kinds[p.kind] | default: p.kind }}{% if p.platforms %}<span class="pl">{{ p.platforms | join: ", " }}</span>{% endif %}</span>
+        <span class="s">{{ s[1] }}</span>
+        <span class="y">{{ p.year }}</span>
+      </a>
+    </li>
+  {%- endfor %}
+{%- endfor %}
+  </ul>
+</section>

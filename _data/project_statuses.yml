@@ -1,0 +1,7 @@
+# Allowed values for `status:` in a project's front matter.
+# The order here is the order of the list on the home page; the text is what the page shows.
+# Keep it to one `key: Label` per line (scripts/check-site.py reads this file).
+released: Released
+prototype: Prototype
+in-development: In development
+archived: Archive

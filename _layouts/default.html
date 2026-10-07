@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+{%- comment -%}
+  The base page: Pet Shark top bar, a "stage" for the content, footer.
+  `layout: project` and `layout: home` build on this one.
+  A page may set `theme:` in its front matter to re-colour the stage and, with `theme.bar`, the top bar
+  (see AGENTS.md, "Themes"). Optional front matter: `noindex: true` asks search engines not to list the page.
+{%- endcomment -%}
+{%- assign t = page.theme -%}
+{%- capture theme_style -%}
+  {%- if t.background %}--page-bg:{{ t.background | escape }};{% endif -%}
+  {%- if t.surface %}--surface:{{ t.surface | escape }};{% endif -%}
+  {%- if t.text %}--text:{{ t.text | escape }};{% endif -%}
+  {%- if t.accent %}--accent:{{ t.accent | escape }};{% endif -%}
+  {%- if t.accent_ink %}--accent-ink:{{ t.accent_ink | escape }};{% endif -%}
+  {%- if t.pattern -%}
+    {%- capture pattern_src %}{% include url.html src=t.pattern %}{% endcapture -%}
+    --page-pattern:url({{ pattern_src | strip | escape }});
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture bar_style -%}
+  {%- if t.bar %}--bar-bg:{{ t.bar | escape }};{% endif -%}
+{%- endcapture -%}
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
+{%- if page.noindex %}
+    <meta name="robots" content="noindex">
+{%- endif %}
+    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+    <link rel="preload" href="{{ '/assets/fonts/archivo-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
-  <body>
-    <div class="wrapper">
-      <header>
-
-        {% if site.logo %}
-          <a href="{{ "/" | absolute_url }}">
-            <img src="{{ site.logo | relative_url }}" alt="Logo" />
-          </a>
-        {% endif %}
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-
-        <div>
-        {% include sidebar-custom.html %}
-        </div>
-        
-
-      </header>
-      <section>
-
-      {{ content }}
-
-      </section>
-      <footer>
-        <p><small>Copyright Pet Shark Productions Inc. All rights reserved.</small></p>
-      </footer>
+  <body{% if bar_style != '' %} style="{{ bar_style | strip }}"{% endif %}>
+    <a class="skip" href="#content">Skip to content</a>
+    {% include topbar.html %}
+    <div class="stage{% if t %} themed{% endif %}"{% if theme_style != '' %} style="{{ theme_style | strip }}"{% endif %}>
+      <main id="content" class="wrap">
+{{ content }}
+      </main>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <footer class="sitefoot">
+      <p>&copy; {{ site.time | date: '%Y' }} Pet Shark Productions Inc. All rights reserved.</p>
+    </footer>
   </body>
 </html>
