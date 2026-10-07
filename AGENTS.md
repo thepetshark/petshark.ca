@@ -204,6 +204,9 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
 ## 8. Known pitfalls
 
 - `{{` and `{%` in a Markdown page are read as Liquid. To show them literally, wrap the text in `{% raw %}...{% endraw %}`.
+- GitHub Pages runs Liquid 4, which is stricter than newer versions. It still parses tags inside `{% comment %}`, and it has no
+  `{% liquid %}`, `{% render %}` or `{% echo %}`. A template error fails the whole build (the old site stays up). The check
+  script looks for both mistakes.
 - A root-relative link such as `/geopets-world/devlog/` is fine on a project page. Links inside a `standalone` page are written
   `{{ "/slug/privacy/" | relative_url }}`, exactly as the existing pages and templates do.
 - A new top-level folder with an `index.md` becomes a public page at once. Check that it is meant to be public.

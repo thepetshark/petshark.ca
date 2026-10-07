@@ -282,6 +282,34 @@ def check_standalone(path):
         warn(rel, "privacy policy without a `Last updated:` line")
 
 
+# ---- Liquid that GitHub Pages cannot build -----------------------------------------------------
+# GitHub Pages runs Liquid 4, and a template error fails the whole build. Two things bit us:
+# Liquid 4 still parses the tags inside {% comment %}, and the newer tags (liquid, render, echo) do not exist.
+
+LIQUID_COMMENT = re.compile(r"\{%-?\s*comment\s*-?%\}(.*?)\{%-?\s*endcomment\s*-?%\}", re.S)
+LIQUID_TAG = re.compile(r"\{%-?\s*(liquid|render|echo)\b")
+LIQUID_SKIP = {"AGENTS.md", "CLAUDE.md", "README.md"}
+
+
+def check_liquid():
+    for path in sorted(ROOT.rglob("*")):
+        rel = path.relative_to(ROOT)
+        if path.suffix not in (".html", ".md", ".xml") or rel.name in LIQUID_SKIP:
+            continue
+        if any(x in ("node_modules", "vendor", "scripts", "geopets-world", "_site") or x.startswith(".")
+               for x in rel.parts[:-1]):
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for m in LIQUID_COMMENT.finditer(text):
+            if "{%" in m.group(1) or "{{" in m.group(1):
+                line = text.count("\n", 0, m.start()) + 1
+                err(f"{rel}:{line}", "Liquid tag inside a {% comment %}; Liquid 4 still parses it and a malformed tag "
+                                     "breaks the GitHub Pages build. Describe it in words instead")
+        for m in LIQUID_TAG.finditer(text):
+            line = text.count("\n", 0, m.start()) + 1
+            err(f"{rel}:{line}", f"`{{% {m.group(1)} %}}` does not exist in the Liquid version GitHub Pages uses")
+
+
 # ---- file size and type guard ------------------------------------------------------------------
 
 GRANDFATHERED = ("geopets-world/archive/", "geopets-world/devlog/")
@@ -340,6 +368,7 @@ def main():
         if parts[0] in ("geopets-world",):
             continue
         check_standalone(p)
+    check_liquid()
     check_sizes()
     if len(FEATURED) > 1:
         warn("_projects", f"{len(FEATURED)} projects are featured ({', '.join(FEATURED)}); the home page shows only the newest")

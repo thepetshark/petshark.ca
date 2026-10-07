@@ -1,6 +1,7 @@
 {%- comment -%}
   Turns a path or a full URL into something usable in src/href.
-  `{% include url.html src=page.image %}` gives a site-relative URL for "/assets/..." and leaves "https://..." alone.
-  Wrap it in {% capture %} when the value is needed inside an attribute.
+  Pass the value as `src`. It gives a site-relative URL for "/assets/..." and leaves "https://..." alone.
+  Wrap the include in a capture block when the value is needed inside an attribute.
+  Do not write Liquid tags inside this comment: Liquid 4 (GitHub Pages) still parses them and a tag that is not well formed breaks the build.
 {%- endcomment -%}
 {%- if include.src contains '://' -%}{{ include.src }}{%- else -%}{{ include.src | relative_url }}{%- endif -%}
