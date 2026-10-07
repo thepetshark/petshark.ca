@@ -194,6 +194,7 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
 ## 7. Before every commit
 
 - [ ] `python scripts/check-site.py` reports 0 errors
+- [ ] If Docker is available, `scripts/build-check.sh` ends with "Build OK" (section 8)
 - [ ] The slug is lowercase with hyphens; file names are lowercase
 - [ ] No published URL moved (rule 2); no standalone page links out to the site (rule 1)
 - [ ] Every image has alt text and is under 300 KB; no video or installers
@@ -211,8 +212,12 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
   `{{ "/slug/privacy/" | relative_url }}`, exactly as the existing pages and templates do.
 - A new top-level folder with an `index.md` becomes a public page at once. Check that it is meant to be public.
 - A change to `_config.yml` needs a restart of `jekyll serve` to take effect locally; on GitHub it takes effect on the next build.
-- Previewing locally is optional and needs Ruby: `bundle install`, then `bundle exec jekyll serve` (see `Gemfile`). If you
-  cannot run it, rely on `scripts/check-site.py` and look at the live page after it is published.
+- With Docker available, use the real build: `scripts/build-check.sh` builds the site in GitHub's own Pages image, then runs
+  `check-site.py` and `scripts/smoke-test.py`. It catches Liquid and Jekyll errors that `check-site.py` cannot. It needs a
+  logged-in `gh` (or `GITHUB_TOKEN`).
+- `scripts/preview.sh` serves the site with auto-reload on port 4000, bound to the whole LAN (anyone on the network can open
+  it; never expose the port beyond the LAN). Without Docker, `bundle install` and `bundle exec jekyll serve` also work (see
+  `Gemfile`). If you can run neither, rely on `scripts/check-site.py` and look at the live page after it is published.
 
 ## 9. The studio's brand
 
