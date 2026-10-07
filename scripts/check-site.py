@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Checks this repo against the rules in AGENTS.md. Run it before every commit:
 
-    python scripts/check-site.py
+    python scripts/check-site.py [--base REF]
+
+With --base REF (used on pull requests, e.g. --base origin/main), files that are not in REF count as new
+for the size and file-type rules, even when committed.
 
 Standard library only. Exit code 0 = no errors (warnings are advice), 1 = errors.
 It cannot build the site; it checks the things a build would not catch.
@@ -13,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 errors, warnings = [], []
+BASE = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else None
 
 
 def err(path, msg):
@@ -331,7 +335,7 @@ def check_sizes():
         warn(".", "could not run git; skipped the file size check")
         return
     try:
-        tracked = set(subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True)
+        tracked = set(subprocess.run(["git", "ls-tree", "-r", "-z", "--name-only", BASE] if BASE else ["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True)
                       .stdout.decode("utf-8").split("\0"))
     except (OSError, subprocess.CalledProcessError):
         tracked = set()

@@ -1,0 +1,33 @@
+# Checks every pull request and every branch push except main with the same builder GitHub Pages uses.
+# It never deploys; publishing happens only when a PR is merged into main.
+name: build check
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build with the Pages builder
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Repo rules (AGENTS.md)
+        run: python scripts/check-site.py --base origin/main
+      - name: Smoke test of the built site
+        run: python scripts/smoke-test.py _site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 7
