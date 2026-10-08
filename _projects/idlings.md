@@ -36,7 +36,7 @@ It was not a one-prompt build. It went through the same pipeline I used on my Un
 1. Workshop. I wrote the brief and the game concept, then settled the open design questions with the agents: the currencies, the time skips, the prices, no ads and no data collected.
 2. Mockups. 24 dated rounds of mockups, each revised on my notes. I signed off the full set of screens before any UI was built, then workshopped the animations and a readability redesign on the phone.
 3. Specs. An approved design plan with a measurable definition of done, a style guide, and 134 GitHub issues: epics, and tasks with acceptance criteria.
-4. Implementation. Claude Code agents (Claude Opus 5.5 and Claude Fable 5.1) built the game to the issues, and OpenAI's Codex drew the mockups and the UI.
+4. Implementation. Claude Code agents (Claude Opus 5.5 and Claude Fable 5.1) built the game to the issues, and OpenAI's Codex generated the new art (icons, the wooden menu signs, the app icon, the achievement badges and new animation frames), using the original sprites as references.
 5. Testing and review. 407 automated tests, 114 reference screens, a balance simulation and runs on an iPhone. My playtests raised 26 issues, and all 26 are closed.
 6. Release. I submitted it on 29 September 2026, and it went on sale on the App Store on 7 October.
 
