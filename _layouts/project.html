@@ -12,7 +12,6 @@ layout: default
 {%- assign status_label = site.data.project_statuses[page.status] | default: page.status -%}
 {%- assign kind_label = site.data.project_kinds[page.kind] | default: page.kind -%}
 <div class="project-page">
-<p class="crumb"><a href="{{ '/#projects' | relative_url }}">All projects</a></p>
 <article class="project">
   {%- if page.theme.hero %}
     {%- capture hero_src %}{% include url.html src=page.theme.hero %}{% endcapture %}
@@ -30,6 +29,9 @@ layout: default
         <div><dt>Type</dt><dd>{{ kind_label }}</dd></div>
         {%- if page.platforms %}
         <div><dt>Platforms</dt><dd>{{ page.platforms | join: ", " }}</dd></div>
+        {%- endif %}
+        {%- if page.engine %}
+        <div><dt>Engine</dt><dd>{{ page.engine }}</dd></div>
         {%- endif %}
         <div><dt>Year</dt><dd>{{ page.year }}</dd></div>
       </dl>
