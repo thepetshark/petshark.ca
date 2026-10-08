@@ -97,6 +97,8 @@ article h1 { margin: .6rem 0 1.1rem; font-size: clamp(2rem, 5vw, 3.1rem); font-w
 .step a:hover { border-color: var(--ink); }
 .step span { color: var(--ink-soft); font-size: .85rem; font-weight: 400; }
 .step .next { text-align: right; }
+.back { display: inline-block; margin-top: 1.25rem; padding: .7rem 1rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; color: var(--ink); font-weight: 600; text-decoration: none; }
+.back:hover { border-color: var(--ink); }
 
 .foot { padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2rem; color: var(--ink-soft); font-size: .85rem; }
 .foot p { max-width: 62rem; margin: 0 auto; }
