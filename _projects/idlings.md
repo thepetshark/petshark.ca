@@ -30,6 +30,8 @@ IdLings is a free idle game for iPhone: Mr Moody has turned thirteen forest fair
 
 ## How it was made
 
+It was not a one-prompt build. It went through the same pipeline I ran with human teams on my Unity games, and I made the calls at every step:
+
 1. Workshop. I wrote the brief and the game concept, then settled the open design questions with the agents: the currencies, the time skips, the prices, no ads and no data collected.
 2. Mockups. 24 dated rounds of mockups, each revised on my notes. I signed off the full set of screens before any UI was built, then workshopped the animations and a readability redesign on the phone.
 3. Specs. An approved design plan with a measurable definition of done, a style guide, and 134 GitHub issues: epics, and tasks with acceptance criteria.
