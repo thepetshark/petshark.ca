@@ -25,6 +25,11 @@ for slug in ("idlings", "catbox", "forestfellers"):
         elif re.search(r"petshark\.ca|<link[^>]+stylesheet|<script", page.read_text(errors="replace"), re.I):
             fail(f"{rel} links to the site or loads a stylesheet or script")
 
+for page in site.glob("*/devlog/**/*.html"):
+    text = page.read_text(errors="replace")
+    if 'class="topbar"' not in text or 'class="up"' not in text:
+        fail(f"{page.relative_to(site)} is missing the site top bar or its up link")
+
 for page in list(site.glob("*.html")) + list(site.glob("projects/**/*.html")) + [site / "sitemap.xml"]:
     if page.is_file() and re.search(r"\{\{|\{%", page.read_text(errors="replace")):
         fail(f"unresolved Liquid in {page.relative_to(site)}")

@@ -301,8 +301,8 @@ def check_liquid():
         rel = path.relative_to(ROOT)
         if path.suffix not in (".html", ".md", ".xml") or rel.name in LIQUID_SKIP:
             continue
-        if any(x in ("node_modules", "vendor", "scripts", "geopets-world", "_site") or x.startswith(".")
-               for x in rel.parts[:-1]):
+        if any(x in ("node_modules", "vendor", "scripts", "_site") or x.startswith(".")
+               for x in rel.parts[:-1]) or rel.as_posix().startswith("geopets-world/archive/"):
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for m in CONFLICT_MARKER.finditer(text):
@@ -316,6 +316,35 @@ def check_liquid():
         for m in LIQUID_TAG.finditer(text):
             line = text.count("\n", 0, m.start()) + 1
             err(f"{rel}:{line}", f"`{{% {m.group(1)} %}}` does not exist in the Liquid version GitHub Pages uses")
+
+
+# ---- dev logs ------------------------------------------------------------------------------------
+
+def check_devlogs():
+    projects = {p.stem for p in (ROOT / "_projects").glob("*.md")}
+    for path in sorted(ROOT.glob("*/devlog/**/*.html")):
+        rel = path.relative_to(ROOT)
+        slug = rel.parts[0]
+        text = path.read_text(encoding="utf-8", errors="replace").replace("\r\n", "\n")
+        m = re.match(r"---\n(.*?)\n---\n", text, re.S)
+        if not m:
+            err(rel, "a dev log page needs front matter with `layout: devlog` (AGENTS.md section 5)")
+            continue
+        fm = dict(re.findall(r"^(\w+):\s*(.*?)\s*$", m.group(1), re.M))
+        if fm.get("layout") != "devlog":
+            err(rel, "a dev log page uses `layout: devlog`, which supplies the site's top bar and the way back")
+        if fm.get("project") != slug or slug not in projects:
+            err(rel, f"`project:` must be `{slug}`, the slug of a page in _projects/")
+        for key in ("title", "description"):
+            if not fm.get(key, "").strip('"'):
+                err(rel, f"a dev log page needs `{key}:` in its front matter")
+        body = text[m.end():]
+        if re.search(r"<(html|head|body)[\s>]", body):
+            err(rel, "the devlog layout writes <html>, <head> and <body>; the page holds only its content")
+        if 'id="content"' not in body:
+            err(rel, 'the main content element needs id="content" (the top bar\'s skip link goes there)')
+        if "{{" in body or "{%" in body:
+            err(rel, "`{{` or `{%` in a dev log page is read as Liquid and can break the build; escape or remove it")
 
 
 # ---- file size and type guard ------------------------------------------------------------------
@@ -377,6 +406,7 @@ def main():
             continue
         check_standalone(p)
     check_liquid()
+    check_devlogs()
     check_sizes()
     if len(FEATURED) > 1:
         warn("_projects", f"{len(FEATURED)} projects are featured ({', '.join(FEATURED)}); the home page shows only the newest")
