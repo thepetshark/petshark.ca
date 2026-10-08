@@ -6,6 +6,7 @@ kind: game
 status: in-development
 year: 2026
 platforms: [Android]
+engine: Unity
 featured: true
 image: /assets/img/projects/geopets-world/card.jpg
 image_alt: Three phone screens showing a floating island village with a windmill, cottages and bridges
