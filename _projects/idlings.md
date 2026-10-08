@@ -2,7 +2,7 @@
 layout: project
 title: IdLings
 subtitle: From a Unity prototype to the App Store
-description: A story-driven idle game I rebuilt from my old Unity prototype in five days, directing AI agents as my development team.
+description: A story-driven idle game I rebuilt from my old Unity prototype using Godot in five days, directing AI agents as my development team.
 kind: game
 status: released
 year: 2026
