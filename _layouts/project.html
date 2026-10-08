@@ -42,9 +42,9 @@ layout: default
           {%- if link_url %}
             {%- capture href %}{% include url.html src=link_url %}{% endcapture %}
             {%- if primary contains key %}
-        <li><a class="btn" href="{{ href | strip }}"{% if link_url contains '://' %} rel="noopener"{% endif %}>{{ l[1] }}</a></li>
+        <li><a class="btn" href="{{ href | strip }}">{{ l[1] }}</a></li>
             {%- else %}
-        <li><a href="{{ href | strip }}"{% if link_url contains '://' %} rel="noopener"{% endif %}>{{ l[1] }}</a></li>
+        <li><a href="{{ href | strip }}">{{ l[1] }}</a></li>
             {%- endif %}
           {%- endif %}
         {%- endfor %}

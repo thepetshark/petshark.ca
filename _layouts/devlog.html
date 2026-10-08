@@ -31,6 +31,6 @@
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}{% if project.theme.bar %} style="--bar-bg:{{ project.theme.bar | escape }}"{% endif %}>
 <a class="skip" href="#content">Skip to content</a>
 {% include topbar.html up_url=up_url up_label=up_label %}
-{{ content }}
+{% include external-links.html html=content %}
 </body>
 </html>
