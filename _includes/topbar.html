@@ -4,9 +4,6 @@
       <img src="{{ '/assets/img/petshark-logo.png' | relative_url }}" width="630" height="326" alt="">
       <span>Pet Shark Productions</span>
     </a>
-{%- if include.up_url %}
-    <a class="up" href="{{ include.up_url | relative_url }}"><span aria-hidden="true">&lsaquo;</span> {{ include.up_label }}</a>
-{%- endif %}
     <nav aria-label="Main">
       <ul>
 {%- for item in site.data.nav %}

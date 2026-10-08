@@ -21,8 +21,6 @@
 .topbar a { color: var(--tb-ink); text-decoration: none; }
 .topbar .brand { display: flex; align-items: center; gap: .65rem; font-weight: 650; font-stretch: 108%; letter-spacing: -.005em; }
 .topbar .brand img { display: block; height: 2.4rem; width: auto; max-width: none; border: 0; }
-.topbar .up { display: flex; align-items: center; gap: .35rem; padding: .4rem .8rem .4rem 1rem; border-left: 1px solid color-mix(in srgb, var(--tb-ink) 18%, var(--bar-bg, #fff)); font-weight: 600; white-space: nowrap; }
-.topbar .up:hover { text-decoration: underline; text-underline-offset: 3px; }
 .topbar nav { margin-left: auto; }
 .topbar ul { display: flex; flex-wrap: wrap; gap: .15rem; list-style: none; margin: 0; padding: 0; }
 .topbar nav a { display: block; padding: .4rem .8rem; border-radius: 4px; font-weight: 550; }

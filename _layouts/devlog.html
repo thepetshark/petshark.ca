@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 {%- comment -%}
-  A dev log page: the Pet Shark top bar with one "up" link, then the page's own content and stylesheet.
-  Front matter: project (the slug of a page in _projects), title, description, optional body_class and noindex.
-  The dev log index goes up to the project page; every other page goes up to the index. See AGENTS.md section 5.
+  A dev log page: the Pet Shark top bar (tinted like the project page), then the page's own content and stylesheet.
+  The content starts with the dev log's project bar and its back link. Front matter: project (the slug of a page in
+  _projects), title, description, optional body_class and noindex. See AGENTS.md section 5.
 {%- endcomment -%}
 {%- assign project = site.projects | where: "slug", page.project | first -%}
-{%- capture devlog_url %}/{{ page.project }}/devlog/{% endcapture -%}
-{%- if page.url == devlog_url -%}
-  {%- assign up_url = project.url -%}
-  {%- assign up_label = project.title -%}
-{%- else -%}
-  {%- assign up_url = devlog_url -%}
-  {%- assign up_label = "Dev Log" -%}
-{%- endif -%}
 <html lang="{{ site.lang | default: 'en' }}">
 <head>
 <meta charset="utf-8">
@@ -26,11 +18,11 @@
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
 <link rel="preload" href="{{ '/assets/fonts/archivo-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/topbar.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-<link rel="stylesheet" href="{{ devlog_url | append: 'devlog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/' | append: page.project | append: '/devlog/devlog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}{% if project.theme.bar %} style="--bar-bg:{{ project.theme.bar | escape }}"{% endif %}>
 <a class="skip" href="#content">Skip to content</a>
-{% include topbar.html up_url=up_url up_label=up_label %}
+{% include topbar.html %}
 {{ content }}
 </body>
 </html>
