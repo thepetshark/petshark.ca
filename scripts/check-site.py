@@ -293,6 +293,7 @@ def check_standalone(path):
 LIQUID_COMMENT = re.compile(r"\{%-?\s*comment\s*-?%\}(.*?)\{%-?\s*endcomment\s*-?%\}", re.S)
 LIQUID_TAG = re.compile(r"\{%-?\s*(liquid|render|echo)\b")
 LIQUID_SKIP = {"AGENTS.md", "CLAUDE.md", "README.md"}
+CONFLICT_MARKER = re.compile(r"^(<<<<<<< |>>>>>>> )", re.M)
 
 
 def check_liquid():
@@ -304,6 +305,9 @@ def check_liquid():
                for x in rel.parts[:-1]):
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
+        for m in CONFLICT_MARKER.finditer(text):
+            line = text.count("\n", 0, m.start()) + 1
+            err(f"{rel}:{line}", "git conflict marker left in the file; resolve the merge")
         for m in LIQUID_COMMENT.finditer(text):
             if "{%" in m.group(1) or "{{" in m.group(1):
                 line = text.count("\n", 0, m.start()) + 1

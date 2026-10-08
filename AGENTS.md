@@ -80,8 +80,14 @@ is (`_data/project_kinds.yml`). The owner decides which projects are shown at al
    are published (section 4).
 2. **Create the page.** Copy `_templates/project.md` to `_projects/<slug>.md` and fill it in (front matter below).
 3. **Write the body.** Start at `##`; the layout already shows the title, subtitle, description, the facts (status, type,
-   platforms, engine, year) and the link buttons, so do not repeat them. No `**bold**` inside headings. Write in the owner's voice, first person and plain, as the
-   existing pages do, unless told otherwise.
+   platforms, engine, year) and the link buttons, so do not repeat them. No `**bold**` inside headings. Write in the owner's
+   voice, first person and plain, as the existing pages do, unless told otherwise. The page is for visitors, so:
+   - Describe what happened, not what the owner thinks or used to do. Do not characterise the owner's past or habits in
+     their voice ("the way I ran my teams"); if it is not in the project's own records, leave it out.
+   - Expand or cut any name a visitor cannot know (an internal framework, a plugin set, a code name). Say what it does.
+   - Keep process and tool detail short: model names, plugin names, test counts and commit counts belong in a dev log.
+   - How AI was used, and anything about licensed or third-party art, is wording the owner approves. Write it plainly and
+     point it out in the pull request.
 4. **Add images** (section 6). Put them in `assets/img/projects/<slug>/`. Every image needs alt text:
    `![A level with a spring pad and three Mushi](/assets/img/projects/mushipoi/level-3.jpg)`.
 5. **Theme it, if the project has a look of its own** (below). If it has no palette yet, leave `theme` out; the page then uses
@@ -166,8 +172,16 @@ Before publishing a new dev log, ask the owner whether it is **public** or **hid
   the `noindex`.
 - Public: say so in the project page's description or body, and link it with `links.devlog`.
 
-Either way it needs a way back to the project page, the size rules in section 6 apply, and large source material (full-size
-screenshots, recordings) does not belong in this repo.
+Either way, the size rules in section 6 apply, and large source material (full-size screenshots, recordings) does not belong
+in this repo. For the pages themselves:
+
+- Every page has a way back to the project page, and every entry page a button at the end that goes back to the dev log's
+  index, as well as any previous and next links. A link in the top bar alone is not enough.
+- Pictures are shown inline at their display size, with no click-through to a larger file.
+- The generator and its sources (content, full-size captures) live in the project's own repository; this repo holds only the
+  output. When a reviewer or the owner asks for a change, change the generator and regenerate, do not hand-edit the output.
+- A quote of the owner ("What I said at the time") is the owner's exact words, chosen because it tells the reader something.
+  The owner approves every quote before the pull request is merged.
 
 ## 6. Large files and media
 
@@ -195,7 +209,7 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
 
 ## 7. Before every commit
 
-- [ ] `python scripts/check-site.py` reports 0 errors
+- [ ] `python scripts/check-site.py` reports 0 errors (it also checks for conflict markers)
 - [ ] If Docker is available, `scripts/build-check.sh` ends with "Build OK" (section 8)
 - [ ] The slug is lowercase with hyphens; file names are lowercase
 - [ ] No published URL moved (rule 2); no standalone page links out to the site (rule 1)
@@ -239,7 +253,13 @@ Merging a pull request into `main` publishes the site. The owner has delegated r
 
 **Author:** branch from an up-to-date `main`, finish section 3 (and section 4 if it applies), run `python scripts/check-site.py`
 and, with Docker, `scripts/build-check.sh`, push the branch and open a PR. The PR text says what changed and anything you
-left out because you did not know it (rule 8). The `build check` workflow runs on the PR; it must be green.
+left out because you did not know it (rule 8), and lists every decision the owner has to make (wording, facts, quotes) so the
+reviewer can ask in one go. The `build check` workflow runs on the PR; it must be green.
+
+A change over 5 MB is split into pull requests of under 5 MB each, stacked on one another (the second PR's base is the first
+PR's branch), with the merge order in each PR's text. The build check measures a PR against its own base. When a parent branch
+changes, merge it forward into every child (part 1 into part 2, part 2 into the link PR) and make sure no conflict markers
+are left; the check script fails on them.
 
 **Reviewer:** check out the branch, then:
 
@@ -249,6 +269,9 @@ left out because you did not know it (rule 8). The `build check` workflow runs o
 3. The pre-commit checklist (section 7) holds: no moved URLs, no links out of standalone pages, no invented facts, images
    within limits.
 4. Merge with squash (`gh pr merge <n> --squash --delete-branch`), then open the live page a minute or two later and look.
+
+When something needs changing, say so in a comment on the PR and let the author agent make the change; it knows the project
+and its generator. The reviewer edits an author's branch only when the owner asks for it.
 
 **Ask the owner instead of merging** when the PR contains privacy policy or support wording (rule 9), a new project the owner has
 not asked for, a new `status: released` or store link the owner has not supplied, a dev log (rule 4), a shared file, anything
