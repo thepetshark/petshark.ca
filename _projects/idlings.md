@@ -11,7 +11,7 @@ engine: Godot
 image: /assets/img/projects/idlings/card.jpg
 image_alt: Freed fairies and their kitties on the forest floor, one saying "Every upgrade makes us stronger. Keep going!"
 links:
-  app_store: https://apps.apple.com/app/idlings/id6816804643
+  app_store: https://apps.apple.com/us/app/idlings/id6816804643
   support: /idlings/
   privacy: /idlings/privacy/
 theme:
