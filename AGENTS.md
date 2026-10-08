@@ -69,13 +69,16 @@ tint the top bar with a light colour (`bar`); the footer never changes.
 
 Every page except the standalone support and privacy pages has the same top bar, written by the layouts (`default`,
 `home`, `project`, `devlog`) from `_includes/topbar.html` and styled by `assets/css/topbar.css`: the logo and "Pet Shark
-Productions" on the left, linking home, and the main menu (`_data/nav.yml`) on the right. Never copy, rebuild or restyle it
-in a page, and do not add a second header with the studio's name or links to the site.
+Productions" on the left, linking home, and the main menu (`_data/nav.yml`) on the right. It belongs to the studio and
+holds nothing else. Never copy, rebuild or restyle it in a page, and do not add a second header with the studio's name or
+links to the site.
 
-- **Up link.** A page below a project page has one "up" link in the top bar, right after the logo: a dev log's index shows
-  "‹ <Project>" (to the project page), a dev log entry shows "‹ Dev Log" (to the index). The `devlog` layout adds it.
-  Project pages have none, because the menu's Projects link is the way up, and no page adds a breadcrumb such as
-  "All projects".
+- **Project bar.** A page below a project page (a dev log's index and its entries) has a project bar directly under the top
+  bar: the project's own navigation, in the project's own colours. Its first item is always the back link: "‹ <Project>" on
+  the dev log's index (to the project page), "‹ Dev Log" on an entry (to the index). Whatever else that page needs, such as a
+  viewer's title, previous and next, follows in the same bar. Section 5 says how a dev log writes it.
+- **Project pages** have no project bar and no back link, because the menu's Projects link is the way up. No page adds a
+  breadcrumb such as "All projects".
 - **Tint.** The top bar is white unless the project's `theme.bar` tints it. A project page and its dev log share the tint.
 
 The home page is built from `_projects/`; you never edit a list. It shows an optional featured project (`featured: true`),
@@ -200,6 +203,7 @@ title: "First scenes in Unity – IdLings Dev Log"
 description: "One sentence for search results and sharing."
 body_class: entry
 ---
+<nav class="projectbar" aria-label="IdLings"><a class="up" href="/idlings/devlog/">‹ Dev Log</a></nav>
 <main id="content">
   ...
 </main>
@@ -207,8 +211,13 @@ body_class: entry
 ```
 
 - `layout: devlog` writes `<html>`, `<head>` (title, description, sharing tags, favicons, the top bar's stylesheet and
-  `/<slug>/devlog/devlog.css`) and the site's top bar with its up link. Write none of those yourself.
-- `project` is the slug of the project's page in `_projects/`. The top bar takes that page's tint and title from it.
+  `/<slug>/devlog/devlog.css`) and the site's top bar. Write none of those yourself.
+- `project` is the slug of the project's page in `_projects/`. The top bar takes that page's tint from it.
+- The page starts with its **project bar**: a `<nav>` (or, for a viewer's toolbar, a `<header>`) with the class
+  `projectbar`, styled by the dev log's own `devlog.css` in the project's colours. Its first link has the class `up`: on the
+  index `href="/projects/<slug>/"` reading "‹ <Project title>", on an entry `href="/<slug>/devlog/"` reading "‹ Dev Log". The
+  arrow may be the `‹` character or an icon. The page's own controls (title, previous and next, a timeline) may follow in the
+  same bar. The check script fails on a page without it or with the wrong back link.
 - `title`: `"<Project> Dev Log"` on the index, `"<Entry title> – <Project> Dev Log"` on an entry. Separate the parts with an
   en dash, not `|` (section 8). The site's name is added for you. Quote `title` and `description`.
 - `body_class` (optional) goes on `<body>`. `noindex: true` marks a hidden dev log.
@@ -218,11 +227,11 @@ body_class: entry
 
 ### Navigation
 
-Section 2, "Header and navigation", applies: the up link is the way back, at the top. In addition:
+Section 2, "Header and navigation", applies: the project bar's back link is the way back, at the top. In addition:
 
 - Entry pages link to the previous and next entries. An entry that scrolls like an article ends with those links and a
   "Back to the Dev Log" button. A full-screen viewer, like Geo Pets World's, keeps previous and next in its toolbar.
-- Every dev log page leads back to the project page: the index through its up link, an entry through the index. The footer
+- Every dev log page leads back to the project page: the index through its back link, an entry through the index. The footer
   may link the project page as well.
 
 ### Content
