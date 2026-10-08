@@ -34,6 +34,13 @@ a { color: var(--wood); }
 :focus-visible { outline: 3px solid var(--wood); outline-offset: 3px; }
 
 
+/* The project bar: the Dev Log's own navigation, under the site's top bar, in the game's ink */
+.projectbar { background: var(--ink); color: #fff; }
+.projectbar div { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: .6rem 0; }
+.projectbar a { color: #fff; font-weight: 700; text-decoration: none; }
+.projectbar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.projectbar :focus-visible { outline-color: #fff; }
+
 main { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: clamp(1.5rem, 5vw, 3.5rem) 0 4rem; }
 
 /* Category chips: a swatch in the category's colour, the label in ink */
