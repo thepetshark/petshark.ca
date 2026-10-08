@@ -95,7 +95,7 @@ a { color: var(--accent); }
 /* A panel is just a section until the page is themed; then it becomes the surface the text sits on */
 .stage.themed .wrap { padding-top: 2rem; padding-bottom: 3.5rem; }
 .stage.themed .panel { background: var(--surface); color: var(--text); border: 1px solid var(--rule); border-radius: 6px; padding: clamp(1.25rem, 4vw, 2.5rem); }
-.stage.themed .crumb, .stage.themed .project { max-width: 52rem; margin-left: auto; margin-right: auto; }
+.stage.themed .project { max-width: 52rem; margin-left: auto; margin-right: auto; }
 
 .page-title, .intro h1, .project-head h1 { font-weight: 680; font-stretch: 112%; line-height: 1.02; letter-spacing: -.028em; }
 
@@ -139,10 +139,6 @@ a { color: var(--accent); }
 /* ---- Project page ----------------------------------------------------- */
 
 .project-page { padding-top: 1.5rem; padding-bottom: 4rem; }
-.crumb { padding-top: 1.75rem; font-size: .95rem; font-weight: 550; }
-.crumb a { color: var(--muted); text-decoration: none; }
-.crumb a:hover { color: var(--text); text-decoration: underline; }
-.stage.themed .crumb { padding-top: 0; margin-bottom: 1rem; }
 
 .project { padding-top: 1.25rem; }
 .project-hero { width: 100%; max-height: 26rem; margin-bottom: 1.25rem; border-radius: 6px; object-fit: cover; }
