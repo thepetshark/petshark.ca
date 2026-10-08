@@ -9,6 +9,7 @@ for the size and file-type rules, even when committed.
 Standard library only. Exit code 0 = no errors (warnings are advice), 1 = errors.
 It cannot build the site; it checks the things a build would not catch.
 """
+import html
 import re
 import subprocess
 import sys
@@ -341,6 +342,19 @@ def check_devlogs():
         body = text[m.end():]
         if re.search(r"<(html|head|body)[\s>]", body):
             err(rel, "the devlog layout writes <html>, <head> and <body>; the page holds only its content")
+        index = rel.parent == Path(slug, "devlog")
+        bar = re.match(r'\s*<(nav|header)\b[^>]*\bclass="[^"]*\bprojectbar\b[^"]*"[^>]*>(.*?)</\1>', body, re.S)
+        up = bar and re.search(r'<a\b([^>]*)>(.*?)</a>', bar.group(2), re.S)
+        title_m = re.search(r"^title:\s*(.+?)\s*$", (ROOT / "_projects" / f"{slug}.md").read_text(encoding="utf-8"), re.M) \
+            if slug in projects else None
+        want_href = f"/projects/{slug}/" if index else f"/{slug}/devlog/"
+        want_label = (title_m.group(1).strip('"') if title_m else slug) if index else "Dev Log"
+        if not bar:
+            err(rel, 'a dev log page starts with its project bar, <nav class="projectbar"> (AGENTS.md section 5)')
+        elif not up or 'class="up' not in up.group(1) or f'href="{want_href}"' not in up.group(1):
+            err(rel, f'the project bar\'s first link is <a class="up" href="{want_href}">')
+        elif html.unescape(re.sub(r"<[^>]+>", "", up.group(2))).replace("\u2039", "").strip() != want_label:
+            err(rel, f"the project bar's back link reads \u2039 {want_label}")
         if 'id="content"' not in body:
             err(rel, 'the main content element needs id="content" (the top bar\'s skip link goes there)')
         if "{{" in body or "{%" in body:

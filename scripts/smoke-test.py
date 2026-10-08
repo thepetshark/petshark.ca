@@ -27,8 +27,8 @@ for slug in ("idlings", "catbox", "forestfellers"):
 
 for page in site.glob("*/devlog/**/*.html"):
     text = page.read_text(errors="replace")
-    if 'class="topbar"' not in text or 'class="up"' not in text:
-        fail(f"{page.relative_to(site)} is missing the site top bar or its up link")
+    if 'class="topbar"' not in text or "projectbar" not in text or 'class="up"' not in text:
+        fail(f"{page.relative_to(site)} is missing the site top bar, or the project bar and its back link")
 
 for page in site.rglob("*.html"):
     rel = page.relative_to(site).as_posix()
