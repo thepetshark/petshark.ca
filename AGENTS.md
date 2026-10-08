@@ -244,7 +244,7 @@ left out because you did not know it (rule 8). The `build check` workflow runs o
 
 1. The diff touches only that project's files, apart from the pointers in section 3 (rule 6). Changes to shared files, to
    `.github/` or to this file are the owner's to approve.
-2. `python scripts/check-site.py --base origin/main` and `scripts/build-check.sh` pass; the `build check` run is green.
+2. `python scripts/check-site.py --base origin/<the PR's base branch>` and `scripts/build-check.sh` pass; the `build check` run is green.
 3. The pre-commit checklist (section 7) holds: no moved URLs, no links out of standalone pages, no invented facts, images
    within limits.
 4. Merge with squash (`gh pr merge <n> --squash --delete-branch`), then open the live page a minute or two later and look.
