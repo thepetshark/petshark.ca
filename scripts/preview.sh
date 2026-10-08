@@ -10,7 +10,7 @@ mkdir -p .bundle-cache
 tty=(); [ -t 0 ] && tty=(-it)
 
 exec docker run --rm "${tty[@]}" \
-  --user "$(id -u):$(id -g)" -e HOME=/tmp -e BUNDLE_PATH=/srv/jekyll/.bundle-cache \
+  --user "$(id -u):$(id -g)" -e HOME=/tmp -e BUNDLE_PATH=/srv/jekyll/.bundle-cache -e PAGES_REPO_NWO=thepetshark/petshark.ca \
   -v "$repo:/srv/jekyll" -w /srv/jekyll -p 4000:4000 -p 35729:35729 \
   ruby:3.3 \
   bash -c 'bundle install --quiet && bundle exec jekyll serve --livereload --host 0.0.0.0 --port 4000 --force_polling'

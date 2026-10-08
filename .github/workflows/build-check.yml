@@ -1,11 +1,11 @@
-# Checks every pull request and every branch push except main with the same builder GitHub Pages uses.
+# Checks every pull request with the same builder GitHub Pages uses. New files are measured against the PR's own
+# base branch, so a stacked PR counts only its own files.
 # It never deploys; publishing happens only when a PR is merged into main.
 name: build check
 
 on:
   pull_request:
-  push:
-    branches-ignore: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,7 +23,7 @@ jobs:
           source: ./
           destination: ./_site
       - name: Repo rules (AGENTS.md)
-        run: python scripts/check-site.py --base origin/main
+        run: python scripts/check-site.py --base "origin/${{ github.base_ref || 'main' }}"
       - name: Smoke test of the built site
         run: python scripts/smoke-test.py _site
       - uses: actions/upload-artifact@v4
