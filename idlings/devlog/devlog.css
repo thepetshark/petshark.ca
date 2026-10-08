@@ -75,6 +75,12 @@ article { padding: clamp(1.25rem, 4vw, 2.75rem); background: var(--panel); borde
 article h1 { margin: .6rem 0 1.1rem; font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; font-stretch: 110%; line-height: 1.05; letter-spacing: -.03em; max-width: 44rem; }
 .text { max-width: 40rem; }
 .text p { margin-bottom: 1rem; }
+/* who did what: my part in wooden-sign brown, the agents' in Moonstone purple */
+.who { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; max-width: 44rem; margin: .5rem 0 1.25rem; }
+.who div { padding: .75rem 1rem; border-left: 4px solid var(--wood); background: #F5F8EF; border-radius: 0 4px 4px 0; }
+.who .agents { border-left-color: #7549B1; }
+.who dt { color: var(--ink-soft); font-size: .85rem; font-weight: 600; }
+.who dd { margin: .15rem 0 0; }
 .said-at-the-time { max-width: 40rem; margin: 1.75rem 0 .5rem; }
 .said-at-the-time h2 { margin-bottom: .8rem; color: var(--ink-soft); font-size: .95rem; font-weight: 600; }
 /* my words at the time, as the game's own speech bubbles: white, a dark pixel edge, a stepped tail */
@@ -100,6 +106,6 @@ article h1 { margin: .6rem 0 1.1rem; font-size: clamp(2rem, 5vw, 3.1rem); font-w
   .trail { padding-left: 2.1rem; }
   .trail::before { left: .2rem; }
   .day::before { left: -2.15rem; }
-  .step { grid-template-columns: 1fr; }
+  .step, .who { grid-template-columns: 1fr; }
   .step .next { text-align: left; }
 }
