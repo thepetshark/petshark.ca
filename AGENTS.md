@@ -49,7 +49,7 @@ Rules added to keep a site edited by several agents consistent. The owner may ch
 - Only plugins on GitHub's allowlist can run. Right now that is `jekyll-seo-tag`. Do not add a plugin to `_config.yml`
   unless it is on https://pages.github.com/versions/ and the owner agrees.
 - A file **with** front matter (`---` lines at the top) is rendered through a layout. A file **without** it is copied as is.
-  That is how the Geo Pets World Dev Log works: plain HTML files, copied untouched.
+  That is how the Geo Pets World mockups in `geopets-world/archive/` are published: plain HTML files, copied untouched.
 - Folders that start with `_` or `.` are not published. `_config.yml` has an `include:` list for the rare exception.
 - GitHub Pages is **case-sensitive**; Windows is not. `Card.JPG` and `card.jpg` are different files online. Use lowercase file
   names with hyphens.
@@ -59,11 +59,27 @@ Rules added to keep a site edited by several agents consistent. The owner may ch
 | Home page | `index.md` | `home` |
 | A project page (a game, app, tool or other project) | `_projects/<slug>.md`, published at `/projects/<slug>/` | `project` |
 | A game's support page and privacy policy | `<slug>/index.md`, `<slug>/privacy.md`, at `/<slug>/` and `/<slug>/privacy/` | `standalone` |
-| A dev log | `<slug>/devlog/`, static files | its own |
+| A dev log | `<slug>/devlog/`, generated HTML pages with front matter (section 5) | `devlog` |
 | Not-found page | `404.html` | `default` |
 
 The page frame is fixed: a slim Pet Shark top bar, a content area ("stage"), a footer. A theme re-colours the stage, and may
 tint the top bar with a light colour (`bar`); the footer never changes.
+
+### Header and navigation
+
+Every page except the standalone support and privacy pages has the same top bar, written by the layouts (`default`,
+`home`, `project`, `devlog`) from `_includes/topbar.html` and styled by `assets/css/topbar.css`: the logo and "Pet Shark
+Productions" on the left, linking home, and the main menu (`_data/nav.yml`) on the right. It belongs to the studio and
+holds nothing else. Never copy, rebuild or restyle it in a page, and do not add a second header with the studio's name or
+links to the site.
+
+- **Project bar.** A page below a project page (a dev log's index and its entries) has a project bar directly under the top
+  bar: the project's own navigation, in the project's own colours. Its first item is always the back link: "‹ <Project>" on
+  the dev log's index (to the project page), "‹ Dev Log" on an entry (to the index). Whatever else that page needs, such as a
+  viewer's title, previous and next, follows in the same bar. Section 5 says how a dev log writes it.
+- **Project pages** have no project bar and no back link, because the menu's Projects link is the way up. No page adds a
+  breadcrumb such as "All projects".
+- **Tint.** The top bar is white unless the project's `theme.bar` tints it. A project page and its dev log share the tint.
 
 The home page is built from `_projects/`; you never edit a list. It shows an optional featured project (`featured: true`),
 then an index of every project ordered by `status` (the order in `_data/project_statuses.yml`) and then newest `year` first,
@@ -161,27 +177,72 @@ Do this when a game is on, or about to go on, the App Store or Google Play. Thes
 
 ## 5. Dev logs
 
-A dev log is a set of static pages under `/<slug>/devlog/`, with its own look. The Geo Pets World Dev Log
-(`geopets-world/devlog/`, with its source material in `geopets-world/archive/`) is the one example. It is produced by tooling
-outside this repo, so do not hand-edit its pages.
+A dev log is a set of pages under `/<slug>/devlog/`: an index (`<slug>/devlog/index.html`), one folder per entry
+(`<slug>/devlog/<entry>/index.html`) and its own stylesheet, `<slug>/devlog/devlog.css`. The IdLings Dev Log
+(`idlings/devlog/`) is the reference example. The Geo Pets World Dev Log (`geopets-world/devlog/`) shows the working mockups
+in `geopets-world/archive/` in a full-screen viewer. A dev log is produced by a generator in the project's own repository, so
+do not hand-edit its pages.
 
 Before publishing a new dev log, ask the owner whether it is **public** or **hidden from search**.
 
-- Hidden: put `<meta name="robots" content="noindex">` in every page of it, and add a `Disallow: /<slug>/<archive path>/` line
-  to `robots.txt` for any folder of raw material. Leave the dev log's own pages crawlable, otherwise search engines never see
+- Hidden: set `noindex: true` in the front matter of every page of it, and add a `Disallow: /<slug>/<archive path>/` line to
+  `robots.txt` for any folder of raw material. Leave the dev log's own pages crawlable, otherwise search engines never see
   the `noindex`.
-- Public: say so in the project page's description or body, and link it with `links.devlog`.
+- Public: say so in the project page's description or body, and link it with `links.devlog`. Its pages are listed in
+  `sitemap.xml` automatically.
 
-Either way, the size rules in section 6 apply, and large source material (full-size screenshots, recordings) does not belong
-in this repo. For the pages themselves:
+### What the generator writes
 
-- Every page has a way back to the project page, and every entry page a button at the end that goes back to the dev log's
-  index, as well as any previous and next links. A link in the top bar alone is not enough.
+Each page is an HTML file that starts with front matter and holds only the page's own content:
+
+```
+---
+layout: devlog
+project: idlings
+title: "First scenes in Unity – IdLings Dev Log"
+description: "One sentence for search results and sharing."
+body_class: entry
+---
+<nav class="projectbar" aria-label="IdLings"><a class="up" href="/idlings/devlog/">‹ Dev Log</a></nav>
+<main id="content">
+  ...
+</main>
+<footer class="foot">...</footer>
+```
+
+- `layout: devlog` writes `<html>`, `<head>` (title, description, sharing tags, favicons, the top bar's stylesheet and
+  `/<slug>/devlog/devlog.css`) and the site's top bar. Write none of those yourself.
+- `project` is the slug of the project's page in `_projects/`. The top bar takes that page's tint from it.
+- The page starts with its **project bar**: a `<nav>` (or, for a viewer's toolbar, a `<header>`) with the class
+  `projectbar`, styled by the dev log's own `devlog.css` in the project's colours. Its first link has the class `up`: on the
+  index `href="/projects/<slug>/"` reading "‹ <Project title>", on an entry `href="/<slug>/devlog/"` reading "‹ Dev Log". The
+  arrow may be the `‹` character or an icon. The page's own controls (title, previous and next, a timeline) may follow in the
+  same bar. The check script fails on a page without it or with the wrong back link.
+- `title`: `"<Project> Dev Log"` on the index, `"<Entry title> – <Project> Dev Log"` on an entry. Separate the parts with an
+  en dash, not `|` (section 8). The site's name is added for you. Quote `title` and `description`.
+- `body_class` (optional) goes on `<body>`. `noindex: true` marks a hidden dev log.
+- The main content element has `id="content"`; the top bar's skip link goes there.
+- No `{{` or `{%` anywhere in a page: it is read as Liquid. The check script fails on it, and on a page without this front
+  matter.
+
+### Navigation
+
+Section 2, "Header and navigation", applies: the project bar's back link is the way back, at the top. In addition:
+
+- Entry pages link to the previous and next entries. An entry that scrolls like an article ends with those links and a
+  "Back to the Dev Log" button. A full-screen viewer, like Geo Pets World's, keeps previous and next in its toolbar.
+- Every dev log page leads back to the project page: the index through its back link, an entry through the index. The footer
+  may link the project page as well.
+
+### Content
+
 - Pictures are shown inline at their display size, with no click-through to a larger file.
 - The generator and its sources (content, full-size captures) live in the project's own repository; this repo holds only the
-  output. When a reviewer or the owner asks for a change, change the generator and regenerate, do not hand-edit the output.
+  output. When a reviewer or the owner asks for a change, change the generator and regenerate.
 - A quote of the owner ("What I said at the time") is the owner's exact words, chosen because it tells the reader something.
   The owner approves every quote before the pull request is merged.
+- The size rules in section 6 apply, and large source material (full-size screenshots, recordings) does not belong in this
+  repo.
 
 ## 6. Large files and media
 
@@ -227,6 +288,8 @@ im.save("shot.jpg", quality=80, optimize=True)  # check the size afterwards
   script looks for both mistakes.
 - A root-relative link such as `/geopets-world/devlog/` is fine on a project page. Links inside a `standalone` page are written
   `{{ "/slug/privacy/" | relative_url }}`, exactly as the existing pages and templates do.
+- In `title:` and `description:`, the SEO tag reads `a | b` as a Markdown table and the `|` disappears from the page title.
+  Separate parts with an en dash (–).
 - A new top-level folder with an `index.md` becomes a public page at once. Check that it is meant to be public.
 - A change to `_config.yml` needs a restart of `jekyll serve` to take effect locally; on GitHub it takes effect on the next build.
 - With Docker available, use the real build: `scripts/build-check.sh` builds the site in GitHub's own Pages image, then runs
@@ -269,6 +332,11 @@ are left; the check script fails on them.
 3. The pre-commit checklist (section 7) holds: no moved URLs, no links out of standalone pages, no invented facts, images
    within limits.
 4. Merge with squash (`gh pr merge <n> --squash --delete-branch`), then open the live page a minute or two later and look.
+
+Merge a stack from the bottom up. Before merging a PR whose branch is another PR's base, retarget the child to `main`
+(`gh pr edit <child> --base main`); otherwise deleting the parent's branch closes the child, and it has to be opened again.
+After the parent is merged, merge `main` into the child branch, keep the child's version of any file both of them added, check
+for conflict markers, and wait for its build check to pass again.
 
 When something needs changing, say so in a comment on the PR and let the author agent make the change; it knows the project
 and its generator. The reviewer edits an author's branch only when the owner asks for it.

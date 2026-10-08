@@ -3,8 +3,8 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 {%- comment -%}
-  Lists the home page and the project pages, and nothing else on purpose: standalone pages
-  (privacy policies, support pages) and dev logs are not listed. A project can opt out with noindex: true.
+  Lists the home page, the project pages and the pages of public dev logs. Standalone pages (privacy policies,
+  support pages) are not listed on purpose. A project page or a dev log opts out with noindex: true.
 {%- endcomment %}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>{{ "/" | absolute_url }}</loc></url>
@@ -12,5 +12,12 @@ layout: null
   {%- unless p.noindex %}
   <url><loc>{{ p.url | absolute_url }}</loc></url>
   {%- endunless %}
+{%- endfor %}
+{%- for p in site.pages %}
+  {%- if p.layout == "devlog" %}
+  {%- unless p.noindex %}
+  <url><loc>{{ p.url | absolute_url }}</loc></url>
+  {%- endunless %}
+  {%- endif %}
 {%- endfor %}
 </urlset>

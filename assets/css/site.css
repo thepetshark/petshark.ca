@@ -59,24 +59,7 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-.skip { position: absolute; left: .75rem; top: -4rem; z-index: 20; padding: .5rem .9rem; border-radius: 4px; background: var(--ink); color: #fff; }
-.skip:focus { top: .75rem; }
-
-/* ---- Top bar ---------------------------------------------------------- */
-
-.topbar { position: sticky; top: 0; z-index: 10; background: var(--bar-bg, #fff); border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, var(--bar-bg, #fff)); }
-.topbar-inner { max-width: var(--wrap); margin: 0 auto; min-height: 3.25rem; padding: .3rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
-.brand { display: flex; align-items: center; gap: .65rem; color: var(--ink); font-weight: 650; font-stretch: 108%; letter-spacing: -.005em; text-decoration: none; }
-.brand img { height: 2.4rem; width: auto; }
-.topbar nav { margin-left: auto; }
-.topbar ul { display: flex; flex-wrap: wrap; gap: .15rem; }
-.topbar nav a { display: block; padding: .4rem .8rem; border-radius: 4px; color: var(--ink); font-weight: 550; text-decoration: none; }
-.topbar nav a:hover, .topbar nav a[aria-current="page"] { background: color-mix(in srgb, var(--ink) 9%, transparent); }
-.topbar :focus-visible { outline-color: var(--ink); }
-
-@media (max-width: 30rem) {
-  .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-}
+/* The top bar and skip link are in topbar.css, which every layout loads. */
 
 /* ---- Stage ------------------------------------------------------------ */
 

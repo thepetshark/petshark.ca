@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Market and Settings as windows | Geo Pets World Dev Log</title>
-<meta name="description" content="The market and the Settings screen redrawn as inset windows over the map, which stays visible under a dim backdrop. Both previews are interactive: four market tabs with browsing, selling, collecting and withdrawing, and three Settings tabs.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../devlog.css">
-</head>
-<body class="shell">
-<header class="bar">
-<a href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Dev Log</a>
+---
+layout: devlog
+project: geopets-world
+title: "Market and Settings as windows – Geo Pets World Dev Log"
+description: "The market and the Settings screen redrawn as inset windows over the map, which stays visible under a dim backdrop. Both previews are interactive: four market tabs with browsing, selling, collecting and withdrawing, and three Settings tabs."
+body_class: shell
+noindex: true
+---
+<header class="bar projectbar" id="content">
+<a class="up" href="/geopets-world/devlog/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Dev Log</a>
 <div class="title"><h1>Market and Settings as windows</h1><div class="when">First committed 23 Sep 2026, 22:16</div></div>
 <nav class="views" id="views" aria-label="Pages in this entry"></nav>
 <nav class="step" aria-label="Neighbouring entries"><a data-step="prev" rel="prev" href="../icons-and-portraits/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Older</a><a data-step="next" rel="next" href="../biome-horizons/">Newer<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></a></nav>
@@ -116,5 +112,3 @@
   log.addEventListener('click',function(e){var r=log.getBoundingClientRect();
     if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)log.close();});
 })();</script>
-</body>
-</html>

@@ -1,0 +1,33 @@
+/*
+  The Pet Shark top bar and skip link, shared by every page except the standalone support and privacy pages.
+  Self-contained on purpose: dev log pages load it beside their own stylesheet and without site.css, so it sets its own
+  font, colours and box model and reads only --bar-bg (a light tint, from the project's theme.bar).
+*/
+@font-face {
+  font-family: Archivo;
+  src: url(../fonts/archivo-latin.woff2) format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100% 112%;
+  font-display: swap;
+}
+
+.skip, .topbar { --tb-ink: #2a3945; font: 400 1.0625rem/1.55 Archivo, "Helvetica Neue", Arial, sans-serif; font-stretch: 100%; }
+.skip { position: absolute; left: .75rem; top: -4rem; z-index: 20; padding: .5rem .9rem; border-radius: 4px; background: var(--tb-ink); color: #fff; }
+.skip:focus { top: .75rem; }
+
+.topbar { position: sticky; top: 0; z-index: 10; flex: none; background: var(--bar-bg, #fff); border-bottom: 1px solid color-mix(in srgb, var(--tb-ink) 14%, var(--bar-bg, #fff)); color: var(--tb-ink); text-align: left; }
+.topbar, .topbar * { box-sizing: border-box; }
+.topbar-inner { max-width: 70rem; margin: 0 auto; min-height: 3.25rem; padding: .3rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.topbar a { color: var(--tb-ink); text-decoration: none; }
+.topbar .brand { display: flex; align-items: center; gap: .65rem; font-weight: 650; font-stretch: 108%; letter-spacing: -.005em; }
+.topbar .brand img { display: block; height: 2.4rem; width: auto; max-width: none; border: 0; }
+.topbar nav { margin-left: auto; }
+.topbar ul { display: flex; flex-wrap: wrap; gap: .15rem; list-style: none; margin: 0; padding: 0; }
+.topbar nav a { display: block; padding: .4rem .8rem; border-radius: 4px; font-weight: 550; }
+.topbar nav a:hover, .topbar nav a[aria-current="page"] { background: color-mix(in srgb, var(--tb-ink) 9%, transparent); }
+.topbar :focus-visible { outline: 2px solid var(--tb-ink); outline-offset: 3px; }
+
+@media (max-width: 30rem) {
+  .topbar-inner { gap: .5rem; padding: .3rem 1rem; }
+  .topbar .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
