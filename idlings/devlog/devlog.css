@@ -1,0 +1,105 @@
+/*
+  IdLings Dev Log (petshark.ca/idlings/devlog/). Built by tools/devlog/build.py in the IdLings repository;
+  regenerate rather than hand-edit. The palette is the game's (docs/design/style-guide.md): hill and meadow
+  greens, the panels' white, the deep teal ink, wooden-sign brown for links. The timeline is a trail of gold
+  Dust, as the Dust drifts up the trees in the game. Archivo is the site's own font file; no other font.
+*/
+@font-face {
+  font-family: Archivo;
+  src: url(/assets/fonts/archivo-latin.woff2) format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100% 112%;
+  font-display: swap;
+}
+
+:root {
+  --hill: #E5EDDD;
+  --meadow: #ECEEA6;
+  --panel: #FFFFFF;
+  --ink: #223C3A;
+  --ink-soft: #5E7270;
+  --wood: #785022;
+  --dust: #FFC93D;
+  --dust-edge: #E9A526;
+  --rule: #CBD6C4;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--hill); color: var(--ink); font: 400 1.0625rem/1.6 Archivo, "Helvetica Neue", Arial, sans-serif; }
+h1, h2, p, figure, blockquote { margin: 0; }
+ol, ul { list-style: none; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--wood); }
+:focus-visible { outline: 3px solid var(--wood); outline-offset: 3px; }
+
+/* The bar: the studio on the left, the way back to the game on the right */
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding: .7rem clamp(1rem, 4vw, 2.5rem); background: var(--meadow); border-bottom: 1px solid #D6D88E; }
+.bar a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.bar .studio { font-stretch: 108%; }
+.bar nav { display: flex; gap: .25rem; }
+.bar nav a { padding: .3rem .7rem; border-radius: 4px; }
+.bar a:hover { background: rgba(34, 60, 58, .09); }
+
+main { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: clamp(1.5rem, 5vw, 3.5rem) 0 4rem; }
+
+/* Category chips: a swatch in the category's colour, the label in ink */
+.cat { display: inline-flex; align-items: center; gap: .4rem; font-size: .875rem; font-weight: 600; color: var(--ink); }
+.cat::before { content: ""; width: .7rem; height: .7rem; border-radius: 2px; background: var(--c); }
+.meta { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; color: var(--ink-soft); font-size: .875rem; }
+
+/* ---- Index ---- */
+.lead { max-width: 42rem; margin-bottom: 2.5rem; }
+.lead h1 { font-size: clamp(2.6rem, 8vw, 5.2rem); font-weight: 700; font-stretch: 112%; line-height: .95; letter-spacing: -.035em; margin-bottom: 1.25rem; }
+.lead p { margin-bottom: .9rem; font-size: 1.125rem; }
+.legend { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; margin-top: 1.5rem; }
+
+.trail { position: relative; padding-left: 2.75rem; }
+.trail::before { content: ""; position: absolute; left: .55rem; top: .4rem; bottom: 0; width: 14px; background: radial-gradient(circle, var(--dust) 0 3.5px, transparent 4.5px) center top / 14px 20px repeat-y; }
+.day { position: relative; margin: 2.25rem 0 .9rem; }
+.day:first-child { margin-top: 0; }
+.day::before { content: ""; position: absolute; left: -2.6rem; top: .2rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: var(--dust); border: 3px solid var(--dust-edge); }
+.day h2 { font-size: 1.35rem; font-weight: 700; font-stretch: 108%; letter-spacing: -.01em; }
+.item { margin-bottom: .9rem; }
+.item a { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 1.25rem; padding: .9rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; color: var(--ink); text-decoration: none; }
+.item a:hover { border-color: var(--ink); }
+.thumb img, .thumb .words { width: 100%; aspect-ratio: 4 / 3; border-radius: 4px; object-fit: cover; }
+.thumb .words { display: flex; align-items: flex-end; padding: .8rem; background: color-mix(in srgb, var(--c) 18%, #fff); border: 1px solid color-mix(in srgb, var(--c) 40%, #fff); font-size: 1.35rem; font-weight: 700; font-stretch: 112%; line-height: 1.05; letter-spacing: -.02em; }
+.what { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+.what .title { font-size: 1.3rem; font-weight: 700; font-stretch: 106%; line-height: 1.2; letter-spacing: -.01em; }
+.what .summary { color: var(--ink); max-width: 38rem; }
+.what .count { margin-top: auto; color: var(--ink-soft); font-size: .875rem; }
+
+/* ---- An entry ---- */
+article { padding: clamp(1.25rem, 4vw, 2.75rem); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; }
+article h1 { margin: .6rem 0 1.1rem; font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; font-stretch: 110%; line-height: 1.05; letter-spacing: -.03em; max-width: 44rem; }
+.text { max-width: 40rem; }
+.text p { margin-bottom: 1rem; }
+.said-at-the-time { max-width: 40rem; margin: 1.75rem 0 .5rem; }
+.said-at-the-time h2 { margin-bottom: .8rem; color: var(--ink-soft); font-size: .95rem; font-weight: 600; }
+/* my words at the time, as the game's own speech bubbles: white, a dark pixel edge, a stepped tail */
+.said { position: relative; margin: 0 0 1.6rem; padding: .85rem 1.1rem; background: #fff; border: 3px solid var(--ink); border-radius: 3px; box-shadow: 4px 4px 0 var(--meadow); font-weight: 600; }
+.said::after { content: ""; position: absolute; left: 1.4rem; bottom: -12px; width: 12px; height: 9px; background: #fff; border: 3px solid var(--ink); border-top: 0; border-left: 0; }
+.said p { overflow-wrap: anywhere; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); gap: 1.25rem 1rem; margin-top: 2rem; align-items: start; }
+.shot.wide { grid-column: 1 / -1; }
+.shot img { border: 1px solid var(--rule); border-radius: 4px; }
+.shot figcaption { margin-top: .4rem; color: var(--ink-soft); font-size: .875rem; line-height: 1.4; }
+
+.step { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+.step a { display: flex; flex-direction: column; gap: .15rem; padding: .9rem 1rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; color: var(--ink); font-weight: 600; text-decoration: none; }
+.step a:hover { border-color: var(--ink); }
+.step span { color: var(--ink-soft); font-size: .85rem; font-weight: 400; }
+.step .next { text-align: right; }
+
+.foot { padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2rem; color: var(--ink-soft); font-size: .85rem; }
+.foot p { max-width: 62rem; margin: 0 auto; }
+
+@media (max-width: 40rem) {
+  .item a { grid-template-columns: 1fr; }
+  .trail { padding-left: 2.1rem; }
+  .trail::before { left: .2rem; }
+  .day::before { left: -2.15rem; }
+  .step { grid-template-columns: 1fr; }
+  .step .next { text-align: left; }
+}
