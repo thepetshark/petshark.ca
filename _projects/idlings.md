@@ -12,6 +12,7 @@ image: /assets/img/projects/idlings/card.jpg
 image_alt: Freed fairies and their kitties on the forest floor, one saying "Every upgrade makes us stronger. Keep going!"
 links:
   app_store: https://apps.apple.com/us/app/idlings/id6816804643
+  devlog: /idlings/devlog/
   support: /idlings/
   privacy: /idlings/privacy/
 theme:
@@ -51,7 +52,7 @@ Each fairy you free gathers fairy Dust and helps break the next statue. When Mr 
 
 ## Where it started
 
-The Unity version was mine alone: the code, and the C# framework under it (MMG, the same one behind [Mushi Poi](/projects/mushipoi/)). Its data tables and art carried over into the rebuild.
+The Unity version was mine alone: the code, and the C# framework under it (MMG, the same one behind [Mushi Poi](/projects/mushipoi/)). Its data tables and art carried over into the rebuild. The [Dev Log](/idlings/devlog/) shows every step in order, from my first Unity scenes in 2020 to the release.
 
 ## Credits
 
