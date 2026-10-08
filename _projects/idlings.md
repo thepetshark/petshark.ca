@@ -27,7 +27,7 @@ theme:
   hero_alt: Freed fairies and their kitties on the forest floor, one saying "Every upgrade makes us stronger. Keep going!"
 ---
 
-IdLings is a free idle game for iPhone: Mr Moody has turned thirteen forest fairies to stone, and you tap them free and race his clock, round after round. Unlike most idle games, it can be finished, and it has a funny ending that is worth playing all the way through to see. I started it in Unity years ago and never finished it. In September 2026 I rebuilt it with AI agents as my development team, and I ran them the way I would run any development team.
+IdLings is a free idle game for iPhone: Mr Moody has turned thirteen forest fairies to stone, and you tap them free and race his clock, round after round. Unlike most idle games, it can be finished, and it has a funny ending that is worth playing all the way through to see. I started it in Unity years ago and never finished it. In September 2026 I rebuilt it in Godot with AI agents as my development team, and I ran them the way I would run any development team.
 
 ## How it was made
 
