@@ -30,6 +30,16 @@ for page in site.glob("*/devlog/**/*.html"):
     if 'class="topbar"' not in text or "projectbar" not in text or 'class="up"' not in text:
         fail(f"{page.relative_to(site)} is missing the site top bar, or the project bar and its back link")
 
+for page in site.rglob("*.html"):
+    rel = page.relative_to(site).as_posix()
+    if rel.startswith("geopets-world/archive/"):
+        continue
+    for tag in re.findall(r'<a\b[^>]*\bhref="https?://[^"]*"[^>]*>', page.read_text(errors="replace")):
+        if re.search(r'href="https?://petshark\.ca', tag):
+            continue
+        if 'target="_blank"' not in tag or 'rel="noopener"' not in tag:
+            fail(f"{rel}: a link to another site does not open in a new tab: {tag[:120]}")
+
 for page in list(site.glob("*.html")) + list(site.glob("projects/**/*.html")) + [site / "sitemap.xml"]:
     if page.is_file() and re.search(r"\{\{|\{%", page.read_text(errors="replace")):
         fail(f"unresolved Liquid in {page.relative_to(site)}")

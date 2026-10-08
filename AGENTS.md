@@ -86,6 +86,13 @@ then an index of every project ordered by `status` (the order in `_data/project_
 with columns for type, platforms, status and year. The site is not only games: a project's `kind` says what sort of thing it
 is (`_data/project_kinds.yml`). The owner decides which projects are shown at all; do not add one on your own initiative.
 
+### Links
+
+A link that leaves the site (a store page, a source repository, any other website) opens in a new tab. The layouts do it:
+they add `target="_blank" rel="noopener"` to every link to another site, in project pages, standalone pages and dev logs.
+Write plain links and never set `target` yourself; the check script fails if you do. Links within petshark.ca and `mailto:`
+links open in the same tab.
+
 ## 3. Adding a project: the checklist
 
 1. **Choose the slug.** If the project already has a standalone folder (`catbox`, `forestfellers`, `idlings`), reuse that name.

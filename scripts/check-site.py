@@ -359,6 +359,24 @@ def check_devlogs():
             err(rel, 'the main content element needs id="content" (the top bar\'s skip link goes there)')
         if "{{" in body or "{%" in body:
             err(rel, "`{{` or `{%` in a dev log page is read as Liquid and can break the build; escape or remove it")
+# ---- links ---------------------------------------------------------------------------------------
+
+LINK_TARGET = re.compile(r'<a\b[^>]*\btarget=|\{:[^}]*\btarget=')
+
+
+def check_links():
+    pages = list((ROOT / "_projects").glob("*.md")) + list(ROOT.glob("*/*.md")) + list(ROOT.glob("*/devlog/**/*.html"))
+    for path in sorted(pages):
+        rel = path.relative_to(ROOT)
+        if rel.parts[0].startswith((".", "_")) and rel.parts[0] != "_projects":
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for m in LINK_TARGET.finditer(text):
+            tag = text[m.start():text.find(">", m.start()) + 1]
+            if 'href="#"' in tag:
+                continue
+            line = text.count("\n", 0, m.start()) + 1
+            err(f"{rel}:{line}", "do not set target on a link; the layouts open links to other sites in a new tab")
 
 
 # ---- file size and type guard ------------------------------------------------------------------
@@ -421,6 +439,7 @@ def main():
         check_standalone(p)
     check_liquid()
     check_devlogs()
+    check_links()
     check_sizes()
     if len(FEATURED) > 1:
         warn("_projects", f"{len(FEATURED)} projects are featured ({', '.join(FEATURED)}); the home page shows only the newest")

@@ -40,7 +40,7 @@
     {% include topbar.html %}
     <div class="stage{% if t %} themed{% endif %}"{% if theme_style != '' %} style="{{ theme_style | strip }}"{% endif %}>
       <main id="content" class="wrap">
-{{ content }}
+{% include external-links.html html=content %}
       </main>
     </div>
     <footer class="sitefoot">

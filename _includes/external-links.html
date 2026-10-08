@@ -1,0 +1,5 @@
+{%- comment -%}
+  Outputs include.html with every link to another site opening in a new tab: target and rel are added before any
+  href that starts with http, then taken off again for links to petshark.ca itself. Pages write plain links.
+{%- endcomment -%}
+{{ include.html | replace: ' href="http', ' target="_blank" rel="noopener" href="http' | replace: ' target="_blank" rel="noopener" href="https://petshark.ca', ' href="https://petshark.ca' | replace: ' target="_blank" rel="noopener" href="http://petshark.ca', ' href="http://petshark.ca' }}
