@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Startup, guest and account screens | Geo Pets World Dev Log</title>
-<meta name="description" content="The first screens a player sees: loading, a splash with Continue, guest play, account creation, sign-in, password reset and log-out, with twenty selectable states and a board that shows twelve at once. A guest who creates an account keeps their progress, and switching accounts never merges silently.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../devlog.css">
-</head>
-<body class="shell">
-<header class="bar">
-<a href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Dev Log</a>
+---
+layout: devlog
+project: geopets-world
+title: "Startup, guest and account screens – Geo Pets World Dev Log"
+description: "The first screens a player sees: loading, a splash with Continue, guest play, account creation, sign-in, password reset and log-out, with twenty selectable states and a board that shows twelve at once. A guest who creates an account keeps their progress, and switching accounts never merges silently."
+body_class: shell
+noindex: true
+---
+<header class="bar" id="content">
 <div class="title"><h1>Startup, guest and account screens</h1><div class="when">First committed 14 Sep 2026, 15:18</div></div>
 <nav class="views" id="views" aria-label="Pages in this entry"></nav>
 <nav class="step" aria-label="Neighbouring entries"><a data-step="prev" rel="prev" href="../checkpoints/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Older</a><a data-step="next" rel="next" href="../world-navigation/">Newer<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></a></nav>
@@ -116,5 +111,3 @@
   log.addEventListener('click',function(e){var r=log.getBoundingClientRect();
     if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)log.close();});
 })();</script>
-</body>
-</html>

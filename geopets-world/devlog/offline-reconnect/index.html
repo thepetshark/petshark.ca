@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>When the connection drops | Geo Pets World Dev Log</title>
-<meta name="description" content="What a player sees when the connection drops: the world stays in place under a pause sheet while the connection, account, saved progress and clock are checked, with states for a failed time check and for an account that moved to another device. A second page previews the confirmation for moving an account to a new device.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../devlog.css">
-</head>
-<body class="shell">
-<header class="bar">
-<a href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Dev Log</a>
+---
+layout: devlog
+project: geopets-world
+title: "When the connection drops – Geo Pets World Dev Log"
+description: "What a player sees when the connection drops: the world stays in place under a pause sheet while the connection, account, saved progress and clock are checked, with states for a failed time check and for an account that moved to another device. A second page previews the confirmation for moving an account to a new device."
+body_class: shell
+noindex: true
+---
+<header class="bar" id="content">
 <div class="title"><h1>When the connection drops</h1><div class="when">First committed 23 Sep 2026, 08:22</div></div>
 <nav class="views" id="views" aria-label="Pages in this entry"></nav>
 <nav class="step" aria-label="Neighbouring entries"><a data-step="prev" rel="prev" href="../library/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Older</a><a data-step="next" rel="next" href="../icons-and-portraits/">Newer<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></a></nav>
@@ -116,5 +111,3 @@
   log.addEventListener('click',function(e){var r=log.getBoundingClientRect();
     if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)log.close();});
 })();</script>
-</body>
-</html>

@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Geo Pets World Dev Log</title>
-<meta name="description" content="Design experiments from building Geo Pets World, a location-based creature-collecting game, in the order they were made. Each is a working page shown as built.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="devlog.css">
-</head>
-<body>
+---
+layout: devlog
+project: geopets-world
+title: "Geo Pets World Dev Log"
+description: "Design experiments from building Geo Pets World, a location-based creature-collecting game, in the order they were made. Each is a working page shown as built."
+noindex: true
+---
 <header class="masthead">
-<a class="org" href="https://petshark.ca/">Pet Shark Productions</a>
 <h1>Geo Pets World Dev Log</h1>
 <p class="lede">Design experiments from building a location-based creature-collecting game, in the order they were made. Each one is a working page from the project. AI agents made the mockups under my direction.</p>
 <div class="controls">
@@ -20,7 +14,7 @@
 <p class="count" id="count" aria-live="polite"></p>
 </div>
 </header>
-<main>
+<main id="content">
 <ol class="route">
 <li class="day" data-date="2026-09-09" style="--gap:1">
 <h2 class="date"><time datetime="2026-09-09">9 September</time></h2>
@@ -473,5 +467,3 @@
   addEventListener('pagehide',save);
   route.addEventListener('click',function(e){var li=e.target.closest&&e.target.closest('.entry');if(li){from=li.dataset.id;save();}});
 })();</script>
-</body>
-</html>

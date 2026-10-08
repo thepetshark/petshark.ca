@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Single finds on the map | Geo Pets World Dev Log</title>
-<meta name="description" content="For each biome, a shelf of the small things a player can pick up (chamomile, hazelnuts, glowcap, wisp lily, frostbloom and six candidate Stonefield plants) on discs of local ground, then painted default and close-up map tiles with the game&#x27;s pickup pins over each find. Switch between day and night, and between two pin rims: A takes a family colour, B keeps paper.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="../devlog.css">
-</head>
-<body class="shell">
-<header class="bar">
-<a href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Dev Log</a>
+---
+layout: devlog
+project: geopets-world
+title: "Single finds on the map – Geo Pets World Dev Log"
+description: "For each biome, a shelf of the small things a player can pick up (chamomile, hazelnuts, glowcap, wisp lily, frostbloom and six candidate Stonefield plants) on discs of local ground, then painted default and close-up map tiles with the game's pickup pins over each find. Switch between day and night, and between two pin rims: A takes a family colour, B keeps paper."
+body_class: shell
+noindex: true
+---
+<header class="bar" id="content">
 <div class="title"><h1>Single finds on the map</h1><div class="when">First committed 27 Sep 2026, 15:44</div></div>
 <nav class="views" id="views" aria-label="Pages in this entry"></nav>
 <nav class="step" aria-label="Neighbouring entries"><a data-step="prev" rel="prev" href="../quarries-and-ore/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Older</a><a data-step="next" rel="next" href="../production-lines/">Newer<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></a></nav>
@@ -116,5 +111,3 @@
   log.addEventListener('click',function(e){var r=log.getBoundingClientRect();
     if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)log.close();});
 })();</script>
-</body>
-</html>
