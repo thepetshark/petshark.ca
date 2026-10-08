@@ -80,7 +80,7 @@ is (`_data/project_kinds.yml`). The owner decides which projects are shown at al
    are published (section 4).
 2. **Create the page.** Copy `_templates/project.md` to `_projects/<slug>.md` and fill it in (front matter below).
 3. **Write the body.** Start at `##`; the layout already shows the title, subtitle, description, the facts (status, type,
-   platforms, year) and the link buttons, so do not repeat them. No `**bold**` inside headings. Write in the owner's voice, first person and plain, as the
+   platforms, engine, year) and the link buttons, so do not repeat them. No `**bold**` inside headings. Write in the owner's voice, first person and plain, as the
    existing pages do, unless told otherwise.
 4. **Add images** (section 6). Put them in `assets/img/projects/<slug>/`. Every image needs alt text:
    `![A level with a spring pad and three Mushi](/assets/img/projects/mushipoi/level-3.jpg)`.
@@ -105,6 +105,7 @@ If the game is being published on the App Store, also do section 4. It is a sepa
 | `status` | yes | `released`, `prototype`, `in-development` or `archived` (`_data/project_statuses.yml`) |
 | `year` | yes | Year released, or started if not out yet. A four-digit number |
 | `platforms` | no | A list, e.g. `[iPhone, iPad]` or `[Windows, Mac]`. Leave it out when it does not apply (a web tool, a library) |
+| `engine` | no | The engine or main framework it is built with, e.g. `Godot` or `Unity`. Leave it out when it does not apply |
 | `image` | no | Thumbnail in the index and picture in the featured block and when shared: 8:5 (like 640 × 400) and under 300 KB |
 | `image_alt` | with `image` | Alt text for `image`; it is read out on the featured block |
 | `featured` | no | `true` puts the project in the featured block on the home page. The owner picks; if several are set, the newest `year` wins |
