@@ -12,7 +12,6 @@ layout: default
 {%- assign status_label = site.data.project_statuses[page.status] | default: page.status -%}
 {%- assign kind_label = site.data.project_kinds[page.kind] | default: page.kind -%}
 <div class="project-page">
-<p class="crumb"><a href="{{ '/#projects' | relative_url }}">All projects</a></p>
 <article class="project">
   {%- if page.theme.hero %}
     {%- capture hero_src %}{% include url.html src=page.theme.hero %}{% endcapture %}
