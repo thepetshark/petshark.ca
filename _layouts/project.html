@@ -31,6 +31,9 @@ layout: default
         {%- if page.platforms %}
         <div><dt>Platforms</dt><dd>{{ page.platforms | join: ", " }}</dd></div>
         {%- endif %}
+        {%- if page.engine %}
+        <div><dt>Engine</dt><dd>{{ page.engine }}</dd></div>
+        {%- endif %}
         <div><dt>Year</dt><dd>{{ page.year }}</dd></div>
       </dl>
       {%- capture actions %}
