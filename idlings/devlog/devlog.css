@@ -37,6 +37,8 @@ a { color: var(--wood); }
 .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding: .7rem clamp(1rem, 4vw, 2.5rem); background: var(--meadow); border-bottom: 1px solid #D6D88E; }
 .bar a { color: var(--ink); font-weight: 600; text-decoration: none; }
 .bar .studio { font-stretch: 108%; }
+.bar .left { display: flex; align-items: center; gap: 1rem; }
+.bar .up { padding: .3rem .7rem; border-radius: 4px; }
 .bar nav { display: flex; gap: .25rem; }
 .bar nav a { padding: .3rem .7rem; border-radius: 4px; }
 .bar a:hover { background: rgba(34, 60, 58, .09); }
