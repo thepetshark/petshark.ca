@@ -9,6 +9,8 @@ platforms: [Windows]
 engine: Unity
 image: /assets/img/projects/tanksmatetoon/card.jpg
 image_alt: "The Tanks Mate 2: Toon Tanks logo, three cartoon tanks in a comic burst, over a street of the resort town"
+links:
+  devlog: /tanksmatetoon/devlog/
 theme:
   bar: "#FFF3D1"
   background: "#1C2A4F"
@@ -55,7 +57,7 @@ Games on your network show up in a list, or you can type the host's address. The
 
 I made the game with an AI coding agent, Claude Code, as my development team. I wrote the brief, made the design calls, played the builds and passed on what my testers said. The agent wrote the code, the tests and the tools, made the game's own sounds and music in code, and wrote each decision into the project's GitHub issues for me to check. OpenAI's Codex drew the logo, the game icon and the pictures on the newer skins, and the agent wrote a painter of its own to put them on the tanks.
 
-It took under five days, from the first commit on the evening of 3 October 2026 to the build my testers are playing now.
+It took under five days, from the first commit on the evening of 3 October 2026 to the build my testers are playing now. The [Dev Log](/tanksmatetoon/devlog/) goes through it build by build, including the four builds the agent held back.
 
 ## Technology
 

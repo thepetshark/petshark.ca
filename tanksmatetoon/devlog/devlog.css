@@ -1,0 +1,126 @@
+/*
+  Tanks Mate 2: Toon Tanks Dev Log (petshark.ca/tanksmatetoon/devlog/). Built by tools/devlog/build.py in the
+  game's repository; regenerate rather than hand-edit. A build log: the index is a street through the builds, grey
+  asphalt with a dashed white centre line like the resort town's roads, and every build that went to the testers
+  carries a number plate. Builds the agent held back get caution stripes. The palette is the game's: the logo's
+  navy outline and red-orange letters, the menu's yellow buttons, the sandy paving of the town's plaza. Archivo is
+  the site's own font file; no other font.
+*/
+@font-face {
+  font-family: Archivo;
+  src: url(/assets/fonts/archivo-latin.woff2) format("woff2");
+  font-weight: 400 700;
+  font-stretch: 100% 112%;
+  font-display: swap;
+}
+
+:root {
+  --sand: #F6EEDC;
+  --panel: #FFFFFF;
+  --ink: #1C2A4F;
+  --ink-soft: #4E5874;
+  --flame: #B4360E;
+  --sun: #FFC21A;
+  --asphalt: #5B6170;
+  --rule: #E3D7BD;
+  --caution: repeating-linear-gradient(135deg, var(--sun) 0 10px, var(--ink) 10px 20px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--sand); color: var(--ink); font: 400 1.0625rem/1.6 Archivo, "Helvetica Neue", Arial, sans-serif; }
+h1, h2, p, figure, ul, ol { margin: 0; }
+ol, ul { list-style: none; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--flame); }
+:focus-visible { outline: 3px solid var(--flame); outline-offset: 3px; }
+
+/* The project bar: the Dev Log's own navigation, under the site's top bar, in the logo's navy */
+.projectbar { background: var(--ink); color: #fff; }
+.projectbar div { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: .6rem 0; }
+.projectbar a { color: #fff; font-weight: 700; text-decoration: none; }
+.projectbar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.projectbar :focus-visible { outline-color: #fff; }
+
+main { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: clamp(1.5rem, 5vw, 3.5rem) 0 4rem; }
+
+/* A build's number plate: navy, the menu's yellow, like the numbers on a tank */
+.plate { display: inline-flex; align-items: center; justify-content: center; min-width: 4.6rem; padding: .3rem .6rem; border: 3px solid var(--ink); border-radius: 8px; background: var(--ink); color: var(--sun); font-weight: 700; font-stretch: 112%; font-variant-numeric: tabular-nums; letter-spacing: .02em; line-height: 1.2; text-align: center; box-shadow: inset 0 0 0 2px var(--sun); }
+.plate.plain { background: var(--panel); color: var(--ink); box-shadow: none; font-stretch: 100%; font-size: .9rem; }
+.out { color: var(--ink-soft); font-size: .9rem; font-weight: 600; }
+.chip { display: inline-block; padding: .1rem .5rem; border-radius: 4px; background: var(--sun); color: var(--ink); font-size: .8rem; font-weight: 700; }
+.chip::before { content: ""; display: inline-block; width: .8rem; height: .55rem; margin-right: .35rem; background: var(--caution); vertical-align: -.02rem; }
+
+/* ---- Index ---- */
+.masthead { max-width: 46rem; margin-bottom: 2.75rem; }
+.kicker { color: var(--flame); font-size: .9rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.masthead h1 { margin: .35rem 0 1.25rem; font-size: clamp(2.5rem, 7.5vw, 4.8rem); font-weight: 700; font-stretch: 112%; line-height: .95; letter-spacing: -.035em; }
+.intro p { margin-bottom: .9rem; font-size: 1.125rem; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .6rem; margin-top: 1.75rem; }
+.stats li { padding: .7rem .9rem .8rem; background: var(--panel); border: 1px solid var(--rule); border-bottom: 4px solid var(--sun); border-radius: 6px; }
+.stats b { display: block; font-size: 1.9rem; font-weight: 700; font-stretch: 112%; line-height: 1.1; letter-spacing: -.02em; }
+.stats span { color: var(--ink-soft); font-size: .9rem; }
+
+/* the track: a street, asphalt with a dashed centre line */
+.track { position: relative; padding-left: 3.25rem; }
+.track::before { content: ""; position: absolute; left: .4rem; top: .5rem; bottom: 0; width: 1.6rem; border-radius: 3px; background: linear-gradient(to bottom, #fff 0 14px, transparent 14px 28px) center top / 3px 28px repeat-y, var(--asphalt); }
+.day { position: relative; margin: 2.5rem 0 1rem; }
+.day:first-child { margin-top: 0; }
+.day::before { content: ""; position: absolute; left: -3.15rem; top: .05rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--sun); border: 4px solid var(--ink); }
+.day h2 { font-size: 1.4rem; font-weight: 700; font-stretch: 108%; letter-spacing: -.01em; }
+.stop { margin-bottom: .9rem; }
+.stop a { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 12rem); gap: 1.1rem; align-items: start; padding: 1rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; color: var(--ink); text-decoration: none; }
+.stop.no-pic a { grid-template-columns: auto minmax(0, 1fr); }
+.stop a:hover { border-color: var(--ink); }
+.stop a:hover .title { text-decoration: underline; text-underline-offset: 3px; }
+.what { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.what .title { font-size: 1.3rem; font-weight: 700; font-stretch: 106%; line-height: 1.2; letter-spacing: -.01em; }
+.what .summary { max-width: 34rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .2rem; }
+.thumb img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 5px; }
+
+/* ---- An entry ---- */
+article { padding: clamp(1.25rem, 4vw, 2.75rem); background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; }
+.badge { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .8rem; }
+.head h1 { margin: .8rem 0 .3rem; font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; font-stretch: 110%; line-height: 1.05; letter-spacing: -.03em; max-width: 46rem; }
+.when { color: var(--ink-soft); font-size: .95rem; margin-bottom: 1.5rem; }
+.text { max-width: 40rem; margin-top: 1.5rem; }
+.text p { margin-bottom: 1rem; }
+.changes { max-width: 42rem; margin: 1.75rem 0; padding: 1.1rem 1.25rem 1rem; background: #FBF6EA; border-radius: 6px; border-left: 5px solid var(--flame); }
+.changes h2, .held h2 { margin-bottom: .6rem; font-size: 1rem; font-weight: 700; font-stretch: 106%; letter-spacing: .02em; text-transform: uppercase; }
+.changes li { position: relative; padding-left: 1.5rem; margin-bottom: .45rem; }
+/* each line marked with a little shell: yellow, navy-rimmed, pointing right */
+.changes li::before { content: ""; position: absolute; left: 0; top: .5rem; width: .95rem; height: .5rem; border-radius: 1px 60% 60% 1px; background: var(--sun); border: 2px solid var(--ink); }
+.held { max-width: 42rem; margin: 1.75rem 0; padding: 1.25rem 1.25rem 1rem; background: #FFF6D6; border-radius: 6px; border: 2px solid var(--ink); border-top: 0; box-shadow: inset 0 10px 0 -2px transparent; position: relative; overflow: hidden; }
+.held::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: var(--caution); }
+.held h2 { margin-top: .2rem; }
+.held p { margin-bottom: .6rem; }
+.shot img { border: 1px solid var(--rule); border-radius: 5px; }
+.shot figcaption { margin-top: .4rem; color: var(--ink-soft); font-size: .875rem; line-height: 1.4; }
+article > .shot { margin-top: .25rem; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: 1.25rem 1rem; margin-top: 2rem; align-items: start; }
+.shots .shot.wide { grid-column: 1 / -1; }
+
+.step { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+.step a { display: flex; flex-direction: column; gap: .15rem; padding: .9rem 1rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; color: var(--ink); font-weight: 600; text-decoration: none; }
+.step a:hover { border-color: var(--ink); }
+.step span { color: var(--ink-soft); font-size: .85rem; font-weight: 400; }
+.step .next { text-align: right; }
+.back { display: inline-block; margin-top: 1.25rem; padding: .7rem 1.1rem; background: var(--ink); border-radius: 8px; color: #fff; font-weight: 700; text-decoration: none; }
+.back:hover { background: var(--flame); }
+
+.foot { padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2rem; color: var(--ink-soft); font-size: .85rem; }
+.foot p { max-width: 62rem; margin: 0 auto; }
+
+@media (max-width: 44rem) {
+  .stop a, .stop.no-pic a { grid-template-columns: auto minmax(0, 1fr); }
+  .stop .thumb { grid-column: 1 / -1; }
+}
+@media (max-width: 30rem) {
+  .track { padding-left: 2.4rem; }
+  .track::before { left: .2rem; width: 1.2rem; }
+  .day::before { left: -2.4rem; width: 1.4rem; height: 1.4rem; }
+  .stop a, .stop.no-pic a { grid-template-columns: 1fr; }
+  .step { grid-template-columns: 1fr; }
+  .step .next { text-align: left; }
+}
