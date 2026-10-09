@@ -21,7 +21,7 @@ theme:
   hero_alt: A red cartoon tank in a street of the resort town, aiming at a purple tank by the palm trees, with the scoreboard, the battle clock and the radar along the top
 ---
 
-Tanks Mate 2: Toon Tanks is a party game for Windows PCs in which cartoon tanks fight through a sunny resort town. One player hosts on their PC, up to three friends on the same network join from theirs, and bots take as many of the ten seats as the host likes, so it also works as a game for one. Matches are every tank for itself, or Red against Blue. I made it in October 2026 with an AI coding agent as my development team, in under five days from the first commit to the build my testers are playing now.
+Tanks Mate 2: Toon Tanks is a party game for Windows PCs in which cartoon tanks fight through a sunny resort town. I made it for my kids, as a fun game to play together. One player hosts on their PC, up to three friends on the same network join from theirs, and bots take as many of the ten seats as the host likes, so it also works as a game for one. Matches are every tank for itself, or Red against Blue.
 
 ## How it plays
 
@@ -53,17 +53,9 @@ Games on your network show up in a list, or you can type the host's address. The
 
 ## How it was made
 
-I made the game with an AI coding agent, Claude Code, as my development team. I wrote the brief, made the design calls, played the builds and passed on what my testers said. The agent wrote the code, the tests and the tools, made the game's own sounds and music in code, and wrote each decision into the project's GitHub issues for me to check. OpenAI's Codex drew the logo, the game icon and the pictures on the newer skins, and the agent wrote a painter of its own to put them on the tanks.
+I made the game with Claude Code, an AI coding agent. I wrote the brief, made the design calls, played the builds and passed on what my kids said. Claude Code wrote the code, the tests and the tools, made the game's own sounds and music in code, and wrote each decision into the project's GitHub issues for me to check. OpenAI's Codex drew the logo, the game icon and the pictures on the newer skins, and Claude Code wrote a tool that paints them onto the tanks.
 
-It took under five days, from the first commit on the evening of 3 October 2026 to the build my testers are playing now.
-
-## Technology
-
-- Built in Unity 6 with the Universal Render Pipeline, and Netcode for GameObjects for play over the local network.
-- The Input System takes keyboard and mouse and a gamepad at the same time.
-- An editor tool builds the battlefield from the town pack's own scene, so it can be rebuilt at any time, and Addressables load it.
-- The tanks' own sounds come from their art pack. Every other sound effect and the music are made in code.
-- Automated tests, plus scripts that run the built game through whole matches and network games.
+It took under five days, from the first commit on the evening of 3 October 2026 to the build my kids are playing now.
 
 ## Credits
 
