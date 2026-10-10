@@ -1,0 +1,28 @@
+---
+layout: devlog
+project: tanksmatetoon
+title: "Power-up boxes after dark, and barriers that stop a tank – Tanks Mate 2: Toon Tanks Dev Log"
+description: "At night the power-up boxes glow from any distance, and cars and concrete barriers stop a ramming tank."
+body_class: entry
+---
+<nav class="projectbar" aria-label="Tanks Mate 2: Toon Tanks"><div><a class="up" href="/tanksmatetoon/devlog/"><span aria-hidden="true">&lsaquo;</span> Dev Log</a></div></nav>
+<main id="content">
+<article>
+<header class="head">
+<p class="badge"><span class="plate">0.2.27</span> <span class="out">To my kids 9 October, 15:55</span></p>
+<h1>Power-up boxes after dark, and barriers that stop a tank</h1>
+<p class="when"><time>9 October, 09:53 to 10:43</time></p>
+</header>
+<figure class="shot wide"><img src="/tanksmatetoon/devlog/img/beacons-and-barriers-1.webp" width="1400" height="788" alt="A red tank at night beside a striped road barrier it has pushed over, under the street lamps" loading="lazy"><figcaption>A road barrier at night, in 0.2.29.</figcaption></figure>
+<div class="text"><p>The fix for the boxes in rain had a cost at night, where a distant box now faded into the dark with everything else. We agreed the boxes should glow like beacons after dark, and the agent gave them back their full colour at night only.</p>
+<p>I had also noticed something older. Cars, and the concrete road barriers most of all, were meant to be hard to move, but a tank at speed had always been able to barge through them and send them bouncing. The cause was in how the tank is driven. Its speed is set again on every step of the physics, so slowing it down at the normal rate left a third of a second in which nothing could stop it. Now a tank that meets something heavy drops to a crawl at once and can only shove it on slowly, forwards or in reverse. I played it the next morning, and ramming felt good.</p></div>
+<section class="changes" aria-labelledby="in-beacons-and-barriers"><h2 id="in-beacons-and-barriers">In this build</h2><ul><li>After dark the power-up boxes keep their full colour at any distance. By day and at dusk they still fade with the fog.</li><li>Cars and concrete barriers stop a ramming tank. It drops to a crawl against them and can only push them on slowly, forwards or in reverse, and they are never flung away.</li></ul></section>
+
+
+</article>
+<nav class="step" aria-label="Entries"><a class="prev" href="/tanksmatetoon/devlog/headlights/"><span>Earlier</span>Headlights that light the street</a><a class="next" href="/tanksmatetoon/devlog/emotes/"><span>Next</span>Emotes, and wheels for every skin</a></nav>
+<a class="back" href="/tanksmatetoon/devlog/">Back to the Dev Log</a>
+</main>
+<footer class="foot"><p>&copy; 2026 Pet Shark Productions Inc. Pictures are from the game and its test runs;
+the tanks, the town and the effects come from Unity Asset Store packs credited on the
+<a href="/projects/tanksmatetoon/">project page</a>.</p></footer>
