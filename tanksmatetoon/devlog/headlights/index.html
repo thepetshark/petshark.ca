@@ -1,0 +1,29 @@
+---
+layout: devlog
+project: tanksmatetoon
+title: "Headlights that light the street – Tanks Mate 2: Toon Tanks Dev Log"
+description: "Headlights reach about 90 metres and light what is around the tank, and a tank stuck on ice no longer shoots forward."
+body_class: entry
+---
+<nav class="projectbar" aria-label="Tanks Mate 2: Toon Tanks"><div><a class="up" href="/tanksmatetoon/devlog/"><span aria-hidden="true">&lsaquo;</span> Dev Log</a></div></nav>
+<main id="content">
+<article>
+<header class="head">
+<p class="badge"><span class="plate">0.2.26</span> <span class="out">To my kids 9 October, 09:44</span></p>
+<h1>Headlights that light the street</h1>
+<p class="when"><time>9 October, 08:49 to 09:37</time></p>
+</header>
+<figure class="shot wide"><img src="/tanksmatetoon/devlog/img/headlights-1.webp" width="1400" height="788" alt="A tank at night in snow with its headlights on, beside a lit street lamp, its top white with snow" loading="lazy"><figcaption>Headlights in night snow, in 0.2.29.</figcaption></figure>
+<div class="text"><p>My next notes came in the morning. The headlights needed to light far more, so that you could see much further and see what was around you. The glowing power-up boxes clashed with the rain. And on ice, when my tank got hung up on something while I was accelerating, it shot forward the moment it came free.</p>
+<p>The agent took the beam from 35 metres to about 90, widened it and made it much brighter. A beam only lights what is ahead, so it also hung a soft light above each tank for the pavements, walls and props around it. In the first render that light sat just above the hull and washed the tank out, so it went up to five metres.</p>
+<p>The boxes turned out to ignore the fog, which is why a distant one shone at full colour through grey rain. The agent made them fade with distance like everything else. For the ice it reproduced the fault in a test: with the tank held, the speed it was pushing for climbed to 6.8 metres a second. That speed can now run only a little ahead of the tank&#x27;s real speed, so nothing builds up.</p></div>
+<section class="changes" aria-labelledby="in-headlights"><h2 id="in-headlights">In this build</h2><ul><li>Headlights reach about 90 metres, up from 35, with a wider and much brighter beam.</li><li>With its headlights on, a tank also lights the pavements, walls and props around it.</li><li>Power-up boxes fade with the fog like everything else.</li><li>On ice, a tank held by something it is pushing no longer builds up thrust and shoots forward when it comes free.</li></ul></section>
+
+<div class="shots"><figure class="shot wide"><img src="/tanksmatetoon/devlog/img/headlights-2.webp" width="1400" height="788" alt="A red tank in a dark, wet street at night with its two headlights on" loading="lazy"><figcaption>Night rain.</figcaption></figure></div>
+</article>
+<nav class="step" aria-label="Entries"><a class="prev" href="/tanksmatetoon/devlog/street-lamps/"><span>Earlier</span>Brighter street lamps, and headlights on F</a><a class="next" href="/tanksmatetoon/devlog/beacons-and-barriers/"><span>Next</span>Power-up boxes after dark, and barriers that stop a tank</a></nav>
+<a class="back" href="/tanksmatetoon/devlog/">Back to the Dev Log</a>
+</main>
+<footer class="foot"><p>&copy; 2026 Pet Shark Productions Inc. Pictures are from the game and its test runs;
+the tanks, the town and the effects come from Unity Asset Store packs credited on the
+<a href="/projects/tanksmatetoon/">project page</a>.</p></footer>

@@ -1,0 +1,30 @@
+---
+layout: devlog
+project: tanksmatetoon
+title: "Emotes, and wheels for every skin – Tanks Mate 2: Toon Tanks Dev Log"
+description: "Eight faces on a wheel to send in a match, wheels in each skin's own colour, and snow that is already falling when a match starts."
+body_class: entry
+---
+<nav class="projectbar" aria-label="Tanks Mate 2: Toon Tanks"><div><a class="up" href="/tanksmatetoon/devlog/"><span aria-hidden="true">&lsaquo;</span> Dev Log</a></div></nav>
+<main id="content">
+<article>
+<header class="head">
+<p class="badge"><span class="plate">0.2.29</span> <span class="out">To my kids 10 October, 10:58</span></p>
+<h1>Emotes, and wheels for every skin</h1>
+<p class="when"><time>10 October, 05:31 to 10:52</time></p>
+</header>
+<figure class="shot wide"><img src="/tanksmatetoon/devlog/img/emotes-1.webp" width="1400" height="788" alt="A red tank in a street with a wheel of eight emote faces round the crosshair, the starry-eyed Woohoo face picked out in yellow" loading="lazy"><figcaption>The emote wheel.</figcaption></figure>
+<div class="text"><p>Emotes had been agreed on 8 October and put off: eight of them on a wheel, shown above the tank, in the kill feed and on the radar, with bots joining in. On the morning of the 10th I said to build them. The faces come from the emoji set in Epic Toon FX, one of the effect packs the game already used. The first version showed each emote&#x27;s word under the face above the tank. I had it taken off, since an emote with words on it misses the point, and the word went into the kill feed.</p>
+<p>A tank also makes a small move with each emote, such as a hop, a nod or a wobble. The agent puts that move on the model only while the picture is being drawn, so it cannot change where the tank is, what hits it, or where its shells leave from.</p>
+<p>The skins changed the same morning. Five of the newer ones still had the tank&#x27;s original wheels, and I asked for wheels in their own colours. I then asked for the same on the plain-colour skins, and picked Ribbit&#x27;s from a sheet of six. Sundae became Cupcake.</p>
+<p>The agent also fixed six tests that had been failing now and then, each at its cause. Another failure turned out to be a fault in the game itself. A long frame at the moment of a hit could use up the hit marker and the kill banner before they were ever drawn.</p></div>
+<section class="changes" aria-labelledby="in-emotes"><h2 id="in-emotes">In this build</h2><ul><li>Eight emotes on a wheel, LOL, Hi, Nice shot, Taunt, Woohoo, Noooo, Sorry and GG. Hold V and flick the mouse at a face, use the numpad, or hold D-pad down and push the right stick.</li><li>The face pops up above your tank, shows on the radar and goes into the kill feed with its word, and the tank makes a small move. Bots emote too.</li><li>An option for emotes from others, All, People only or None. The limit is one emote every two seconds and three in ten.</li><li>Every skin except Forest Camo has wheels in its own colour. The plain colours get a darker shade of theirs, and Ribbit&#x27;s are its hull green.</li><li>The Sundae skin is now called Cupcake.</li><li>Snow and rain are already falling when a match appears, and where the camera lands after a respawn.</li><li>A stutter at the moment of a hit no longer swallows the hit marker, the kill banner or the squash of the hull.</li></ul></section>
+<aside class="held"><h2>0.2.28: held back</h2><p>In the built game the face above the player&#x27;s own tank covered about a sixth of the screen. The agent halved the faces, made the one above your own tank smaller still, and sent the build as 0.2.29 a few minutes later.</p></aside>
+<div class="shots"><figure class="shot wide"><img src="/tanksmatetoon/devlog/img/emotes-2.webp" width="1400" height="788" alt="A wide-eyed emote face above a red tank, and the kill feed at the right listing emotes with their words between the kills" loading="lazy"><figcaption>An emote above the tank, and others in the kill feed.</figcaption></figure><figure class="shot"><img src="/tanksmatetoon/devlog/img/emotes-3.webp" width="960" height="1400" alt="Five skins on both tank types with their new wheels, Tiger Stripes and Bumblebee in black, Jolly Roger in gold, Galaxy in deep indigo and Robot in dark steel" loading="lazy"><figcaption>The five newer skins with wheels of their own.</figcaption></figure><figure class="shot"><img src="/tanksmatetoon/devlog/img/emotes-4.webp" width="800" height="1400" alt="The Ribbit frog skin on both tank types with six wheel colours, its old olive and grey, then dark green, hull green, mid green, yellow and orange" loading="lazy"><figcaption>The options for Ribbit&#x27;s wheels. I picked B, the hull green.</figcaption></figure></div>
+</article>
+<nav class="step" aria-label="Entries"><a class="prev" href="/tanksmatetoon/devlog/beacons-and-barriers/"><span>Earlier</span>Power-up boxes after dark, and barriers that stop a tank</a><span></span></nav>
+<a class="back" href="/tanksmatetoon/devlog/">Back to the Dev Log</a>
+</main>
+<footer class="foot"><p>&copy; 2026 Pet Shark Productions Inc. Pictures are from the game and its test runs;
+the tanks, the town and the effects come from Unity Asset Store packs credited on the
+<a href="/projects/tanksmatetoon/">project page</a>.</p></footer>
