@@ -10,7 +10,9 @@ engine: Unity
 image: /assets/img/projects/tanksmatetoon/card.jpg
 image_alt: "The Tanks Mate 2: Toon Tanks logo, three cartoon tanks in a comic burst, over a street of the resort town"
 links:
+  download: https://github.com/thepetshark/petshark-public-downloads/releases/download/tanks-mate-toon-v0.2.30/TanksMateToon-v0.2.30.zip
   devlog: /tanksmatetoon/devlog/
+  docs: /tanksmatetoon/how-to-play/
 theme:
   bar: "#FFF3D1"
   background: "#1C2A4F"
@@ -24,6 +26,8 @@ theme:
 ---
 
 Tanks Mate 2: Toon Tanks is a party game for Windows PCs in which cartoon tanks fight through a sunny resort town. I made it for my kids, as a fun game to play together. One player hosts on their PC, up to three friends on the same network join from theirs, and bots take as many of the ten seats as the host likes, so it also works as a game for one. Matches are every tank for itself, or Red against Blue.
+
+The game is free to download for Windows. The Download button above gets version 0.2.30, and [How to play](/tanksmatetoon/how-to-play/) shows how to get it running and what every button on the main menu and in the lobby does.
 
 ## How it plays
 
