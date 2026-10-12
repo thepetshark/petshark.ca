@@ -48,8 +48,6 @@ main { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: clamp(1.5rem, 5v
 .plate { display: inline-flex; align-items: center; justify-content: center; min-width: 4.6rem; padding: .3rem .6rem; border: 3px solid var(--ink); border-radius: 8px; background: var(--ink); color: var(--sun); font-weight: 700; font-stretch: 112%; font-variant-numeric: tabular-nums; letter-spacing: .02em; line-height: 1.2; text-align: center; box-shadow: inset 0 0 0 2px var(--sun); }
 .plate.plain { background: var(--panel); color: var(--ink); box-shadow: none; font-stretch: 100%; font-size: .9rem; }
 .out { color: var(--ink-soft); font-size: .9rem; font-weight: 600; }
-.chip { display: inline-block; padding: .1rem .5rem; border-radius: 4px; background: var(--sun); color: var(--ink); font-size: .8rem; font-weight: 700; }
-.chip::before { content: ""; display: inline-block; width: .8rem; height: .55rem; margin-right: .35rem; background: var(--caution); vertical-align: -.02rem; }
 
 /* ---- Index ---- */
 .masthead { max-width: 46rem; margin-bottom: 2.75rem; }
@@ -77,7 +75,6 @@ main { width: min(100% - 2rem, 62rem); margin: 0 auto; padding: clamp(1.5rem, 5v
 .what { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
 .what .title { font-size: 1.3rem; font-weight: 700; font-stretch: 106%; line-height: 1.2; letter-spacing: -.01em; }
 .what .summary { max-width: 34rem; }
-.chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .2rem; }
 .thumb img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 5px; }
 
 /* ---- An entry ---- */
