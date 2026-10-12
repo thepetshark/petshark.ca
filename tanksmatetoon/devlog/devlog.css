@@ -123,3 +123,62 @@ article > .shot { margin-top: .25rem; }
   .step { grid-template-columns: 1fr; }
   .step .next { text-align: left; }
 }
+
+/* ---- How to play (tools/devlog/guide.py): pictures with numbered pins, each pin a link to its legend line ---- */
+.guide .masthead { margin-bottom: 1.5rem; }
+.get { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: 1.25rem; }
+.get span { color: var(--ink-soft); font-size: .95rem; }
+.dl { display: inline-block; padding: .8rem 1.3rem; background: var(--flame); border-radius: 8px; color: #fff; font-size: 1.1rem; font-weight: 700; text-decoration: none; }
+.dl:hover { background: var(--ink); }
+.jump ul { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
+.jump a { display: block; padding: .35rem .8rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 999px; color: var(--ink); font-size: .95rem; font-weight: 600; text-decoration: none; }
+.jump a:hover { border-color: var(--ink); }
+.part { margin-top: 1.25rem; padding: clamp(1.1rem, 3.5vw, 2.25rem); background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; scroll-margin-top: 1rem; }
+.part h2 { margin-bottom: .9rem; font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; font-stretch: 110%; line-height: 1.1; letter-spacing: -.02em; }
+.part .text { margin-top: 0; }
+.part .text:empty { display: none; }
+.ui { font-weight: 700; font-stretch: 106%; letter-spacing: .01em; }
+kbd { display: inline-block; min-width: 1.6em; padding: 0 .4em; border: 1px solid var(--ink); border-bottom-width: 3px; border-radius: 5px; background: #fff; font: 700 .85em/1.5 Archivo, sans-serif; text-align: center; white-space: nowrap; }
+.steps { max-width: 42rem; margin-bottom: 1.25rem; counter-reset: step; }
+.steps li { position: relative; margin-bottom: .7rem; padding-left: 2.6rem; counter-increment: step; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: -.05rem; width: 1.8rem; height: 1.8rem; border-radius: 6px; background: var(--ink); color: var(--sun); font-weight: 700; line-height: 1.8rem; text-align: center; }
+.anno { margin: 1.25rem 0 1.75rem; }
+.pic figcaption { margin-top: .4rem; color: var(--ink-soft); font-size: .875rem; }
+.scroll { overflow-x: auto; border-radius: 6px; }
+.pins { position: relative; min-width: 36rem; container-type: inline-size; }
+.pins img { width: 100%; border: 1px solid var(--rule); border-radius: 6px; }
+.pin, .legend b { display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--sun); border: 3px solid var(--ink); color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.pin { position: absolute; width: 1.9rem; height: 1.9rem; margin: -.95rem 0 0 -.95rem; font-size: .95rem; text-decoration: none; box-shadow: 0 2px 6px rgb(0 0 0 / .45); transition: transform .12s; }
+.pin:hover, .pin:focus-visible { transform: scale(1.3); z-index: 2; }
+.legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: .5rem 1.5rem; margin-top: 1.1rem; }
+.legend li { display: grid; grid-template-columns: 1.9rem minmax(0, 1fr); gap: .7rem; padding: .5rem; border-radius: 6px; scroll-margin-top: 1rem; }
+.legend b { width: 1.9rem; height: 1.9rem; font-size: .95rem; }
+.legend h3 { margin: 0; font-size: 1rem; font-weight: 700; font-stretch: 106%; line-height: 1.9rem; letter-spacing: .01em; }
+.legend p { font-size: .97rem; line-height: 1.5; }
+.legend li:hover, .legend li:target { background: #FFF6D6; }
+.legend li:target b { background: var(--flame); color: #fff; }
+.anno:has(.l1:hover) .p1, .anno:has(.p1:hover) .l1 b, .anno:has(.p1:focus-visible) .l1 b,
+.anno:has(.l2:hover) .p2, .anno:has(.p2:hover) .l2 b, .anno:has(.p2:focus-visible) .l2 b,
+.anno:has(.l3:hover) .p3, .anno:has(.p3:hover) .l3 b, .anno:has(.p3:focus-visible) .l3 b,
+.anno:has(.l4:hover) .p4, .anno:has(.p4:hover) .l4 b, .anno:has(.p4:focus-visible) .l4 b,
+.anno:has(.l5:hover) .p5, .anno:has(.p5:hover) .l5 b, .anno:has(.p5:focus-visible) .l5 b,
+.anno:has(.l6:hover) .p6, .anno:has(.p6:hover) .l6 b, .anno:has(.p6:focus-visible) .l6 b,
+.anno:has(.l7:hover) .p7, .anno:has(.p7:hover) .l7 b, .anno:has(.p7:focus-visible) .l7 b,
+.anno:has(.l8:hover) .p8, .anno:has(.p8:hover) .l8 b, .anno:has(.p8:focus-visible) .l8 b,
+.anno:has(.l9:hover) .p9, .anno:has(.p9:hover) .l9 b, .anno:has(.p9:focus-visible) .l9 b,
+.anno:has(.l10:hover) .p10, .anno:has(.p10:hover) .l10 b, .anno:has(.p10:focus-visible) .l10 b,
+.anno:has(.l11:hover) .p11, .anno:has(.p11:hover) .l11 b, .anno:has(.p11:focus-visible) .l11 b,
+.anno:has(.l12:hover) .p12, .anno:has(.p12:hover) .l12 b, .anno:has(.p12:focus-visible) .l12 b { background: var(--flame); color: #fff; transform: scale(1.3); z-index: 2; }
+.keys { overflow-x: auto; margin: 1rem 0 1.25rem; }
+.keys table { width: 100%; border-collapse: collapse; font-size: .97rem; }
+.keys th, .keys td { padding: .55rem .75rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.keys thead th { border-bottom: 3px solid var(--ink); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+.keys tbody th { font-weight: 600; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.card { padding: 1rem 1.15rem; background: #FBF6EA; border-radius: 6px; border-left: 5px solid var(--flame); }
+.card h3 { margin: 0 0 .5rem; font-size: 1rem; font-weight: 700; font-stretch: 106%; letter-spacing: .02em; text-transform: uppercase; }
+.card dl { margin: 0; }
+.card dt { font-weight: 700; }
+.card dd { margin: 0 0 .55rem; font-size: .97rem; line-height: 1.5; }
+@container (max-width: 40rem) { .pin { width: 1.25rem; height: 1.25rem; margin: -.625rem 0 0 -.625rem; border-width: 2px; font-size: .68rem; } }
+@media (prefers-reduced-motion: reduce) { .pin { transition: none; } }
