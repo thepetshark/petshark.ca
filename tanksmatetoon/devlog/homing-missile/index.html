@@ -1,0 +1,30 @@
+---
+layout: devlog
+project: tanksmatetoon
+title: "A Homing Missile that goes round buildings – Tanks Mate 2: Toon Tanks Dev Log"
+description: "The Homing Missile stops flying into buildings, the town behind the menu and the lobby stands on solid ground, and two Scout skins get their pictures clear of the turret's triangle."
+body_class: entry
+---
+<nav class="projectbar" aria-label="Tanks Mate 2: Toon Tanks"><div><a class="up" href="/tanksmatetoon/devlog/"><span aria-hidden="true">&lsaquo;</span> Dev Log</a></div></nav>
+<main id="content">
+<article>
+<header class="head">
+<p class="badge"><span class="plate">0.2.30</span> <span class="out">To my kids 11 October, 05:22</span></p>
+<h1>A Homing Missile that goes round buildings</h1>
+<p class="when"><time>11 October, 03:35 to 05:14</time></p>
+</header>
+<figure class="shot wide"><img src="/tanksmatetoon/devlog/img/homing-missile-1.webp" width="1400" height="858" alt="The town behind the main menu and the lobby, before and after. Before, sky shows between the back buildings down to the paving. After, a sandstone wall closes the gaps." loading="lazy"><figcaption>The town behind the main menu and the lobby, before and after.</figcaption></figure>
+<div class="text"><p>I reported that the Homing Missile usually flew into a building and blew up, even with tanks in view, and suggested it choose from the tanks in view first. The agent read the code and found that the missile turned straight at the nearest tank within 45 metres, whether or not a wall stood in between, and chose again on every frame.</p>
+<p>Before changing anything, the agent wrote a test that launches missiles around the real town and ran it on the old code. 8 of 24 reached their tank, and none of the 12 fired from a Bruiser did. That pointed to a second fault. A missile was never told where the ground was under its tank, and worked it out from the height of the Scout&#x27;s barrel. The Bruiser&#x27;s barrel sits lower, so its missile started partly inside the road and blew up as it left the barrel.</p>
+<p>The same morning I sent a picture of the main menu, where the buildings at the back seemed to hang off the edge of the ground. I asked for the ground to be finished and suggested a wall. The agent ran the paving on behind the buildings, closed the gaps with the town&#x27;s own wall, and wrote a test that looks for sky below the horizon at five screen shapes.</p>
+<p>The skin fix dates from the day before. On the Scout, the Galaxy moon and the Jolly Roger skull lay under the triangle marking on the turret. I asked for suggestions, got three with a mock-up, and picked moving the pictures forward.</p></div>
+<section class="changes" aria-labelledby="in-homing-missile"><h2 id="in-homing-missile">In this build</h2><ul><li>The Homing Missile picks a tank in view first, the ones ahead of it before those to the side.</li><li>It goes round a building to a tank that is hidden, keeps the tank it picked, and slows down to turn hard near walls.</li><li>A Bruiser&#x27;s missile no longer blows up as it leaves the barrel.</li><li>In test launches all over the town, 96 of 96 missiles reached their tank. Before the change it was 8 of 24.</li><li>In two test matches with every bot carrying the missile, 84 of 89 missiles ended on a tank.</li><li>On the main menu and in the lobby, the paving runs on behind the buildings and a wall closes the gaps between them.</li><li>On the Scout, the Galaxy moon and the Jolly Roger skull sit ahead of the turret&#x27;s triangle.</li></ul></section>
+
+<div class="shots"><figure class="shot wide"><img src="/tanksmatetoon/devlog/img/homing-missile-2.webp" width="1080" height="360" alt="The navy Jolly Roger skin on the Scout from two sides, with a white skull and crossbones on the turret just ahead of a small gold triangle" loading="lazy"><figcaption>The Jolly Roger skull ahead of the Scout&#x27;s triangle.</figcaption></figure></div>
+</article>
+<nav class="step" aria-label="Entries"><a class="prev" href="/tanksmatetoon/devlog/emotes/"><span>Earlier</span>Emotes, and wheels for every skin</a><span></span></nav>
+<a class="back" href="/tanksmatetoon/devlog/">Back to the Dev Log</a>
+</main>
+<footer class="foot"><p>&copy; 2026 Pet Shark Productions Inc. Pictures are from the game and its test runs;
+the tanks, the town and the effects come from Unity Asset Store packs credited on the
+<a href="/projects/tanksmatetoon/">project page</a>.</p></footer>
