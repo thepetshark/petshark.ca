@@ -138,7 +138,7 @@ If the game is being published on the App Store, also do section 4. It is a sepa
 | `image` | no | Thumbnail in the index and picture in the featured block and when shared: 8:5 (like 640 × 400) and under 300 KB |
 | `image_alt` | with `image` | Alt text for `image`; it is read out on the featured block |
 | `featured` | no | `true` puts the project in the featured block on the home page. The owner picks; if several are set, the newest `year` wins |
-| `links` | no | Keys from `_data/project_links.yml`: `app_store`, `google_play`, `download`, `demo`, `devlog`, `docs`, `support`, `privacy`, `source`, `website`. Values are `/site/paths` or `https://` URLs. `source` must be a **public** repository: a private one shows visitors a 404 |
+| `links` | no | Keys from `_data/project_links.yml`: `app_store`, `google_play`, `download`, `demo`, `devlog`, `how_to_play`, `docs`, `support`, `privacy`, `source`, `website`. Values are `/site/paths` or `https://` URLs. `source` must be a **public** repository: a private one shows visitors a 404 |
 | `theme` | no | See below |
 | `noindex` | no | `true` asks search engines to skip the page, and leaves it out of `sitemap.xml` |
 
