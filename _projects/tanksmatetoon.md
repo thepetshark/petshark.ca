@@ -12,7 +12,7 @@ image_alt: "The Tanks Mate 2: Toon Tanks logo, three cartoon tanks in a comic bu
 links:
   download: https://github.com/thepetshark/petshark-public-downloads/releases/download/tanks-mate-toon-v0.2.30/TanksMateToon-v0.2.30.zip
   devlog: /tanksmatetoon/devlog/
-  docs: /tanksmatetoon/how-to-play/
+  how_to_play: /tanksmatetoon/how-to-play/
 theme:
   bar: "#FFF3D1"
   background: "#1C2A4F"
